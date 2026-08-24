@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T22:46:51.932891+00:00",
+  "updatedAt": "2026-08-24T23:10:57.223475+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "quotes": {
     "AAOI": {
@@ -9,7 +9,7 @@
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:47.383645+00:00"
+      "updatedAt": "2026-08-24T23:10:51.735016+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
@@ -18,7 +18,7 @@
       "currency": "SEK",
       "exchange": "STO",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:47.685717+00:00"
+      "updatedAt": "2026-08-24T23:10:52.115659+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
@@ -27,7 +27,7 @@
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:47.989756+00:00"
+      "updatedAt": "2026-08-24T23:10:52.500465+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
@@ -36,7 +36,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:48.295712+00:00"
+      "updatedAt": "2026-08-24T23:10:52.882165+00:00"
     },
     "POET": {
       "symbol": "POET",
@@ -45,7 +45,7 @@
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:48.642743+00:00"
+      "updatedAt": "2026-08-24T23:10:53.267444+00:00"
     },
     "ARM": {
       "symbol": "ARM",
@@ -54,7 +54,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:48.954740+00:00"
+      "updatedAt": "2026-08-24T23:10:53.653388+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
@@ -63,7 +63,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:49.277784+00:00"
+      "updatedAt": "2026-08-24T23:10:54.054179+00:00"
     },
     "INTC": {
       "symbol": "INTC",
@@ -72,7 +72,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:49.694494+00:00"
+      "updatedAt": "2026-08-24T23:10:54.471060+00:00"
     },
     "LITE": {
       "symbol": "LITE",
@@ -81,7 +81,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:49.999944+00:00"
+      "updatedAt": "2026-08-24T23:10:54.882678+00:00"
     },
     "EWY": {
       "symbol": "EWY",
@@ -90,7 +90,7 @@
       "currency": "USD",
       "exchange": "PCX",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:50.320239+00:00"
+      "updatedAt": "2026-08-24T23:10:55.277614+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
@@ -99,7 +99,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:50.636138+00:00"
+      "updatedAt": "2026-08-24T23:10:55.667699+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
@@ -108,7 +108,7 @@
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:50.949943+00:00"
+      "updatedAt": "2026-08-24T23:10:56.126501+00:00"
     },
     "MU": {
       "symbol": "MU",
@@ -117,7 +117,7 @@
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:51.324314+00:00"
+      "updatedAt": "2026-08-24T23:10:56.542476+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
@@ -126,7 +126,7 @@
       "currency": "CHF",
       "exchange": "EBS",
       "marketState": null,
-      "updatedAt": "2026-08-24T22:46:51.682737+00:00"
+      "updatedAt": "2026-08-24T23:10:56.973332+00:00"
     }
   },
   "failures": []
