@@ -1,8 +1,8 @@
 {
-  "recordedAt": "2026-08-24T14:22:57.431874+00:00",
-  "workflowCommit": "60bf5527a892de8e9a4aeff110d9d93da2453d20",
+  "recordedAt": "2026-08-24T14:32:15.044705+00:00",
+  "workflowCommit": "b0fb2197a638df0594a487ac49230addf7fda0d6",
   "collector": {
-    "startedAt": "2026-08-24T14:22:40.326Z",
+    "startedAt": "2026-08-24T14:31:58.789Z",
     "provider": "multi-source",
     "accounts": [
       {
@@ -16,18 +16,18 @@
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12217
+            "durationMs": 12383
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 100,
-            "durationMs": 2965
+            "durationMs": 2513
           }
         ]
       }
     ],
-    "completedAt": "2026-08-24T14:22:56.310Z",
+    "completedAt": "2026-08-24T14:32:14.488Z",
     "added": 100,
     "totalStored": 100
   },
