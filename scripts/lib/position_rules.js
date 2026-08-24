@@ -133,6 +133,36 @@ const SOFT_RULES = [
   },
 ];
 
+function listActionForTicker(text, ticker) {
+  const lines = String(text || "").split(/\n+/).map((x) => x.trim()).filter(Boolean);
+  const listHeaderRules = [
+    { type: "ADD", confidence: "A", score: 0.99, pattern: /\b(?:i|we)\s+(?:actually\s+|recently\s+|also\s+)?(?:added|bought\s+more|increased)\s+(?:to\s+)?(?:the\s+)?following\b/i },
+    { type: "OPEN", confidence: "A", score: 0.99, pattern: /\b(?:i|we)\s+(?:bought|opened|initiated|started)\s+(?:the\s+)?following\b/i },
+    { type: "REDUCE", confidence: "A", score: 0.99, pattern: /\b(?:i|we)\s+(?:trimmed|reduced|cut)\s+(?:the\s+)?following\b/i },
+    { type: "EXIT", confidence: "A", score: 0.99, pattern: /\b(?:i|we)\s+(?:sold|exited|closed)\s+(?:out\s+of\s+)?(?:the\s+)?following\b/i },
+  ];
+
+  for (let i = 0; i < lines.length; i += 1) {
+    if (cashtagsInClause(lines[i]).length) continue;
+    const selected = listHeaderRules.map((rule) => {
+      const match = lines[i].match(rule.pattern);
+      return match ? { ...rule, evidence: match[0] } : null;
+    }).find(Boolean);
+    if (!selected) continue;
+
+    for (let j = i + 1; j < lines.length; j += 1) {
+      const line = lines[j];
+      const tags = cashtagsInClause(line);
+      if (!tags.length) break;
+      // Explicit lists use cashtags at the beginning of each list item. A later
+      // narrative sentence such as "Separately, I like $CCC" terminates the list.
+      if (!/^\s*(?:[-*•]\s*)?\$[A-Za-z0-9]/.test(line)) break;
+      if (tags.includes(String(ticker).toUpperCase())) return selected;
+    }
+  }
+  return null;
+}
+
 function firstMatch(text, rules) {
   for (const rule of rules) {
     for (const pattern of rule.patterns) {
@@ -150,14 +180,15 @@ function classifyPost(post) {
 
   const results = [];
   for (const ticker of tickers) {
+    const listAction = listActionForTicker(text, ticker);
     const scope = localScopeForTicker(text, ticker);
-    if (!scope) continue;
-    const strong = firstMatch(scope, RULES);
+    if (!scope && !listAction) continue;
+    const strong = listAction || firstMatch(scope, RULES);
     const soft = strong ? null : firstMatch(scope, SOFT_RULES);
     const selected = strong || soft;
     if (!selected) continue;
 
-    const multiTickerPenalty = tickers.length > 1 && !POSITION_WORDS.test(scope);
+    const multiTickerPenalty = !listAction && tickers.length > 1 && !POSITION_WORDS.test(scope);
     const confidence = multiTickerPenalty && selected.confidence === "A" ? "B" : selected.confidence;
     const score = multiTickerPenalty ? Math.min(selected.score, 0.82) : selected.score;
     results.push({
@@ -166,10 +197,10 @@ function classifyPost(post) {
       confidence,
       score,
       evidence: selected.evidence,
-      classifier: "rules-v2.1-local",
+      classifier: listAction ? "rules-v2.2-explicit-list" : "rules-v2.1-local",
     });
   }
   return results;
 }
 
-module.exports = { extractTickers, classifyPost, localScopeForTicker };
+module.exports = { extractTickers, classifyPost, localScopeForTicker, listActionForTicker };
