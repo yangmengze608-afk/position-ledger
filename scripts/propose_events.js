@@ -3,6 +3,7 @@
 
 const fs = require("fs/promises");
 const path = require("path");
+const { findMirrorMatch, upgradeMirrorEvent } = require("./lib/event_reconciliation");
 
 const ROOT = path.resolve(__dirname, "..");
 const EVENTS_PATH = path.join(ROOT, "data", "events.json");
@@ -30,6 +31,10 @@ function eventId(item, type) {
   return `evt-${item.ticker.toLowerCase()}-${item.sourcePostId}-${type.toLowerCase()}`;
 }
 
+function classifierName(item) {
+  return item.llm ? `llm+${item.classifier || "rules-v2.1-local"}` : (item.classifier || "rules-v2.1-local");
+}
+
 async function main() {
   const eventPayload = await readJson(EVENTS_PATH, { schemaVersion: 1, events: [] });
   const queuePayload = await readJson(QUEUE_PATH, { schemaVersion: 1, items: [] });
@@ -38,6 +43,7 @@ async function main() {
   const previousByTicker = new Map();
   for (const event of events) previousByTicker.set(event.ticker, event);
   let proposed = 0;
+  let upgraded = 0;
   let changed = false;
 
   for (const item of queuePayload.items || []) {
@@ -48,6 +54,22 @@ async function main() {
       if (item.status !== "proposed") { item.status = "proposed"; changed = true; }
       continue;
     }
+
+    // V1 seed data used secondary mirrors. When an exact X disclosure matches the
+    // same person/ticker/type within a narrow time window, upgrade the existing
+    // evidence instead of double-counting the same disclosure as a second event.
+    const mirror = findMirrorMatch(events, item, type);
+    if (mirror) {
+      upgradeMirrorEvent(mirror, item, type, classifierName(item));
+      item.status = "proposed";
+      item.proposedEventId = mirror.id;
+      item.reconciliation = "upgraded-secondary-mirror";
+      previousByTicker.set(item.ticker, mirror);
+      upgraded += 1;
+      changed = true;
+      continue;
+    }
+
     const previous = previousByTicker.get(item.ticker) || {};
     events.push({
       id,
@@ -58,13 +80,13 @@ async function main() {
       type,
       date: item.sourceDate,
       confidence: "A",
-      summary: `自动发现的公开持仓披露：${(item.llm?.reason || item.evidence || type).slice(0, 180)}`,
+      summary: `原始公开披露：${(item.llm?.reason || item.evidence || type).slice(0, 180)}`,
       sourceUrl: item.sourceUrl,
       sourceType: "x-original",
       sourcePostId: item.sourcePostId,
       sourceText: item.sourceText,
       note: "V2 自动提议；以 PR 合并作为人工验收",
-      classifier: item.llm ? "llm+rules-v2" : "rules-v2"
+      classifier: classifierName(item)
     });
     existingIds.add(id);
     previousByTicker.set(item.ticker, events[events.length - 1]);
@@ -84,7 +106,7 @@ async function main() {
   eventPayload.events = events;
   await fs.writeFile(EVENTS_PATH, JSON.stringify(eventPayload, null, 2) + "\n");
   await fs.writeFile(QUEUE_PATH, JSON.stringify(queuePayload, null, 2) + "\n");
-  console.log(`[propose] proposed=${proposed}; events=${events.length}`);
+  console.log(`[propose] proposed=${proposed}; upgraded=${upgraded}; events=${events.length}`);
 }
 
 main().catch((error) => { console.error(error); process.exit(1); });
