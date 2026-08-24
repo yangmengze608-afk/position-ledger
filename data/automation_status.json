@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-08-24T14:04:51.216048+00:00",
+  "workflowCommit": "3b3a7451a34b097099dade2b553eaebdd7ddddc9",
+  "collector": {
+    "startedAt": "2026-08-24T14:04:23.566Z",
+    "provider": "x-syndication",
+    "accounts": [
+      {
+        "handle": "aleabitoreddit",
+        "ok": false,
+        "recent": 0,
+        "added": 0,
+        "error": "HTTP 429 after retries"
+      }
+    ],
+    "completedAt": "2026-08-24T14:04:50.305Z",
+    "added": 0,
+    "totalStored": 0
+  },
+  "rawPostCount": 0,
+  "reviewQueueCount": 0,
+  "stepsReached": {
+    "guard": "success",
+    "fetch": "success",
+    "classify": "success",
+    "llm": "success",
+    "propose": "success"
+  }
+}
