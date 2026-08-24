@@ -1,132 +1,132 @@
 {
-  "updatedAt": "2026-08-24T14:08:14.428824+00:00",
+  "updatedAt": "2026-08-24T15:03:33.203273+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "quotes": {
     "AAOI": {
       "symbol": "AAOI",
-      "price": 104.335,
+      "price": 109.11,
       "previousClose": 154.89,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:10.067273+00:00"
+      "updatedAt": "2026-08-24T15:03:27.656930+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
-      "price": 33.8,
+      "price": 33.4,
       "previousClose": 36.74,
       "currency": "SEK",
       "exchange": "STO",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:10.365877+00:00"
+      "updatedAt": "2026-08-24T15:03:28.009837+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
-      "price": 43.828,
+      "price": 44.65,
       "previousClose": 50.7,
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:10.664709+00:00"
+      "updatedAt": "2026-08-24T15:03:28.360242+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
-      "price": 63.45,
+      "price": 64.28,
       "previousClose": 95.97,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:11.013655+00:00"
+      "updatedAt": "2026-08-24T15:03:28.718182+00:00"
     },
     "POET": {
       "symbol": "POET",
-      "price": 7.748,
+      "price": 7.785,
       "previousClose": 9.4,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:11.310828+00:00"
+      "updatedAt": "2026-08-24T15:03:29.505042+00:00"
     },
     "ARM": {
       "symbol": "ARM",
-      "price": 235.43,
+      "price": 236.635,
       "previousClose": 271.43,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:11.609695+00:00"
+      "updatedAt": "2026-08-24T15:03:29.857939+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
-      "price": 226.075,
+      "price": 225.72,
       "previousClose": 234.33,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:11.944057+00:00"
+      "updatedAt": "2026-08-24T15:03:30.223685+00:00"
     },
     "INTC": {
       "symbol": "INTC",
-      "price": 85.761,
+      "price": 86.33,
       "previousClose": 103.49,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:12.280345+00:00"
+      "updatedAt": "2026-08-24T15:03:30.604502+00:00"
     },
     "LITE": {
       "symbol": "LITE",
-      "price": 799.255,
+      "price": 817.01,
       "previousClose": 968.9,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:12.580727+00:00"
+      "updatedAt": "2026-08-24T15:03:30.953674+00:00"
     },
     "EWY": {
       "symbol": "EWY",
-      "price": 172.425,
+      "price": 172.85,
       "previousClose": 185.1,
       "currency": "USD",
       "exchange": "PCX",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:12.908054+00:00"
+      "updatedAt": "2026-08-24T15:03:31.333776+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
-      "price": 212.6,
+      "price": 212.085,
       "previousClose": 263.73,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:13.208993+00:00"
+      "updatedAt": "2026-08-24T15:03:31.751116+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
-      "price": 93.66,
+      "price": 95.24,
       "previousClose": 145.61,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:13.509064+00:00"
+      "updatedAt": "2026-08-24T15:03:32.096867+00:00"
     },
     "MU": {
       "symbol": "MU",
-      "price": 893.23,
+      "price": 900.37,
       "previousClose": 1011.75,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:13.859950+00:00"
+      "updatedAt": "2026-08-24T15:03:32.572040+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
-      "price": 16.27,
+      "price": 16.54,
       "previousClose": 18.29,
       "currency": "CHF",
       "exchange": "EBS",
       "marketState": null,
-      "updatedAt": "2026-08-24T14:08:14.178665+00:00"
+      "updatedAt": "2026-08-24T15:03:32.953084+00:00"
     }
   },
   "failures": []
