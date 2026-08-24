@@ -31,6 +31,7 @@ jobs:
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_MODEL: ${{ vars.LLM_MODEL }}
       LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+      POSITION_LEDGER_REPORT_PATH: /tmp/collector-report.json
     steps:
       - uses: actions/checkout@v4
         with:
@@ -56,18 +57,22 @@ jobs:
           fi
 
       - name: Fetch recent public X posts
+        id: fetch
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/fetch_x_timeline.js
 
       - name: Deterministic conservative triage
+        id: classify
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/classify_positions.js
 
       - name: Optional LLM review for ambiguous candidates
+        id: llm
         if: steps.guard.outputs.skip != 'true'
         run: python scripts/llm_review.py
 
       - name: Propose only high-confidence explicit events
+        id: propose
         if: steps.guard.outputs.skip != 'true'
         run: |
           node scripts/propose_events.js
@@ -85,6 +90,50 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record one-shot smoke diagnostics for automation-code pushes
+        if: ${{ always() && github.event_name == 'push' }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          def load(path, fallback):
+              p = Path(path)
+              if not p.exists():
+                  return fallback
+              try:
+                  return json.loads(p.read_text())
+              except Exception as exc:
+                  return {"parseError": str(exc)}
+
+          collector = load('/tmp/collector-report.json', {"missing": True})
+          raw = load('data/raw_posts.json', {"posts": []})
+          queue = load('data/review_queue.json', {"items": []})
+          status = {
+              "recordedAt": __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
+              "workflowCommit": os.environ.get('GITHUB_SHA'),
+              "collector": collector,
+              "rawPostCount": len(raw.get('posts', [])) if isinstance(raw, dict) else None,
+              "reviewQueueCount": len(queue.get('items', [])) if isinstance(queue, dict) else None,
+              "stepsReached": {
+                  "guard": "${{ steps.guard.outcome }}",
+                  "fetch": "${{ steps.fetch.outcome }}",
+                  "classify": "${{ steps.classify.outcome }}",
+                  "llm": "${{ steps.llm.outcome }}",
+                  "propose": "${{ steps.propose.outcome }}"
+              }
+          }
+          Path('data/automation_status.json').write_text(json.dumps(status, indent=2) + '\n')
+          PY
+          git config user.name "position-ledger-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/automation_status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: record discovery smoke status"
+            git push origin HEAD:main
           fi
 
       - name: Create review branch and pull request
