@@ -3,7 +3,7 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("fs");
 const path = require("path");
-const { classifyPost, extractTickers } = require("../scripts/lib/position_rules");
+const { classifyPost, extractTickers, localScopeForTicker } = require("../scripts/lib/position_rules");
 const fixtures = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "posts.json"), "utf8"));
 
 function first(id) { return classifyPost(fixtures.find((x) => x.id === id))[0]; }
@@ -24,4 +24,38 @@ test("mixed polarity stays ticker-specific", () => {
 });
 test("numeric cashtag comes from X entity, not dollar amount regex", () => {
   assert.deepEqual(extractTickers("paid $2000, bought $AAOI", ["2494"]), ["2494","AAOI"]);
+});
+
+test("GOOGL humanoid 'we have' is not a holding", () => {
+  const out = classifyPost({ text: "After watching clips... Still can't believe $GOOGL sold Boston Dynamics, don't think we have another humanoid that can backflip." });
+  assert.deepEqual(out, []);
+});
+
+test("distant position disclosure does not attach to earlier MU ticker", () => {
+  const text = "If you get Vietnam flashbacks like I do to $MU / Samsung / SK Hynix -> Legacy DRAM. My thesis is we'll see the same thing here maybe late H2, early 2027 with consumer MLCCs. Lots of supply discussion. More channel checks. Taiyo Yuden (6976, disclosure: I have positions) would be a major beneficiary.";
+  assert.deepEqual(classifyPost({ text, cashtags: ["MU"] }), []);
+});
+
+test("single ticker may borrow the next tickerless clause for OPEN", () => {
+  const out = classifyPost({ text: "I really like $CCXI. I bought around the announcement." });
+  assert.equal(out[0].ticker, "CCXI");
+  assert.equal(out[0].suggestedType, "OPEN");
+});
+
+test("numeric entity ticker may borrow adjacent clause for ADD", () => {
+  const out = classifyPost({ text: "Walsin $2494 is top 4 globally. I actually added some recently.", cashtags: ["2494"] });
+  assert.equal(out[0].ticker, "2494");
+  assert.equal(out[0].suggestedType, "ADD");
+});
+
+test("mixed tickers do not borrow each other's clauses", () => {
+  const out = classifyPost({ text: "I don't hold $AAA. I own $BBB." });
+  const by = Object.fromEntries(out.map((x) => [x.ticker, x.suggestedType]));
+  assert.equal(by.AAA, "DENY");
+  assert.equal(by.BBB, "HOLD");
+});
+
+test("local scope stays near the target ticker", () => {
+  const text = "$MU legacy DRAM. unrelated sentence. more unrelated. 6976 disclosure: I have positions.";
+  assert.equal(localScopeForTicker(text, "MU"), "$MU legacy DRAM. unrelated sentence");
 });
