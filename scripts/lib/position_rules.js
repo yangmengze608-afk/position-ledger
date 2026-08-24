@@ -1,6 +1,7 @@
 "use strict";
 
 const TICKER_RE = /\$([A-Z][A-Z0-9.-]{0,9})\b/g;
+const ANY_CASHTAG_RE = /\$([A-Z0-9][A-Z0-9.-]{0,14})\b/gi;
 const POSITION_WORDS = /\b(position|positions|stake|stakes|shares?|longs?|bags?|holding|holdings|exposure)\b/i;
 
 function extractTickers(text, entityTickers = []) {
@@ -18,6 +19,39 @@ function extractTickers(text, entityTickers = []) {
     }
   }
   return found;
+}
+
+function cashtagsInClause(text) {
+  return [...String(text || "").matchAll(ANY_CASHTAG_RE)].map((m) => m[1].toUpperCase());
+}
+
+function clauseHasTicker(clause, ticker) {
+  return cashtagsInClause(clause).includes(String(ticker).toUpperCase());
+}
+
+function localScopeForTicker(text, ticker) {
+  const clauses = String(text || "")
+    .split(/(?:[.!?;\n]+|\s+(?:but|while|whereas|however)\s+)/i)
+    .map((x) => x.trim())
+    .filter(Boolean);
+
+  const indexes = clauses
+    .map((clause, index) => clauseHasTicker(clause, ticker) ? index : -1)
+    .filter((index) => index >= 0);
+  if (!indexes.length) return "";
+
+  const selected = new Set();
+  for (const index of indexes) {
+    selected.add(index);
+    for (const neighbor of [index - 1, index + 1]) {
+      if (neighbor < 0 || neighbor >= clauses.length) continue;
+      // Only borrow a neighboring clause when it has no cashtag of its own.
+      // This lets "$CCXI. I bought..." bind correctly without allowing
+      // "$MU ... [many clauses] ... 6976, I have positions" cross-contamination.
+      if (cashtagsInClause(clauses[neighbor]).length === 0) selected.add(neighbor);
+    }
+  }
+  return [...selected].sort((a, b) => a - b).map((index) => clauses[index]).join(". ");
 }
 
 const RULES = [
@@ -76,7 +110,9 @@ const RULES = [
     confidence: "A",
     score: 0.98,
     patterns: [
-      /\b(?:i|we)\s+(?:still\s+|currently\s+)?(?:have|hold|own)\b/i,
+      /\b(?:i|we)\s+(?:still|currently)\s+(?:have|hold|own)\b/i,
+      /\b(?:i|we)\s+(?:hold|own)\b/i,
+      /\b(?:i|we)\s+have\s+(?:(?:a|an|the|my|our|large|small|sizeable|sizable|significant)\s+){0,3}(?:position|positions|stake|stakes|shares?|longs?)\b/i,
       /\b(?:i|we)\s+(?:am|are|'m|'re)\s+still\s+long\b/i,
       /\b(?:my|our)\s+(?:position|stake|shares?|longs?)\b/i,
     ],
@@ -112,16 +148,9 @@ function classifyPost(post) {
   const tickers = extractTickers(text, post?.cashtags || []);
   if (!text || tickers.length === 0) return [];
 
-  const clauses = text
-    .split(/(?:[.!?;\n]+|\s+(?:but|while|whereas|however)\s+)/i)
-    .map((x) => x.trim())
-    .filter(Boolean);
-
   const results = [];
   for (const ticker of tickers) {
-    const scope = tickers.length === 1
-      ? text
-      : (clauses.find((clause) => clause.toUpperCase().includes(`$${ticker}`)) || "");
+    const scope = localScopeForTicker(text, ticker);
     if (!scope) continue;
     const strong = firstMatch(scope, RULES);
     const soft = strong ? null : firstMatch(scope, SOFT_RULES);
@@ -137,10 +166,10 @@ function classifyPost(post) {
       confidence,
       score,
       evidence: selected.evidence,
-      classifier: "rules-v2",
+      classifier: "rules-v2.1-local",
     });
   }
   return results;
 }
 
-module.exports = { extractTickers, classifyPost };
+module.exports = { extractTickers, classifyPost, localScopeForTicker };
