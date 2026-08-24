@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "accounts": [
+    {
+      "person": "Serenity",
+      "handle": "aleabitoreddit",
+      "platform": "x",
+      "enabled": true,
+      "includeReplies": true,
+      "source": "x-syndication",
+      "maxAgeDays": 14
+    }
+  ]
+}

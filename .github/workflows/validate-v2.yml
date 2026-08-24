@@ -1,0 +1,32 @@
+name: Validate V2 automation
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - "tests/**"
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/**"
+      - "tests/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/validate_data.py
+      - run: python scripts/validate_automation.py
+      - run: node --test tests/classifier.test.js
+      - name: Ensure generated holdings are committed
+        run: |
+          python scripts/rebuild_holdings.py
+          git diff --exit-code data/holdings.json

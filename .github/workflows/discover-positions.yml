@@ -1,0 +1,95 @@
+name: Discover public position disclosures
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: position-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_MODEL: ${{ vars.LLM_MODEL }}
+      LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Skip while a previous discovery PR is awaiting review
+        id: guard
+        shell: bash
+        run: |
+          count=$(gh pr list --state open --head bot/position-discovery --json number --jq 'length')
+          if [ "$count" != "0" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "An existing bot PR is still open; skipping this cycle."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch recent public X posts
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/fetch_x_timeline.js
+
+      - name: Deterministic conservative triage
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/classify_positions.js
+
+      - name: Optional LLM review for ambiguous candidates
+        if: steps.guard.outputs.skip != 'true'
+        run: python scripts/llm_review.py
+
+      - name: Propose only high-confidence explicit events
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          node scripts/propose_events.js
+          python scripts/rebuild_holdings.py
+          python scripts/validate_data.py
+          python scripts/validate_automation.py
+          node --test tests/classifier.test.js
+
+      - name: Stop when nothing changed
+        if: steps.guard.outputs.skip != 'true'
+        id: diff
+        shell: bash
+        run: |
+          if git diff --quiet -- data/raw_posts.json data/review_queue.json data/events.json data/holdings.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create review branch and pull request
+        if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "position-ledger-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C bot/position-discovery
+          git add data/raw_posts.json data/review_queue.json data/events.json data/holdings.json
+          git commit -m "data: propose newly discovered position disclosures"
+          git push --force-with-lease origin bot/position-discovery
+          node scripts/pr_summary.js > /tmp/pr-body.md
+          gh pr create \
+            --base main \
+            --head bot/position-discovery \
+            --title "data: review newly discovered position disclosures" \
+            --body-file /tmp/pr-body.md
