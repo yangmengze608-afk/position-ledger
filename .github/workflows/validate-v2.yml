@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
       - run: python scripts/validate_data.py
       - run: python scripts/validate_automation.py
-      - run: node --test tests/classifier.test.js
+      - run: node --test tests/classifier.test.js tests/collector.test.js
       - name: Ensure generated holdings are committed
         run: |
           python scripts/rebuild_holdings.py
