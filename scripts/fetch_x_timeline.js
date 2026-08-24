@@ -7,6 +7,7 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "data", "source_accounts.json");
 const OUT_PATH = path.join(ROOT, "data", "raw_posts.json");
+const REPORT_PATH = process.env.POSITION_LEDGER_REPORT_PATH || "";
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36";
 const MAX_POSTS = Number(process.env.POSITION_LEDGER_RAW_MAX || 500);
 
@@ -15,6 +16,11 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 async function readJson(file, fallback) {
   try { return JSON.parse(await fs.readFile(file, "utf8")); }
   catch { return fallback; }
+}
+
+async function writeReport(report) {
+  if (!REPORT_PATH) return;
+  await fs.writeFile(REPORT_PATH, JSON.stringify(report, null, 2) + "\n", "utf8");
 }
 
 function cleanText(tweet) {
@@ -82,12 +88,14 @@ function parseTimeline(html, account) {
 }
 
 async function main() {
+  const report = { startedAt: new Date().toISOString(), provider: "x-syndication", accounts: [] };
   const config = await readJson(CONFIG_PATH, { accounts: [] });
   const existingPayload = await readJson(OUT_PATH, { schemaVersion: 1, posts: [] });
   const byId = new Map((existingPayload.posts || []).map((post) => [post.id, post]));
   let fetched = 0;
 
   for (const account of (config.accounts || []).filter((a) => a.enabled && a.platform === "x")) {
+    const before = fetched;
     try {
       const html = await fetchTimeline(account);
       const posts = parseTimeline(html, account);
@@ -97,8 +105,10 @@ async function main() {
           fetched += 1;
         }
       }
+      report.accounts.push({ handle: account.handle, ok: true, recent: posts.length, added: fetched - before });
       console.log(`[x] ${account.handle}: ${posts.length} recent, ${fetched} new total`);
     } catch (error) {
+      report.accounts.push({ handle: account.handle, ok: false, recent: 0, added: 0, error: error.message });
       console.warn(`[x] ${account.handle}: ${error.message}`);
     }
     await sleep(1200);
@@ -107,6 +117,12 @@ async function main() {
   const posts = [...byId.values()]
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
     .slice(0, MAX_POSTS);
+
+  report.completedAt = new Date().toISOString();
+  report.added = fetched;
+  report.totalStored = posts.length;
+  await writeReport(report);
+
   if (fetched === 0) {
     console.log(`[x] raw store unchanged: ${posts.length} posts; 0 added`);
     return;
@@ -115,4 +131,10 @@ async function main() {
   console.log(`[x] raw store: ${posts.length} posts; ${fetched} added`);
 }
 
-main().catch((error) => { console.error(error); process.exit(1); });
+main().catch(async (error) => {
+  try {
+    await writeReport({ startedAt: new Date().toISOString(), provider: "x-syndication", fatal: error.message, accounts: [] });
+  } catch {}
+  console.error(error);
+  process.exit(1);
+});
