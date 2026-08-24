@@ -18,6 +18,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: position-discovery
@@ -32,6 +33,7 @@ jobs:
       LLM_MODEL: ${{ vars.LLM_MODEL }}
       LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
       POSITION_LEDGER_REPORT_PATH: /tmp/collector-report.json
+      REVIEW_ISSUE_TITLE: "review: pending position disclosures"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,14 +46,15 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Skip while a previous discovery PR is awaiting review
+      - name: Skip while a previous discovery review is awaiting approval
         id: guard
         shell: bash
         run: |
-          count=$(gh pr list --state open --head bot/position-discovery --json number --jq 'length')
-          if [ "$count" != "0" ]; then
+          pr_count=$(gh pr list --state open --head bot/position-discovery --json number --jq 'length')
+          issue_count=$(gh issue list --state open --limit 100 --json title --jq '[.[] | select(.title == "review: pending position disclosures")] | length')
+          if [ "$pr_count" != "0" ] || [ "$issue_count" != "0" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "An existing bot PR is still open; skipping this cycle."
+            echo "A discovery PR or fallback review issue is still open; skipping this cycle."
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
@@ -79,7 +82,7 @@ jobs:
           python scripts/rebuild_holdings.py
           python scripts/validate_data.py
           python scripts/validate_automation.py
-          node --test tests/classifier.test.js
+          node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js
 
       - name: Stop when nothing changed
         if: steps.guard.outputs.skip != 'true'
@@ -136,7 +139,8 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Create review branch and pull request
+      - name: Publish review request
+        id: delivery
         if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.changed == 'true'
         shell: bash
         run: |
@@ -147,8 +151,60 @@ jobs:
           git commit -m "data: propose newly discovered position disclosures"
           git push --force-with-lease origin bot/position-discovery
           node scripts/pr_summary.js > /tmp/pr-body.md
-          gh pr create \
+
+          if pr_url=$(gh pr create \
             --base main \
             --head bot/position-discovery \
             --title "data: review newly discovered position disclosures" \
-            --body-file /tmp/pr-body.md
+            --body-file /tmp/pr-body.md 2>/tmp/pr-error.log); then
+            echo "kind=pr" >> "$GITHUB_OUTPUT"
+            echo "url=$pr_url" >> "$GITHUB_OUTPUT"
+            echo "Created review PR: $pr_url"
+          else
+            echo "GitHub Actions could not create a PR; falling back to an issue." >&2
+            cat /tmp/pr-error.log >&2 || true
+            compare_url="https://github.com/${GITHUB_REPOSITORY}/compare/main...bot/position-discovery?expand=1"
+            {
+              echo "The discovery bot found position disclosures and pushed the review branch, but the repository currently blocks GITHUB_TOKEN from creating pull requests."
+              echo
+              echo "Create/review the PR here: ${compare_url}"
+              echo
+              echo "---"
+              cat /tmp/pr-body.md
+            } > /tmp/issue-body.md
+            issue_url=$(gh issue create --title "$REVIEW_ISSUE_TITLE" --body-file /tmp/issue-body.md)
+            echo "kind=issue" >> "$GITHUB_OUTPUT"
+            echo "url=$issue_url" >> "$GITHUB_OUTPUT"
+            echo "Created fallback review issue: $issue_url"
+          fi
+
+      - name: Persist smoke delivery outcome
+        if: ${{ always() && github.event_name == 'push' && steps.guard.outputs.skip != 'true' }}
+        env:
+          DELIVERY_KIND: ${{ steps.delivery.outputs.kind }}
+          DELIVERY_URL: ${{ steps.delivery.outputs.url }}
+        shell: bash
+        run: |
+          git switch main
+          git pull --ff-only origin main
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path('data/automation_status.json')
+          try:
+              status = json.loads(p.read_text())
+          except Exception:
+              status = {}
+          status['delivery'] = {
+              'kind': os.environ.get('DELIVERY_KIND') or 'none',
+              'url': os.environ.get('DELIVERY_URL') or None,
+          }
+          p.write_text(json.dumps(status, indent=2) + '\n')
+          PY
+          git config user.name "position-ledger-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/automation_status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: record discovery delivery status"
+            git push origin HEAD:main
+          fi
