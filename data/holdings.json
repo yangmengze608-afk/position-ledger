@@ -8,11 +8,11 @@
       "state": "live",
       "confidence": "A",
       "firstRecordedAt": "2026-08-18T22:15:00+10:00",
-      "lastConfirmedAt": "2026-08-22T23:02:00+10:00",
-      "lastActiveAt": "2026-08-22T23:02:00+10:00",
-      "note": "明确当前持有",
-      "thesis": "公开回复明确表示仍持有 AAOI，同时批评该公司的融资方式、时机与规模。",
-      "eventCount": 2
+      "lastConfirmedAt": "2026-08-24T11:00:56.000Z",
+      "lastActiveAt": "2026-08-24T11:00:56.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I have large positions",
+      "eventCount": 3
     },
     {
       "ticker": "AEHR",
@@ -72,12 +72,12 @@
       "exchange": "US",
       "state": "live",
       "confidence": "A",
-      "firstRecordedAt": "2026-08-16T17:04:00+10:00",
-      "lastConfirmedAt": "2026-08-16T17:04:00+10:00",
-      "lastActiveAt": "2026-08-16T17:04:00+10:00",
-      "note": "明确买入",
-      "thesis": "表示在相关公告前后买入 CCXI，披露的规模约相当于公司流通股的 0.25%–0.75%。",
-      "eventCount": 1
+      "firstRecordedAt": "2026-08-16T09:04:18.000Z",
+      "lastConfirmedAt": "2026-08-18T16:14:06.000Z",
+      "lastActiveAt": "2026-08-18T16:14:06.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I own",
+      "eventCount": 2
     },
     {
       "ticker": "EWY",
