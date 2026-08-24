@@ -1,0 +1,8 @@
+{
+  "name": "Serenity",
+  "handle": "@aleabitoreddit",
+  "description": "把公开披露拆成可核对的事件账本；只有明确证据才升级状态，长期未提及不会自动推断为卖出。",
+  "updatedAt": "2026-08-24T17:55:00+10:00",
+  "methodology": "Event-sourced public-disclosure ledger. Explicit current-position statements are separated from historical disclosures and denials.",
+  "disclaimer": "Research only. Public statements are not brokerage records and may be incomplete."
+}
