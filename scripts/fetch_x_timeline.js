@@ -30,7 +30,15 @@ function cleanText(tweet) {
 
 async function fetchTimeline(account) {
   const showReplies = account.includeReplies !== false ? "true" : "false";
-  const url = `https://syndication.twitter.com/srv/timeline-profile/screen-name/${encodeURIComponent(account.handle)}?showReplies=${showReplies}`;
+  // X widget generations have used both names. Supplying both keeps the public
+  // syndication collector compatible with either routing layer.
+  const query = new URLSearchParams({
+    showReplies,
+    with_replies: showReplies,
+    dnt: "true",
+    lang: "en",
+  });
+  const url = `https://syndication.twitter.com/srv/timeline-profile/screen-name/${encodeURIComponent(account.handle)}?${query}`;
   for (let attempt = 0; attempt < 4; attempt += 1) {
     const response = await fetch(url, { headers: { "user-agent": UA, accept: "text/html" } });
     if (response.ok) return response.text();
