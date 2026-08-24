@@ -21,6 +21,7 @@ GitHub-backed 的公开持仓追踪站。核心不是“猜现在持有什么”
 ## GitHub 后端
 
 `config.js` 已预设：
+
 - owner: `yangmengze608-afk`
 - repo: `position-ledger`
 - branch: `main`
