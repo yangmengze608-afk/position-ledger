@@ -3,7 +3,8 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const fs = require("fs");
 const path = require("path");
-const { classifyPost, extractTickers, localScopeForTicker } = require("../scripts/lib/position_rules");
+const { classifyPost, extractTickers, localScopeForTicker, contextualSecurityMentions } = require("../scripts/lib/position_rules");
+const { canPromote } = require("../scripts/propose_events");
 const fixtures = JSON.parse(fs.readFileSync(path.join(__dirname, "fixtures", "posts.json"), "utf8"));
 
 function first(id) { return classifyPost(fixtures.find((x) => x.id === id))[0]; }
@@ -32,7 +33,7 @@ test("GOOGL humanoid 'we have' is not a holding", () => {
 });
 
 test("distant position disclosure does not attach to earlier MU ticker", () => {
-  const text = "If you get Vietnam flashbacks like I do to $MU / Samsung / SK Hynix -> Legacy DRAM. My thesis is we'll see the same thing here maybe late H2, early 2027 with consumer MLCCs. Lots of supply discussion. More channel checks. Taiyo Yuden (6976, disclosure: I have positions) would be a major beneficiary.";
+  const text = "If you get Vietnam flashbacks like I do to $MU / Samsung / SK Hynix -> Legacy DRAM. My thesis is we'll see the same thing here maybe late H2, early 2027 with consumer MLCCs. Lots of supply discussion. More channel checks. Unknown Company (6976, disclosure: I have positions) would be a major beneficiary.";
   assert.deepEqual(classifyPost({ text, cashtags: ["MU"] }), []);
 });
 
@@ -56,7 +57,7 @@ test("mixed tickers do not borrow each other's clauses", () => {
 });
 
 test("local scope stays near the target ticker", () => {
-  const text = "$MU legacy DRAM. unrelated sentence. more unrelated. 6976 disclosure: I have positions.";
+  const text = "$MU legacy DRAM. unrelated sentence. more unrelated. Unknown Company 6976 disclosure: I have positions.";
   assert.equal(localScopeForTicker(text, "MU"), "$MU legacy DRAM. unrelated sentence");
 });
 
@@ -79,6 +80,50 @@ test("ordinary ticker list without an explicit portfolio action stays ignored", 
 test("explicit bought-following list becomes OPEN rather than generic mentions", () => {
   const out = classifyPost({ text: "I bought the following stocks:\n$AAA → starter\n$BBB → starter" });
   const by = Object.fromEntries(out.map((x) => [x.ticker, x.suggestedType]));
-  assert.equal(by.AAA, "OPEN");
-  assert.equal(by.BBB, "OPEN");
+  assert.equal(by.AAA,"OPEN");
+  assert.equal(by.BBB,"OPEN");
+});
+
+test("catalog resolves Taiyo Yuden parenthetical numeric ticker without X cashtag entities", () => {
+  const text = "Companies with large market share like Taiyo Yuden (6976, disclosure: I have positions) would be a major beneficiary.";
+  assert.deepEqual(extractTickers(text), ["6976"]);
+  const out = classifyPost({ text });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "6976");
+  assert.equal(out[0].suggestedType, "HOLD");
+  assert.equal(out[0].confidence, "A");
+  assert.equal(out[0].company, "Taiyo Yuden Co., Ltd.");
+  assert.equal(out[0].exchange, "TSE");
+  assert.equal(out[0].entityWarning, null);
+  assert.equal(out[0].classifier, "rules-v2.3-contextual-numeric");
+});
+
+test("Walsin source-code mismatch resolves canonical security but cannot auto-promote", () => {
+  const text = "Walsin (2494) is top 4 globally in MLCC market share (I actually added some recently to track how this guess plays out).";
+  const mentions = contextualSecurityMentions(text);
+  assert.equal(mentions[0].ticker, "2492");
+  assert.equal(mentions[0].rawCode, "2494");
+  assert.match(mentions[0].entityWarning, /2494!=2492/);
+  assert.deepEqual(extractTickers(text, ["2494"]), ["2492"]);
+  const out = classifyPost({ text, cashtags: ["2494"] });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "2492");
+  assert.equal(out[0].suggestedType, "ADD");
+  assert.equal(out[0].confidence, "B");
+  assert.equal(out[0].classifier, "rules-v2.3-entity-mismatch");
+  assert.equal(canPromote({ ...out[0], llm: { explicit: true, event_type: "ADD", confidence: 0.99 } }), false);
+});
+
+test("unknown numbers, years and amounts never become contextual numeric tickers", () => {
+  const text = "Acme (2026) shipped 3008 units and generated $4.5B; I added some recently.";
+  assert.deepEqual(extractTickers(text), []);
+  assert.deepEqual(classifyPost({ text }), []);
+});
+
+test("still have a sizeable EWY position remains explicit HOLD A", () => {
+  const out = classifyPost({ text: "I still have a sizeable position in $EWY even after realizing gains." });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "EWY");
+  assert.equal(out[0].suggestedType, "HOLD");
+  assert.equal(out[0].confidence, "A");
 });

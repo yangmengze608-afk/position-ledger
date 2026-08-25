@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "securities": [
+    {
+      "ticker": "6976",
+      "company": "Taiyo Yuden Co., Ltd.",
+      "exchange": "TSE",
+      "marketSymbol": "6976.T",
+      "aliases": ["Taiyo Yuden"]
+    },
+    {
+      "ticker": "2492",
+      "company": "Walsin Technology Corporation",
+      "exchange": "TWSE",
+      "marketSymbol": "2492.TW",
+      "aliases": ["Walsin Technology", "Walsin"]
+    }
+  ]
+}
