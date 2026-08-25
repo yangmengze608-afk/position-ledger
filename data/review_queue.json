@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-08-25T03:18:18.504Z",
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-25T11:23:29.646Z",
   "items": [
     {
       "id": "cand-x-2091843192639672553-aaoi-hold",
@@ -38,6 +38,32 @@
       "createdAt": "2026-08-24T14:37:42.488Z",
       "proposedEventId": "evt-aaoi-20260822-hold",
       "reconciliation": "upgraded-secondary-mirror"
+    },
+    {
+      "id": "ck-capital-cand-x-2090584243407630469-eos.ax-hold",
+      "creatorId": "ck-capital",
+      "person": "CK Capital",
+      "ticker": "EOS.AX",
+      "suggestedType": "HOLD",
+      "confidence": "A",
+      "score": 0.98,
+      "classifier": "rules-v2.1-local",
+      "evidence": "One of my highest conviction positions",
+      "company": null,
+      "exchange": null,
+      "marketSymbol": null,
+      "entityMention": null,
+      "sourceCode": null,
+      "entityWarning": null,
+      "sourcePostId": "2090584243407630469",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090584243407630469",
+      "sourceDate": "2026-08-20T23:38:19.000Z",
+      "sourceText": "$EOS.AX has been flying recently. \nOne of my highest conviction positions.\nSurprised this name isn’t talked about more on this platform.",
+      "status": "proposed",
+      "llm": null,
+      "batchId": "32841992078-1",
+      "createdAt": "2026-08-25T11:23:29.439Z",
+      "proposedEventId": "ck-capital-evt-eos.ax-2090584243407630469-hold"
     },
     {
       "id": "cand-x-2089747675415494843-ccxi-hold",

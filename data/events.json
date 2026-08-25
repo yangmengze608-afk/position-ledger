@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "events": [
     {
       "id": "evt-axti-20260813-hold",
@@ -351,6 +351,24 @@
       "sourceUrl": "https://aichainmap.com/serenity/",
       "sourceType": "secondary-mirror",
       "note": "考虑加仓"
+    },
+    {
+      "id": "ck-capital-evt-eos.ax-2090584243407630469-hold",
+      "creatorId": "ck-capital",
+      "person": "CK Capital",
+      "ticker": "EOS.AX",
+      "company": "EOS.AX",
+      "exchange": "",
+      "type": "HOLD",
+      "date": "2026-08-20T23:38:19.000Z",
+      "confidence": "A",
+      "summary": "原始公开披露：One of my highest conviction positions",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090584243407630469",
+      "sourceType": "x-original",
+      "sourcePostId": "2090584243407630469",
+      "sourceText": "$EOS.AX has been flying recently. \nOne of my highest conviction positions.\nSurprised this name isn’t talked about more on this platform.",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "classifier": "rules-v2.1-local"
     },
     {
       "id": "evt-ams-osram-20260821-deny",

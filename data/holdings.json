@@ -2,6 +2,20 @@
   "schemaVersion": 1,
   "holdings": [
     {
+      "creatorId": "ck-capital",
+      "ticker": "EOS.AX",
+      "company": "EOS.AX",
+      "exchange": "",
+      "state": "live",
+      "confidence": "A",
+      "firstRecordedAt": "2026-08-20T23:38:19.000Z",
+      "lastConfirmedAt": "2026-08-20T23:38:19.000Z",
+      "lastActiveAt": "2026-08-20T23:38:19.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：One of my highest conviction positions",
+      "eventCount": 1
+    },
+    {
       "ticker": "2492",
       "company": "Walsin Technology Corporation",
       "exchange": "TWSE",
