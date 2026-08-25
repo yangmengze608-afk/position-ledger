@@ -1,7 +1,42 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T11:15:01.871Z",
+  "generatedAt": "2026-08-25T12:43:13.949Z",
   "posts": [
+    {
+      "id": "2092226228942241975",
+      "person": "Serenity",
+      "platform": "x",
+      "handle": "aleabitoreddit",
+      "sourceAuthor": "aleabitoreddit",
+      "createdAt": "2026-08-25T12:22:59.000Z",
+      "text": "Price took a hit largely due to Boostrap Europe converting 7% of shares outstanding and selling that into the Swedish market from ~July 3rd to maybe ~August 18th completion. \nThat happened alongside the overall AI sector drop + incorrect reports of CPO delays + short sellers with timing. \nThere was the final 1.659M in warrants from 2 weeks ago, and looks like it got sold into market strength.  \nThat overhang is largely exhausted, so I think $SIVE will go back to normal after a catalyst (like earnings).",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2092226228942241975",
+      "cashtags": [
+        "SIVE"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T12:42:55.212Z",
+      "creatorId": "serenity"
+    },
+    {
+      "id": "2092225887408152640",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T12:21:37.000Z",
+      "text": "$QQQ and $SPY this morning.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092225887408152640",
+      "cashtags": [
+        "QQQ",
+        "SPY"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T12:43:13.143Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092186856792506435",
       "person": "Serenity",
