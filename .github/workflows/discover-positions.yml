@@ -11,6 +11,7 @@ on:
       - "scripts/lib/position_rules.js"
       - "scripts/llm_review.py"
       - "scripts/propose_events.js"
+      - "scripts/pr_summary.js"
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
@@ -33,6 +34,7 @@ jobs:
       LLM_MODEL: ${{ vars.LLM_MODEL }}
       LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
       POSITION_LEDGER_REPORT_PATH: /tmp/collector-report.json
+      POSITION_DISCOVERY_BATCH: ${{ github.run_id }}-${{ github.run_attempt }}
       REVIEW_ISSUE_TITLE: "review: pending position disclosures"
     steps:
       - uses: actions/checkout@v4
@@ -82,18 +84,34 @@ jobs:
           python scripts/rebuild_holdings.py
           python scripts/validate_data.py
           python scripts/validate_automation.py
-          node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js
+          node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js tests/queue-upgrade.test.js
 
-      - name: Stop when nothing changed
+      - name: Classify repository changes
         if: steps.guard.outputs.skip != 'true'
         id: diff
         shell: bash
         run: |
-          if git diff --quiet -- data/raw_posts.json data/review_queue.json data/events.json data/holdings.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- data/review_queue.json data/events.json data/holdings.json; then
+            echo "review_changed=false" >> "$GITHUB_OUTPUT"
           else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "review_changed=true" >> "$GITHUB_OUTPUT"
           fi
+          if git diff --quiet -- data/raw_posts.json; then
+            echo "raw_changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "raw_changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Persist raw-only ingest cache without human review
+        if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.review_changed != 'true' && steps.diff.outputs.raw_changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "position-ledger-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/raw_posts.json
+          git commit -m "data: archive newly discovered public posts"
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       - name: Record one-shot smoke diagnostics for automation-code pushes
         if: ${{ always() && github.event_name == 'push' }}
@@ -118,9 +136,14 @@ jobs:
           status = {
               "recordedAt": __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
               "workflowCommit": os.environ.get('GITHUB_SHA'),
+              "batchId": os.environ.get('POSITION_DISCOVERY_BATCH'),
               "collector": collector,
               "rawPostCount": len(raw.get('posts', [])) if isinstance(raw, dict) else None,
               "reviewQueueCount": len(queue.get('items', [])) if isinstance(queue, dict) else None,
+              "changes": {
+                  "raw": "${{ steps.diff.outputs.raw_changed }}",
+                  "review": "${{ steps.diff.outputs.review_changed }}"
+              },
               "stepsReached": {
                   "guard": "${{ steps.guard.outcome }}",
                   "fetch": "${{ steps.fetch.outcome }}",
@@ -136,12 +159,13 @@ jobs:
           git add data/automation_status.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: record discovery smoke status"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
 
       - name: Publish review request
         id: delivery
-        if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.changed == 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.review_changed == 'true'
         shell: bash
         run: |
           git config user.name "position-ledger-bot"

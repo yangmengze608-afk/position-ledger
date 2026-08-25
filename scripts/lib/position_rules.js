@@ -45,13 +45,55 @@ function localScopeForTicker(text, ticker) {
     selected.add(index);
     for (const neighbor of [index - 1, index + 1]) {
       if (neighbor < 0 || neighbor >= clauses.length) continue;
-      // Only borrow a neighboring clause when it has no cashtag of its own.
-      // This lets "$CCXI. I bought..." bind correctly without allowing
-      // "$MU ... [many clauses] ... 6976, I have positions" cross-contamination.
       if (cashtagsInClause(clauses[neighbor]).length === 0) selected.add(neighbor);
     }
   }
   return [...selected].sort((a, b) => a - b).map((index) => clauses[index]).join(". ");
+}
+
+const LIST_ACTIONS = [
+  { type: "ADD", verb: "added", score: 0.99, pattern: /\b(?:i|we)\s+(?:have\s+)?added\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
+  { type: "ADD", verb: "bought more", score: 0.99, pattern: /\b(?:i|we)\s+bought\s+more\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
+  { type: "OPEN", verb: "bought", score: 0.99, pattern: /\b(?:i|we)\s+bought\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
+  { type: "REDUCE", verb: "trimmed", score: 0.99, pattern: /\b(?:i|we)\s+(?:trimmed|reduced|cut)\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
+  { type: "EXIT", verb: "sold", score: 0.99, pattern: /\b(?:i|we)\s+(?:sold|exited|closed)\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
+];
+
+function explicitListActions(text, allowedTickers = []) {
+  const lines = String(text || "").split(/\r?\n/);
+  const allowed = new Set((allowedTickers || []).map((x) => String(x).toUpperCase()));
+  const results = new Map();
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const header = LIST_ACTIONS.find((rule) => rule.pattern.test(lines[i]));
+    if (!header) continue;
+
+    let sawItem = false;
+    for (let j = i + 1; j < Math.min(lines.length, i + 25); j += 1) {
+      const line = lines[j].trim();
+      if (!line) {
+        if (sawItem) break;
+        continue;
+      }
+      const match = line.match(/^[-*•]?\s*\$([A-Z][A-Z0-9.-]{0,9})\b/i);
+      if (!match) {
+        if (sawItem) break;
+        continue;
+      }
+      sawItem = true;
+      const ticker = match[1].toUpperCase();
+      if (allowed.size && !allowed.has(ticker)) continue;
+      results.set(ticker, {
+        ticker,
+        suggestedType: header.type,
+        confidence: "A",
+        score: header.score,
+        evidence: lines[i].trim(),
+        classifier: "rules-v2.2-list",
+      });
+    }
+  }
+  return results;
 }
 
 const RULES = [
@@ -148,8 +190,14 @@ function classifyPost(post) {
   const tickers = extractTickers(text, post?.cashtags || []);
   if (!text || tickers.length === 0) return [];
 
+  const listResults = explicitListActions(text, tickers);
   const results = [];
   for (const ticker of tickers) {
+    if (listResults.has(ticker)) {
+      results.push(listResults.get(ticker));
+      continue;
+    }
+
     const scope = localScopeForTicker(text, ticker);
     if (!scope) continue;
     const strong = firstMatch(scope, RULES);
@@ -172,4 +220,4 @@ function classifyPost(post) {
   return results;
 }
 
-module.exports = { extractTickers, classifyPost, localScopeForTicker };
+module.exports = { extractTickers, classifyPost, localScopeForTicker, explicitListActions };

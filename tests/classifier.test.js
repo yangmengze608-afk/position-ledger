@@ -59,3 +59,26 @@ test("local scope stays near the target ticker", () => {
   const text = "$MU legacy DRAM. unrelated sentence. more unrelated. 6976 disclosure: I have positions.";
   assert.equal(localScopeForTicker(text, "MU"), "$MU legacy DRAM. unrelated sentence");
 });
+
+test("explicit multi-stock ADD list inherits the action for every listed ticker", () => {
+  const text = "This week I added to the following amounts to the following stocks:\n$SPCX → $20,000\n$CBRS → $20,000\n$ORCL → $20,000\n$NVTS → $5,000\n$CCXI → $5,000";
+  const out = classifyPost({ text });
+  const by = Object.fromEntries(out.map((x) => [x.ticker, x]));
+  for (const ticker of ["SPCX", "CBRS", "ORCL", "NVTS", "CCXI"]) {
+    assert.equal(by[ticker].suggestedType, "ADD");
+    assert.equal(by[ticker].confidence, "A");
+    assert.equal(by[ticker].classifier, "rules-v2.2-list");
+  }
+});
+
+test("ordinary ticker list without an explicit portfolio action stays ignored", () => {
+  const out = classifyPost({ text: "Stocks I like this week:\n$AAOI\n$MU\n$ORCL" });
+  assert.deepEqual(out, []);
+});
+
+test("explicit bought-following list becomes OPEN rather than generic mentions", () => {
+  const out = classifyPost({ text: "I bought the following stocks:\n$AAA → starter\n$BBB → starter" });
+  const by = Object.fromEntries(out.map((x) => [x.ticker, x.suggestedType]));
+  assert.equal(by.AAA, "OPEN");
+  assert.equal(by.BBB, "OPEN");
+});
