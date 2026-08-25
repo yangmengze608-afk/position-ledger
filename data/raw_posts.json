@@ -1,7 +1,39 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T13:03:47.514Z",
+  "generatedAt": "2026-08-25T14:09:16.493Z",
   "posts": [
+    {
+      "id": "2092245952094416925",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T13:41:21.000Z",
+      "text": "Send me to $250.\n$NVDA\nAdded some $NVDA on the dip this morning. This thing has traded sideways for about a year while revenue nearly doubled. Sideways price with rising earnings just means the multiple keeps compressing, and that gap doesn’t close by earnings coming down. The fundamentals already caug…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092245952094416925",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T14:09:12.145Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092244897046651348",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T13:37:10.000Z",
+      "text": "@PhotonBull Lets goooo",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092244897046651348",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T14:09:12.145Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092226228942241975",
       "person": "Serenity",
