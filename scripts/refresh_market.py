@@ -12,8 +12,13 @@ ROOT = Path(__file__).resolve().parents[1]
 SYMBOLS = json.loads((ROOT / "data" / "symbols.json").read_text(encoding="utf-8"))
 HOLDINGS = json.loads((ROOT / "data" / "holdings.json").read_text(encoding="utf-8")).get("holdings", [])
 OUT = ROOT / "data" / "market.json"
+DEFAULT_CREATOR_ID = "serenity"
 
 HEADERS = {"User-Agent": "Mozilla/5.0 PositionLedger/1.0"}
+
+
+def creator_id(value):
+    return str(value.get("creatorId") or DEFAULT_CREATOR_ID).strip().lower() or DEFAULT_CREATOR_ID
 
 
 def parse_iso(value):
@@ -123,8 +128,25 @@ def performance_pct(current_price, anchor):
     return round((float(current_price) / float(anchor["price"]) - 1.0) * 100.0, 4)
 
 
-def holding_for_ticker(ticker):
-    return next((h for h in HOLDINGS if h.get("ticker") == ticker), None)
+def holdings_for_ticker(ticker):
+    return [h for h in HOLDINGS if h.get("ticker") == ticker]
+
+
+def build_creator_anchors(ticker, sessions, market_tz, current_price):
+    anchors = {}
+    for holding in holdings_for_ticker(ticker):
+        cid = creator_id(holding)
+        first_anchor = anchor_for_event(sessions, holding.get("firstRecordedAt"), market_tz)
+        last_anchor = anchor_for_event(sessions, holding.get("lastActiveAt"), market_tz)
+        if first_anchor:
+            first_anchor["performancePct"] = performance_pct(current_price, first_anchor)
+        if last_anchor:
+            last_anchor["performancePct"] = performance_pct(current_price, last_anchor)
+        anchors[cid] = {
+            "firstDisclosureAnchor": first_anchor,
+            "lastActionAnchor": last_anchor,
+        }
+    return anchors
 
 
 def fetch_quote(ticker, symbol):
@@ -143,13 +165,8 @@ def fetch_quote(ticker, symbol):
         if fallback is not None:
             previous = float(fallback)
 
-    holding = holding_for_ticker(ticker) or {}
-    first_anchor = anchor_for_event(sessions, holding.get("firstRecordedAt"), market_tz)
-    last_anchor = anchor_for_event(sessions, holding.get("lastActiveAt"), market_tz)
-    if first_anchor:
-        first_anchor["performancePct"] = performance_pct(price, first_anchor)
-    if last_anchor:
-        last_anchor["performancePct"] = performance_pct(price, last_anchor)
+    creator_anchors = build_creator_anchors(ticker, sessions, market_tz, price)
+    serenity = creator_anchors.get(DEFAULT_CREATOR_ID, {})
 
     return {
         "symbol": symbol,
@@ -159,8 +176,11 @@ def fetch_quote(ticker, symbol):
         "exchange": meta.get("exchangeName"),
         "marketState": meta.get("marketState"),
         "exchangeTimezone": meta.get("exchangeTimezoneName"),
-        "firstDisclosureAnchor": first_anchor,
-        "lastActionAnchor": last_anchor,
+        # Legacy Serenity fields stay for backwards compatibility.
+        "firstDisclosureAnchor": serenity.get("firstDisclosureAnchor"),
+        "lastActionAnchor": serenity.get("lastActionAnchor"),
+        # Creator-specific anchors are canonical for multi-creator views.
+        "creatorAnchors": creator_anchors,
         "updatedAt": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -183,8 +203,9 @@ def main():
             if quote.get("price") is not None:
                 quotes[ticker] = quote
                 first_perf = quote.get("firstDisclosureAnchor", {}).get("performancePct") if quote.get("firstDisclosureAnchor") else None
-                suffix = f" | since first {first_perf:+.2f}%" if first_perf is not None else ""
-                print(f"{ticker}: {quote['price']} {quote['currency']}{suffix}")
+                suffix = f" | Serenity since first {first_perf:+.2f}%" if first_perf is not None else ""
+                creators = len(quote.get("creatorAnchors", {}))
+                print(f"{ticker}: {quote['price']} {quote['currency']} | creators={creators}{suffix}")
         except Exception as exc:
             failures.append(f"{ticker}: {exc}")
             print(f"WARN {ticker}: {exc}")
@@ -195,7 +216,7 @@ def main():
         "provider": "Yahoo Finance chart endpoint via GitHub Actions",
         "methodology": {
             "dailyMove": "regular market price versus previous valid adjusted daily session close",
-            "disclosureAnchors": "adjusted close from first market session on or after disclosure date in exchange timezone; not investor cost basis",
+            "disclosureAnchors": "creator-scoped adjusted close from first market session on or after disclosure date in exchange timezone; not investor cost basis",
         },
         "quotes": quotes,
         "failures": failures,
