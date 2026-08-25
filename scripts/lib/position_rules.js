@@ -94,12 +94,15 @@ function restoreTickerDots(text) {
   return String(text || "").split(TICKER_DOT_SENTINEL).join(".");
 }
 
-function localScopeForTicker(text, ticker) {
-  const clauses = protectTickerDots(text)
+function splitClauses(text) {
+  return protectTickerDots(text)
     .split(/(?:[.!?;\n]+|\s+(?:but|while|whereas|however)\s+)/i)
     .map((x) => restoreTickerDots(x).trim())
     .filter(Boolean);
+}
 
+function localScopeForTicker(text, ticker) {
+  const clauses = splitClauses(text);
   const indexes = clauses
     .map((clause, index) => clauseHasTicker(clause, ticker) ? index : -1)
     .filter((index) => index >= 0);
@@ -116,6 +119,24 @@ function localScopeForTicker(text, ticker) {
   return [...selected].sort((a, b) => a - b).map((index) => clauses[index]).join(". ");
 }
 
+function futureIntentForTicker(text, ticker) {
+  const tickerPattern = new RegExp(`\\$${escapeRegExp(String(ticker).toUpperCase())}\\b`, "i");
+  const intentPattern = /\b(?:may|might|could|would|plan(?:ning)?\s+to|consider(?:ing)?|thinking\s+about)\b[\s\S]{0,160}?\b(?:buy|open|initiate|start|move|rotate|switch|allocate|add)\b/i;
+  const actionPattern = /\b(?:buy|open|initiate|start|move|rotate|switch|allocate|add)\b/i;
+
+  for (const clause of splitClauses(text)) {
+    const tickerMatch = clause.match(tickerPattern);
+    if (!tickerMatch) continue;
+    const intentMatch = clause.match(intentPattern);
+    if (!intentMatch) continue;
+    const actionMatch = intentMatch[0].match(actionPattern);
+    if (!actionMatch) continue;
+    const actionIndex = intentMatch.index + actionMatch.index;
+    if (tickerMatch.index > actionIndex) return true;
+  }
+  return false;
+}
+
 const LIST_ACTIONS = [
   { type: "ADD", verb: "added", score: 0.99, pattern: /\b(?:i|we)\s+(?:have\s+)?added\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
   { type: "ADD", verb: "bought more", score: 0.99, pattern: /\b(?:i|we)\s+bought\s+more\b.*\bfollowing\b.*\b(?:stocks?|positions?|names?)\b/i },
@@ -129,9 +150,29 @@ function explicitListActions(text, allowedTickers = []) {
   const allowed = new Set((allowedTickers || []).map((x) => String(x).toUpperCase()));
   const results = new Map();
 
+  function addTicker(ticker, header, evidence) {
+    const normalized = String(ticker || "").toUpperCase();
+    if (!normalized || (allowed.size && !allowed.has(normalized))) return;
+    results.set(normalized, {
+      ticker: normalized,
+      suggestedType: header.type,
+      confidence: "A",
+      score: header.score,
+      evidence,
+      classifier: "rules-v2.4-list",
+    });
+  }
+
   for (let i = 0; i < lines.length; i += 1) {
     const header = LIST_ACTIONS.find((rule) => rule.pattern.test(lines[i]));
     if (!header) continue;
+    const headerMatch = lines[i].match(header.pattern);
+    const evidence = headerMatch ? headerMatch[0].trim() : lines[i].trim();
+
+    if (headerMatch) {
+      const tail = lines[i].slice(headerMatch.index + headerMatch[0].length);
+      for (const match of tail.matchAll(TICKER_RE)) addTicker(match[1], header, evidence);
+    }
 
     let sawItem = false;
     for (let j = i + 1; j < Math.min(lines.length, i + 25); j += 1) {
@@ -146,16 +187,7 @@ function explicitListActions(text, allowedTickers = []) {
         continue;
       }
       sawItem = true;
-      const ticker = match[1].toUpperCase();
-      if (allowed.size && !allowed.has(ticker)) continue;
-      results.set(ticker, {
-        ticker,
-        suggestedType: header.type,
-        confidence: "A",
-        score: header.score,
-        evidence: lines[i].trim(),
-        classifier: "rules-v2.2-list",
-      });
+      addTicker(match[1], header, evidence);
     }
   }
   return results;
@@ -169,9 +201,22 @@ const RULES = [
     patterns: [
       /\b(?:i|we)\s+(?:do(?:n['’]?t| not)|did(?:n['’]?t| not))\s+(?:currently\s+)?(?:have|hold|own)\b/i,
       /\b(?:i|we)\s+(?:have|hold|own)\s+no\s+(?:position|stake|shares?)\b/i,
+      /\b(?:i|we)\s+(?:have|hold|own)\s+none\b/i,
       /\b(?:i|we)\s+have\s+not\s+(?:started|opened|initiated|taken)\s+(?:a|any)?\s*(?:position|stake)\b/i,
       /\bno\s+(?:position|stake|shares?)\s+(?:in|on)\b/i,
       /\b(?:not|never)\s+(?:a\s+)?(?:holder|owner)\b/i,
+    ],
+  },
+  {
+    type: "REDUCE",
+    confidence: "A",
+    score: 0.97,
+    patterns: [
+      /\b(?:i|we)\s+(?:trimmed|reduced|cut)\b/i,
+      /\b(?:i|we)\s+sold\s+(?:some|part|a\s+portion)\b/i,
+      /\b(?:i|we)\s+sold\s+(?:about\s+|roughly\s+|approximately\s+)?\d+(?:\.\d+)?%\s+(?:of\s+)?/i,
+      /\b(?:i|we)\s+sold\s+(?:half|a\s+half|one\s+half|a\s+quarter|one\s+quarter)\b/i,
+      /\btook\s+(?:some\s+)?profits?\b/i,
     ],
   },
   {
@@ -182,16 +227,6 @@ const RULES = [
       /\b(?:i|we)\s+(?:fully\s+)?(?:sold|exited|closed)\s+(?:out\s+of\s+)?(?:my|our|the)?\s*(?:position|stake|shares?)?\b/i,
       /\b(?:i|we)\s+(?:no\s+longer|don['’]?t\s+anymore)\s+(?:have|hold|own)\b/i,
       /\b(?:i|we)\s+am\s+out\s+of\b/i,
-    ],
-  },
-  {
-    type: "REDUCE",
-    confidence: "A",
-    score: 0.97,
-    patterns: [
-      /\b(?:i|we)\s+(?:trimmed|reduced|cut)\b/i,
-      /\b(?:i|we)\s+sold\s+(?:some|part|a\s+portion)\b/i,
-      /\btook\s+(?:some\s+)?profits?\b/i,
     ],
   },
   {
@@ -273,6 +308,8 @@ function classifyPost(post) {
     const selected = strong || soft;
     if (!selected) continue;
 
+    if (selected.type === "HOLD" && futureIntentForTicker(scope, ticker)) continue;
+
     const resolution = contextualByTicker.get(ticker) || null;
     const multiTickerPenalty = tickers.length > 1 && !POSITION_WORDS.test(scope);
     let confidence = multiTickerPenalty && selected.confidence === "A" ? "B" : selected.confidence;
@@ -311,4 +348,5 @@ module.exports = {
   localScopeForTicker,
   explicitListActions,
   contextualSecurityMentions,
+  futureIntentForTicker,
 };

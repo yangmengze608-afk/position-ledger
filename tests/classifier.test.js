@@ -68,7 +68,7 @@ test("explicit multi-stock ADD list inherits the action for every listed ticker"
   for (const ticker of ["SPCX", "CBRS", "ORCL", "NVTS", "CCXI"]) {
     assert.equal(by[ticker].suggestedType, "ADD");
     assert.equal(by[ticker].confidence, "A");
-    assert.equal(by[ticker].classifier, "rules-v2.2-list");
+    assert.equal(by[ticker].classifier, "rules-v2.4-list");
   }
 });
 
@@ -166,4 +166,49 @@ test("explicit not-started position is a DENY when ticker-local", () => {
   assert.equal(out[0].ticker, "ABC");
   assert.equal(out[0].suggestedType, "DENY");
   assert.equal(out[0].confidence, "A");
+});
+
+test("future rotation targets do not inherit a current holding from an adjacent clause", () => {
+  const text = "@CKCapitalxx one of my holdings! I'm incredibly curious as well and I may sell all my $AAOI holdings and move it to $CRDO & $ALAB ! Better management";
+  const out = classifyPost({ text });
+  const by = Object.fromEntries(out.map((x) => [x.ticker, x]));
+  assert.equal(by.AAOI.suggestedType, "HOLD");
+  assert.equal(by.AAOI.confidence, "A");
+  assert.equal(by.CRDO, undefined);
+  assert.equal(by.ALAB, undefined);
+});
+
+test("explicit own-none disclosure is DENY rather than HOLD", () => {
+  const out = classifyPost({ text: "Incredible! Sadly I own none! $MRNA Moderna calls are up today." });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "MRNA");
+  assert.equal(out[0].suggestedType, "DENY");
+  assert.equal(out[0].confidence, "A");
+});
+
+test("selling an explicit percentage is REDUCE rather than EXIT", () => {
+  const out = classifyPost({ text: "Also why I sold 50% of my $AEHR this morning at 128! Risk reward favors the sale and repurchase!" });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "AEHR");
+  assert.equal(out[0].suggestedType, "REDUCE");
+  assert.equal(out[0].confidence, "A");
+});
+
+test("selling all remains EXIT after partial-sale hardening", () => {
+  const out = classifyPost({ text: "I sold all my $AEHR today and I'm out." });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "AEHR");
+  assert.equal(out[0].suggestedType, "EXIT");
+  assert.equal(out[0].confidence, "A");
+});
+
+test("inline explicit multi-stock ADD list is A-grade for every listed ticker", () => {
+  const text = "After Unitrees phenomenal debut today, why are you still not buying $CCXI yet? This week I added to the following amounts to the following stocks: $SPCX → $20,000 $CBRS → $20,000 $ORCL → $20,000 $NVTS → $5,000 $CCXI → $5,000";
+  const out = classifyPost({ text });
+  const by = Object.fromEntries(out.map((x) => [x.ticker, x]));
+  for (const ticker of ["SPCX", "CBRS", "ORCL", "NVTS", "CCXI"]) {
+    assert.equal(by[ticker].suggestedType, "ADD", ticker);
+    assert.equal(by[ticker].confidence, "A", ticker);
+    assert.equal(by[ticker].classifier, "rules-v2.4-list", ticker);
+  }
 });
