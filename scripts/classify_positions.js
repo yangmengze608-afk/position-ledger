@@ -10,6 +10,7 @@ const ROOT = path.resolve(__dirname, "..");
 const RAW_PATH = path.join(ROOT, "data", "raw_posts.json");
 const EVENTS_PATH = path.join(ROOT, "data", "events.json");
 const QUEUE_PATH = path.join(ROOT, "data", "review_queue.json");
+const CORRECTIONS_PATH = path.join(ROOT, "data", "corrections.json");
 const BATCH_ID = process.env.POSITION_DISCOVERY_BATCH || "";
 const CONFIDENCE_RANK = { C: 1, B: 2, A: 3 };
 
@@ -25,6 +26,19 @@ function candidateId(postId, ticker, type, creatorId = DEFAULT_CREATOR_ID) {
 
 function eventKey(value, sourcePostId, ticker, type) {
   return `${creatorIdOf(value)}|${sourcePostId || ""}|${ticker}|${type}`;
+}
+
+function correctionSourceKey(creatorId, sourcePostId) {
+  return `${String(creatorId || DEFAULT_CREATOR_ID).trim().toLowerCase() || DEFAULT_CREATOR_ID}|${String(sourcePostId || "")}`;
+}
+
+function invalidSourceKeysFrom(payload) {
+  const keys = new Set();
+  for (const correction of payload?.corrections || []) {
+    if (!correction?.invalidForCreator || !correction?.sourcePostId) continue;
+    keys.add(correctionSourceKey(correction.creatorId || DEFAULT_CREATOR_ID, correction.sourcePostId));
+  }
+  return keys;
 }
 
 function isStronger(existing, candidate) {
@@ -69,13 +83,20 @@ async function main() {
   const raw = await readJson(RAW_PATH, { posts: [] });
   const eventPayload = await readJson(EVENTS_PATH, { events: [] });
   const queuePayload = await readJson(QUEUE_PATH, { items: [] });
+  const corrections = await readJson(CORRECTIONS_PATH, { corrections: [] });
+  const invalidSourceKeys = invalidSourceKeysFrom(corrections);
   const eventKeys = new Set((eventPayload.events || []).map((e) => eventKey(e, e.sourcePostId, e.ticker, e.type)));
   const queued = new Map((queuePayload.items || []).map((item) => [item.id, item]));
   let added = 0;
   let upgraded = 0;
+  let skippedCorrected = 0;
 
   for (const post of raw.posts || []) {
     const creatorId = creatorIdOf(post);
+    if (invalidSourceKeys.has(correctionSourceKey(creatorId, post.id))) {
+      skippedCorrected += 1;
+      continue;
+    }
     for (const result of classifyPost(post)) {
       const key = eventKey({ creatorId }, post.id, result.ticker, result.suggestedType);
       if (eventKeys.has(key)) continue;
@@ -114,18 +135,18 @@ async function main() {
 
   const items = [...queued.values()].sort((a, b) => b.sourceDate.localeCompare(a.sourceDate));
   if (added === 0 && upgraded === 0) {
-    console.log(`[classify] queue unchanged=${items.length}; added=0 upgraded=0`);
+    console.log(`[classify] queue unchanged=${items.length}; added=0 upgraded=0 corrected-skips=${skippedCorrected}`);
     return;
   }
   queuePayload.schemaVersion = Math.max(Number(queuePayload.schemaVersion || 1), 2);
   queuePayload.generatedAt = new Date().toISOString();
   queuePayload.items = items;
   await fs.writeFile(QUEUE_PATH, JSON.stringify(queuePayload, null, 2) + "\n");
-  console.log(`[classify] queue=${items.length}; added=${added} upgraded=${upgraded}`);
+  console.log(`[classify] queue=${items.length}; added=${added} upgraded=${upgraded} corrected-skips=${skippedCorrected}`);
 }
 
 if (require.main === module) {
   main().catch((error) => { console.error(error); process.exit(1); });
 }
 
-module.exports = { candidateId, eventKey, isStronger, mergeCandidate };
+module.exports = { candidateId, eventKey, correctionSourceKey, invalidSourceKeysFrom, isStronger, mergeCandidate };
