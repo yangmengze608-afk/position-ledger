@@ -39,6 +39,7 @@ jobs:
       - run: python scripts/validate_data.py
       - run: python scripts/validate_automation.py
       - run: node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js tests/queue-upgrade.test.js
+      - run: python -m unittest tests/test_resolutions.py
       - name: Validate frontend syntax and config
         run: |
           node --check app.js
