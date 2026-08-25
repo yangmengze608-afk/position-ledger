@@ -2,6 +2,19 @@
   "schemaVersion": 1,
   "holdings": [
     {
+      "ticker": "6976",
+      "company": "Taiyo Yuden Co., Ltd.",
+      "exchange": "TSE",
+      "state": "live",
+      "confidence": "A",
+      "firstRecordedAt": "2026-08-17T02:52:12.000Z",
+      "lastConfirmedAt": "2026-08-17T02:52:12.000Z",
+      "lastActiveAt": "2026-08-17T02:52:12.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I have positions",
+      "eventCount": 1
+    },
+    {
       "ticker": "AAOI",
       "company": "Applied Optoelectronics",
       "exchange": "NASDAQ",

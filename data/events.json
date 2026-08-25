@@ -280,6 +280,23 @@
       "note": "个人多头"
     },
     {
+      "id": "evt-6976-2089183484556480536-hold",
+      "person": "Serenity",
+      "ticker": "6976",
+      "company": "Taiyo Yuden Co., Ltd.",
+      "exchange": "TSE",
+      "type": "HOLD",
+      "date": "2026-08-17T02:52:12.000Z",
+      "confidence": "A",
+      "summary": "原始公开披露：I have positions",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2089183484556480536",
+      "sourceType": "x-original",
+      "sourcePostId": "2089183484556480536",
+      "sourceText": "I think we're seeing AI server MLCC demand cause an interesting effect... with tightening capacity for consumer/general-purpose MLCCs.\nIf you get Vietnam flashbacks like I do to $MU / Samsung / SK Hynix -> Legacy DRAM: \nMy thesis is we'll see the same thing here maybe late H2, early 2027 with consumer/broad MLCCs. \nFrom July 6th: \n\"the crowding-out effect from AI-oriented high-end MLCC production has begun spilling over into both the automotive and consumer markets.\" \nJuly 28th: \n\"AI Demand Pushes Japanese and Korean MLCC Suppliers to Record Monthly Shipments; Consumer-Grade Order Spillovers Continue to Surge\"\nAug 12: \nAs [MLCC] capacity shifts from consumer grades to AI-oriented products... (Trendforce)\nAug 12: \nChina's electronics market channel checks found 22µF and 47µF MLCCs (used more broadly) out of stock. Then found and said certain manufacturers had stopped taking orders. \n(for reference: Walsin said high-volume smartphone/PC products such as... 22µF, so it's broader MLCCs)\nObviously Samsung Electro-Mechanics/Murata are main beneficiaries of AI server MLCC ramp. \nBut companies with large market share of overall MLCCs like Taiyo Yuden (6976, disclosure: I have positions) with less AI server share, would be a major beneficiary of this. \nFun part is, we're only in H2 2026, so the next major bottleneck should be fun!",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "classifier": "rules-v2.3-contextual-numeric"
+    },
+    {
       "id": "evt-ccxi-2089747675415494843-hold",
       "person": "Serenity",
       "ticker": "CCXI",
