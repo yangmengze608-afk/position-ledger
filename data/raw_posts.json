@@ -1,7 +1,24 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T14:09:16.493Z",
+  "generatedAt": "2026-08-25T15:09:31.689Z",
   "posts": [
+    {
+      "id": "2092263077341196710",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T14:49:24.000Z",
+      "text": "$SMTC reports today after the close.\nHow are we feeling?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092263077341196710",
+      "cashtags": [
+        "SMTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T15:09:14.688Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092245952094416925",
       "person": "CK Capital",
