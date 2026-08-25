@@ -44,5 +44,9 @@
     "classify": "success",
     "llm": "success",
     "propose": "success"
+  },
+  "delivery": {
+    "kind": "none",
+    "url": null
   }
 }
