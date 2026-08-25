@@ -57,8 +57,25 @@ function extractLetterCashtags(text = "") {
   return [...seen];
 }
 
+function sourceStatusHandle(value = "") {
+  const text = decodeEntities(String(value || "")).trim();
+  if (!text) return "";
+  try {
+    const url = new URL(text, "https://x.com");
+    const match = url.pathname.match(/^\/@?([^/?#]+)\/status\/\d+/i);
+    return match ? decodeURIComponent(match[1]).replace(/^@/, "") : "";
+  } catch {
+    return "";
+  }
+}
+
+function sameHandle(left, right) {
+  return Boolean(left && right && String(left).toLowerCase() === String(right).toLowerCase());
+}
+
 function canonicalXUrl(value, handle, id) {
-  if (id) return `https://x.com/${handle}/status/${id}`;
+  const sourceHandle = sourceStatusHandle(value) || handle;
+  if (id && sourceHandle) return `https://x.com/${sourceHandle}/status/${id}`;
   if (!value) return "";
   return value
     .replace(/^https?:\/\/(?:www\.)?twitter\.com\//i, "https://x.com/")
@@ -119,17 +136,19 @@ function parseSyndication(html, account) {
     const tweet = entry?.content?.tweet;
     if (!tweet?.id_str || tweet.retweeted_status) continue;
     const user = tweet.user || {};
-    if ((user.screen_name || "").toLowerCase() !== account.handle.toLowerCase()) continue;
+    if (!sameHandle(user.screen_name, account.handle)) continue;
     const created = new Date(tweet.created_at || "");
     if (!Number.isFinite(created.getTime()) || created.getTime() < cutoff) continue;
+    const sourceAuthor = user.screen_name || account.handle;
     posts.push({
       id: tweet.id_str,
       person: account.person,
       platform: "x",
-      handle: user.screen_name || account.handle,
+      handle: sourceAuthor,
+      sourceAuthor,
       createdAt: created.toISOString(),
       text: cleanText(tweet),
-      sourceUrl: canonicalXUrl(tweet.permalink ? `https://twitter.com${tweet.permalink}` : "", user.screen_name || account.handle, tweet.id_str),
+      sourceUrl: canonicalXUrl(tweet.permalink ? `https://twitter.com${tweet.permalink}` : "", sourceAuthor, tweet.id_str),
       cashtags: (tweet.entities?.symbols || []).map((symbol) => symbol.text).filter(Boolean),
       isReply: Boolean(tweet.in_reply_to_status_id_str || tweet.in_reply_to_screen_name),
       sourceProvider: "x-syndication",
@@ -159,9 +178,12 @@ function parseFxRss(xml, account) {
 
   for (const item of items) {
     const guid = getXmlTag(item, "guid");
-    const link = getXmlTag(item, "link") || guid;
-    const idMatch = (guid || link).match(/\/status\/(\d+)/);
+    const link = getXmlTag(item, "link");
+    const statusUrl = [link, guid].find((value) => /\/status\/\d+/i.test(value || "")) || "";
+    const idMatch = statusUrl.match(/\/status\/(\d+)/i);
     if (!idMatch) continue;
+    const sourceAuthor = sourceStatusHandle(statusUrl);
+    if (!sameHandle(sourceAuthor, account.handle)) continue;
     const created = new Date(getXmlTag(item, "pubDate"));
     if (!Number.isFinite(created.getTime()) || created.getTime() < cutoff) continue;
     const descriptionRaw = getXmlTag(item, "description");
@@ -173,10 +195,11 @@ function parseFxRss(xml, account) {
       id: idMatch[1],
       person: account.person,
       platform: "x",
-      handle: account.handle,
+      handle: sourceAuthor,
+      sourceAuthor,
       createdAt: created.toISOString(),
       text,
-      sourceUrl: canonicalXUrl(link || guid, account.handle, idMatch[1]),
+      sourceUrl: canonicalXUrl(statusUrl, sourceAuthor, idMatch[1]),
       // Fx RSS is not guaranteed to preserve X cashtag entities. Keep numeric
       // cashtags out of the fallback path so values like "$2000" cannot become tickers.
       cashtags: extractLetterCashtags(text),
@@ -214,8 +237,10 @@ function parseNitterHtml(html, account, instance = "nitter") {
   for (const block of blocks) {
     const linkTag = block.match(/<a[^>]+class=["'][^"']*tweet-link[^"']*["'][^>]*>/i)?.[0] || "";
     const href = extractAttr(linkTag, "href");
-    const idMatch = href.match(/\/status\/(\d+)/);
+    const idMatch = href.match(/\/status\/(\d+)/i);
     if (!idMatch) continue;
+    const sourceAuthor = sourceStatusHandle(href);
+    if (!sameHandle(sourceAuthor, account.handle)) continue;
 
     const content = block.match(/<div[^>]+class=["'][^"']*tweet-content[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1] || "";
     const text = stripHtml(content);
@@ -232,10 +257,11 @@ function parseNitterHtml(html, account, instance = "nitter") {
       id: idMatch[1],
       person: account.person,
       platform: "x",
-      handle: account.handle,
+      handle: sourceAuthor,
+      sourceAuthor,
       createdAt: created.toISOString(),
       text,
-      sourceUrl: canonicalXUrl(href, account.handle, idMatch[1]),
+      sourceUrl: canonicalXUrl(href, sourceAuthor, idMatch[1]),
       cashtags: extractLetterCashtags(text),
       isReply: /replying-to/i.test(block),
       sourceProvider: `nitter-html:${instance}`,
@@ -352,6 +378,8 @@ module.exports = {
   decodeEntities,
   stripHtml,
   extractLetterCashtags,
+  sourceStatusHandle,
+  sameHandle,
   parseSyndication,
   parseFxRss,
   parseNitterHtml,
