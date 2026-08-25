@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25T09:15:00Z",
+  "creators": [
+    {
+      "id": "serenity",
+      "displayName": "Serenity",
+      "aliases": ["白毛"],
+      "status": "active",
+      "primaryPlatform": "x",
+      "handle": "aleabitoreddit",
+      "profileUrl": "https://x.com/aleabitoreddit",
+      "coverageMode": "public-plus-reviewed-secondary",
+      "subscriberCoverage": "not-guaranteed",
+      "dataNamespace": "serenity",
+      "positionPolicy": "event-sourced-evidence-first"
+    }
+  ]
+}
