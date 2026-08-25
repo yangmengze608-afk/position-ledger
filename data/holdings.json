@@ -2,6 +2,19 @@
   "schemaVersion": 1,
   "holdings": [
     {
+      "ticker": "2492",
+      "company": "Walsin Technology Corporation",
+      "exchange": "TWSE",
+      "state": "live",
+      "confidence": "B",
+      "firstRecordedAt": "2026-08-17T03:11:28.000Z",
+      "lastConfirmedAt": "2026-08-17T03:11:28.000Z",
+      "lastActiveAt": "2026-08-17T03:11:28.000Z",
+      "note": "人工裁决 resolve-walsin-2089188332987097213: 原帖明确表示近期加仓 Walsin，但括号代码写为 2494。Walsin Technology 官方投资者关系资料确认其 TSE 代码为 2492，且公司官方资料称其 MLCC 全球市占约第四，与原帖 top-4 MLCC 语境一致，因此人工解析为 2492；因源代码冲突保留 B 级置信度。",
+      "thesis": "人工实体解析：原帖明确表示近期加仓 Walsin，但括号代码写为 2494。Walsin Technology 官方投资者关系资料确认其 TSE 代码为 2492，且公司官方资料称其 MLCC 全球市占约第四，与原帖 top-4 MLCC 语境一致，因此人工解析为 2492；因源代码冲突保留 B 级置信度。",
+      "eventCount": 1
+    },
+    {
       "ticker": "6976",
       "company": "Taiyo Yuden Co., Ltd.",
       "exchange": "TSE",

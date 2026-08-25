@@ -76,10 +76,15 @@
       "sourceUrl": "https://x.com/aleabitoreddit/status/2089188332987097213",
       "sourceDate": "2026-08-17T03:11:28.000Z",
       "sourceText": "Walsin (2494) is top 4 in the world in terms of overall MLCC marketshare (I actually added some recently to track how this guess plays out), with apparently less AI server related compared to Yaiyo Yuden. \n~$4.5B MC relative to Yageo, so relatively higher exposure if MLCC supply imbalance broadens. \nThere's primary Walsin document they state \"10% global MLCC share\" / \"4th or 5th globally\"",
-      "status": "pending",
+      "status": "accepted",
       "llm": null,
       "batchId": "32804638584-1",
-      "createdAt": "2026-08-25T03:18:18.317Z"
+      "createdAt": "2026-08-25T03:18:18.317Z",
+      "acceptedEventId": "evt-2492-2089188332987097213-add",
+      "resolutionId": "resolve-walsin-2089188332987097213",
+      "resolvedAt": "2026-08-25T03:22:00Z",
+      "resolutionReason": "原帖明确表示近期加仓 Walsin，但括号代码写为 2494。Walsin Technology 官方投资者关系资料确认其 TSE 代码为 2492，且公司官方资料称其 MLCC 全球市占约第四，与原帖 top-4 MLCC 语境一致，因此人工解析为 2492；因源代码冲突保留 B 级置信度。",
+      "resolvedTicker": "2492"
     },
     {
       "id": "cand-x-2089183484556480536-6976-hold",
