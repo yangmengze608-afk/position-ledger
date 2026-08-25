@@ -1,9 +1,9 @@
 {
-  "recordedAt": "2026-08-25T02:07:09.273680+00:00",
-  "workflowCommit": "3079fc67c919088a19d68daa84d3b16ec70c52dd",
-  "batchId": "32800140821-1",
+  "recordedAt": "2026-08-25T03:18:18.923453+00:00",
+  "workflowCommit": "eadb8d6ffdf40260a0a707e4a576c11c2c370720",
+  "batchId": "32804638584-1",
   "collector": {
-    "startedAt": "2026-08-25T02:06:53.041Z",
+    "startedAt": "2026-08-25T03:18:02.832Z",
     "provider": "multi-source",
     "accounts": [
       {
@@ -11,31 +11,31 @@
         "ok": true,
         "selectedProvider": "fxembed-rss",
         "recent": 100,
-        "added": 14,
+        "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12440
+            "durationMs": 12263
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 100,
-            "durationMs": 2362
+            "durationMs": 2342
           }
         ]
       }
     ],
-    "completedAt": "2026-08-25T02:07:08.646Z",
-    "added": 14,
+    "completedAt": "2026-08-25T03:18:18.242Z",
+    "added": 0,
     "totalStored": 114
   },
   "rawPostCount": 114,
-  "reviewQueueCount": 10,
+  "reviewQueueCount": 12,
   "changes": {
-    "raw": "true",
+    "raw": "false",
     "review": "true"
   },
   "stepsReached": {
@@ -47,6 +47,6 @@
   },
   "delivery": {
     "kind": "issue",
-    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/10"
+    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/17"
   }
 }
