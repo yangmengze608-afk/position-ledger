@@ -234,7 +234,7 @@ async function sortLedgerRows() {
   if (!body) return;
   const { holdings, market } = await loadTuiData();
   const map = new Map(holdings.map(h => [h.ticker, h]));
-  const rows = [...body.querySelectorAll("tr[data-ticker]")];
+  const currentRows = [...body.querySelectorAll("tr[data-ticker]")];
   const valueFor = ticker => {
     const h = map.get(ticker) || {};
     const q = market.quotes?.[ticker] || {};
@@ -244,12 +244,18 @@ async function sortLedgerRows() {
     if (tuiSort === "first") return new Date(h.firstRecordedAt || 0).getTime();
     return new Date(h.lastConfirmedAt || 0).getTime();
   };
-  rows.sort((a, b) => {
+  const desiredRows = [...currentRows].sort((a, b) => {
     const av = valueFor(a.dataset.ticker);
     const bv = valueFor(b.dataset.ticker);
     if (typeof av === "string") return av.localeCompare(bv);
     return bv - av;
-  }).forEach(row => body.appendChild(row));
+  });
+  const currentSignature = currentRows.map(row => row.dataset.ticker).join("|");
+  const desiredSignature = desiredRows.map(row => row.dataset.ticker).join("|");
+  if (currentSignature === desiredSignature) return;
+  const fragment = document.createDocumentFragment();
+  desiredRows.forEach(row => fragment.appendChild(row));
+  body.appendChild(fragment);
 }
 
 function bindSortControl() {
