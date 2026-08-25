@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T12:43:13.949Z",
+  "generatedAt": "2026-08-25T13:03:47.514Z",
   "posts": [
     {
       "id": "2092226228942241975",
@@ -59,6 +59,25 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2092100420281962973",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-25T04:03:04.000Z",
+      "text": "@ren_stocks I’m far more bullish! \n$NBIS — now $224 → base $774 bear $95 / bull $1,126)\nhttps://x.com/_stockresearch/status/2091099230534525190?s=46\nFor my analysis below, I ran a quick analysis to come up with updated numbers for base, bear and bull case scenarios by December 2027. $NBIS — now $224 → base $774 bear $95 / bull $1,126) $RKLB — now $73 → base $193 (bear $42 / bull $287) $ASML — now $1,752 → base $2,969 (bear $1…",
+      "sourceUrl": "https://x.com/_stockResearch/status/2092100420281962973",
+      "cashtags": [
+        "NBIS",
+        "RKLB",
+        "ASML"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2092092600920465683",
       "person": "CK Capital",
       "platform": "x",
@@ -74,6 +93,23 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-25T11:15:01.066Z",
       "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092088735198548327",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-25T03:16:38.000Z",
+      "text": "Welcome back 80K! I missed you!\n$BTC - now let’s get over the 100k now.",
+      "sourceUrl": "https://x.com/_stockResearch/status/2092088735198548327",
+      "cashtags": [
+        "BTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2092083346692034663",
@@ -542,6 +578,21 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091922167969858026",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-24T16:14:45.000Z",
+      "text": "@DeepValueBagger",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091922167969858026",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2091911532938678275",
       "person": "Serenity",
       "platform": "x",
@@ -800,6 +851,88 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091839564109447225",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-24T10:46:31.000Z",
+      "text": "are you kidding me? Chinese tech is so far ahead of US tech! $XPEV Unitree\nI did not expect it to be THIS fun watching robot olympics 😂",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091839564109447225",
+      "cashtags": [
+        "XPEV"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091819858937942477",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-24T09:28:13.000Z",
+      "text": "A bit orthodox, but I bought $MA Mastercard  $V Visa $ISRG  Intuitive Surgical and $MRVL Marvel in my kids account today! \nThese will remain invested until the kids turn 18 years old, which is decades away!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091819858937942477",
+      "cashtags": [
+        "MA",
+        "V",
+        "ISRG",
+        "MRVL"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091818005592486229",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-24T09:20:51.000Z",
+      "text": "@DividendDrip I’m trying to order it but can’t find it. Can you send me a link to Amazon please? If you have one in UK, I’ll try to find something similar in Germany.",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091818005592486229",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091799469516071221",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-24T08:07:11.000Z",
+      "text": "@YodaStockInvest Danny X or 20 X leverage trades!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091799469516071221",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091799310262477039",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-24T08:06:33.000Z",
+      "text": "@DividendDrip I just bought Mastercard Visa in my kids account today.",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091799310262477039",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2091755022937940422",
       "person": "Serenity",
       "platform": "x",
@@ -951,6 +1084,21 @@
       "creatorId": "ck-capital"
     },
     {
+      "id": "2091577194485264845",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-23T17:23:57.000Z",
+      "text": "Weekly traffic rose from ~40 vessels two weeks ago to nearly 200 last week (103 inbound, 89 outbound), an absolute increase of about 160 ships. Pre-war February levels averaged 130-140 vessels daily (~910-980 per week). Current volume is still only around 20% of that.\nJUST IN: Strait of Hormuz traffic reportedly explodes nearly 400%",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091577194485264845",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2091556544676585840",
       "person": "CK Capital",
       "platform": "x",
@@ -964,6 +1112,21 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-25T11:15:01.067Z",
       "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091548696584585519",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-23T15:30:43.000Z",
+      "text": "@wilson_eth absolutely!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091548696584585519",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2091508238823112749",
@@ -992,6 +1155,21 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.622Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2091494843558285773",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-23T11:56:43.000Z",
+      "text": "@aleabitoreddit Create a research firm, hire me as an equity analyst, then go on to be the largest 2 person research and hedge fund in the world!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091494843558285773",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2091489257059958801",
@@ -1211,6 +1389,62 @@
       "creatorId": "ck-capital"
     },
     {
+      "id": "2091196733321875674",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T16:12:08.000Z",
+      "text": "@MZohaibKhan92 nope. I changed my mind on it recently! https://x.com/_stockResearch/status/2089225923132608773?s=20\nI changed my mind on $SPCX ! I said ~$75 by August end once 20% of the float unlocked. That was wrong, and here’s what changed my mind. Aug 6: 911.5M shares unlocked. Float went 4.9% → 11.8% of shares out. Stock closed green (+2.6%). Then the Q2 13Fs landed. Saudi PIF added 154M …",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091196733321875674",
+      "cashtags": [
+        "SPCX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.709Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091189774539436365",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T15:44:29.000Z",
+      "text": "@danielnewmanUV Thanks Daniel! & so my bull case for $MU is $ 3,875 ! https://x.com/_stockresearch/status/2091099230534525190?s=46\nFor my analysis below, I ran a quick analysis to come up with updated numbers for base, bear and bull case scenarios by December 2027. $NBIS — now $224 → base $774 bear $95 / bull $1,126) $RKLB — now $73 → base $193 (bear $42 / bull $287) $ASML — now $1,752 → base $2,969 (bear $1…",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091189774539436365",
+      "cashtags": [
+        "MU",
+        "NBIS",
+        "RKLB",
+        "ASML"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091187741853946226",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T15:36:24.000Z",
+      "text": "@CKCapitalxx one of my holdings! I'm incredibly curious as well and I may sell all my $AAOI holdings and move it to $CRDO & $ALAB ! Better management1",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091187741853946226",
+      "cashtags": [
+        "AAOI",
+        "CRDO",
+        "ALAB"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2091185017825247641",
       "person": "CK Capital",
       "platform": "x",
@@ -1241,6 +1475,23 @@
       "creatorId": "ck-capital"
     },
     {
+      "id": "2091182128839184894",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T15:14:06.000Z",
+      "text": "@StockSavvyShay @fiscal_ai $MU is a $3,874 stock trading at 964!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091182128839184894",
+      "cashtags": [
+        "MU"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2091182034794250368",
       "person": "CK Capital",
       "platform": "x",
@@ -1256,6 +1507,55 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-25T11:15:01.068Z",
       "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091181466776662357",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T15:11:28.000Z",
+      "text": "@ColesTrades A $ 1,126 stock! https://x.com/_stockresearch/status/2091099230534525190?s=46\nFor my analysis below, I ran a quick analysis to come up with updated numbers for base, bear and bull case scenarios by December 2027. $NBIS — now $224 → base $774 bear $95 / bull $1,126) $RKLB — now $73 → base $193 (bear $42 / bull $287) $ASML — now $1,752 → base $2,969 (bear $1…",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091181466776662357",
+      "cashtags": [
+        "NBIS",
+        "RKLB",
+        "ASML"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091180498630664496",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T15:07:37.000Z",
+      "text": "I’m realizing this now as I’m traveling in Nepal. There are ton of these options and you can go the entire year without eating a non-veg products and you will not miss anything. \nUnfortunately, it’s not the same in Europe. in Germany you do not get half the vegetables that you get here in Nepal.",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091180498630664496",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091179942843437067",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T15:05:25.000Z",
+      "text": "@aleabitoreddit Bro, I see you read the Reuters, I  see you read the Wall Street Journal. What is your go to source for getting all this information? Do you have the Bloomberg terminal?",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091179942843437067",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2091179096013525189",
@@ -1335,6 +1635,464 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.623Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2091174915999457640",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:45:26.000Z",
+      "text": "@timoassi",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091174915999457640",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091174774210965542",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:44:52.000Z",
+      "text": "@metr0n0me_ @DamonZumbroegel Yeah, this was my plan as well!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091174774210965542",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091174718342885555",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:44:39.000Z",
+      "text": "@NeuralCadence Subsidiaries, Compute, access to more power, deals with Mag7s, increasing brand awareness,  a whole bunch of stuff!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091174718342885555",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091174166150189515",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:42:28.000Z",
+      "text": "Well, if you are active in the space and you track companies, you definitely can be sustainable. I’ve worked as an equity analyst in Canary wharf and we’ve managed to do it in the past for very NW customers! So yes it’s possible with a small to medium capital it’s not possible with 100,000,000+ capital if you ask me",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091174166150189515",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091173789304520946",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:40:58.000Z",
+      "text": "I don’t know, I came through a MBA admission timeline in my tweet today, and I want to brag that I have a GMAT score of 790 out of 800, which is considered 99.99 percentile! Take this information as you may!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091173789304520946",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091170217611403607",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:26:46.000Z",
+      "text": "@rutu609 I’m not very well aware of the Indian customs, but is this considered good or bad?",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091170217611403607",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091169854137278667",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:25:19.000Z",
+      "text": "@WuWei113 By your logic, Make it mandatory for a white man to marry an Asian woman! Hahha",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091169854137278667",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091169642119385226",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:24:29.000Z",
+      "text": "@DividendDrip Are you kidding me? I flew from Germany to Nepal for summer break and Just the  flights tickets for my family in business class were over €15,000. The hotels are additional on top in different places that i will be  traveling in Nepal.!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091169642119385226",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091169195811860987",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:22:42.000Z",
+      "text": "@DividendDrip I’ve been very  transparent about my stockholdings and it’s mostly related to $NBIS and $RKLB  and a few others! \nAll my stocks and holdings are over my timeline, including details of when I buy, when I sell etc.",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091169195811860987",
+      "cashtags": [
+        "NBIS",
+        "RKLB"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091168687239909486",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T14:20:41.000Z",
+      "text": "@_NNex_ @DamonZumbroegel Not even from a restaurant you mean?",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091168687239909486",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091160619219317000",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:48:38.000Z",
+      "text": "@drayinvests If $BTC crosses its ATH in the next couple of months, $HOOD could be a 300 stock!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091160619219317000",
+      "cashtags": [
+        "BTC",
+        "HOOD"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091160337081147522",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:47:30.000Z",
+      "text": "@mdnghtmss No",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091160337081147522",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091160265870209076",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:47:13.000Z",
+      "text": "@DudeWhoInvests Let’s get this guy liquidated!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091160265870209076",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091160173750702105",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:46:51.000Z",
+      "text": "@antibearthesis On $SOFI , I’ve been hearing the same argument for the past five years! I have been in and out of Sofi and have rotated into other companies that have done well! SOFI  is a great company no doubt, but the market does not seem to love it very much!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091160173750702105",
+      "cashtags": [
+        "SOFI"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091159735173370199",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:45:07.000Z",
+      "text": "I think people are always confused! I ran an analysis today for the stock that I track and for Google I have this estimate for December 27! \n$GOOG — now $341 → base $415 (bear $265 / bull $652) \nSo it’s all good. It’s going to be a good return because it’s a good company. That’s all I care about honestly!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091159735173370199",
+      "cashtags": [
+        "GOOG"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.711Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091159356914147481",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:43:37.000Z",
+      "text": "@optionscjp I hope someday we will hear news about him being liquidated because of $CRWV $NBIS & $MU shorts!!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091159356914147481",
+      "cashtags": [
+        "CRWV",
+        "NBIS",
+        "MU"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.711Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091159171555295439",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:42:53.000Z",
+      "text": "@MZohaibKhan92 A lot of people with wrongly say SpaceX! $SPCX !",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091159171555295439",
+      "cashtags": [
+        "SPCX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.711Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091158724287324325",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:41:06.000Z",
+      "text": "@gruust 🤣",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091158724287324325",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.711Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091157143672307808",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:34:49.000Z",
+      "text": "@FindleysFinance By design actually!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091157143672307808",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091156015899353318",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T13:30:20.000Z",
+      "text": "And, no matter where in the world you go, once you are used to the German system, your most expensive purchase in any supermarket, anywhere in the world is going to be, you guessed it, Beer!\nAt Kathmandu Nepal!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091156015899353318",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.711Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091119343535079427",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T11:04:37.000Z",
+      "text": "@maxwilliamson__ Indeed!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091119343535079427",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091109851711889502",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T10:26:54.000Z",
+      "text": "If $BTC sentiment continues this way, we may see 100K by the end of September!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091109851711889502",
+      "cashtags": [
+        "BTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091109199094984926",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T10:24:18.000Z",
+      "text": "Also me trying to find the next 100X stock!\nThis me trying find a job in America right now",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091109199094984926",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091108475107684416",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T10:21:26.000Z",
+      "text": "@damnang2 I initiated a position at 170 and I’m pretty pleased with it actually! https://x.com/_stockresearch/status/2078842089459364339?s=46\nI am initiating a position in $MRVL in my long term portfolio tomorrow. Here's why, and why now: $MRVL as a Secular AI Infrastructure Play Marvell is rapidly transitioning from a cyclical chip designer into an indispensable backbone for the global AI transition. 1. Top-Line Accel…",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091108475107684416",
+      "cashtags": [
+        "MRVL"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091102373607575752",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T09:57:11.000Z",
+      "text": "This reminds of the time I went to business school. I actually have a 790 GMAT! This was the first 790 score in the test center, that I went to, so when I got the results, the test center did a small celebration with a small cake to celebrate 790 out of 800. It’s pretty incredible that this was almost 10 years back!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091102373607575752",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091099392808026210",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T09:45:20.000Z",
+      "text": "@babyfolio Yeah! But coming to your point it’s very easy to 2X or 3X or 4X on these stocks because they are phenomenal companies!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091099392808026210",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091099230534525190",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T09:44:41.000Z",
+      "text": "For my analysis below, I ran a quick analysis to come up with updated numbers for base, bear and bull case scenarios by December 2027. \n$NBIS — now $224 → base $774 bear $95 / bull $1,126)\n$RKLB — now $73 → base $193 (bear $42 / bull $287)\n$ASML — now $1,752 → base $2,969 (bear $1,309 / bull $4,817)\n$GOOG — now $341 → base $415 (bear $265 / bull $652)\n$AMZN — now $252 → base $411 (bear $195 / bull $587)\n$CRCL — now $89 → base $198 (bear $35 / bull $987)\n$RDDT — now $150 → base $379 (bear $85 / bull $673)\n$MU — now $964 → base $1,947 (bear $550 / bull $3,874)\n$SNDK — now $1,599 → base $2,954 (bear $650 / bull $6,571)\n$ASTS — now $69 → base $175 (bear $28 / bull $398)\n$CRDO — now $235 → base $315 (bear $110 / bull $520)\n$ALAB — now $290 → base $340 (bear $120 / bull $560)\n$LITE — now $898 → base $1,462 (bear $350 / bull $2,897)\n$BTC — now ~$77,000 → base $140,000 (bear $35,000 / bull $372,000)\nThe one variable that decides each:\n•NBIS — dilution. The $4.5B convert offering knocked 10% off the stock in a session,  and the build isn’t done. Revenue can 3x and the stock still go nowhere if the share count follows.\n•RKLB — Neutron. Debut already slipped to Q4 2026.  Base assumes it flies and Iridium integrates. Bear assumes another slip.\n•ASML — guidance was raised twice this year, to €43–45B.  2027 low-NA capacity is up 30%. Bear case is a China DUV cutoff plus digestion.\n•GOOG — capex now $195–205B.  The depreciation wave hits 2027 EPS. Cloud backlog is the offset.\n•AMZN — AWS at $169B run rate, 39.4% segment margin.  Base is ~26x 2027 operating income, unchanged from today’s multiple.\n•CRCL — front-end rates, full stop. Reserve income was $667.7M of $701M total revenue.  Flat base case because USDC growth and yield compression cancel.\n•RDDT — Google. US daily users slipped QoQ despite a 61% revenue beat.\n•MU — whether AI memory is structural or the best cycle top ever printed. FY27 EPS consensus is ~$155, so the stock trades near 6x forward.  That multiple is the market saying it doesn’t believe it.\nThese are my own modeled ranges, not consensus — and 16-month single-stock forecast targets are guesses with error bars, not crystal ball predictions!\nThis year has been absolutely massive. We’ve watched several stocks casually 5X ( $AXTI $SIVE $SNDK $BE etc. thanks to my friend @aleabitoreddit ) . I've been in and out of all the above 4 tickers with good gains. However, for the long term portfolio, the following tickers accoun…",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091099230534525190",
+      "cashtags": [
+        "NBIS",
+        "RKLB",
+        "ASML",
+        "GOOG",
+        "AMZN",
+        "CRCL",
+        "RDDT",
+        "MU",
+        "SNDK",
+        "ASTS",
+        "CRDO",
+        "ALAB",
+        "LITE",
+        "BTC",
+        "AXTI",
+        "SIVE",
+        "BE"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.711Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2091088824961216577",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T09:03:21.000Z",
+      "text": "I am walking around taking pictures in Kathmandu, Nepal this week! \nIt’s a very vibrant and a very colorful society!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091088824961216577",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.710Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2091036083630878961",
@@ -1582,6 +2340,25 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-25T11:15:01.069Z",
       "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090847230383345794",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-21T17:03:20.000Z",
+      "text": "This marked the near bottom for $BTC . It's up 28% since this tweet!\n$NBIS $RDDT\nI’m getting tempted to sell my $BTC to invest in $NBIS & $RDDT!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2090847230383345794",
+      "cashtags": [
+        "BTC",
+        "NBIS",
+        "RDDT"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2090829226001809673",
@@ -1849,6 +2626,30 @@
       "creatorId": "ck-capital"
     },
     {
+      "id": "2090613282348597282",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-21T01:33:42.000Z",
+      "text": "@daniel_koss This is vey much like my portfolio of compounders. $NBIS $CRWV $MU $BE $FCEL . \nI’d go one level down and put the semi manufacturers/designers in there: my pick there $ASML $TSM $NVDA",
+      "sourceUrl": "https://x.com/_stockResearch/status/2090613282348597282",
+      "cashtags": [
+        "NBIS",
+        "CRWV",
+        "MU",
+        "BE",
+        "FCEL",
+        "ASML",
+        "TSM",
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2090590509395816876",
       "person": "CK Capital",
       "platform": "x",
@@ -2062,6 +2863,57 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2090101839975121031",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-19T15:41:25.000Z",
+      "text": "Incredible! - 1000 to 4 million! \nSadly I own none! $MRNA\nModerna $80 Calls are up +400,000% today That's a 4000x Return So, $1,000 -> $4,000,000",
+      "sourceUrl": "https://x.com/_stockResearch/status/2090101839975121031",
+      "cashtags": [
+        "MRNA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2090101104625479733",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-19T15:38:30.000Z",
+      "text": "& that’s why no one lost money by taking some profits! $AEHR\n@babyfolio I was thinking about this today! Also why I sold 50% of my $AEHR this morning at 128! Risk reward favors the sale and repurchase!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2090101104625479733",
+      "cashtags": [
+        "AEHR"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2090044564627407215",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-19T11:53:50.000Z",
+      "text": "Unitrees massive listings creates an Interesting market dynamics. If you keep the geopolitics aside, $XPEV suddenly becomes very attractive. \n$XPEV Q1 26, balance sheet check before Monday’s Q2 print!\nCash position: RMB 42.1B (~$6.1B)\nRev RMB 13.0B, −17.6% YoY\nNet loss RMB 1.78B (vs +0.38B in Q4)\n$XPEV is aiming for production capacity of 1,000+ robots per month by year-end.\nXPeng plans to deploy IRON first as a shopping assistant in its China stores in Q1 2027, then expand to overseas locations later in the year.\nIt's official, Unitree the 8000x+ retail oversubscribed humanoid company in China. Is expected to go public in 2 days! So the 19th. Opening is implied to be around ~$41.66B MC per derivatives, around +363.3% above its ~$9B IPO valuation. Fun times for humanoids this week.",
+      "sourceUrl": "https://x.com/_stockResearch/status/2090044564627407215",
+      "cashtags": [
+        "XPEV"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2089978707830280655",
       "person": "Serenity",
       "platform": "x",
@@ -2115,6 +2967,27 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.624Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2089952098695909477",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-19T05:46:24.000Z",
+      "text": "After Unitrees phenomenal debut today, why are you still not buying $CCXI yet?\nThis week I added to the following amounts to the following stocks: $SPCX → $20,000 $CBRS → $20,000 $ORCL → $20,000 $NVTS → $5,000 $CCXI → $5,000",
+      "sourceUrl": "https://x.com/_stockResearch/status/2089952098695909477",
+      "cashtags": [
+        "CCXI",
+        "SPCX",
+        "CBRS",
+        "ORCL",
+        "NVTS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2089908198694351064",
@@ -2347,6 +3220,38 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2089703882054377889",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-18T13:20:04.000Z",
+      "text": "@pepemoonboy Now we will see a bunch of accounts that said, I said you so!!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2089703882054377889",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.713Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2089703145488482670",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-18T13:17:09.000Z",
+      "text": "@babyfolio I am suddenly seeing a lot of buzz from large fintweets on $ASYS ! Now that you have it, I’ll look at it in the morning!!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2089703145488482670",
+      "cashtags": [
+        "ASYS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.713Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2089690301409673642",
       "person": "Serenity",
       "platform": "x",
@@ -2391,6 +3296,21 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.625Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2089598591413493865",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-18T06:21:41.000Z",
+      "text": "December 18, 2023:\nMunich, Germany!\nRain, black ice, and a bicycle.\nI went down hard on the way home.\nBefore I could even sit up, my Apple Watch was already talking to me:\n“It looks like you’ve taken a hard fall. Calling emergency services in 5… 4… 3…”\nI cancelled it!\nThen I looked at my other wrist.\nMy Rolex Submariner — ceramic bezel chipped, sapphire crystal cracked.\nRepair bill: €3,700\nOne watch tried to save my life. To the other one, I had to save.\nThat incident made me evaluate a lot of things in life:\nWe spend our lives buying things that need protecting, and call it success. Real luxury might be the opposite — owning things that protect you.\nNow before  large purchase: I ask, am I buying an asset or adopting a dependent!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2089598591413493865",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T13:03:46.712Z",
+      "creatorId": "luminara"
     },
     {
       "id": "2089587357401895126",
