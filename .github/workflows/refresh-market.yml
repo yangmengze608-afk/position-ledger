@@ -1,12 +1,21 @@
 name: Refresh market snapshot
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data/symbols.json"
+      - ".github/workflows/refresh-market.yml"
   workflow_dispatch:
   schedule:
     - cron: "17,47 12-22 * * 1-5"
 
 permissions:
   contents: write
+
+concurrency:
+  group: market-refresh
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -26,5 +35,6 @@ jobs:
             echo "No market changes"
           else
             git commit -m "data: refresh market snapshot"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi

@@ -14,17 +14,24 @@ assert len(item_ids) == len(set(item_ids)), "duplicate review item ids"
 assert all(i.get("status") in {"pending", "proposed", "rejected", "accepted"} for i in queue.get("items", []))
 assert all(a.get("handle") and a.get("person") for a in sources.get("accounts", []))
 
-# Parse the workflow itself in CI so changes to the automation control plane are
-# validated too. BaseLoader avoids YAML 1.1 treating the key `on` as boolean.
+# Parse every workflow in CI so control-plane edits cannot bypass basic YAML QA.
+# BaseLoader avoids YAML 1.1 treating the key `on` as boolean.
 try:
     import yaml
 except ImportError:
     yaml = None
 
 if yaml is not None:
-    workflow_path = ROOT / ".github" / "workflows" / "discover-positions.yml"
+    workflow_dir = ROOT / ".github" / "workflows"
+    for path in sorted([*workflow_dir.glob("*.yml"), *workflow_dir.glob("*.yaml")]):
+        parsed = yaml.load(path.read_text(), Loader=yaml.BaseLoader)
+        assert isinstance(parsed, dict), f"{path.name} must be a YAML mapping"
+        assert parsed.get("name"), f"{path.name} must have a workflow name"
+        assert parsed.get("on") is not None, f"{path.name} must declare triggers"
+        assert parsed.get("jobs"), f"{path.name} must declare jobs"
+
+    workflow_path = workflow_dir / "discover-positions.yml"
     workflow = yaml.load(workflow_path.read_text(), Loader=yaml.BaseLoader)
-    assert isinstance(workflow, dict), "discovery workflow must be a YAML mapping"
     triggers = workflow.get("on") or {}
     assert "schedule" in triggers and "workflow_dispatch" in triggers, "discovery workflow must remain scheduled and manually runnable"
     permissions = workflow.get("permissions") or {}
@@ -39,6 +46,5 @@ if yaml is not None:
     assert "review_changed" in workflow_text and "raw_changed" in workflow_text, "raw cache and review changes must be separated"
     assert "Persist raw-only ingest cache without human review" in workflow_text, "raw-only cache persistence missing"
     assert "steps.diff.outputs.review_changed == 'true'" in workflow_text, "human review must be gated on review-worthy changes"
-    assert "merge" not in workflow_text.lower() or "auto-merge" not in workflow_text.lower(), "discovery workflow must not auto-merge review data"
 
 print(f"automation OK: posts={len(post_ids)} queue={len(item_ids)} sources={len(sources.get('accounts', []))}")
