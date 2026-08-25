@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25T09:15:00Z",
+  "updatedAt": "2026-08-25T11:05:00Z",
   "policy": {
     "canonicalRule": "Public mirrors are discovery and corroboration sources. They do not become A-grade canonical position evidence unless the original first-person source can be verified. Human-reviewed secondary evidence may enter at B grade with provenance retained.",
     "subscriberCoverage": "not-guaranteed",
@@ -9,11 +9,19 @@
   "sources": [
     {
       "id": "x-public",
-      "name": "X public timeline",
+      "name": "X public timeline · Serenity",
       "type": "primary",
       "url": "https://x.com/aleabitoreddit",
       "trust": "A-eligible",
-      "use": "Primary source for directly observable public first-person disclosures."
+      "use": "Primary source for directly observable public first-person disclosures from Serenity."
+    },
+    {
+      "id": "x-public-ck-capital",
+      "name": "X public timeline · CK Capital",
+      "type": "primary",
+      "url": "https://x.com/CKCapitalxx",
+      "trust": "A-eligible",
+      "use": "Primary source for directly observable public first-person disclosures from CK Capital."
     },
     {
       "id": "topicdigg",
@@ -21,7 +29,7 @@
       "type": "public-mirror",
       "url": "https://topicdigg.com/x/aleabitoreddit",
       "trust": "discovery",
-      "use": "Gap detection and historical public-post recovery; verify against original X when possible."
+      "use": "Gap detection and historical public-post recovery for Serenity; verify against original X when possible."
     },
     {
       "id": "serenity-wiki",
@@ -29,7 +37,7 @@
       "type": "independent-tracker",
       "url": "https://serenity.wiki/en",
       "trust": "discovery",
-      "use": "Coverage comparison, ticker discovery and missing-post detection."
+      "use": "Coverage comparison, ticker discovery and missing-post detection for Serenity."
     },
     {
       "id": "serenitysaid",
@@ -37,15 +45,31 @@
       "type": "public-mirror",
       "url": "https://www.serenitysaid.com/",
       "trust": "discovery",
-      "use": "Bilingual public-post mirror and narrative mapping."
+      "use": "Bilingual public-post mirror and narrative mapping for Serenity."
     },
     {
       "id": "instalker",
-      "name": "Instalker",
+      "name": "Instalker · Serenity",
       "type": "public-mirror",
       "url": "https://instalker.org/aleabitoreddit",
       "trust": "discovery",
-      "use": "Recent public-post recovery when X syndication is incomplete."
+      "use": "Recent public-post recovery for Serenity when X syndication is incomplete."
+    },
+    {
+      "id": "instalker-ck-capital",
+      "name": "Instalker · CK Capital",
+      "type": "public-mirror",
+      "url": "https://instalker.org/CKCapitalxx",
+      "trust": "discovery",
+      "use": "Gap detection for CK Capital. Never promote mirror text to A-grade evidence without the original first-person source."
+    },
+    {
+      "id": "kolticker-ck-capital",
+      "name": "The Ticker · CK Capital action index",
+      "type": "independent-tracker",
+      "url": "https://kolticker.com/actions",
+      "trust": "discovery-only",
+      "use": "Candidate action discovery for CK Capital; every action must be re-verified against the original public source before entering the canonical ledger."
     },
     {
       "id": "fortunetrace",
