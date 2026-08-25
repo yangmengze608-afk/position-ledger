@@ -1,0 +1,101 @@
+:root {
+  --tone-mint: 119, 226, 188;
+  --tone-cyan: 114, 201, 233;
+  --tone-amber: 237, 195, 109;
+  --tone-violet: 183, 156, 245;
+  --tone-coral: 232, 148, 135;
+  --tone-blue: 130, 165, 244;
+  --tone-teal: 95, 196, 190;
+  --tone-rose: 217, 143, 181;
+}
+
+/* Stable per-ticker tones. The tint is intentionally subtle so state badges keep their semantic meaning. */
+.asset-tone.tone-0 { --asset-tone: var(--tone-mint); }
+.asset-tone.tone-1 { --asset-tone: var(--tone-cyan); }
+.asset-tone.tone-2 { --asset-tone: var(--tone-amber); }
+.asset-tone.tone-3 { --asset-tone: var(--tone-violet); }
+.asset-tone.tone-4 { --asset-tone: var(--tone-coral); }
+.asset-tone.tone-5 { --asset-tone: var(--tone-blue); }
+.asset-tone.tone-6 { --asset-tone: var(--tone-teal); }
+.asset-tone.tone-7 { --asset-tone: var(--tone-rose); }
+
+.ledger-table tbody tr.asset-tone {
+  background: linear-gradient(90deg, rgba(var(--asset-tone), .07), rgba(255,255,255,.008) 38%, transparent 76%);
+  transition: background .16s ease, box-shadow .16s ease;
+}
+.ledger-table tbody tr.asset-tone:hover,
+.ledger-table tbody tr.asset-tone:focus {
+  background: linear-gradient(90deg, rgba(var(--asset-tone), .13), rgba(var(--asset-tone), .035) 42%, rgba(255,255,255,.015) 80%);
+}
+.ledger-table tbody tr.asset-tone td:first-child {
+  box-shadow: inset 3px 0 0 rgba(var(--asset-tone), .56);
+}
+.ledger-table tbody tr.asset-tone .asset-cell strong {
+  text-shadow: 0 0 18px rgba(var(--asset-tone), .13);
+}
+
+.feed-item.asset-tone {
+  background: linear-gradient(90deg, rgba(var(--asset-tone), .065), transparent 62%);
+}
+.feed-item.asset-tone:hover {
+  background: linear-gradient(90deg, rgba(var(--asset-tone), .12), rgba(var(--asset-tone), .018) 64%);
+}
+.feed-item.asset-tone .feed-rail {
+  background: rgb(var(--asset-tone));
+  box-shadow: 0 0 12px rgba(var(--asset-tone), .5);
+}
+.feed-item.asset-tone .feed-type {
+  color: rgb(var(--asset-tone));
+}
+
+#drawer-content.asset-tone .drawer-hero {
+  position: relative;
+  background: radial-gradient(circle at 92% 0%, rgba(var(--asset-tone), .13), transparent 42%);
+}
+#drawer-content.asset-tone .drawer-kicker,
+#drawer-content.asset-tone .drawer-section-label,
+#drawer-content.asset-tone .timeline-meta span,
+#drawer-content.asset-tone .timeline-meta b,
+#drawer-content.asset-tone .evidence-head {
+  color: rgb(var(--asset-tone));
+}
+#drawer-content.asset-tone .timeline-dot {
+  border-color: rgb(var(--asset-tone));
+  box-shadow: 0 0 10px rgba(var(--asset-tone), .22);
+}
+#drawer-content.asset-tone .evidence-card {
+  border-color: rgba(var(--asset-tone), .2);
+  background: rgba(var(--asset-tone), .03);
+}
+#drawer-content.asset-tone .evidence-card a,
+#drawer-content.asset-tone .timeline-body a {
+  color: rgb(var(--asset-tone));
+}
+
+/* Overview cards also get distinct tones instead of one flat panel color. */
+.stat:nth-child(1) { --stat-tone: var(--tone-mint); }
+.stat:nth-child(2) { --stat-tone: var(--tone-cyan); }
+.stat:nth-child(3) { --stat-tone: var(--tone-violet); }
+.stat:nth-child(4) { --stat-tone: var(--tone-amber); }
+.stat:nth-child(5) { --stat-tone: var(--tone-coral); }
+.stat {
+  background: linear-gradient(145deg, rgba(var(--stat-tone), .06), transparent 62%);
+}
+.stat strong {
+  text-shadow: 0 0 22px rgba(var(--stat-tone), .11);
+}
+
+@media (max-width: 620px) {
+  .ledger-table tbody tr.asset-tone {
+    border-color: rgba(var(--asset-tone), .24);
+    background: linear-gradient(135deg, rgba(var(--asset-tone), .14), rgba(9,22,29,.9) 52%, rgba(var(--asset-tone), .035));
+    box-shadow: inset 3px 0 0 rgba(var(--asset-tone), .58), 0 10px 28px rgba(0,0,0,.12);
+  }
+  .ledger-table tbody tr.asset-tone:hover,
+  .ledger-table tbody tr.asset-tone:focus {
+    background: linear-gradient(135deg, rgba(var(--asset-tone), .2), rgba(9,22,29,.9) 50%, rgba(var(--asset-tone), .055));
+  }
+  .ledger-table tbody tr.asset-tone td:first-child {
+    box-shadow: none;
+  }
+}

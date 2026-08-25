@@ -12,6 +12,7 @@ on:
       - "terminal-ui.js"
       - "evidence-drawer-ui.js"
       - "mentions-ui.js"
+      - "asset-card-ui.js"
       - "config.js"
       - "index.html"
       - "styles.css"
@@ -21,6 +22,7 @@ on:
       - "mentions.css"
       - "manjianghong.css"
       - "creator-ui.css"
+      - "asset-card-ui.css"
       - "vercel.json"
   pull_request:
     paths:
@@ -33,6 +35,7 @@ on:
       - "terminal-ui.js"
       - "evidence-drawer-ui.js"
       - "mentions-ui.js"
+      - "asset-card-ui.js"
       - "config.js"
       - "index.html"
       - "styles.css"
@@ -42,6 +45,7 @@ on:
       - "mentions.css"
       - "manjianghong.css"
       - "creator-ui.css"
+      - "asset-card-ui.css"
       - "vercel.json"
 
 jobs:
@@ -67,6 +71,7 @@ jobs:
           node --check terminal-ui.js
           node --check evidence-drawer-ui.js
           node --check mentions-ui.js
+          node --check asset-card-ui.js
           node --check scripts/tag_creator_ids.js
           node --check scripts/classify_positions.js
           node --check scripts/propose_events.js
