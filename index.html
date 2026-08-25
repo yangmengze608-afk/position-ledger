@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Position Ledger：基于 Serenity 公开披露与原始证据的持仓追踪台账。" />
-  <title>Position Ledger · 白毛公开持仓证据账本</title>
+  <meta name="description" content="Position Ledger：基于公开披露与原始证据的多 Creator 持仓追踪网络。" />
+  <title>Position Ledger · 公开持仓证据网络</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./performance.css" />
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./evidence-drawer.css" />
   <link rel="stylesheet" href="./mentions.css" />
   <link rel="stylesheet" href="./manjianghong.css" />
+  <link rel="stylesheet" href="./creator-ui.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -20,7 +21,7 @@
         <span class="brand-mark">PL</span>
         <span class="brand-copy">
           <strong>Position Ledger</strong>
-          <small>PUBLIC DISCLOSURE LEDGER</small>
+          <small>PUBLIC DISCLOSURE NETWORK</small>
         </span>
       </a>
       <div class="top-actions">
@@ -32,31 +33,41 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <div class="eyebrow">SERENITY · PUBLIC PORTFOLIO INTELLIGENCE</div>
-          <h1 id="profile-name">Serenity · 持仓追踪台</h1>
-          <p id="profile-desc" class="hero-desc">把散落在公开内容里的持仓披露拆成可核对的事件账本；每条状态都尽量回到原始证据，没有新披露就不自动推断卖出。</p>
+          <div class="eyebrow" id="profile-eyebrow">CREATOR · PUBLIC PORTFOLIO INTELLIGENCE</div>
+          <h1 id="profile-name">公开持仓证据网络</h1>
+          <p id="profile-desc" class="hero-desc">把散落在公开内容里的持仓披露拆成可核对的事件账本；每个 Creator 独立记账，没有新披露就不自动推断卖出。</p>
           <div class="hero-meta">
-            <span id="profile-handle">@aleabitoreddit</span>
+            <span id="profile-handle">正在读取研究对象…</span>
             <span>·</span>
-            <span>公开信息研究项目</span>
+            <span id="profile-scope">公开信息研究项目</span>
             <span>·</span>
             <span id="last-updated">正在读取数据…</span>
           </div>
         </div>
         <div class="method-card">
           <span class="method-label">EVIDENCE-FIRST METHODOLOGY</span>
-          <strong>记录“她公开说过什么”，而不是猜她的券商账户。</strong>
-          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变账本状态。“披露后表现”使用披露日对应交易日的市场收盘锚点，只描述公开披露后的价格路径，不代表真实持仓成本或账户收益。</p>
+          <strong>记录“公开说过什么”，而不是猜任何人的券商账户。</strong>
+          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变某个 Creator 自己的账本状态。“披露后表现”使用披露日对应交易日的市场收盘锚点，只描述公开披露后的价格路径，不代表真实持仓成本或账户收益。</p>
         </div>
       </section>
 
       <section class="coverage-banner" aria-label="数据覆盖说明">
         <b>!</b>
         <div>
-          <strong>公开覆盖，不等于完整会员内容或完整账户。</strong>
-          <span>Serenity 提供 X 订阅内容；非订阅者无法保证看到全部订阅专属帖子。本账本使用可观察公开源 + 可审计公开镜像补漏，任何二手搬运都不会静默升级为 A 级证据。</span>
+          <strong id="coverage-title">公开覆盖，不等于完整会员内容或完整账户。</strong>
+          <span id="coverage-copy">部分研究对象可能存在订阅专属内容。本账本只使用可观察公开源与可审计二手来源补漏，任何搬运都不会静默升级为 A 级证据。</span>
         </div>
         <a href="./data/coverage_sources.json" target="_blank" rel="noreferrer">覆盖来源 ↗</a>
+      </section>
+
+      <section class="creator-switcher-shell" aria-label="研究对象切换">
+        <div class="creator-switcher-copy">
+          <span class="creator-switcher-kicker">RESEARCH SUBJECT</span>
+          <strong id="creator-switcher-title">选择研究对象</strong>
+          <small>每个 Creator 的持仓状态、证据时间线与普通讨论严格隔离。</small>
+        </div>
+        <div id="creator-switcher" class="creator-switcher" role="tablist" aria-label="Creator 切换"></div>
+        <a id="creator-profile-link" class="creator-profile-link" href="#" target="_blank" rel="noreferrer">原始主页 ↗</a>
       </section>
 
       <section id="portfolio-ribbon" class="portfolio-ribbon" aria-label="公开持仓组合快照">
@@ -82,7 +93,7 @@
             <div class="panel-head-copy">
               <div class="eyebrow">POSITION LEDGER</div>
               <h2>公开持仓台账</h2>
-              <div class="panel-subline">点击任一标的查看完整事件时间线；“原推 ↗”可直接回到最新公开证据。</div>
+              <div class="panel-subline">点击任一标的查看该 Creator 的完整事件时间线；“原推 ↗”可直接回到最新公开证据。</div>
             </div>
             <div class="ledger-head-tools">
               <label class="sort-control"><span>排序</span>
@@ -98,7 +109,7 @@
             </div>
           </div>
 
-          <div class="reference-note"><strong>读表方式：</strong>“在持”表示最近可靠公开证据支持仍有仓位；“历史”只能证明过去曾建仓；沉默不会自动变成清仓。A/B/C 是证据强度，不是投资评级。</div>
+          <div class="reference-note"><strong>读表方式：</strong>“在持”表示最近可靠公开证据支持该 Creator 仍有仓位；“历史”只能证明过去曾建仓；沉默不会自动变成清仓。A/B/C 是证据强度，不是投资评级。</div>
 
           <div class="controls">
             <div class="tabs" id="tabs" role="tablist" aria-label="持仓状态筛选">
@@ -139,7 +150,7 @@
         <aside class="side-column">
           <section class="panel feed-panel">
             <div class="panel-head">
-              <div class="panel-head-copy"><div class="eyebrow">LATEST DISCLOSURES</div><h2>最近披露 · Evidence Tape</h2><div class="panel-subline">中文事件摘要 + 可用时展示原始英文证据片段。</div></div>
+              <div class="panel-head-copy"><div class="eyebrow">LATEST DISCLOSURES</div><h2>最近披露 · Evidence Tape</h2><div class="panel-subline">当前研究对象的中文事件摘要 + 可用时展示原始英文证据片段。</div></div>
               <span class="live-dot">LIVE</span>
             </div>
             <div id="recent-feed" class="feed-list"></div>
@@ -156,7 +167,7 @@
     </main>
 
     <footer>
-      <span>Hosted on GitHub Pages</span><span>·</span><span>GitHub-backed evidence ledger</span><span>·</span><span>公开信息研究用途</span><span>·</span><span>Not financial advice</span>
+      <span>Hosted on GitHub Pages</span><span>·</span><span>GitHub-backed evidence network</span><span>·</span><span>公开信息研究用途</span><span>·</span><span>Not financial advice</span>
     </footer>
   </div>
 
