@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25T09:15:00Z",
+  "updatedAt": "2026-08-25T11:05:00Z",
   "creators": [
     {
       "id": "serenity",
@@ -13,6 +13,19 @@
       "coverageMode": "public-plus-reviewed-secondary",
       "subscriberCoverage": "not-guaranteed",
       "dataNamespace": "serenity",
+      "positionPolicy": "event-sourced-evidence-first"
+    },
+    {
+      "id": "ck-capital",
+      "displayName": "CK Capital",
+      "aliases": ["CK"],
+      "status": "active",
+      "primaryPlatform": "x",
+      "handle": "CKCapitalxx",
+      "profileUrl": "https://x.com/CKCapitalxx",
+      "coverageMode": "public-plus-reviewed-secondary",
+      "subscriberCoverage": "public-observed-only",
+      "dataNamespace": "ck-capital",
       "positionPolicy": "event-sourced-evidence-first"
     }
   ]
