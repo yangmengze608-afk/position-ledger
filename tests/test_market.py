@@ -1,7 +1,9 @@
 import unittest
 from datetime import timezone
+from unittest.mock import patch
 
-from scripts.refresh_market import anchor_for_event, performance_pct, previous_session_close
+import scripts.refresh_market as market_module
+from scripts.refresh_market import anchor_for_event, build_creator_anchors, performance_pct, previous_session_close
 
 
 class MarketAnchorTests(unittest.TestCase):
@@ -42,6 +44,39 @@ class MarketAnchorTests(unittest.TestCase):
 
     def test_missing_anchor_returns_no_performance(self):
         self.assertIsNone(performance_pct(100.0, None))
+
+    def test_same_ticker_gets_independent_creator_anchors(self):
+        sessions = [
+            {"date": "2026-08-10", "price": 100.0},
+            {"date": "2026-08-20", "price": 120.0},
+            {"date": "2026-08-24", "price": 150.0},
+        ]
+        holdings = [
+            {
+                "ticker": "NVDA",
+                "firstRecordedAt": "2026-08-10T12:00:00Z",
+                "lastActiveAt": "2026-08-10T12:00:00Z",
+            },
+            {
+                "creatorId": "ck-capital",
+                "ticker": "NVDA",
+                "firstRecordedAt": "2026-08-20T12:00:00Z",
+                "lastActiveAt": "2026-08-20T12:00:00Z",
+            },
+        ]
+        with patch.object(market_module, "HOLDINGS", holdings):
+            anchors = build_creator_anchors("NVDA", sessions, timezone.utc, 150.0)
+        self.assertEqual(set(anchors), {"serenity", "ck-capital"})
+        self.assertEqual(anchors["serenity"]["firstDisclosureAnchor"]["price"], 100.0)
+        self.assertEqual(anchors["serenity"]["firstDisclosureAnchor"]["performancePct"], 50.0)
+        self.assertEqual(anchors["ck-capital"]["firstDisclosureAnchor"]["price"], 120.0)
+        self.assertEqual(anchors["ck-capital"]["firstDisclosureAnchor"]["performancePct"], 25.0)
+
+    def test_creator_without_holding_gets_no_anchor(self):
+        sessions = [{"date": "2026-08-20", "price": 120.0}]
+        with patch.object(market_module, "HOLDINGS", []):
+            anchors = build_creator_anchors("NVDA", sessions, timezone.utc, 150.0)
+        self.assertEqual(anchors, {})
 
 
 if __name__ == "__main__":
