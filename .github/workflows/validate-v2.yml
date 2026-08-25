@@ -6,15 +6,13 @@ on:
       - "data/**"
       - "scripts/**"
       - "tests/**"
-      - ".github/workflows/discover-positions.yml"
-      - ".github/workflows/validate-v2.yml"
+      - ".github/workflows/**"
   pull_request:
     paths:
       - "data/**"
       - "scripts/**"
       - "tests/**"
-      - ".github/workflows/discover-positions.yml"
-      - ".github/workflows/validate-v2.yml"
+      - ".github/workflows/**"
 
 jobs:
   validate:
@@ -23,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
