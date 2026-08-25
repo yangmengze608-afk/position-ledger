@@ -4,6 +4,7 @@ const SECURITY_CATALOG = require("../../data/security_aliases.json").securities 
 const TICKER_RE = /\$([A-Z][A-Z0-9.-]{0,9})\b/g;
 const ANY_CASHTAG_RE = /\$([A-Z0-9][A-Z0-9.-]{0,14})\b/gi;
 const POSITION_WORDS = /\b(position|positions|stake|stakes|shares?|longs?|bags?|holding|holdings|exposure)\b/i;
+const TICKER_DOT_SENTINEL = "\uE000";
 
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -85,10 +86,18 @@ function clauseHasTicker(clause, ticker) {
   return tickersInClause(clause).includes(String(ticker).toUpperCase());
 }
 
+function protectTickerDots(text) {
+  return String(text || "").replace(/\$[A-Z][A-Z0-9-]*(?:\.[A-Z0-9-]+)+\b/gi, (match) => match.replace(/\./g, TICKER_DOT_SENTINEL));
+}
+
+function restoreTickerDots(text) {
+  return String(text || "").split(TICKER_DOT_SENTINEL).join(".");
+}
+
 function localScopeForTicker(text, ticker) {
-  const clauses = String(text || "")
+  const clauses = protectTickerDots(text)
     .split(/(?:[.!?;\n]+|\s+(?:but|while|whereas|however)\s+)/i)
-    .map((x) => x.trim())
+    .map((x) => restoreTickerDots(x).trim())
     .filter(Boolean);
 
   const indexes = clauses
@@ -160,6 +169,7 @@ const RULES = [
     patterns: [
       /\b(?:i|we)\s+(?:do(?:n['’]?t| not)|did(?:n['’]?t| not))\s+(?:currently\s+)?(?:have|hold|own)\b/i,
       /\b(?:i|we)\s+(?:have|hold|own)\s+no\s+(?:position|stake|shares?)\b/i,
+      /\b(?:i|we)\s+have\s+not\s+(?:started|opened|initiated|taken)\s+(?:a|any)?\s*(?:position|stake)\b/i,
       /\bno\s+(?:position|stake|shares?)\s+(?:in|on)\b/i,
       /\b(?:not|never)\s+(?:a\s+)?(?:holder|owner)\b/i,
     ],
@@ -212,7 +222,7 @@ const RULES = [
       /\b(?:i|we)\s+(?:hold|own)\b/i,
       /\b(?:i|we)\s+have\s+(?:(?:a|an|the|my|our|large|small|sizeable|sizable|significant)\s+){0,3}(?:position|positions|stake|stakes|shares?|longs?)\b/i,
       /\b(?:i|we)\s+(?:am|are|'m|'re)\s+still\s+long\b/i,
-      /\b(?:my|our)\s+(?:position|stake|shares?|longs?)\b/i,
+      /\b(?:one\s+of\s+)?(?:my|our)\s+(?:(?:highest|high|top|largest|biggest|core|major)\s+)?(?:conviction\s+)?(?:position|positions|stake|stakes|shares?|longs?|holding|holdings)\b/i,
     ],
   },
 ];

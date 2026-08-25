@@ -127,3 +127,43 @@ test("still have a sizeable EWY position remains explicit HOLD A", () => {
   assert.equal(out[0].suggestedType, "HOLD");
   assert.equal(out[0].confidence, "A");
 });
+
+test("first-person conviction position is an explicit HOLD A", () => {
+  const out = classifyPost({ text: "$EOS.AX has been flying recently. One of my highest conviction positions. Surprised this name isn't talked about more." });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "EOS.AX");
+  assert.equal(out[0].suggestedType, "HOLD");
+  assert.equal(out[0].confidence, "A");
+  assert.match(out[0].evidence, /my highest conviction positions/i);
+});
+
+test("first-person core or largest holding phrasing is an explicit HOLD", () => {
+  for (const text of [
+    "$AAA remains one of my largest holdings.",
+    "$AAA is my core position.",
+    "$AAA is one of our top positions.",
+  ]) {
+    const out = classifyPost({ text });
+    assert.equal(out.length, 1, text);
+    assert.equal(out[0].suggestedType, "HOLD", text);
+    assert.equal(out[0].confidence, "A", text);
+  }
+});
+
+test("second-person biggest-holding rhetoric does not become the author's position", () => {
+  const out = classifyPost({ text: "Good day when one of your biggest holdings is up 13%. $EOS.AX." });
+  assert.deepEqual(out, []);
+});
+
+test("third-party fund position language stays ignored", () => {
+  const out = classifyPost({ text: "$EOS.AX is one of the largest positions in the fund." });
+  assert.deepEqual(out, []);
+});
+
+test("explicit not-started position is a DENY when ticker-local", () => {
+  const out = classifyPost({ text: "$ABC looks interesting. I have not started a position." });
+  assert.equal(out.length, 1);
+  assert.equal(out[0].ticker, "ABC");
+  assert.equal(out[0].suggestedType, "DENY");
+  assert.equal(out[0].confidence, "A");
+});
