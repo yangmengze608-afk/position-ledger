@@ -160,6 +160,7 @@ const RULES = [
     patterns: [
       /\b(?:i|we)\s+(?:do(?:n['’]?t| not)|did(?:n['’]?t| not))\s+(?:currently\s+)?(?:have|hold|own)\b/i,
       /\b(?:i|we)\s+(?:have|hold|own)\s+no\s+(?:position|stake|shares?)\b/i,
+      /\b(?:i|we)\s+have\s+not\s+(?:started|opened|initiated|taken)\s+(?:a|any)?\s*(?:position|stake)\b/i,
       /\bno\s+(?:position|stake|shares?)\s+(?:in|on)\b/i,
       /\b(?:not|never)\s+(?:a\s+)?(?:holder|owner)\b/i,
     ],
@@ -212,7 +213,7 @@ const RULES = [
       /\b(?:i|we)\s+(?:hold|own)\b/i,
       /\b(?:i|we)\s+have\s+(?:(?:a|an|the|my|our|large|small|sizeable|sizable|significant)\s+){0,3}(?:position|positions|stake|stakes|shares?|longs?)\b/i,
       /\b(?:i|we)\s+(?:am|are|'m|'re)\s+still\s+long\b/i,
-      /\b(?:my|our)\s+(?:position|stake|shares?|longs?)\b/i,
+      /\b(?:one\s+of\s+)?(?:my|our)\s+(?:(?:highest|high|top|largest|biggest|core|major)\s+)?(?:conviction\s+)?(?:position|positions|stake|stakes|shares?|longs?|holding|holdings)\b/i,
     ],
   },
 ];
