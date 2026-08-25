@@ -112,11 +112,50 @@ def validate_resolutions(resolutions, queue):
                 fail(f"resolution {rid} evidenceUrl must use https")
 
 
+def validate_corrections(corrections, creator_ids, canonical_event_ids):
+    correction_ids = set()
+    revoked_ids = set()
+    invalid_source_keys = set()
+    for i, correction in enumerate(corrections.get("corrections", []), start=1):
+        cid = creator_id(correction)
+        correction_id = str(correction.get("id", "")).strip()
+        source_post_id = str(correction.get("sourcePostId", "")).strip()
+        reason = str(correction.get("reason", "")).strip()
+        if not correction_id or not source_post_id or not reason:
+            fail(f"correction #{i} missing id/sourcePostId/reason")
+        if correction_id in correction_ids:
+            fail(f"duplicate correction id: {correction_id}")
+        correction_ids.add(correction_id)
+        if cid not in creator_ids:
+            fail(f"correction {correction_id} references unknown creatorId: {cid}")
+        if correction.get("invalidForCreator"):
+            key = (cid, source_post_id)
+            if key in invalid_source_keys:
+                fail(f"duplicate creator-scoped invalid source correction: {key}")
+            invalid_source_keys.add(key)
+        for event_id in correction.get("revokedEventIds", []):
+            event_id = str(event_id).strip()
+            if not event_id:
+                fail(f"correction {correction_id} has empty revokedEventId")
+            if event_id in revoked_ids:
+                fail(f"event revoked by multiple corrections: {event_id}")
+            revoked_ids.add(event_id)
+            if event_id in canonical_event_ids:
+                fail(f"revoked event still present in canonical events: {event_id}")
+        for event_id in correction.get("preserveIndependentEvents", []):
+            if event_id not in canonical_event_ids:
+                fail(f"correction {correction_id} expected preserved event missing: {event_id}")
+        for url in correction.get("auditSources", []):
+            if not str(url).startswith("https://"):
+                fail(f"correction {correction_id} audit source must use https")
+    return revoked_ids
+
+
 def main():
     loaded = {}
     for name in [
         "profile", "events", "holdings", "market", "symbols", "security_aliases",
-        "review_queue", "resolutions", "creators", "source_accounts"
+        "review_queue", "resolutions", "corrections", "creators", "source_accounts"
     ]:
         loaded[name] = load_data(name)
 
@@ -153,6 +192,8 @@ def main():
                 fail(f"duplicate creator-scoped source event: {key}")
             scoped_source_keys.add(key)
 
+    revoked_ids = validate_corrections(loaded["corrections"], creator_ids, ids)
+
     for i, item in enumerate(loaded["review_queue"].get("items", []), start=1):
         cid = creator_id(item)
         if cid not in creator_ids:
@@ -165,7 +206,8 @@ def main():
 
     subprocess.run([sys.executable, str(ROOT / "scripts" / "rebuild_holdings.py")], check=True)
     print(
-        f"OK: validated {len(ids)} events across {len(creator_ids)} creator(s), "
+        f"OK: validated {len(ids)} canonical events ({len(revoked_ids)} revoked in audit) "
+        f"across {len(creator_ids)} creator(s), "
         f"{len(loaded['security_aliases'].get('securities', []))} security aliases, "
         f"{len(loaded['resolutions'].get('resolutions', []))} resolutions"
     )
