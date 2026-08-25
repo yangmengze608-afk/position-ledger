@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25T11:05:00Z",
+  "updatedAt": "2026-08-25T12:45:00Z",
   "policy": {
     "canonicalRule": "Public mirrors are discovery and corroboration sources. They do not become A-grade canonical position evidence unless the original first-person source can be verified. Human-reviewed secondary evidence may enter at B grade with provenance retained.",
     "subscriberCoverage": "not-guaranteed",
@@ -22,6 +22,14 @@
       "url": "https://x.com/CKCapitalxx",
       "trust": "A-eligible",
       "use": "Primary source for directly observable public first-person disclosures from CK Capital."
+    },
+    {
+      "id": "x-public-luminara",
+      "name": "X public timeline · Luminara Stocks",
+      "type": "primary",
+      "url": "https://x.com/_stockResearch",
+      "trust": "A-eligible",
+      "use": "Primary source for directly observable public first-person disclosures from Luminara Stocks."
     },
     {
       "id": "topicdigg",
@@ -64,12 +72,28 @@
       "use": "Gap detection for CK Capital. Never promote mirror text to A-grade evidence without the original first-person source."
     },
     {
+      "id": "instalker-luminara",
+      "name": "Instalker · Luminara Stocks",
+      "type": "public-mirror",
+      "url": "https://instalker.org/_stockResearch",
+      "trust": "discovery",
+      "use": "Gap detection for Luminara Stocks. Never promote mirror text to A-grade evidence without the original first-person source."
+    },
+    {
       "id": "kolticker-ck-capital",
       "name": "The Ticker · CK Capital action index",
       "type": "independent-tracker",
       "url": "https://kolticker.com/actions",
       "trust": "discovery-only",
       "use": "Candidate action discovery for CK Capital; every action must be re-verified against the original public source before entering the canonical ledger."
+    },
+    {
+      "id": "aichainmap-serenity",
+      "name": "AIChainMap · Serenity bilingual mirror",
+      "type": "public-mirror",
+      "url": "https://aichainmap.com/serenity/",
+      "trust": "corroboration",
+      "use": "Bilingual corroboration and provenance auditing. It exposed a legacy foreign-author attribution error involving Luminara Stocks; mirror text is not A-grade by itself."
     },
     {
       "id": "fortunetrace",
