@@ -1,29 +1,29 @@
 {
-  "recordedAt": "2026-08-25T11:23:30.059836+00:00",
-  "workflowCommit": "8f6b69f7c51ba70ff1adf8e15ba7deb4afd9e49b",
-  "batchId": "32841992078-1",
+  "recordedAt": "2026-08-25T12:43:14.703754+00:00",
+  "workflowCommit": "760d07406a1a6c92dc839dbb34616e47a54f040a",
+  "batchId": "32849079854-1",
   "collector": {
-    "startedAt": "2026-08-25T11:22:54.469Z",
+    "startedAt": "2026-08-25T12:42:40.390Z",
     "provider": "multi-source",
     "accounts": [
       {
         "handle": "aleabitoreddit",
         "ok": true,
         "selectedProvider": "fxembed-rss",
-        "recent": 65,
-        "added": 0,
+        "recent": 64,
+        "added": 1,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12325
+            "durationMs": 12320
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
-            "recent": 65,
-            "durationMs": 2650
+            "recent": 64,
+            "durationMs": 2511
           }
         ]
       },
@@ -32,36 +32,36 @@
         "ok": true,
         "selectedProvider": "fxembed-rss",
         "recent": 72,
-        "added": 0,
+        "added": 1,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12314
+            "durationMs": 12229
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 72,
-            "durationMs": 5955
+            "durationMs": 4893
           }
         ]
       }
     ],
-    "completedAt": "2026-08-25T11:23:29.317Z",
-    "added": 0,
-    "totalStored": 187
+    "completedAt": "2026-08-25T12:43:13.948Z",
+    "added": 2,
+    "totalStored": 189
   },
-  "rawPostCount": 187,
+  "rawPostCount": 189,
   "rawPostsByCreator": {
-    "serenity": 115,
-    "ck-capital": 72
+    "serenity": 116,
+    "ck-capital": 73
   },
   "reviewQueueCount": 13,
   "changes": {
-    "raw": "false",
-    "review": "true"
+    "raw": "true",
+    "review": "false"
   },
   "stepsReached": {
     "guard": "success",
@@ -72,7 +72,7 @@
     "propose": "success"
   },
   "delivery": {
-    "kind": "issue",
-    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/32"
+    "kind": "none",
+    "url": null
   }
 }
