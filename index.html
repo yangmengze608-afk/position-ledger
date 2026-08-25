@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Position Ledger：基于公开披露与原始证据的持仓追踪台账。" />
-  <title>Position Ledger · 公开持仓证据账本</title>
+  <meta name="description" content="Position Ledger：基于 Serenity 公开披露与原始证据的持仓追踪台账。" />
+  <title>Position Ledger · 白毛公开持仓证据账本</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./performance.css" />
+  <link rel="stylesheet" href="./terminal.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -28,20 +29,31 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <div class="eyebrow">PORTFOLIO INTELLIGENCE · EVIDENCE FIRST</div>
+          <div class="eyebrow">SERENITY · PUBLIC PORTFOLIO INTELLIGENCE</div>
           <h1 id="profile-name">Serenity · 持仓追踪台</h1>
-          <p id="profile-desc" class="hero-desc">把公开披露拆成可核对的事件账本；没有新披露，不自动推断卖出。</p>
+          <p id="profile-desc" class="hero-desc">把散落在公开内容里的持仓披露拆成可核对的事件账本；每条状态都尽量回到原始证据，没有新披露就不自动推断卖出。</p>
           <div class="hero-meta">
             <span id="profile-handle">@aleabitoreddit</span>
+            <span>·</span>
+            <span>公开信息研究项目</span>
             <span>·</span>
             <span id="last-updated">正在读取数据…</span>
           </div>
         </div>
         <div class="method-card">
-          <span class="method-label">METHODOLOGY</span>
-          <strong>记录“她公开说过什么”，而不是猜她现在持有什么。</strong>
-          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变账本状态；“披露后表现”使用披露日对应交易日的市场收盘锚点，只描述公开披露后的价格路径，不代表真实持仓成本或账户收益。</p>
+          <span class="method-label">EVIDENCE-FIRST METHODOLOGY</span>
+          <strong>记录“她公开说过什么”，而不是猜她的券商账户。</strong>
+          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变账本状态。“披露后表现”使用披露日对应交易日的市场收盘锚点，只描述公开披露后的价格路径，不代表真实持仓成本或账户收益。</p>
         </div>
+      </section>
+
+      <section id="portfolio-ribbon" class="portfolio-ribbon" aria-label="公开持仓组合快照">
+        <div class="portfolio-ribbon-head"><div><span class="portfolio-ribbon-kicker">PORTFOLIO · DAILY AUTO UPDATE</span><strong>正在读取公开持仓快照…</strong></div></div>
+      </section>
+
+      <section class="market-tape-shell" aria-label="在持标的市场快照">
+        <div class="market-tape-head"><div class="eyebrow">LIVE MARKET TAPE</div><span>按今日绝对波动排序 · 同时显示披露后表现</span></div>
+        <div id="market-tape" class="market-tape"><div class="tape-empty">正在读取行情…</div></div>
       </section>
 
       <section class="stat-strip" aria-label="账本概览">
@@ -55,12 +67,26 @@
       <section class="dashboard-grid">
         <div class="ledger-panel panel">
           <div class="panel-head ledger-head">
-            <div>
+            <div class="panel-head-copy">
               <div class="eyebrow">POSITION LEDGER</div>
               <h2>公开持仓台账</h2>
+              <div class="panel-subline">点击任一标的查看完整事件时间线；“原推 ↗”可直接回到最新公开证据。</div>
             </div>
-            <div class="head-note"><span id="result-count">0</span> 个标的</div>
+            <div class="ledger-head-tools">
+              <label class="sort-control"><span>排序</span>
+                <select id="sort-order" aria-label="持仓排序">
+                  <option value="confirmed">最近确认</option>
+                  <option value="first">首次披露</option>
+                  <option value="daily">今日涨跌</option>
+                  <option value="disclosure">披露后表现</option>
+                  <option value="ticker">Ticker</option>
+                </select>
+              </label>
+              <div class="head-note"><span id="result-count">0</span> 个标的</div>
+            </div>
           </div>
+
+          <div class="reference-note"><strong>读表方式：</strong>“在持”表示最近可靠公开证据支持仍有仓位；“历史”只能证明过去曾建仓；沉默不会自动变成清仓。A/B/C 是证据强度，不是投资评级。</div>
 
           <div class="controls">
             <div class="tabs" id="tabs" role="tablist" aria-label="持仓状态筛选">
@@ -82,7 +108,7 @@
                 <tr>
                   <th>标的</th>
                   <th>状态</th>
-                  <th>最后动作</th>
+                  <th>最后动作 / 来源</th>
                   <th>最后确认</th>
                   <th>首次披露</th>
                   <th class="num">现价</th>
@@ -101,7 +127,7 @@
         <aside class="side-column">
           <section class="panel feed-panel">
             <div class="panel-head">
-              <div><div class="eyebrow">LATEST DISCLOSURES</div><h2>最近披露</h2></div>
+              <div class="panel-head-copy"><div class="eyebrow">LATEST DISCLOSURES</div><h2>最近披露 · Evidence Tape</h2><div class="panel-subline">中文事件摘要 + 可用时展示原始英文证据片段。</div></div>
               <span class="live-dot">LIVE</span>
             </div>
             <div id="recent-feed" class="feed-list"></div>
@@ -110,7 +136,7 @@
           <section class="panel legend-panel">
             <div class="panel-head"><div><div class="eyebrow">EVIDENCE SCALE</div><h2>证据等级</h2></div></div>
             <div class="legend-row"><b>A</b><div><strong>明确一手声明</strong><span>直接说买入、仍持有、卖出或没有持仓。</span></div></div>
-            <div class="legend-row"><b>B</b><div><strong>强语义支持</strong><span>证据很强，但不是直接账户状态句，或需要人工实体解析。</span></div></div>
+            <div class="legend-row"><b>B</b><div><strong>强语义 / 人工解析</strong><span>证据很强但不是直接账户状态句，或需要证券实体人工核验。</span></div></div>
             <div class="legend-row"><b>C</b><div><strong>推断</strong><span>不自动进入 Live，仅作研究候选。</span></div></div>
           </section>
         </aside>
@@ -131,5 +157,6 @@
   <script src="./config.js"></script>
   <script type="module" src="./app.js"></script>
   <script type="module" src="./performance-ui.js"></script>
+  <script type="module" src="./terminal-ui.js"></script>
 </body>
 </html>
