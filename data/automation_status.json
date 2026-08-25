@@ -1,29 +1,29 @@
 {
-  "recordedAt": "2026-08-25T12:43:14.703754+00:00",
-  "workflowCommit": "760d07406a1a6c92dc839dbb34616e47a54f040a",
-  "batchId": "32849079854-1",
+  "recordedAt": "2026-08-25T12:47:43.251985+00:00",
+  "workflowCommit": "ee50b2264dc3c5784bd2a9424d91a7349b1c2674",
+  "batchId": "32849491583-1",
   "collector": {
-    "startedAt": "2026-08-25T12:42:40.390Z",
+    "startedAt": "2026-08-25T12:46:53.712Z",
     "provider": "multi-source",
     "accounts": [
       {
         "handle": "aleabitoreddit",
         "ok": true,
         "selectedProvider": "fxembed-rss",
-        "recent": 64,
-        "added": 1,
+        "recent": 65,
+        "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12320
+            "durationMs": 12258
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
-            "recent": 64,
-            "durationMs": 2511
+            "recent": 65,
+            "durationMs": 2762
           }
         ]
       },
@@ -32,36 +32,58 @@
         "ok": true,
         "selectedProvider": "fxembed-rss",
         "recent": 72,
-        "added": 1,
+        "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12229
+            "durationMs": 12197
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 72,
-            "durationMs": 4893
+            "durationMs": 4396
+          }
+        ]
+      },
+      {
+        "handle": "_stockResearch",
+        "ok": true,
+        "selectedProvider": "fxembed-rss",
+        "recent": 55,
+        "added": 55,
+        "attempts": [
+          {
+            "provider": "x-syndication",
+            "ok": false,
+            "error": "HTTP 429",
+            "durationMs": 12179
+          },
+          {
+            "provider": "fxembed-rss",
+            "ok": true,
+            "recent": 55,
+            "durationMs": 2542
           }
         ]
       }
     ],
-    "completedAt": "2026-08-25T12:43:13.948Z",
-    "added": 2,
-    "totalStored": 189
+    "completedAt": "2026-08-25T12:47:42.449Z",
+    "added": 55,
+    "totalStored": 244
   },
-  "rawPostCount": 189,
+  "rawPostCount": 244,
   "rawPostsByCreator": {
     "serenity": 116,
-    "ck-capital": 73
+    "ck-capital": 73,
+    "luminara": 55
   },
-  "reviewQueueCount": 13,
+  "reviewQueueCount": 28,
   "changes": {
     "raw": "true",
-    "review": "false"
+    "review": "true"
   },
   "stepsReached": {
     "guard": "success",
@@ -72,7 +94,7 @@
     "propose": "success"
   },
   "delivery": {
-    "kind": "none",
-    "url": null
+    "kind": "issue",
+    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/37"
   }
 }
