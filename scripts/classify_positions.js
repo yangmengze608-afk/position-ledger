@@ -4,6 +4,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 const { classifyPost } = require("./lib/position_rules");
+const { DEFAULT_CREATOR_ID, creatorIdOf, legacyCompatibleId } = require("./lib/creator_identity");
 
 const ROOT = path.resolve(__dirname, "..");
 const RAW_PATH = path.join(ROOT, "data", "raw_posts.json");
@@ -17,8 +18,13 @@ async function readJson(file, fallback) {
   catch { return fallback; }
 }
 
-function candidateId(postId, ticker, type) {
-  return `cand-x-${postId}-${ticker.toLowerCase()}-${type.toLowerCase()}`;
+function candidateId(postId, ticker, type, creatorId = DEFAULT_CREATOR_ID) {
+  const base = `cand-x-${postId}-${ticker.toLowerCase()}-${type.toLowerCase()}`;
+  return legacyCompatibleId(base, creatorId);
+}
+
+function eventKey(value, sourcePostId, ticker, type) {
+  return `${creatorIdOf(value)}|${sourcePostId || ""}|${ticker}|${type}`;
 }
 
 function isStronger(existing, candidate) {
@@ -37,6 +43,8 @@ function mergeCandidate(queued, candidate) {
   if (existing.status !== "pending" || !isStronger(existing, candidate)) return "unchanged";
 
   Object.assign(existing, {
+    creatorId: candidate.creatorId,
+    person: candidate.person,
     confidence: candidate.confidence,
     score: candidate.score,
     classifier: candidate.classifier,
@@ -61,19 +69,21 @@ async function main() {
   const raw = await readJson(RAW_PATH, { posts: [] });
   const eventPayload = await readJson(EVENTS_PATH, { events: [] });
   const queuePayload = await readJson(QUEUE_PATH, { items: [] });
-  const eventKeys = new Set((eventPayload.events || []).map((e) => `${e.sourcePostId || ""}|${e.ticker}|${e.type}`));
+  const eventKeys = new Set((eventPayload.events || []).map((e) => eventKey(e, e.sourcePostId, e.ticker, e.type)));
   const queued = new Map((queuePayload.items || []).map((item) => [item.id, item]));
   let added = 0;
   let upgraded = 0;
 
   for (const post of raw.posts || []) {
+    const creatorId = creatorIdOf(post);
     for (const result of classifyPost(post)) {
-      const key = `${post.id}|${result.ticker}|${result.suggestedType}`;
+      const key = eventKey({ creatorId }, post.id, result.ticker, result.suggestedType);
       if (eventKeys.has(key)) continue;
-      const id = candidateId(post.id, result.ticker, result.suggestedType);
+      const id = candidateId(post.id, result.ticker, result.suggestedType, creatorId);
       const now = new Date().toISOString();
       const candidate = {
         id,
+        creatorId,
         person: post.person,
         ticker: result.ticker,
         suggestedType: result.suggestedType,
@@ -107,7 +117,10 @@ async function main() {
     console.log(`[classify] queue unchanged=${items.length}; added=0 upgraded=0`);
     return;
   }
-  await fs.writeFile(QUEUE_PATH, JSON.stringify({ schemaVersion: 1, generatedAt: new Date().toISOString(), items }, null, 2) + "\n");
+  queuePayload.schemaVersion = Math.max(Number(queuePayload.schemaVersion || 1), 2);
+  queuePayload.generatedAt = new Date().toISOString();
+  queuePayload.items = items;
+  await fs.writeFile(QUEUE_PATH, JSON.stringify(queuePayload, null, 2) + "\n");
   console.log(`[classify] queue=${items.length}; added=${added} upgraded=${upgraded}`);
 }
 
@@ -115,4 +128,4 @@ if (require.main === module) {
   main().catch((error) => { console.error(error); process.exit(1); });
 }
 
-module.exports = { candidateId, isStronger, mergeCandidate };
+module.exports = { candidateId, eventKey, isStronger, mergeCandidate };
