@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T09:54:11.021Z",
+  "generatedAt": "2026-08-25T11:15:01.871Z",
   "posts": [
     {
       "id": "2092186856792506435",
@@ -22,6 +22,230 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-25T09:54:10.212Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2092092600920465683",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T03:31:59.000Z",
+      "text": "Let the fun begin.\n$EOS.AX\nGood day when one of your biggest holdings is up 13%. $EOS.AX.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092092600920465683",
+      "cashtags": [
+        "EOS.AX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092083346692034663",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T02:55:13.000Z",
+      "text": "$BTC is now above 80k.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092083346692034663",
+      "cashtags": [
+        "BTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092059899836403917",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T01:22:03.000Z",
+      "text": "@Brownmoose What about a raptor man, so sick.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092059899836403917",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092059145511858343",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T01:19:03.000Z",
+      "text": "@optionscjp Yea, unless they were able to capture more of the heart and lung market I don’t see enough upside at these levels.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092059145511858343",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092058387311661104",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T01:16:02.000Z",
+      "text": "Phew.\nThank you Jim. $RKLB\nJim Cramer was just asked about Rocket Lab $RKLB stock “I’m not a big fan of Rocket Lab. We like Hawkeye 360. ... I think Rocket Lab is too speculative”",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092058387311661104",
+      "cashtags": [
+        "RKLB"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092054341574119666",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T00:59:58.000Z",
+      "text": "****they guided full year revenue to $360 to $400 million including MARSS, against prior core-only guidance of $280 to $300 million.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092054341574119666",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092054114377044286",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T00:59:04.000Z",
+      "text": "@EraserheadCap Thank you for the catch.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092054114377044286",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092053322169528519",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T00:55:55.000Z",
+      "text": "Good day when one of your biggest holdings is up 13%.\n$EOS.AX.\n$EOS.AX just dropped its half-year report and the numbers explain the move. Revenue of $168.8 million, up 283% year over year. Underlying EBITDA swung to a $21.6 million profit from a $14.9 million loss last year. Order book at a record $846 million. And they raised full year gui…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092053322169528519",
+      "cashtags": [
+        "EOS.AX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092043104560013412",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T00:15:19.000Z",
+      "text": "$EOS.AX just dropped its half-year report and the numbers explain the move.\nRevenue of $168.8 million, up 283% year over year.\nUnderlying EBITDA swung to a $21.6 million profit from a $14.9 million loss last year.\nOrder book at a record $846 million.\nAnd they raised full year guidance to $360 to $400 million, up from $280 to $300 million on the core business alone.\nRecent orders tell you where the demand is. Roughly $175 million for their Slinger counter-drone system and $23 million for naval remote weapon stations in the Middle East.\nThe thesis is simple. You can’t defend against drone swarms by firing million dollar interceptors at thousand dollar drones. \nCounter-UAS and directed energy are moving from niche capability to mainstream procurement, and EOS sits in both.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092043104560013412",
+      "cashtags": [
+        "EOS.AX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092008274778292497",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T21:56:54.000Z",
+      "text": "The Situational Awareness timeline gets crazier every week.\n>The fund returns 439% net in the first half of 2026. Grows to roughly $45 billion by early July, concentrated in AI compute and power, on leverage.\n>Late July, Citadel Securities publishes a note calling for a surprise Fed hike.\n>AI infrastructure gets liquidated.\n>Situational Awareness takes catastrophic losses. \n>The fund is forced to sell its entire public equity book. Millennium bids. Citadel wins.\n>AI names rebound almost immediately after the purchase.\n>Citadel then says systematic buyers are getting ready to load up on stocks again after the unwind.\n>Citadel's Wellington fund posts a 5.94% July, its best month since 2022.\n>Griffin tells clients they've unwound more than 80% of the acquired risk. Over 100 block trades, more than $4 billion, in three weeks.\n>Today, the SEC subpoenas four banks. They want records on the timing of Situational Awareness's trades and its communications with lenders about leverage.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092008274778292497",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091982412058177563",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T20:14:08.000Z",
+      "text": "@htamraz Yea, it’s crazy seeing a lot of these small caps get massive deals and somehow fade a 30% pump the next day.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091982412058177563",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091982180612264291",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T20:13:13.000Z",
+      "text": "$NVDA has now closed red 7 straight sessions.\nThis ties the longest losing streak since 2022.\n$NVDA has closed red six straight sessions. If it closes red today, that ties its longest losing streak in four years.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091982180612264291",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091981249929781444",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T20:09:31.000Z",
+      "text": "@awayyfromhomee I agree, I think we are at a point where it’s time to start adding some of these bigger names.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091981249929781444",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091977365903507677",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T19:54:05.000Z",
+      "text": "I feel like it’s been forever since one of my stocks has had some crazy news release.\nI need a $NBIS deal now.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091977365903507677",
+      "cashtags": [
+        "NBIS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2091967826764632087",
@@ -76,6 +300,23 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091961996023345432",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T18:53:01.000Z",
+      "text": "Added some $NVDA on the dip this morning.\nThis thing has traded sideways for about a year while revenue nearly doubled. \nSideways price with rising earnings just means the multiple keeps compressing, and that gap doesn’t close by earnings coming down.\nThe fundamentals already caught up. It’s only a matter of time before the price does.\nBoring buy but the RR here is great here imo.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091961996023345432",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2091961431461957968",
       "person": "Serenity",
       "platform": "x",
@@ -90,6 +331,21 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-25T02:07:07.834Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2091960579015454773",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T18:47:23.000Z",
+      "text": "@ntcoffeee They can’t trade sideways forever imo. Only a matter of time until fundamentals catch up to stock price.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091960579015454773",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2091960327831278077",
@@ -170,6 +426,68 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091948344792809581",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T17:58:46.000Z",
+      "text": "Here we go again.\nCitadel FUD to buy back low.\nBe ready for the article next week saying it’s time to load up on stocks again after they get their entries.\nCITADEL WARNS BESSENT’S BUYBACKS COULD BACKFIRE Citadel Securities calls Treasury’s expanded bond buybacks “financial repression,” warning they could weaken the dollar and fuel inflation. Bessent’s strategy aims to suppress long-term yields, potentially using Treasury’s cash rese…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091948344792809581",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091948057717883215",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T17:57:38.000Z",
+      "text": "@BlackPantherCap Lol, both. Buckle up.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091948057717883215",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091947502014542013",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T17:55:25.000Z",
+      "text": "The entire market comes down to one man this week.\nJensen Huang steps on stage Wednesday after the close.\nWhatever he says will decide how the next few months go. $NVDA",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091947502014542013",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091941983346466911",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T17:33:29.000Z",
+      "text": "Put together a full portfolio review for subs. \nWhere we stand, what I'm rotating into, and why the bond market matters more than anything else right now.\nSubscribe to read!!\nThis post is unavailable",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091941983346466911",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2091935022005776661",
       "person": "Serenity",
       "platform": "x",
@@ -248,6 +566,78 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091900387779301507",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T14:48:12.000Z",
+      "text": "$SMTC reports tomorrow after close.\nThe bar: revenue around $328 million, up 27.5%, with EPS near $0.62, up 51% year over year. \nLast quarter they did $291 million and beat by six cents, so consensus wants growth accelerating from 15.9% to 27.7%.\nWhat matters is the data center business. Semtech sells CopperEdge, the active copper silicon inside AI racks at short reach, plus LPO optics on the other side. \nThey've disclosed a major hyperscaler design win ramping this year, and they own an indium phosphide laser fab bought for $34 million that looks a lot smarter now.\n$LITE beat and guided 8% above. $COHR beat every line and guided well above. $AAOI said demand runs 20 to 40% above what they can build with capacity booked through Q2 2027.\nIf Semtech confirms the same picture, it's another data point in a very consistent story.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091900387779301507",
+      "cashtags": [
+        "SMTC",
+        "LITE",
+        "COHR",
+        "AAOI"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091893038066909343",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T14:19:00.000Z",
+      "text": "Nancy Pelosi just disclosed buys in $BE and $INTC.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091893038066909343",
+      "cashtags": [
+        "BE",
+        "INTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091892311877718109",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T14:16:07.000Z",
+      "text": "@EWL1589 I have not started a position.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091892311877718109",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091890590795337996",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T14:09:16.000Z",
+      "text": "The real trade. $NFLX $DIS $AMC",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091890590795337996",
+      "cashtags": [
+        "NFLX",
+        "DIS",
+        "AMC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2091889716274798891",
       "person": "Serenity",
       "platform": "x",
@@ -288,6 +678,55 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.622Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2091874278077604236",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T13:04:27.000Z",
+      "text": "Treasury officials say Bessent could tap the roughly $950 billion sitting in the Treasury General Account to fund bond buybacks.\nThat account is the government's operating cash at the Fed. The prior administration targeted $550 to $600 billion. Bessent built it to nearly a trillion.\nWhy it matters. Last week's announcement doubled long end buybacks from $2 billion to at least $4 billion, and yields dropped hard, then the move faded within days because investors questioned how much firepower was actually behind it.\nThis is the answer to that. Suddenly there's a trillion dollars of potential backing.\nThe 30-year hit its highest level since 2007 last week. National debt just crossed $40 trillion, adding a trillion in a matter of months. Bessent himself called liquidity in the 30-year very poor.\nThe government is now openly discussing using its operating cash to manage its own borrowing costs.\nThat's fiscal dominance, where debt service starts driving policy instead of the other way around. \nHistorically, that's the environment hard assets do well in.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091874278077604236",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091873025100567004",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T12:59:28.000Z",
+      "text": "So far this is the most interesting ones I have looked at.\n$TMDX keeps donor organs alive during transport instead of packing them in ice. \nTheir Organ Care System keeps a liver producing bile or a heart actually beating on the way to the operating room, which extends the viable window, lets surgeons assess function before implanting, and turns organs that would have been discarded into usable transplants.\nThe clinical evidence is what makes it work.\nTheir liver trial ran 300 patients across 20 US centers. Early allograft dysfunction dropped from 30.5% on ice to 17.3% on the machine. \nIschemic biliary complications at twelve months fell from 9.9% to 2.6%. And utilization of organs from donation after cardiac death went from 24.5% to 45.9%, meaning nearly twice as many organs that would have been thrown away got used.\nOn the heart side, their expanded criteria trial took hearts that other centers had already refused an average of 65 times each, and transplanted 80% of them successfully.\nThen there's the part that answers the obvious objection. Everyone asks why a hospital pays $38,000 to $80,000 for a machine when ice is free. \nThe answer is that organ acquisition never got folded into the fixed Medicare payment system in 1983 the way everything else did. \nIt's still reimbursed on a cost basis, and preservation is explicitly on the reimbursable list. The box isn't competing against free ice on the hospital's P&L. Also worth noting a heart transplant can total up to $2 million, so even the expensive version is a rounding error on the procedure.\nNow the business.\nQ2 revenue of $189.9 million, up 21%. Liver alone did $148 million, up 27.7%, and that segment has gone from $116 million to $148 million over the last four quarters. Gross margin at 60%, net income of $14.7 million, and $473 million in cash.\nThey also bought an aviation company in 2023 and now run 22 aircraft, 17 regional hubs, over 200 clinical staff, and a routing algorithm built with MIT. Roughly 99% of the business runs through their own logistics program, and service revenue is growing nearly twice as fast as product revenue.\nA competitor can copy the box. Copying a private airline plus 200 clinical experts plus a decade of routing data is a different problem.\nManagement is targeting 10,000 US cases a year by 2028 and over $2 billion in revenue by 2032, against roughly $750 million this year.\nSo it's liver today, heart as a dated option, and kidney as the long term prize at three times liver's market size.\nI know I posted about this a while back, but I'm diving back in. What is your favorite MedTech play and why?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091873025100567004",
+      "cashtags": [
+        "TMDX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.066Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091866757229126093",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T12:34:34.000Z",
+      "text": "$NVDA has closed red six straight sessions. \nIf it closes red today, that ties its longest losing streak in four years.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091866757229126093",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2091851831718879660",
@@ -340,6 +779,84 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091737466428391489",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T04:00:49.000Z",
+      "text": "@SnarffleSn78270 I do like it, my only worry is they cut growth guidance twice this year, 10% down to 5%. That's now slower than the industry, which is forecast around 7.6%. And J&J is losing share in heart ablation, which is one of their biggest and highest margin businesses.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091737466428391489",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091735176531292440",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T03:51:43.000Z",
+      "text": "I know I posted about this a while back, but I'm diving back in.\nWhat is your favorite MedTech play and why?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091735176531292440",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091734739216408892",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T03:49:59.000Z",
+      "text": "@theragingbullX I agree.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091734739216408892",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091727383183200287",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-24T03:20:45.000Z",
+      "text": "With $NVDA raising server prices by more than 15% because of memory costs, it will be interesting to see how the neoclouds trade tomorrow on it.\nThe obvious read is obvious. They buy those servers, so every megawatt gets more expensive to build.\nBut these companies aren't demand constrained, they're supply constrained. $NBIS said they could sell all of 2027 capacity today and are choosing not to. \nTheir disclosed contract value is above $20 million per megawatt with new deals being negotiated at $40 to $50 million.\nA 15% cost increase disappears inside pricing that's doubling.\nThat's how the whole chain works. Memory raises on Nvidia. Nvidia raises on the neoclouds. Neoclouds raise on their customers. And those customers can't get compute anywhere else.\nEveryone passes it along until it lands on the buyer with no alternative.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091727383183200287",
+      "cashtags": [
+        "NVDA",
+        "NBIS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091649080371855864",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-23T22:09:36.000Z",
+      "text": "Futures are open:",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091649080371855864",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2091618989743190211",
       "person": "Serenity",
       "platform": "x",
@@ -382,6 +899,36 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.622Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2091583009778545138",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-23T17:47:03.000Z",
+      "text": "Three quarters of Americans would oppose a data center near them, and more would rather live next to a nuclear plant.\nThat’s insane to me.\nPeople see a higher electric bill and a chatbot. They don’t see what this actually becomes over the next decade.\nThe bills are a real problem and the industry has to answer for it. \nBut we’re going to look back at this and wonder what we were arguing about.\nThree quarters of Americans now say they would oppose a data center being built near them. More Americans would rather live next to a nuclear plant. Over 15 states have tried to pass anti data center legislation. Only one has made it through a legislature, and it is still sitting…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091583009778545138",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091556544676585840",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-23T16:01:54.000Z",
+      "text": "Futures open in 6 hours.\nRed or Green?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091556544676585840",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2091508238823112749",
@@ -458,6 +1005,21 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091267783426289696",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T20:54:28.000Z",
+      "text": "@darkseidzz Haha, usually that’s how it goes.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091267783426289696",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2091265545027150188",
       "person": "Serenity",
       "platform": "x",
@@ -503,6 +1065,164 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091257521579167834",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T20:13:41.000Z",
+      "text": "I made a longer version of this for subs, but this is worth everyone reading because I agree with it.\nThis is exactly why I’ve been rotating toward some larger caps and stepping away from so many small caps unless I genuinely love the setup.\nHis point about the re rate is the important part. From Q1 through Q2, the whole supply chain went from ignored to noticed, and a lot of names doubled purely on that recognition. That’s a one time move. Once a stock has been discovered, it needs actual results to go higher, not just attention.\nThat’s a different game than the one we were playing in the spring, and it’s a harder one.\nAdd the July deleveraging on top. We watched forced selling take names down 50% while the businesses got better. That taught us something about liquidity. When it disappears, small caps have no bid, and being right on the thesis doesn’t help you.\nI still hold smaller cap names. But those are positions where I can point to something specific, a dated catalyst or a structural advantage, not just a story that hasn’t been noticed yet.\nBigger names, cleaner balance sheets, and selective on the small stuff is what the market has shifted to.\nI believe that only the highest quality AI stocks should be considered going forwards. The easy money has been made. Random AI shitcos went up >100% in weeks from Q1-Q2 due to the entire supply chain going through a broad re-rating off of depressed valuations. Most of that pricin…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091257521579167834",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091250486489776408",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T19:45:44.000Z",
+      "text": "$NVDA is raising server prices more than 15% and the reason is memory.\nPer Bloomberg, their largest customers were told prices on systems with Vera Rubin and Grace Blackwell chips go up early next year, with the increase depending on memory configuration.\nNvidia prepays suppliers to lock capacity. Nobody has more leverage over their own inputs.\nAnd they still can’t absorb memory costs. They’re passing them to hyperscalers.\nSame thing Apple did. Cook called memory pricing a hundred year flood and raised iPad and Mac prices because of it.\nTwo of the most powerful buyers on earth, both eating the same cost, both passing it on.\nThree companies supply the world’s memory, and it’s sold out past 2030.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091250486489776408",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091237406770954592",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T18:53:45.000Z",
+      "text": "@CTInvestmentss I agree, but at these prices I dont know...",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091237406770954592",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091234233817718973",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T18:41:09.000Z",
+      "text": "Bold move shorting after the amazing ER report.\nThe time to short was at $180, not at $90 already 50% below ATHs.\nJUST IN: Michael Burry is now shorting CoreWeave $CRWV",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091234233817718973",
+      "cashtags": [
+        "CRWV"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.067Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091213969016881330",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T17:20:37.000Z",
+      "text": "If you could hold 3 stocks for the next 5 years.\nWhat are they?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091213969016881330",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091212335109021947",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T17:14:08.000Z",
+      "text": "@EhrmantrautCap_ Good luck!!",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091212335109021947",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091203548780413199",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T16:39:13.000Z",
+      "text": "@_stockResearch $CRDO is one of my favorites.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091203548780413199",
+      "cashtags": [
+        "CRDO"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091185017825247641",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T15:25:35.000Z",
+      "text": "@DanDon0077 @BULLINVESTOR44 Me not responding doesn’t mean I agree.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091185017825247641",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091182531366256670",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T15:15:42.000Z",
+      "text": "@DanDon0077 @BULLINVESTOR44 Where did I say 38%?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091182531366256670",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091182034794250368",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T15:13:44.000Z",
+      "text": "One of my favorite names reports September 1st and I can’t wait for this one.\n$CRDO is the first quarter where the photonics acquisition actually shows up in the numbers.\nThey closed DustPhotonics on May 28 for $750 million. The quarter ended August 1, so this print carries about two months of it.\nHere’s why that deal was such a big deal. \n$CRDO already owned the SerDes and the DSPs. What they didn’t own was the silicon photonics, the light generating layer itself. Dust gave them that across 800G, 1.6T and 3.2T, on both near package and co packaged designs.\nThey went from selling components into someone else’s optical module to owning the entire stack.\nManagement guided combined optical revenue above $600 million in fiscal 2027 with accretive margins. The whole company did $1.34 billion last year.\nQ1 is guided to $465-475 million, above consensus, and fiscal 2027 is guided to over 80% growth.\nAnd the reason I like owning it is they don’t have to time the copper to optical transition. \nThey lead active electrical cables today, which pays the bills right now, and they own the photonics for whenever the rack converts.\nThis is the quarter a $750 million acquisition stops being a strategy slide and becomes a revenue line.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091182034794250368",
+      "cashtags": [
+        "CRDO"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2091179096013525189",
       "person": "Serenity",
       "platform": "x",
@@ -517,6 +1237,36 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.623Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2091178527529853059",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T14:59:47.000Z",
+      "text": "@dcblocher I was never bullish.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091178527529853059",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091178078688964898",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T14:58:00.000Z",
+      "text": "@DanDon0077 @BULLINVESTOR44 I can assure you I will not be buying shares lol. Why do you think short interest is 60%?",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091178078688964898",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2091178043935232296",
@@ -552,6 +1302,134 @@
       "creatorId": "serenity"
     },
     {
+      "id": "2091036083630878961",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T05:33:46.000Z",
+      "text": "@No1caresellmore Are you adding out of curiosity? I see you bought at $38.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091036083630878961",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091033217650343952",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T05:22:23.000Z",
+      "text": "@No1caresellmore Down 40% in 2 trading days is not all good.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091033217650343952",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091026665480581432",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T04:56:21.000Z",
+      "text": "@DEihausen 1/3 of the market cap after the upsize…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091026665480581432",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2091022345452327085",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T04:39:11.000Z",
+      "text": "Even more brutal for $WYFI holders.\n“WhiteFiber Announces Closing of Upsized $310.0 Million Convertible Senior Notes Offering.”\nStarted at $250 million, upsized to $270 million, closed at $310 million with the full option exercised.\nSecond raise this year, at a higher coupon than January, and roughly $118 million of it went straight to paying off those January notes.\nOuch…\nAbsolutely brutal for $WYFI holders. An offering that is a near 25% of its market cap.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2091022345452327085",
+      "cashtags": [
+        "WYFI"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090980722420941292",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T01:53:47.000Z",
+      "text": "@HunterAllen4 Thank you man",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090980722420941292",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090965560414662818",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-22T00:53:32.000Z",
+      "text": "@theoptionslord @HunterAllen4 @Brownmoose @TslaGroupie @MDCTrades305 thank you!!!",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090965560414662818",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090937268705878199",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T23:01:07.000Z",
+      "text": "Look at how much capital these three raised in the last two weeks.\n$INTC did a $20 billion underwritten offering on August 10, upsized from $15 billion, with an option for $2.25 billion more. Priced at $95 with the stock already up roughly 3x on the year.\n$NBIS priced $5 billion in converts on August 19, upsized from $4.5 billion because the book was oversubscribed. That’s on top of roughly $2.8 billion already pulled through an ATM at an average of $224 a share.\n$AAOI filed another $600 million ATM yesterday. Fourth program since February, roughly $1.7 billion authorized in seven months.\nJust a few names.\nAnd every one of them is funding the same thing. Capacity they can’t build fast enough.\n$INTC says supply can’t keep pace with demand. $NBIS says they could sell all of 2027 today and are deliberately choosing not to. $AAOI says demand runs 20 to 40% above what they can produce, with capacity booked through Q2 2027.\nNobody raises at this pace to build something speculative. They raise because the orders exist and the window to fill them is closing.\nThough the structures aren’t equal. $INTC took a one time hit at a good price. $NBIS used converts that price off strength. $AAOI just keeps dripping shares into the open market, which is the worst version of the three.\nSame message underneath all of it. The buildout is moving faster than cash flow can fund it.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090937268705878199",
+      "cashtags": [
+        "INTC",
+        "NBIS",
+        "AAOI"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090904654502826379",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T20:51:31.000Z",
+      "text": "Agree, and it’s the part of the $AAOI story that is ugly.\nAn ATM puts a permanent seller in your own stock. Strength gets sold into by the company itself, every time.\nThe operating picture is strong. Demand 20 to 40% above what they can build, booked through Q2 2027. \nBut you can be right on the thesis and still watch the share count work against you.\nIt's getting much harder to support $AAOI when they keep dropping $500m or $600M ATMs left and right. At a certain point, the operating outlook could be positive. But the share structure/financing becomes increasingly shareholder unfriendly. Really, really, dislike ATMs and inces…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090904654502826379",
+      "cashtags": [
+        "AAOI"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
       "id": "2090903631793127644",
       "person": "Serenity",
       "platform": "x",
@@ -566,6 +1444,190 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.623Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2090896036885643493",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T20:17:16.000Z",
+      "text": "$AAOI 600m offering.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090896036885643493",
+      "cashtags": [
+        "AAOI"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090891434194858033",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T19:58:59.000Z",
+      "text": "$NBIS priced $5 billion in converts, upsized from $4.5 billion.\nHere’s what’s interesting. Every major deal in this company’s history came paired with a raise.\nSeptember 2025, Microsoft signs up to $19.4 billion. Within days, $2.75 billion in converts.\nMarch 2026, Meta expands to $27 billion on the 16th. By the 20th, $4.3 billion closed.\nThis is the first raise without a deal attached to it yet.\nAnd management said on the call they could sell their entire 2027 capacity today and are deliberately choosing not to, because they see more value keeping some available.\nSo they’re turning down business and raising $5 billion to build more capacity.\nCould be nothing. But the pattern is hard to ignore.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090891434194858033",
+      "cashtags": [
+        "NBIS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.068Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090887636139286896",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T19:43:53.000Z",
+      "text": "@Kaisupremedeez $WOLF and $NVTS are solid",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090887636139286896",
+      "cashtags": [
+        "WOLF",
+        "NVTS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090875164380520718",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T18:54:20.000Z",
+      "text": "@harvesttrad Haha no, I’m a memory bull.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090875164380520718",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090868254021484768",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T18:26:52.000Z",
+      "text": "Every testing name put up monster earnings and the whole group is down from its highs.\n$FORM makes the probe cards that touch the wafer. Record quarter, margins expanding, guided above consensus.\n$VIAV does optical test. Beat on every line, crushed the guide.\n$AMKR is the only US advanced packaging name at scale. Signed a 10-year agreement with TSMC in Arizona and got $1.5 billion prepaid from Nvidia. Faded the entire pop.\nTesting is mandatory. Every chip made has to be tested before it ships, and it doesn’t matter whose silicon wins.\nAnd intensity is rising faster than volume. HBM stacks memory vertically and every layer needs verification. Advanced packaging means testing at die, package, and system level. CPO adds optical test on top of electrical.\nEven yield problems help. Viavi’s CEO called the CPO delay panic nonsense because bad yields mean more testing, not less.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090868254021484768",
+      "cashtags": [
+        "FORM",
+        "VIAV",
+        "AMKR"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090857164210368887",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T17:42:48.000Z",
+      "text": "@ThematicTrader $CELH is a solid one.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090857164210368887",
+      "cashtags": [
+        "CELH"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090829226001809673",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T15:51:47.000Z",
+      "text": "Markets like to hear it. $SKM\n$SKM just got a lot more interesting on this IPO Anthropic news. SK Telecom put $100 million into Anthropic in 2023 when it was valued at $5 billion. They still hold roughly 0.3% of the company. That stake is worth somewhere around a few billion today, against a market cap around…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090829226001809673",
+      "cashtags": [
+        "SKM"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090825007567925742",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T15:35:02.000Z",
+      "text": "The Citadel and Situational Awareness timeline, event by event.\nSituational Awareness returns 439% in the first half of 2026, growing to roughly $45 billion on leverage, concentrated in AI compute and power.\nLate July, Citadel Securities publishes a note calling for a surprise Fed hike.\nAI infrastructure gets liquidated.\nSituational Awareness takes catastrophic losses and is forced to sell its entire public book. Millennium bids. Citadel wins.\nAI names rebound almost immediately after the purchase.\nCitadel’s Wellington fund posts a 5.9% July, its best month since 2022.\nFriday, Griffin tells clients they’ve unwound more than 80% of the acquired risk. Over 100 block trades, more than $4 billion.\nAbsolutely insane.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090825007567925742",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090818957418574045",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T15:10:59.000Z",
+      "text": "$HOOD wants it. \nNew ATHs soon??\nCrypto run could send $HOOD back to All Time Highs.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090818957418574045",
+      "cashtags": [
+        "HOOD"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090818245825573341",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T15:08:09.000Z",
+      "text": "@stockflixx Wish I could tell you why. No clue",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090818245825573341",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090816977598058725",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T15:03:07.000Z",
+      "text": "It’s funny how all the $BTC holders are coming out of hibernation.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090816977598058725",
+      "cashtags": [
+        "BTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2090816483861696517",
@@ -613,6 +1675,21 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.623Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2090753993500696977",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T10:52:51.000Z",
+      "text": "Mining stocks were the play this week.\nGlad I got in early.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090753993500696977",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2090747117338059251",
@@ -703,6 +1780,88 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.623Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "2090631214881214912",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T02:44:58.000Z",
+      "text": "Another KOSPI party.\nKOSPI came to party today.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090631214881214912",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090615816693657914",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T01:43:47.000Z",
+      "text": "Okay wait it might actually go to 100k.\nIt’s not stopping. $BTC\nbitcoin:native Might be heading back towards 100k. This thing is flying.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090615816693657914",
+      "cashtags": [
+        "BTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090590509395816876",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-21T00:03:13.000Z",
+      "text": "@DEihausen I agree.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090590509395816876",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090587546388463861",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-20T23:51:26.000Z",
+      "text": "Bullishhhh. $ASTS\nSpaceX $SPCX and AST SpaceMobile $ASTS are reportedly interested in acquiring 800 MHz spectrum licenses valued around $6B. The licenses cover nearly the entire U.S. population and could support direct-to-device satellite voice services. Preliminary bids are due in early September…",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090587546388463861",
+      "cashtags": [
+        "ASTS",
+        "SPCX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2090584243407630469",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-20T23:38:19.000Z",
+      "text": "$EOS.AX has been flying recently. \nOne of my highest conviction positions.\nSurprised this name isn’t talked about more on this platform.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2090584243407630469",
+      "cashtags": [
+        "EOS.AX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T11:15:01.069Z",
+      "creatorId": "ck-capital"
     },
     {
       "id": "2090510568474231045",
