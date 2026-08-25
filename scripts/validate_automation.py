@@ -35,6 +35,10 @@ if yaml is not None:
     assert "bot/position-discovery" in workflow_text, "review branch guard missing"
     assert "gh pr create" in workflow_text, "PR delivery missing"
     assert "gh issue create" in workflow_text, "issue fallback delivery missing"
+    assert "POSITION_DISCOVERY_BATCH" in workflow_text, "discovery batch isolation missing"
+    assert "review_changed" in workflow_text and "raw_changed" in workflow_text, "raw cache and review changes must be separated"
+    assert "Persist raw-only ingest cache without human review" in workflow_text, "raw-only cache persistence missing"
+    assert "steps.diff.outputs.review_changed == 'true'" in workflow_text, "human review must be gated on review-worthy changes"
     assert "merge" not in workflow_text.lower() or "auto-merge" not in workflow_text.lower(), "discovery workflow must not auto-merge review data"
 
 print(f"automation OK: posts={len(post_ids)} queue={len(item_ids)} sources={len(sources.get('accounts', []))}")
