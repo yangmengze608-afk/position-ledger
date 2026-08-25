@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EVENTS_PATH = ROOT / "data" / "events.json"
 QUEUE_PATH = ROOT / "data" / "review_queue.json"
 RESOLUTIONS_PATH = ROOT / "data" / "resolutions.json"
+DEFAULT_CREATOR_ID = "serenity"
 
 
 def load_json(path, fallback):
@@ -18,10 +19,16 @@ def load_json(path, fallback):
         return fallback
 
 
+def creator_id(value):
+    return str(value.get("creatorId") or DEFAULT_CREATOR_ID).strip().lower() or DEFAULT_CREATOR_ID
+
+
 def event_id(item, resolution):
     ticker = str(resolution.get("resolvedTicker") or item["ticker"]).lower()
     event_type = str(resolution.get("eventType") or item["suggestedType"]).lower()
-    return f"evt-{ticker}-{item['sourcePostId']}-{event_type}"
+    base = f"evt-{ticker}-{item['sourcePostId']}-{event_type}"
+    creator = creator_id(item)
+    return base if creator == DEFAULT_CREATOR_ID else f"{creator}-{base}"
 
 
 def apply_resolutions(resolution_payload, queue_payload, event_payload):
@@ -54,8 +61,10 @@ def apply_resolutions(resolution_payload, queue_payload, event_payload):
         if eid not in event_ids:
             confidence = resolution.get("confidence") or item.get("confidence") or "C"
             reason = str(resolution.get("reason") or "人工审核接受该候选").strip()
+            creator = creator_id(item)
             event = {
                 "id": eid,
+                "creatorId": creator,
                 "person": item["person"],
                 "ticker": str(resolution.get("resolvedTicker") or item["ticker"]).upper(),
                 "company": resolution.get("company") or item.get("company") or item["ticker"],
@@ -81,6 +90,7 @@ def apply_resolutions(resolution_payload, queue_payload, event_payload):
             changed = True
 
         if item.get("status") != "accepted" or item.get("acceptedEventId") != eid:
+            item["creatorId"] = creator_id(item)
             item["status"] = "accepted"
             item["acceptedEventId"] = eid
             item["resolutionId"] = resolution.get("id")
