@@ -3,106 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="公开持仓证据账本：用事件与原始证据追踪投资者公开披露的持仓状态。" />
-  <title>Position Ledger · 持仓证据账本</title>
+  <meta name="description" content="Position Ledger：基于公开披露与原始证据的持仓追踪台账。" />
+  <title>Position Ledger · 公开持仓证据账本</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="shell">
+  <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="./" aria-label="Position Ledger 首页">
         <span class="brand-mark">PL</span>
         <span class="brand-copy">
           <strong>Position Ledger</strong>
-          <small>公开持仓证据账本</small>
+          <small>PUBLIC DISCLOSURE LEDGER</small>
         </span>
       </a>
       <div class="top-actions">
-        <span class="backend-pill" id="backend-pill">数据源 · GitHub</span>
-        <button class="ghost-btn" id="refresh-btn" type="button">刷新数据</button>
+        <span class="status-pill"><i></i><span id="backend-pill">GitHub Live</span></span>
+        <button class="ghost-btn" id="refresh-btn" type="button">刷新</button>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero-kicker">PUBLIC POSITION INTELLIGENCE</div>
-        <div class="hero-grid">
-          <div>
-            <h1 id="profile-name">Serenity · 持仓追踪台</h1>
-            <p class="hero-desc" id="profile-desc">把公开披露拆成可核对的事件账本；“没提到”不等于“没有持仓”。</p>
-            <div class="hero-meta">
-              <span id="profile-handle">@aleabitoreddit</span>
-              <span class="dot">·</span>
-              <span id="last-updated">正在读取 GitHub 数据…</span>
+        <div class="hero-copy">
+          <div class="eyebrow">PORTFOLIO INTELLIGENCE · EVIDENCE FIRST</div>
+          <h1 id="profile-name">Serenity · 持仓追踪台</h1>
+          <p id="profile-desc" class="hero-desc">把公开披露拆成可核对的事件账本；没有新披露，不自动推断卖出。</p>
+          <div class="hero-meta">
+            <span id="profile-handle">@aleabitoreddit</span>
+            <span>·</span>
+            <span id="last-updated">正在读取数据…</span>
+          </div>
+        </div>
+        <div class="method-card">
+          <span class="method-label">METHODOLOGY</span>
+          <strong>记录“她公开说过什么”，而不是猜她现在持有什么。</strong>
+          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变账本状态；历史提及与推测单独处理。</p>
+        </div>
+      </section>
+
+      <section class="stat-strip" aria-label="账本概览">
+        <div class="stat"><span>当前在持</span><strong id="stat-live">—</strong><small>Live</small></div>
+        <div class="stat"><span>A 级证据</span><strong id="stat-a">—</strong><small>Explicit</small></div>
+        <div class="stat"><span>近 7 天动作</span><strong id="stat-7d">—</strong><small>Events</small></div>
+        <div class="stat"><span>历史 / 未确认</span><strong id="stat-unconfirmed">—</strong><small>Unconfirmed</small></div>
+        <div class="stat"><span>否认 / 清仓</span><strong id="stat-closed">—</strong><small>Closed</small></div>
+      </section>
+
+      <section class="dashboard-grid">
+        <div class="ledger-panel panel">
+          <div class="panel-head ledger-head">
+            <div>
+              <div class="eyebrow">POSITION LEDGER</div>
+              <h2>公开持仓台账</h2>
             </div>
+            <div class="head-note"><span id="result-count">0</span> 个标的</div>
           </div>
-          <div class="hero-note">
-            <strong>证据优先</strong>
-            <p>页面展示的是公开声明的结构化记录，不是实时券商账户，也不构成投资建议。</p>
-          </div>
-        </div>
-      </section>
 
-      <section class="stats-grid" aria-label="持仓统计">
-        <article class="stat-card">
-          <span>当前在持</span>
-          <strong id="stat-live">—</strong>
-          <small>最近证据未显示退出</small>
-        </article>
-        <article class="stat-card">
-          <span>60 天新披露</span>
-          <strong id="stat-new">—</strong>
-          <small>按账本首条事件计算</small>
-        </article>
-        <article class="stat-card">
-          <span>120 天静默</span>
-          <strong id="stat-silent">—</strong>
-          <small>长期未获得再次确认</small>
-        </article>
-        <article class="stat-card">
-          <span>明确否认 / 清仓</span>
-          <strong id="stat-closed">—</strong>
-          <small>DENY + EXIT 事件</small>
-        </article>
-      </section>
-
-      <section class="workspace">
-        <div class="toolbar">
-          <div class="tabs" id="tabs" role="tablist" aria-label="持仓筛选">
-            <button class="tab active" data-filter="live" type="button">Live</button>
-            <button class="tab" data-filter="new" type="button">近 60 天</button>
-            <button class="tab" data-filter="all" type="button">全部</button>
-            <button class="tab" data-filter="silent" type="button">静默</button>
-            <button class="tab" data-filter="archive" type="button">Archive</button>
-            <button class="tab" data-filter="denials" type="button">Denials</button>
+          <div class="controls">
+            <div class="tabs" id="tabs" role="tablist" aria-label="持仓状态筛选">
+              <button class="tab active" data-filter="live" type="button">在持</button>
+              <button class="tab" data-filter="all" type="button">全部</button>
+              <button class="tab" data-filter="unconfirmed" type="button">历史</button>
+              <button class="tab" data-filter="archive" type="button">清仓</button>
+              <button class="tab" data-filter="denial" type="button">否认</button>
+            </div>
+            <label class="searchbox">
+              <span>⌕</span>
+              <input id="search" type="search" placeholder="搜索 ticker / 公司 / 观点" autocomplete="off" />
+            </label>
           </div>
-          <label class="searchbox">
-            <span>⌕</span>
-            <input id="search" type="search" placeholder="搜索 ticker / 公司 / 备注" autocomplete="off" />
-          </label>
+
+          <div class="table-wrap">
+            <table class="ledger-table">
+              <thead>
+                <tr>
+                  <th>标的</th>
+                  <th>状态</th>
+                  <th>最后动作</th>
+                  <th>最后确认</th>
+                  <th>首次披露</th>
+                  <th class="num">现价</th>
+                  <th class="num">日涨跌</th>
+                  <th class="num">事件</th>
+                  <th>证据</th>
+                </tr>
+              </thead>
+              <tbody id="ledger-body"></tbody>
+            </table>
+          </div>
+          <div class="empty-state hidden" id="empty-state"><strong>没有符合条件的记录</strong><p>更换筛选条件或等待新的公开披露进入账本。</p></div>
         </div>
 
-        <div class="section-head">
-          <div>
-            <span class="eyebrow" id="section-eyebrow">LIVE POSITIONS</span>
-            <h2 id="section-title">当前公开持仓</h2>
-          </div>
-          <span class="result-count" id="result-count">0 项</span>
-        </div>
+        <aside class="side-column">
+          <section class="panel feed-panel">
+            <div class="panel-head">
+              <div><div class="eyebrow">LATEST DISCLOSURES</div><h2>最近披露</h2></div>
+              <span class="live-dot">LIVE</span>
+            </div>
+            <div id="recent-feed" class="feed-list"></div>
+          </section>
 
-        <div class="cards" id="cards" aria-live="polite"></div>
-        <div class="empty-state hidden" id="empty-state">
-          <strong>这个筛选下还没有记录</strong>
-          <p>事件账本是唯一事实源；等下一条证据进入 GitHub 后，这里会自动更新。</p>
-        </div>
+          <section class="panel legend-panel">
+            <div class="panel-head"><div><div class="eyebrow">EVIDENCE SCALE</div><h2>证据等级</h2></div></div>
+            <div class="legend-row"><b>A</b><div><strong>明确一手声明</strong><span>直接说买入、仍持有、卖出或没有持仓。</span></div></div>
+            <div class="legend-row"><b>B</b><div><strong>强语义支持</strong><span>证据很强，但不是直接账户状态句。</span></div></div>
+            <div class="legend-row"><b>C</b><div><strong>推断</strong><span>不自动进入 Live，仅作研究候选。</span></div></div>
+          </section>
+        </aside>
       </section>
     </main>
 
     <footer>
-      <span>GitHub-backed evidence ledger</span>
-      <span>·</span>
-      <span>Not financial advice</span>
+      <span>GitHub-backed evidence ledger</span><span>·</span><span>公开信息研究用途</span><span>·</span><span>Not financial advice</span>
     </footer>
   </div>
 
