@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 EVENT_TYPES = {"OPEN", "ADD", "HOLD", "REDUCE", "EXIT", "DENY", "HISTORICAL"}
 CONFIDENCE = {"A", "B", "C"}
+RESOLUTION_DECISIONS = {"accept", "reject"}
 
 
 def fail(msg):
@@ -48,13 +49,44 @@ def validate_security_catalog(symbols):
             fail(f"market symbol mismatch for {ticker}: catalog={market_symbol} symbols={symbols.get(ticker)}")
 
 
+def validate_resolutions(resolutions, queue):
+    candidate_ids = {item.get("id") for item in queue.get("items", [])}
+    resolution_ids = set()
+    for i, resolution in enumerate(resolutions.get("resolutions", []), start=1):
+        rid = str(resolution.get("id", "")).strip()
+        candidate_id = str(resolution.get("candidateId", "")).strip()
+        decision = resolution.get("decision")
+        reason = str(resolution.get("reason", "")).strip()
+        resolved_at = str(resolution.get("resolvedAt", "")).strip()
+        if not rid or not candidate_id or not reason or not resolved_at:
+            fail(f"resolution #{i} missing id/candidateId/reason/resolvedAt")
+        if rid in resolution_ids:
+            fail(f"duplicate resolution id: {rid}")
+        resolution_ids.add(rid)
+        if candidate_id not in candidate_ids:
+            fail(f"resolution {rid} references missing candidate: {candidate_id}")
+        if decision not in RESOLUTION_DECISIONS:
+            fail(f"resolution {rid} has invalid decision: {decision}")
+        if decision == "accept":
+            if not resolution.get("resolvedTicker"):
+                fail(f"accepted resolution {rid} missing resolvedTicker")
+            if resolution.get("confidence") not in CONFIDENCE:
+                fail(f"accepted resolution {rid} has invalid confidence")
+            if resolution.get("eventType") not in EVENT_TYPES:
+                fail(f"accepted resolution {rid} has invalid eventType")
+        for url in resolution.get("evidenceUrls", []):
+            if not str(url).startswith("https://"):
+                fail(f"resolution {rid} evidenceUrl must use https")
+
+
 def main():
     loaded = {}
-    for name in ["profile", "events", "holdings", "market", "symbols", "security_aliases"]:
+    for name in ["profile", "events", "holdings", "market", "symbols", "security_aliases", "review_queue", "resolutions"]:
         loaded[name] = load_data(name)
 
     symbols = loaded["symbols"]
     validate_security_catalog(symbols)
+    validate_resolutions(loaded["resolutions"], loaded["review_queue"])
 
     payload = loaded["events"]
     ids = set()
@@ -76,7 +108,11 @@ def main():
             fail(f"sourceUrl must use https: {event['id']}")
 
     subprocess.run([sys.executable, str(ROOT / "scripts" / "rebuild_holdings.py")], check=True)
-    print(f"OK: validated {len(ids)} events and {len(loaded['security_aliases'].get('securities', []))} security aliases")
+    print(
+        f"OK: validated {len(ids)} events, "
+        f"{len(loaded['security_aliases'].get('securities', []))} security aliases, "
+        f"{len(loaded['resolutions'].get('resolutions', []))} resolutions"
+    )
 
 
 if __name__ == "__main__":

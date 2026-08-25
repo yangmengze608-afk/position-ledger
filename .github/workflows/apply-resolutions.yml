@@ -1,0 +1,42 @@
+name: Apply manual review resolutions
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data/resolutions.json"
+      - "scripts/apply_resolutions.py"
+      - ".github/workflows/apply-resolutions.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manual-position-resolutions
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply reviewed resolutions
+        run: python scripts/apply_resolutions.py
+      - name: Validate resulting ledger
+        run: python scripts/validate_data.py
+      - name: Commit canonical resolution outputs
+        run: |
+          git config user.name "position-ledger-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/review_queue.json data/holdings.json
+          if git diff --cached --quiet; then
+            echo "No resolution outputs changed"
+          else
+            git commit -m "data: apply reviewed position resolutions"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

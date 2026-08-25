@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "resolutions": [
+    {
+      "id": "resolve-walsin-2089188332987097213",
+      "candidateId": "cand-x-2089188332987097213-2492-add",
+      "decision": "accept",
+      "resolvedTicker": "2492",
+      "company": "Walsin Technology Corporation",
+      "exchange": "TWSE",
+      "confidence": "B",
+      "eventType": "ADD",
+      "reason": "原帖明确表示近期加仓 Walsin，但括号代码写为 2494。Walsin Technology 官方投资者关系资料确认其 TSE 代码为 2492，且公司官方资料称其 MLCC 全球市占约第四，与原帖 top-4 MLCC 语境一致，因此人工解析为 2492；因源代码冲突保留 B 级置信度。",
+      "evidenceUrls": [
+        "https://www.passivecomponent.com/investor-relations/fundamentals/",
+        "https://www.passivecomponent.com/passive-system-alliance/"
+      ],
+      "resolvedAt": "2026-08-25T03:22:00Z"
+    }
+  ]
+}
