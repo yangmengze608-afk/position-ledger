@@ -13,5 +13,9 @@
   "TSEM": "TSEM",
   "AEHR": "AEHR",
   "MU": "MU",
-  "AMS-OSRAM": "AMS.SW"
+  "AMS-OSRAM": "AMS.SW",
+  "SPCX": "SPCX",
+  "CBRS": "CBRS",
+  "ORCL": "ORCL",
+  "NVTS": "NVTS"
 }
