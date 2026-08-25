@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T11:26:58.654416+00:00",
+  "updatedAt": "2026-08-25T11:28:48.420683+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "methodology": {
     "dailyMove": "regular market price versus previous valid adjusted daily session close",
@@ -46,11 +46,11 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:50.257891+00:00"
+      "updatedAt": "2026-08-25T11:28:41.438823+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
-      "price": 35.1,
+      "price": 35.18,
       "previousClose": 36.5,
       "currency": "SEK",
       "exchange": "STO",
@@ -61,14 +61,14 @@
         "sessionDate": "2026-08-17",
         "price": 40.900002,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -14.1809
+        "performancePct": -13.9853
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-21T17:40:00+10:00",
         "sessionDate": "2026-08-21",
         "price": 36.5,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -3.8356
+        "performancePct": -3.6164
       },
       "creatorAnchors": {
         "serenity": {
@@ -77,18 +77,18 @@
             "sessionDate": "2026-08-17",
             "price": 40.900002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -14.1809
+            "performancePct": -13.9853
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-21T17:40:00+10:00",
             "sessionDate": "2026-08-21",
             "price": 36.5,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -3.8356
+            "performancePct": -3.6164
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:50.680159+00:00"
+      "updatedAt": "2026-08-25T11:28:41.761303+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
@@ -130,7 +130,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:51.103826+00:00"
+      "updatedAt": "2026-08-25T11:28:42.087108+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
@@ -172,7 +172,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:51.519826+00:00"
+      "updatedAt": "2026-08-25T11:28:42.441188+00:00"
     },
     "POET": {
       "symbol": "POET",
@@ -214,7 +214,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:51.997704+00:00"
+      "updatedAt": "2026-08-25T11:28:42.755379+00:00"
     },
     "ARM": {
       "symbol": "ARM",
@@ -244,7 +244,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:52.411104+00:00"
+      "updatedAt": "2026-08-25T11:28:43.075204+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
@@ -274,7 +274,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:52.834247+00:00"
+      "updatedAt": "2026-08-25T11:28:43.406809+00:00"
     },
     "INTC": {
       "symbol": "INTC",
@@ -304,7 +304,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:53.271989+00:00"
+      "updatedAt": "2026-08-25T11:28:43.749959+00:00"
     },
     "LITE": {
       "symbol": "LITE",
@@ -334,7 +334,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:53.687215+00:00"
+      "updatedAt": "2026-08-25T11:28:44.073920+00:00"
     },
     "EWY": {
       "symbol": "EWY",
@@ -364,7 +364,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:54.178210+00:00"
+      "updatedAt": "2026-08-25T11:28:44.414478+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
@@ -394,7 +394,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:54.592773+00:00"
+      "updatedAt": "2026-08-25T11:28:44.729817+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
@@ -424,7 +424,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:55.001208+00:00"
+      "updatedAt": "2026-08-25T11:28:45.092024+00:00"
     },
     "MU": {
       "symbol": "MU",
@@ -454,7 +454,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:55.441434+00:00"
+      "updatedAt": "2026-08-25T11:28:45.483869+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
@@ -484,7 +484,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T11:26:55.867519+00:00"
+      "updatedAt": "2026-08-25T11:28:45.831384+00:00"
     },
     "SPCX": {
       "symbol": "SPCX",
@@ -526,7 +526,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:56.282096+00:00"
+      "updatedAt": "2026-08-25T11:28:46.151258+00:00"
     },
     "CBRS": {
       "symbol": "CBRS",
@@ -568,7 +568,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:56.693705+00:00"
+      "updatedAt": "2026-08-25T11:28:46.471691+00:00"
     },
     "ORCL": {
       "symbol": "ORCL",
@@ -610,7 +610,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:57.117041+00:00"
+      "updatedAt": "2026-08-25T11:28:46.810417+00:00"
     },
     "NVTS": {
       "symbol": "NVTS",
@@ -652,7 +652,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:57.531289+00:00"
+      "updatedAt": "2026-08-25T11:28:47.134915+00:00"
     },
     "6976": {
       "symbol": "6976.T",
@@ -694,7 +694,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:57.972841+00:00"
+      "updatedAt": "2026-08-25T11:28:47.520785+00:00"
     },
     "2492": {
       "symbol": "2492.TW",
@@ -736,7 +736,37 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T11:26:58.404273+00:00"
+      "updatedAt": "2026-08-25T11:28:47.852943+00:00"
+    },
+    "EOS.AX": {
+      "symbol": "EOS.AX",
+      "price": 10.58,
+      "previousClose": 8.6,
+      "currency": "AUD",
+      "exchange": "ASX",
+      "marketState": null,
+      "exchangeTimezone": "Australia/Sydney",
+      "firstDisclosureAnchor": null,
+      "lastActionAnchor": null,
+      "creatorAnchors": {
+        "ck-capital": {
+          "firstDisclosureAnchor": {
+            "eventAt": "2026-08-20T23:38:19.000Z",
+            "sessionDate": "2026-08-21",
+            "price": 8.9,
+            "method": "first-market-close-on-or-after-disclosure-date",
+            "performancePct": 18.8764
+          },
+          "lastActionAnchor": {
+            "eventAt": "2026-08-20T23:38:19.000Z",
+            "sessionDate": "2026-08-21",
+            "price": 8.9,
+            "method": "first-market-close-on-or-after-disclosure-date",
+            "performancePct": 18.8764
+          }
+        }
+      },
+      "updatedAt": "2026-08-25T11:28:48.170543+00:00"
     }
   },
   "failures": []
