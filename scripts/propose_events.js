@@ -4,6 +4,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 const { findMirrorMatch, upgradeMirrorEvent } = require("./lib/event_reconciliation");
+const { DEFAULT_CREATOR_ID, creatorIdOf, legacyCompatibleId } = require("./lib/creator_identity");
 
 const ROOT = path.resolve(__dirname, "..");
 const EVENTS_PATH = path.join(ROOT, "data", "events.json");
@@ -29,7 +30,12 @@ function eventType(item) {
 }
 
 function eventId(item, type) {
-  return `evt-${item.ticker.toLowerCase()}-${item.sourcePostId}-${type.toLowerCase()}`;
+  const base = `evt-${item.ticker.toLowerCase()}-${item.sourcePostId}-${type.toLowerCase()}`;
+  return legacyCompatibleId(base, creatorIdOf(item));
+}
+
+function creatorTickerKey(value) {
+  return `${creatorIdOf(value)}|${value.ticker}`;
 }
 
 function classifierName(item) {
@@ -42,7 +48,7 @@ async function main() {
   const events = eventPayload.events || [];
   const existingIds = new Set(events.map((e) => e.id));
   const previousByTicker = new Map();
-  for (const event of events) previousByTicker.set(event.ticker, event);
+  for (const event of events) previousByTicker.set(creatorTickerKey(event), event);
   let proposed = 0;
   let upgraded = 0;
   let changed = false;
@@ -62,15 +68,17 @@ async function main() {
       item.status = "proposed";
       item.proposedEventId = mirror.id;
       item.reconciliation = "upgraded-secondary-mirror";
-      previousByTicker.set(item.ticker, mirror);
+      previousByTicker.set(creatorTickerKey(item), mirror);
       upgraded += 1;
       changed = true;
       continue;
     }
 
-    const previous = previousByTicker.get(item.ticker) || {};
+    const previous = previousByTicker.get(creatorTickerKey(item)) || {};
+    const creatorId = creatorIdOf(item);
     events.push({
       id,
+      creatorId,
       person: item.person,
       ticker: item.ticker,
       company: item.company || previous.company || item.ticker,
@@ -87,7 +95,8 @@ async function main() {
       classifier: classifierName(item)
     });
     existingIds.add(id);
-    previousByTicker.set(item.ticker, events[events.length - 1]);
+    previousByTicker.set(creatorTickerKey(item), events[events.length - 1]);
+    item.creatorId = creatorId;
     item.status = "proposed";
     item.proposedEventId = id;
     proposed += 1;
@@ -100,8 +109,10 @@ async function main() {
   }
 
   events.sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
-  queuePayload.generatedAt = new Date().toISOString();
+  eventPayload.schemaVersion = Math.max(Number(eventPayload.schemaVersion || 1), 2);
   eventPayload.events = events;
+  queuePayload.schemaVersion = Math.max(Number(queuePayload.schemaVersion || 1), 2);
+  queuePayload.generatedAt = new Date().toISOString();
   await fs.writeFile(EVENTS_PATH, JSON.stringify(eventPayload, null, 2) + "\n");
   await fs.writeFile(QUEUE_PATH, JSON.stringify(queuePayload, null, 2) + "\n");
   console.log(`[propose] proposed=${proposed}; upgraded=${upgraded}; events=${events.length}`);
@@ -111,4 +122,4 @@ if (require.main === module) {
   main().catch((error) => { console.error(error); process.exit(1); });
 }
 
-module.exports = { canPromote, eventType, eventId, classifierName };
+module.exports = { canPromote, eventType, eventId, creatorTickerKey, classifierName };
