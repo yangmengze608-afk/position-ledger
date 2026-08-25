@@ -102,19 +102,8 @@ jobs:
             echo "raw_changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Persist raw-only ingest cache without human review
-        if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.review_changed != 'true' && steps.diff.outputs.raw_changed == 'true'
-        shell: bash
-        run: |
-          git config user.name "position-ledger-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw_posts.json
-          git commit -m "data: archive newly discovered public posts"
-          git pull --rebase origin main
-          git push origin HEAD:main
-
-      - name: Record one-shot smoke diagnostics for automation-code pushes
-        if: ${{ always() && github.event_name == 'push' }}
+      - name: Prepare one-shot smoke diagnostics
+        if: ${{ always() && github.event_name == 'push' && steps.guard.outputs.skip != 'true' }}
         shell: bash
         run: |
           python - <<'PY'
@@ -152,16 +141,19 @@ jobs:
                   "propose": "${{ steps.propose.outcome }}"
               }
           }
-          Path('data/automation_status.json').write_text(json.dumps(status, indent=2) + '\n')
+          Path('/tmp/discovery-smoke-status.json').write_text(json.dumps(status, indent=2) + '\n')
           PY
+
+      - name: Persist raw-only ingest cache without human review
+        if: steps.guard.outputs.skip != 'true' && steps.diff.outputs.review_changed != 'true' && steps.diff.outputs.raw_changed == 'true'
+        shell: bash
+        run: |
           git config user.name "position-ledger-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/automation_status.json
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: record discovery smoke status"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          git add data/raw_posts.json
+          git commit -m "data: archive newly discovered public posts"
+          git pull --rebase origin main
+          git push origin HEAD:main
 
       - name: Publish review request
         id: delivery
@@ -202,7 +194,7 @@ jobs:
             echo "Created fallback review issue: $issue_url"
           fi
 
-      - name: Persist smoke delivery outcome
+      - name: Persist smoke diagnostics and delivery outcome
         if: ${{ always() && github.event_name == 'push' && steps.guard.outputs.skip != 'true' }}
         env:
           DELIVERY_KIND: ${{ steps.delivery.outputs.kind }}
@@ -214,21 +206,26 @@ jobs:
           python - <<'PY'
           import json, os
           from pathlib import Path
-          p = Path('data/automation_status.json')
+          source = Path('/tmp/discovery-smoke-status.json')
           try:
-              status = json.loads(p.read_text())
+              status = json.loads(source.read_text())
           except Exception:
-              status = {}
+              status = {
+                  'recordedAt': __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
+                  'workflowCommit': os.environ.get('GITHUB_SHA'),
+                  'batchId': os.environ.get('POSITION_DISCOVERY_BATCH'),
+              }
           status['delivery'] = {
               'kind': os.environ.get('DELIVERY_KIND') or 'none',
               'url': os.environ.get('DELIVERY_URL') or None,
           }
-          p.write_text(json.dumps(status, indent=2) + '\n')
+          Path('data/automation_status.json').write_text(json.dumps(status, indent=2) + '\n')
           PY
           git config user.name "position-ledger-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/automation_status.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore: record discovery delivery status"
+            git commit -m "chore: record discovery smoke status"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
