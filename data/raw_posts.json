@@ -1,7 +1,41 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T19:49:01.581Z",
+  "generatedAt": "2026-08-25T20:49:51.199Z",
   "posts": [
+    {
+      "id": "2092344903585976390",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T20:14:33.000Z",
+      "text": "$SMTC earnings are out.\nRevenue of $341.9 million against $328 million guided. Up 33% year over year, 17% sequentially, and a company record.\nAdjusted EPS of $0.71 versus $0.61 guided.\nAdjusted operating margin at 24.4%, up from 18.8% a year ago. EBITDA margin at 26.6%.\nNow the guide, which is the real story.\nQ3 revenue guided to $410 million. That’s another 20% sequential jump, off a quarter that already grew 17%.\nAdjusted EPS guided to $1.05. Up 48% from the $0.71 they just posted.\nOperating margin guided to 31%. EBITDA margin to 32.8%.\nThey did $257.6 million a year ago. They’re telling you next quarter is $410 million.\nAnd here’s the line buried in the outlook. \nAdjusted gross margin excluding the business held for sale is guided to 63.9%. \nStrip out what they’re selling and this is a 60%+ gross margin semiconductor company, not the 53% business the market has been valuing.\nHou pointed to accelerating bookings and record backlog signaling a strong inflection, with visibility extending well into next fiscal year.\nLin said broad-based bookings strength should translate into sustained revenue, margin and earnings growth.\nThat’s the CopperEdge and FiberEdge 1.6T ramp arriving exactly when they said it would.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092344903585976390",
+      "cashtags": [
+        "SMTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T20:49:34.298Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092342301192315161",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T20:04:13.000Z",
+      "text": "Not good. $INTU",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092342301192315161",
+      "cashtags": [
+        "INTU"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T20:49:34.299Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092337677974511729",
       "person": "CK Capital",
