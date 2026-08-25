@@ -11,6 +11,7 @@ on:
       - "evidence-drawer.css"
       - "mentions.css"
       - "manjianghong.css"
+      - "creator-ui.css"
       - "app.js"
       - "performance-ui.js"
       - "terminal-ui.js"
