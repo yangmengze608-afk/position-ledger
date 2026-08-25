@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T20:49:01.700747+00:00",
+  "updatedAt": "2026-08-25T21:46:29.365110+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "methodology": {
     "dailyMove": "regular market price versus previous valid adjusted daily session close",
@@ -62,7 +62,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:55.036827+00:00"
+      "updatedAt": "2026-08-25T21:46:22.552753+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
@@ -104,7 +104,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:55.388839+00:00"
+      "updatedAt": "2026-08-25T21:46:22.868103+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
@@ -146,7 +146,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:55.700209+00:00"
+      "updatedAt": "2026-08-25T21:46:23.192249+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
@@ -188,7 +188,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:56.047147+00:00"
+      "updatedAt": "2026-08-25T21:46:23.525241+00:00"
     },
     "POET": {
       "symbol": "POET",
@@ -230,7 +230,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:56.352540+00:00"
+      "updatedAt": "2026-08-25T21:46:23.846472+00:00"
     },
     "ARM": {
       "symbol": "ARM",
@@ -260,7 +260,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:56.667216+00:00"
+      "updatedAt": "2026-08-25T21:46:24.176990+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
@@ -306,7 +306,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:56.986281+00:00"
+      "updatedAt": "2026-08-25T21:46:24.510014+00:00"
     },
     "INTC": {
       "symbol": "INTC",
@@ -336,7 +336,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:57.314228+00:00"
+      "updatedAt": "2026-08-25T21:46:24.854084+00:00"
     },
     "LITE": {
       "symbol": "LITE",
@@ -366,7 +366,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:57.625567+00:00"
+      "updatedAt": "2026-08-25T21:46:25.162805+00:00"
     },
     "EWY": {
       "symbol": "EWY",
@@ -396,7 +396,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:57.951490+00:00"
+      "updatedAt": "2026-08-25T21:46:25.490378+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
@@ -426,7 +426,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:58.261704+00:00"
+      "updatedAt": "2026-08-25T21:46:25.811821+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
@@ -472,7 +472,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:58.578354+00:00"
+      "updatedAt": "2026-08-25T21:46:26.114545+00:00"
     },
     "MU": {
       "symbol": "MU",
@@ -502,7 +502,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:58.915195+00:00"
+      "updatedAt": "2026-08-25T21:46:26.458013+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
@@ -532,7 +532,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-08-25T20:48:59.234891+00:00"
+      "updatedAt": "2026-08-25T21:46:26.791545+00:00"
     },
     "SPCX": {
       "symbol": "SPCX",
@@ -562,7 +562,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:59.542964+00:00"
+      "updatedAt": "2026-08-25T21:46:27.107831+00:00"
     },
     "CBRS": {
       "symbol": "CBRS",
@@ -592,7 +592,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:48:59.851178+00:00"
+      "updatedAt": "2026-08-25T21:46:27.422972+00:00"
     },
     "ORCL": {
       "symbol": "ORCL",
@@ -622,7 +622,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:49:00.171712+00:00"
+      "updatedAt": "2026-08-25T21:46:27.759084+00:00"
     },
     "NVTS": {
       "symbol": "NVTS",
@@ -652,7 +652,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:49:00.475174+00:00"
+      "updatedAt": "2026-08-25T21:46:28.072979+00:00"
     },
     "6976": {
       "symbol": "6976.T",
@@ -694,7 +694,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:49:00.804944+00:00"
+      "updatedAt": "2026-08-25T21:46:28.455220+00:00"
     },
     "2492": {
       "symbol": "2492.TW",
@@ -736,7 +736,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:49:01.130452+00:00"
+      "updatedAt": "2026-08-25T21:46:28.800477+00:00"
     },
     "EOS.AX": {
       "symbol": "EOS.AX",
@@ -766,7 +766,7 @@
           }
         }
       },
-      "updatedAt": "2026-08-25T20:49:01.450596+00:00"
+      "updatedAt": "2026-08-25T21:46:29.114960+00:00"
     }
   },
   "failures": []
