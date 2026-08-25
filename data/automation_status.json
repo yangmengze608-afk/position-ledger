@@ -1,9 +1,9 @@
 {
-  "recordedAt": "2026-08-25T11:15:02.593506+00:00",
-  "workflowCommit": "1ef129a1688ec667b6108699c4b701485fa213bd",
-  "batchId": "32841278004-1",
+  "recordedAt": "2026-08-25T11:23:30.059836+00:00",
+  "workflowCommit": "8f6b69f7c51ba70ff1adf8e15ba7deb4afd9e49b",
+  "batchId": "32841992078-1",
   "collector": {
-    "startedAt": "2026-08-25T11:14:28.841Z",
+    "startedAt": "2026-08-25T11:22:54.469Z",
     "provider": "multi-source",
     "accounts": [
       {
@@ -17,13 +17,13 @@
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12240
+            "durationMs": 12325
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 65,
-            "durationMs": 2642
+            "durationMs": 2650
           }
         ]
       },
@@ -32,25 +32,25 @@
         "ok": true,
         "selectedProvider": "fxembed-rss",
         "recent": 72,
-        "added": 72,
+        "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12164
+            "durationMs": 12314
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 72,
-            "durationMs": 4378
+            "durationMs": 5955
           }
         ]
       }
     ],
-    "completedAt": "2026-08-25T11:15:01.870Z",
-    "added": 72,
+    "completedAt": "2026-08-25T11:23:29.317Z",
+    "added": 0,
     "totalStored": 187
   },
   "rawPostCount": 187,
@@ -58,10 +58,10 @@
     "serenity": 115,
     "ck-capital": 72
   },
-  "reviewQueueCount": 12,
+  "reviewQueueCount": 13,
   "changes": {
-    "raw": "true",
-    "review": "false"
+    "raw": "false",
+    "review": "true"
   },
   "stepsReached": {
     "guard": "success",
@@ -72,7 +72,7 @@
     "propose": "success"
   },
   "delivery": {
-    "kind": "none",
-    "url": null
+    "kind": "issue",
+    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/32"
   }
 }
