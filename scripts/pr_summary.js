@@ -4,10 +4,13 @@ const fs = require("fs");
 const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const queue = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "review_queue.json"), "utf8"));
+const creators = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "creators.json"), "utf8"));
 const batchId = process.env.POSITION_DISCOVERY_BATCH || "";
 const items = batchId
   ? (queue.items || []).filter((x) => x.batchId === batchId)
   : (queue.items || []);
+const creatorNames = new Map((creators.creators || []).map((x) => [x.id, x.displayName || x.id]));
+const creatorLabel = (x) => creatorNames.get(x.creatorId || "serenity") || x.creatorId || x.person || "Serenity";
 const proposed = items.filter((x) => x.status === "proposed");
 const pending = items.filter((x) => x.status === "pending");
 console.log("## Automated position discovery\n");
@@ -17,14 +20,14 @@ console.log(`Needs manual review: **${pending.length}**\n`);
 if (proposed.length) {
   console.log("### Proposed events\n");
   for (const x of proposed.slice(0, 30)) {
-    console.log(`- **${x.ticker} · ${x.llm?.event_type || x.suggestedType}** — ${x.sourceUrl}`);
+    console.log(`- **${creatorLabel(x)} · ${x.ticker} · ${x.llm?.event_type || x.suggestedType}** — ${x.sourceUrl}`);
     console.log(`  - Evidence: \`${String(x.llm?.evidence || x.evidence || "").replace(/`/g, "'").slice(0, 180)}\``);
   }
 }
 if (pending.length) {
   console.log("\n### Review queue\n");
   for (const x of pending.slice(0, 30)) {
-    console.log(`- **${x.ticker} · ${x.suggestedType}** (${x.confidence}/${Number(x.score || 0).toFixed(2)}) — ${x.sourceUrl}`);
+    console.log(`- **${creatorLabel(x)} · ${x.ticker} · ${x.suggestedType}** (${x.confidence}/${Number(x.score || 0).toFixed(2)}) — ${x.sourceUrl}`);
   }
 }
 if (!proposed.length && !pending.length) {
