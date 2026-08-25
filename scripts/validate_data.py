@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EVENT_TYPES = {"OPEN", "ADD", "HOLD", "REDUCE", "EXIT", "DENY", "HISTORICAL"}
 CONFIDENCE = {"A", "B", "C"}
 RESOLUTION_DECISIONS = {"accept", "reject"}
+DEFAULT_CREATOR_ID = "serenity"
 
 
 def fail(msg):
@@ -21,6 +22,38 @@ def load_data(name):
         return json.loads(path.read_text(encoding="utf-8"))
     except Exception as exc:
         fail(f"invalid {path}: {exc}")
+
+
+def creator_id(value):
+    return str(value.get("creatorId") or DEFAULT_CREATOR_ID).strip().lower() or DEFAULT_CREATOR_ID
+
+
+def validate_creators(creators, source_accounts):
+    ids = set()
+    handles = set()
+    for i, creator in enumerate(creators.get("creators", []), start=1):
+        cid = str(creator.get("id", "")).strip().lower()
+        name = str(creator.get("displayName", "")).strip()
+        if not cid or not name:
+            fail(f"creator #{i} missing id/displayName")
+        if cid in ids:
+            fail(f"duplicate creator id: {cid}")
+        ids.add(cid)
+        handle = str(creator.get("handle", "")).strip().lower()
+        if handle:
+            if handle in handles:
+                fail(f"duplicate creator handle: {handle}")
+            handles.add(handle)
+    if DEFAULT_CREATOR_ID not in ids:
+        fail(f"default creator missing from registry: {DEFAULT_CREATOR_ID}")
+
+    for i, account in enumerate(source_accounts.get("accounts", []), start=1):
+        cid = str(account.get("creatorId", "")).strip().lower()
+        if not cid:
+            fail(f"source account #{i} missing creatorId")
+        if cid not in ids:
+            fail(f"source account #{i} references unknown creatorId: {cid}")
+    return ids
 
 
 def validate_security_catalog(symbols):
@@ -81,19 +114,27 @@ def validate_resolutions(resolutions, queue):
 
 def main():
     loaded = {}
-    for name in ["profile", "events", "holdings", "market", "symbols", "security_aliases", "review_queue", "resolutions"]:
+    for name in [
+        "profile", "events", "holdings", "market", "symbols", "security_aliases",
+        "review_queue", "resolutions", "creators", "source_accounts"
+    ]:
         loaded[name] = load_data(name)
 
+    creator_ids = validate_creators(loaded["creators"], loaded["source_accounts"])
     symbols = loaded["symbols"]
     validate_security_catalog(symbols)
     validate_resolutions(loaded["resolutions"], loaded["review_queue"])
 
     payload = loaded["events"]
     ids = set()
+    scoped_source_keys = set()
     for i, event in enumerate(payload.get("events", []), start=1):
         for field in ["id", "ticker", "type", "date", "confidence", "summary"]:
             if not event.get(field):
                 fail(f"event #{i} missing {field}")
+        cid = creator_id(event)
+        if cid not in creator_ids:
+            fail(f"event {event['id']} references unknown creatorId: {cid}")
         if event["id"] in ids:
             fail(f"duplicate event id: {event['id']}")
         ids.add(event["id"])
@@ -106,10 +147,25 @@ def main():
         source = event.get("sourceUrl", "")
         if source and not source.startswith("https://"):
             fail(f"sourceUrl must use https: {event['id']}")
+        if event.get("sourcePostId"):
+            key = (cid, str(event["sourcePostId"]), event["ticker"], event["type"])
+            if key in scoped_source_keys:
+                fail(f"duplicate creator-scoped source event: {key}")
+            scoped_source_keys.add(key)
+
+    for i, item in enumerate(loaded["review_queue"].get("items", []), start=1):
+        cid = creator_id(item)
+        if cid not in creator_ids:
+            fail(f"review item #{i} references unknown creatorId: {cid}")
+
+    for i, holding in enumerate(loaded["holdings"].get("holdings", []), start=1):
+        cid = creator_id(holding)
+        if cid not in creator_ids:
+            fail(f"holding #{i} references unknown creatorId: {cid}")
 
     subprocess.run([sys.executable, str(ROOT / "scripts" / "rebuild_holdings.py")], check=True)
     print(
-        f"OK: validated {len(ids)} events, "
+        f"OK: validated {len(ids)} events across {len(creator_ids)} creator(s), "
         f"{len(loaded['security_aliases'].get('securities', []))} security aliases, "
         f"{len(loaded['resolutions'].get('resolutions', []))} resolutions"
     )

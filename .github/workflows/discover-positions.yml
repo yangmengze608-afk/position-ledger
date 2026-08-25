@@ -6,9 +6,13 @@ on:
     paths:
       - ".github/workflows/discover-positions.yml"
       - "data/source_accounts.json"
+      - "data/creators.json"
       - "scripts/fetch_x_timeline.js"
+      - "scripts/tag_creator_ids.js"
       - "scripts/classify_positions.js"
+      - "scripts/lib/creator_identity.js"
       - "scripts/lib/position_rules.js"
+      - "scripts/lib/event_reconciliation.js"
       - "scripts/llm_review.py"
       - "scripts/propose_events.js"
       - "scripts/pr_summary.js"
@@ -66,6 +70,11 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/fetch_x_timeline.js
 
+      - name: Resolve creator identity on raw evidence
+        id: creator
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/tag_creator_ids.js
+
       - name: Deterministic conservative triage
         id: classify
         if: steps.guard.outputs.skip != 'true'
@@ -84,7 +93,7 @@ jobs:
           python scripts/rebuild_holdings.py
           python scripts/validate_data.py
           python scripts/validate_automation.py
-          node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js tests/queue-upgrade.test.js
+          node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js tests/queue-upgrade.test.js tests/creator-scope.test.js
 
       - name: Classify repository changes
         if: steps.guard.outputs.skip != 'true'
@@ -122,12 +131,17 @@ jobs:
           collector = load('/tmp/collector-report.json', {"missing": True})
           raw = load('data/raw_posts.json', {"posts": []})
           queue = load('data/review_queue.json', {"items": []})
+          creator_counts = {}
+          for post in raw.get('posts', []) if isinstance(raw, dict) else []:
+              cid = post.get('creatorId') or 'serenity'
+              creator_counts[cid] = creator_counts.get(cid, 0) + 1
           status = {
               "recordedAt": __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
               "workflowCommit": os.environ.get('GITHUB_SHA'),
               "batchId": os.environ.get('POSITION_DISCOVERY_BATCH'),
               "collector": collector,
               "rawPostCount": len(raw.get('posts', [])) if isinstance(raw, dict) else None,
+              "rawPostsByCreator": creator_counts,
               "reviewQueueCount": len(queue.get('items', [])) if isinstance(queue, dict) else None,
               "changes": {
                   "raw": "${{ steps.diff.outputs.raw_changed }}",
@@ -136,6 +150,7 @@ jobs:
               "stepsReached": {
                   "guard": "${{ steps.guard.outcome }}",
                   "fetch": "${{ steps.fetch.outcome }}",
+                  "creator": "${{ steps.creator.outcome }}",
                   "classify": "${{ steps.classify.outcome }}",
                   "llm": "${{ steps.llm.outcome }}",
                   "propose": "${{ steps.propose.outcome }}"

@@ -1,7 +1,8 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "accounts": [
     {
+      "creatorId": "serenity",
       "person": "Serenity",
       "handle": "aleabitoreddit",
       "platform": "x",

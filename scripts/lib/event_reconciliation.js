@@ -1,10 +1,16 @@
 "use strict";
 
+const { creatorIdOf } = require("./creator_identity");
+
 const DEFAULT_WINDOW_MS = 3 * 60 * 60 * 1000;
 
 function timestamp(value) {
   const t = new Date(value || "").getTime();
   return Number.isFinite(t) ? t : null;
+}
+
+function sameCreator(a, b) {
+  return creatorIdOf(a) === creatorIdOf(b);
 }
 
 function findMirrorMatch(events, item, type, windowMs = DEFAULT_WINDOW_MS) {
@@ -15,6 +21,7 @@ function findMirrorMatch(events, item, type, windowMs = DEFAULT_WINDOW_MS) {
   let bestDelta = Infinity;
   for (const event of events || []) {
     if (event?.sourceType !== "secondary-mirror") continue;
+    if (!sameCreator(event, item)) continue;
     if (event.ticker !== item.ticker || event.type !== type) continue;
     if (event.person && item.person && event.person !== item.person) continue;
     const eventTime = timestamp(event.date);
@@ -38,6 +45,7 @@ function upgradeMirrorEvent(event, item, type, classifier) {
   const history = Array.isArray(event.sourceHistory) ? [...event.sourceHistory] : [];
   if (oldSource.sourceUrl || oldSource.sourceType) history.push(oldSource);
 
+  event.creatorId = creatorIdOf(item);
   event.type = type;
   event.date = item.sourceDate;
   event.confidence = "A";
@@ -52,4 +60,4 @@ function upgradeMirrorEvent(event, item, type, classifier) {
   return event;
 }
 
-module.exports = { DEFAULT_WINDOW_MS, findMirrorMatch, upgradeMirrorEvent };
+module.exports = { DEFAULT_WINDOW_MS, sameCreator, findMirrorMatch, upgradeMirrorEvent };
