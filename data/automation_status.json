@@ -1,8 +1,9 @@
 {
-  "recordedAt": "2026-08-24T14:37:43.012266+00:00",
-  "workflowCommit": "7f5d6f83d82bf2ac8f0b711b70cbde05ba833339",
+  "recordedAt": "2026-08-25T02:03:29.231728+00:00",
+  "workflowCommit": "96b1e96ffcb9955c20ca16c68d3dfc62bd07a23d",
+  "batchId": "32799884440-1",
   "collector": {
-    "startedAt": "2026-08-24T14:37:26.426Z",
+    "startedAt": "2026-08-25T02:03:13.440Z",
     "provider": "multi-source",
     "accounts": [
       {
@@ -10,38 +11,38 @@
         "ok": true,
         "selectedProvider": "fxembed-rss",
         "recent": 100,
-        "added": 100,
+        "added": 14,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12410
+            "durationMs": 12254
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 100,
-            "durationMs": 2795
+            "durationMs": 2111
           }
         ]
       }
     ],
-    "completedAt": "2026-08-24T14:37:42.434Z",
-    "added": 100,
-    "totalStored": 100
+    "completedAt": "2026-08-25T02:03:28.608Z",
+    "added": 14,
+    "totalStored": 114
   },
-  "rawPostCount": 100,
-  "reviewQueueCount": 6,
+  "rawPostCount": 114,
+  "reviewQueueCount": 10,
+  "changes": {
+    "raw": "true",
+    "review": "true"
+  },
   "stepsReached": {
     "guard": "success",
     "fetch": "success",
     "classify": "success",
     "llm": "success",
     "propose": "success"
-  },
-  "delivery": {
-    "kind": "issue",
-    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/5"
   }
 }
