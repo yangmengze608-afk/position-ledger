@@ -8,9 +8,11 @@ on:
       - "tests/**"
       - ".github/workflows/**"
       - "app.js"
+      - "performance-ui.js"
       - "config.js"
       - "index.html"
       - "styles.css"
+      - "performance.css"
       - "vercel.json"
   pull_request:
     paths:
@@ -19,9 +21,11 @@ on:
       - "tests/**"
       - ".github/workflows/**"
       - "app.js"
+      - "performance-ui.js"
       - "config.js"
       - "index.html"
       - "styles.css"
+      - "performance.css"
       - "vercel.json"
 
 jobs:
@@ -39,10 +43,11 @@ jobs:
       - run: python scripts/validate_data.py
       - run: python scripts/validate_automation.py
       - run: node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js tests/queue-upgrade.test.js
-      - run: python -m unittest tests/test_resolutions.py
+      - run: python -m unittest tests/test_resolutions.py tests/test_market.py
       - name: Validate frontend syntax and config
         run: |
           node --check app.js
+          node --check performance-ui.js
           node --check config.js
           python -m json.tool vercel.json >/dev/null
       - name: Ensure generated holdings are committed
