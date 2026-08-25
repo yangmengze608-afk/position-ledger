@@ -4,6 +4,7 @@ const SECURITY_CATALOG = require("../../data/security_aliases.json").securities 
 const TICKER_RE = /\$([A-Z][A-Z0-9.-]{0,9})\b/g;
 const ANY_CASHTAG_RE = /\$([A-Z0-9][A-Z0-9.-]{0,14})\b/gi;
 const POSITION_WORDS = /\b(position|positions|stake|stakes|shares?|longs?|bags?|holding|holdings|exposure)\b/i;
+const TICKER_DOT_SENTINEL = "\uE000";
 
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -85,10 +86,18 @@ function clauseHasTicker(clause, ticker) {
   return tickersInClause(clause).includes(String(ticker).toUpperCase());
 }
 
+function protectTickerDots(text) {
+  return String(text || "").replace(/\$[A-Z][A-Z0-9-]*(?:\.[A-Z0-9-]+)+\b/gi, (match) => match.replace(/\./g, TICKER_DOT_SENTINEL));
+}
+
+function restoreTickerDots(text) {
+  return String(text || "").split(TICKER_DOT_SENTINEL).join(".");
+}
+
 function localScopeForTicker(text, ticker) {
-  const clauses = String(text || "")
+  const clauses = protectTickerDots(text)
     .split(/(?:[.!?;\n]+|\s+(?:but|while|whereas|however)\s+)/i)
-    .map((x) => x.trim())
+    .map((x) => restoreTickerDots(x).trim())
     .filter(Boolean);
 
   const indexes = clauses
