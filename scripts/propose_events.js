@@ -16,6 +16,7 @@ async function readJson(file, fallback) {
 }
 
 function canPromote(item) {
+  if (item.entityWarning) return false;
   const llm = item.llm;
   if (llm) {
     return llm.explicit === true && llm.event_type !== "IGNORE" && Number(llm.confidence || 0) >= AUTO_SCORE;
@@ -55,9 +56,6 @@ async function main() {
       continue;
     }
 
-    // V1 seed data used secondary mirrors. When an exact X disclosure matches the
-    // same person/ticker/type within a narrow time window, upgrade the existing
-    // evidence instead of double-counting the same disclosure as a second event.
     const mirror = findMirrorMatch(events, item, type);
     if (mirror) {
       upgradeMirrorEvent(mirror, item, type, classifierName(item));
@@ -75,8 +73,8 @@ async function main() {
       id,
       person: item.person,
       ticker: item.ticker,
-      company: previous.company || item.ticker,
-      exchange: previous.exchange || "",
+      company: item.company || previous.company || item.ticker,
+      exchange: item.exchange || previous.exchange || "",
       type,
       date: item.sourceDate,
       confidence: "A",
@@ -109,4 +107,8 @@ async function main() {
   console.log(`[propose] proposed=${proposed}; upgraded=${upgraded}; events=${events.length}`);
 }
 
-main().catch((error) => { console.error(error); process.exit(1); });
+if (require.main === module) {
+  main().catch((error) => { console.error(error); process.exit(1); });
+}
+
+module.exports = { canPromote, eventType, eventId, classifierName };
