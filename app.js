@@ -11,13 +11,12 @@ const state = {
 };
 
 const els = {
-  cards: document.querySelector("#cards"),
+  ledgerBody: document.querySelector("#ledger-body"),
   empty: document.querySelector("#empty-state"),
   search: document.querySelector("#search"),
   tabs: document.querySelector("#tabs"),
   resultCount: document.querySelector("#result-count"),
-  sectionTitle: document.querySelector("#section-title"),
-  sectionEyebrow: document.querySelector("#section-eyebrow"),
+  recentFeed: document.querySelector("#recent-feed"),
   backendPill: document.querySelector("#backend-pill"),
   refreshBtn: document.querySelector("#refresh-btn"),
   drawer: document.querySelector("#drawer"),
@@ -26,13 +25,14 @@ const els = {
   drawerContent: document.querySelector("#drawer-content")
 };
 
-const FILTER_META = {
-  live: ["LIVE POSITIONS", "当前公开持仓"],
-  new: ["NEW DISCLOSURES · 60D", "近 60 天新披露"],
-  all: ["ALL LEDGER STATES", "全部记录"],
-  silent: ["SILENT · 120D+", "120 天以上未确认"],
-  archive: ["ARCHIVE", "已清仓"],
-  denials: ["DENIALS", "明确否认持有"]
+const EVENT_LABELS = {
+  OPEN: "建仓",
+  ADD: "加仓",
+  HOLD: "确认持有",
+  REDUCE: "减仓",
+  EXIT: "清仓",
+  DENY: "明确否认",
+  HISTORICAL: "历史披露"
 };
 
 function githubRawBase() {
@@ -75,150 +75,167 @@ async function loadData(bust = false) {
     state.market = market.quotes || {};
     hydrateProfile();
     renderStats();
-    render();
+    renderLedger();
+    renderRecentFeed();
     updateBackendBadge();
     openTickerFromURL();
   } catch (err) {
     console.error(err);
-    els.cards.innerHTML = `<div class="empty-state"><strong>数据读取失败</strong><p>${escapeHTML(err.message)}</p></div>`;
+    els.ledgerBody.innerHTML = `<tr><td colspan="9"><div class="error-box"><strong>数据读取失败</strong><span>${escapeHTML(err.message)}</span></div></td></tr>`;
   } finally {
     els.refreshBtn.disabled = false;
-    els.refreshBtn.textContent = "刷新数据";
+    els.refreshBtn.textContent = "刷新";
   }
 }
 
 function hydrateProfile() {
-  const p = state.profile;
-  document.querySelector("#profile-name").textContent = `${p.name} · 持仓追踪台`;
-  document.querySelector("#profile-desc").textContent = p.description;
-  document.querySelector("#profile-handle").textContent = p.handle;
-  const latestEventMs = state.events.reduce((latest, event) => {
-    const value = Date.parse(event.date || "");
-    return Number.isFinite(value) ? Math.max(latest, value) : latest;
-  }, 0);
-  const profileMs = Date.parse(p.updatedAt || "");
-  const latestMs = Math.max(Number.isFinite(profileMs) ? profileMs : 0, latestEventMs);
-  document.querySelector("#last-updated").textContent = `账本更新 ${formatDateTime(latestMs ? new Date(latestMs).toISOString() : p.updatedAt)}`;
+  const p = state.profile || {};
+  document.querySelector("#profile-name").textContent = `${p.name || "Serenity"} · 持仓追踪台`;
+  document.querySelector("#profile-desc").textContent = p.description || "公开披露事件账本";
+  document.querySelector("#profile-handle").textContent = p.handle || "";
+  const eventDates = state.events.map(e => Date.parse(e.date)).filter(Number.isFinite);
+  const newestEvent = eventDates.length ? Math.max(...eventDates) : 0;
+  const profileTime = Date.parse(p.updatedAt || "") || 0;
+  const freshness = Math.max(newestEvent, profileTime);
+  document.querySelector("#last-updated").textContent = freshness ? `账本更新 ${formatDateTime(freshness)}` : "账本更新时间未知";
 }
 
 function updateBackendBadge() {
-  els.backendPill.textContent = state.backend === "github" ? "数据源 · GitHub Live" : "数据源 · 本地回退";
+  els.backendPill.textContent = state.backend === "github" ? "GitHub Live" : "Local fallback";
 }
 
 function renderStats() {
-  const today = new Date();
+  const now = new Date();
   const live = state.holdings.filter(h => h.state === "live").length;
-  const fresh = state.holdings.filter(h => daysBetween(h.firstRecordedAt, today) <= 60 && h.state === "live").length;
-  const silent = state.holdings.filter(h => h.state === "live" && daysBetween(h.lastConfirmedAt, today) > 120).length;
+  const aGrade = state.holdings.filter(h => h.confidence === "A").length;
+  const events7d = state.events.filter(e => daysBetween(e.date, now) <= 7).length;
+  const unconfirmed = state.holdings.filter(h => h.state === "unconfirmed").length;
   const closed = state.holdings.filter(h => ["archive", "denial"].includes(h.state)).length;
   document.querySelector("#stat-live").textContent = live;
-  document.querySelector("#stat-new").textContent = fresh;
-  document.querySelector("#stat-silent").textContent = silent;
+  document.querySelector("#stat-a").textContent = aGrade;
+  document.querySelector("#stat-7d").textContent = events7d;
+  document.querySelector("#stat-unconfirmed").textContent = unconfirmed;
   document.querySelector("#stat-closed").textContent = closed;
 }
 
-function render() {
-  const [eyebrow, title] = FILTER_META[state.filter];
-  els.sectionEyebrow.textContent = eyebrow;
-  els.sectionTitle.textContent = title;
-
+function renderLedger() {
   const list = filteredHoldings();
-  els.resultCount.textContent = `${list.length} 项`;
-  els.cards.innerHTML = list.map(cardHTML).join("");
+  els.resultCount.textContent = list.length;
+  els.ledgerBody.innerHTML = list.map(rowHTML).join("");
   els.empty.classList.toggle("hidden", list.length !== 0);
+  document.querySelector(".table-wrap").classList.toggle("hidden", list.length === 0);
 
-  els.cards.querySelectorAll(".position-card").forEach(card => {
-    card.addEventListener("click", () => openDrawer(card.dataset.ticker));
-    card.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") openDrawer(card.dataset.ticker);
+  els.ledgerBody.querySelectorAll("tr[data-ticker]").forEach(row => {
+    row.addEventListener("click", () => openDrawer(row.dataset.ticker));
+    row.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") openDrawer(row.dataset.ticker);
     });
   });
 }
 
 function filteredHoldings() {
-  const today = new Date();
   const q = state.search.trim().toLowerCase();
   return state.holdings
     .filter(h => {
-      if (state.filter === "live" && h.state !== "live") return false;
-      if (state.filter === "new" && !(h.state === "live" && daysBetween(h.firstRecordedAt, today) <= 60)) return false;
-      if (state.filter === "silent" && !(h.state === "live" && daysBetween(h.lastConfirmedAt, today) > 120)) return false;
-      if (state.filter === "archive" && h.state !== "archive") return false;
-      if (state.filter === "denials" && h.state !== "denial") return false;
+      if (state.filter !== "all" && h.state !== state.filter) return false;
       if (!q) return true;
       return [h.ticker, h.company, h.exchange, h.note, h.thesis]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase()
-        .includes(q);
+        .filter(Boolean).join(" ").toLowerCase().includes(q);
     })
-    .sort((a, b) => new Date(b.lastConfirmedAt) - new Date(a.lastConfirmedAt));
+    .sort((a, b) => new Date(b.lastConfirmedAt || 0) - new Date(a.lastConfirmedAt || 0));
 }
 
-function cardHTML(h) {
+function rowHTML(h) {
   const quote = state.market[h.ticker];
-  const badge = badgeMeta(h);
-  const last = h.lastConfirmedAt ? formatDate(h.lastConfirmedAt) : "—";
-  const first = h.firstRecordedAt ? formatDate(h.firstRecordedAt) : "—";
-  const price = quote?.price != null ? formatMoney(quote.price, quote.currency) : "待行情任务更新";
+  const events = eventsForTicker(h.ticker);
+  const lastEvent = events[0];
+  const status = statusMeta(h.state);
+  const move = dayMove(quote);
+  const price = quote?.price != null ? formatMoney(quote.price, quote.currency) : "—";
+  const company = h.company && h.company !== h.ticker ? h.company : marketNameFallback(h.ticker);
   return `
-    <article class="position-card" data-ticker="${escapeAttr(h.ticker)}" tabindex="0" role="button" aria-label="查看 ${escapeAttr(h.ticker)} 详情">
-      <div class="card-top">
-        <div>
-          <div class="ticker">${escapeHTML(h.ticker)}</div>
-          <div class="company">${escapeHTML(h.company || "")}</div>
-        </div>
-        <span class="badge ${badge.className}">${badge.label}</span>
-      </div>
-      <div class="card-metrics">
-        <div class="metric"><span>最后确认</span><strong>${last}</strong></div>
-        <div class="metric"><span>记录起点</span><strong>${first}</strong></div>
-        <div class="metric"><span>市场价格</span><strong>${escapeHTML(price)}</strong></div>
-        <div class="metric"><span>市场</span><strong>${escapeHTML(h.exchange || "—")}</strong></div>
-      </div>
-      <div class="card-foot">
-        <span class="confidence">置信度 <b>${escapeHTML(h.confidence || "—")}</b></span>
-        <span>${escapeHTML(h.note || h.thesis || "查看证据链")}</span>
-        <span class="card-chevron">›</span>
-      </div>
-    </article>`;
+    <tr data-ticker="${escapeAttr(h.ticker)}" tabindex="0" role="button" aria-label="查看 ${escapeAttr(h.ticker)} 证据详情">
+      <td data-label="标的"><div class="asset-cell"><strong>${escapeHTML(h.ticker)}</strong><span>${escapeHTML(company || h.exchange || "")}</span></div></td>
+      <td data-label="状态"><span class="state-badge ${status.className}">${status.label}</span></td>
+      <td data-label="最后动作"><span class="event-chip">${escapeHTML(EVENT_LABELS[lastEvent?.type] || lastEvent?.type || "—")}</span></td>
+      <td data-label="最后确认"><div class="date-cell"><strong>${formatDate(h.lastConfirmedAt)}</strong><span>${relativeAge(h.lastConfirmedAt)}</span></div></td>
+      <td data-label="首次披露"><span class="mono-soft">${formatDate(h.firstRecordedAt)}</span></td>
+      <td data-label="现价" class="num"><strong>${escapeHTML(price)}</strong></td>
+      <td data-label="日涨跌" class="num"><span class="move ${move.className}">${move.text}</span></td>
+      <td data-label="事件" class="num"><span class="event-count">${h.eventCount ?? events.length}</span></td>
+      <td data-label="证据"><span class="grade grade-${escapeAttr((h.confidence || "C").toLowerCase())}">${escapeHTML(h.confidence || "C")}</span></td>
+    </tr>`;
 }
 
-function badgeMeta(h) {
-  if (h.state === "denial") return { label: "明确否认", className: "badge-denial" };
-  if (h.state === "archive") return { label: "已清仓", className: "badge-archive" };
-  if (h.state === "unconfirmed") return { label: "历史披露", className: "badge-silent" };
-  if (h.state === "live" && daysBetween(h.lastConfirmedAt, new Date()) > 120) return { label: "静默", className: "badge-silent" };
-  return { label: "在持", className: "badge-live" };
+function renderRecentFeed() {
+  const recent = [...state.events]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 8);
+  els.recentFeed.innerHTML = recent.map(e => {
+    const label = EVENT_LABELS[e.type] || e.type;
+    return `
+      <button class="feed-item" type="button" data-ticker="${escapeAttr(e.ticker)}">
+        <span class="feed-rail"></span>
+        <div class="feed-main">
+          <div class="feed-top"><strong>${escapeHTML(e.ticker)}</strong><span class="feed-type">${escapeHTML(label)}</span><time>${formatDateShort(e.date)}</time></div>
+          <p>${escapeHTML(shorten(e.summary || e.note || "公开披露事件", 108))}</p>
+          <div class="feed-foot"><span>证据 ${escapeHTML(e.confidence || "C")}</span><span>查看台账 →</span></div>
+        </div>
+      </button>`;
+  }).join("") || `<div class="feed-empty">暂无事件</div>`;
+  els.recentFeed.querySelectorAll(".feed-item").forEach(item => item.addEventListener("click", () => openDrawer(item.dataset.ticker)));
 }
 
 function openDrawer(ticker) {
   const h = state.holdings.find(x => x.ticker === ticker);
   if (!h) return;
-  const events = state.events
-    .filter(e => e.ticker === ticker)
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  const events = eventsForTicker(ticker);
   const quote = state.market[ticker];
-  const badge = badgeMeta(h);
+  const status = statusMeta(h.state);
+  const move = dayMove(quote);
+  const latest = events[0];
 
   els.drawerContent.innerHTML = `
-    <div class="drawer-head">
+    <div class="drawer-hero">
       <div class="drawer-kicker">POSITION EVIDENCE FILE</div>
-      <h2 class="drawer-title">${escapeHTML(h.ticker)}</h2>
-      <div class="drawer-company">${escapeHTML(h.company || "")}</div>
-      <div class="drawer-summary">
-        <div class="summary-tile"><span>状态</span><strong>${badge.label}</strong></div>
-        <div class="summary-tile"><span>置信度</span><strong>${escapeHTML(h.confidence || "—")}</strong></div>
-        <div class="summary-tile"><span>最后确认</span><strong>${formatDate(h.lastConfirmedAt)}</strong></div>
-        <div class="summary-tile"><span>市场价格</span><strong>${quote?.price != null ? escapeHTML(formatMoney(quote.price, quote.currency)) : "待更新"}</strong></div>
+      <div class="drawer-title-row">
+        <div><h2>${escapeHTML(h.ticker)}</h2><p>${escapeHTML(h.company || "")}</p></div>
+        <span class="state-badge ${status.className}">${status.label}</span>
       </div>
-      ${h.thesis ? `<p class="hero-desc">${escapeHTML(h.thesis)}</p>` : ""}
+      <div class="drawer-price">
+        <strong>${quote?.price != null ? escapeHTML(formatMoney(quote.price, quote.currency)) : "行情待更新"}</strong>
+        <span class="move ${move.className}">${move.text}</span>
+        ${quote?.exchange ? `<small>${escapeHTML(quote.exchange)} · ${escapeHTML(quote.currency || "")}</small>` : ""}
+      </div>
     </div>
-    <div class="timeline-title">公开事件时间线 · ${events.length} 条</div>
-    <div class="timeline">
-      ${events.map(eventHTML).join("") || `<div class="event"><p>暂无事件。</p></div>`}
+
+    <div class="drawer-metrics">
+      <div><span>证据等级</span><strong>${escapeHTML(h.confidence || "C")}</strong></div>
+      <div><span>最后动作</span><strong>${escapeHTML(EVENT_LABELS[latest?.type] || latest?.type || "—")}</strong></div>
+      <div><span>最后确认</span><strong>${formatDate(h.lastConfirmedAt)}</strong></div>
+      <div><span>首次披露</span><strong>${formatDate(h.firstRecordedAt)}</strong></div>
+      <div><span>事件数量</span><strong>${events.length}</strong></div>
+      <div><span>状态年龄</span><strong>${relativeAge(h.lastConfirmedAt)}</strong></div>
     </div>
-    <div class="drawer-note">重要：这里记录的是“公开披露发生过什么”，不是对真实券商账户的证明。没有新披露时，只能降低置信度，不能自动推断已经卖出。</div>
+
+    ${latest ? `
+      <section class="latest-evidence">
+        <div class="drawer-section-label">LATEST EVIDENCE</div>
+        <div class="evidence-card">
+          <div class="evidence-head"><span>${escapeHTML(EVENT_LABELS[latest.type] || latest.type)}</span><time>${formatDateTime(latest.date)}</time></div>
+          <p>${escapeHTML(latest.summary || latest.note || "")}</p>
+          ${latest.sourceUrl ? `<a href="${escapeAttr(latest.sourceUrl)}" target="_blank" rel="noreferrer">打开原始来源 ↗</a>` : ""}
+        </div>
+      </section>` : ""}
+
+    <section class="timeline-section">
+      <div class="drawer-section-label">EVENT TIMELINE · ${events.length}</div>
+      <div class="timeline">
+        ${events.map(eventHTML).join("") || `<div class="timeline-empty">暂无事件。</div>`}
+      </div>
+    </section>
+
+    <div class="drawer-disclaimer">这里记录的是公开披露及其证据链，不是券商账户证明。长期未提及只会降低时效性，不会自动生成 EXIT。</div>
   `;
 
   els.drawer.classList.add("open");
@@ -231,15 +248,42 @@ function openDrawer(ticker) {
 
 function eventHTML(e) {
   return `
-    <article class="event">
-      <div class="event-meta">
-        <span>${formatDate(e.date)}</span>
-        <span class="event-type">${escapeHTML(e.type)}</span>
-        <span>置信度 ${escapeHTML(e.confidence || "—")}</span>
+    <article class="timeline-event">
+      <span class="timeline-dot"></span>
+      <div class="timeline-body">
+        <div class="timeline-meta"><time>${formatDateTime(e.date)}</time><span>${escapeHTML(EVENT_LABELS[e.type] || e.type)}</span><b>${escapeHTML(e.confidence || "C")}</b></div>
+        <p>${escapeHTML(e.summary || e.note || "")}</p>
+        ${e.sourceUrl ? `<a href="${escapeAttr(e.sourceUrl)}" target="_blank" rel="noreferrer">证据来源 ↗</a>` : ""}
       </div>
-      <p>${escapeHTML(e.summary)}</p>
-      ${e.sourceUrl ? `<a class="source-link" href="${escapeAttr(e.sourceUrl)}" target="_blank" rel="noreferrer">打开证据来源 ↗</a>` : ""}
     </article>`;
+}
+
+function eventsForTicker(ticker) {
+  return state.events.filter(e => e.ticker === ticker).sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+function statusMeta(s) {
+  if (s === "live") return { label: "在持", className: "state-live" };
+  if (s === "unconfirmed") return { label: "历史", className: "state-unconfirmed" };
+  if (s === "archive") return { label: "清仓", className: "state-archive" };
+  if (s === "denial") return { label: "否认", className: "state-denial" };
+  return { label: s || "未知", className: "state-unconfirmed" };
+}
+
+function dayMove(quote) {
+  if (!quote || quote.price == null || quote.previousClose == null || Number(quote.previousClose) === 0) return { text: "—", className: "move-flat" };
+  const pct = (Number(quote.price) / Number(quote.previousClose) - 1) * 100;
+  return { text: `${pct >= 0 ? "+" : ""}${pct.toFixed(2)}%`, className: pct > 0 ? "move-up" : pct < 0 ? "move-down" : "move-flat" };
+}
+
+function relativeAge(value) {
+  if (!value) return "—";
+  const days = daysBetween(value, new Date());
+  if (days <= 0) return "今天";
+  if (days === 1) return "1 天前";
+  if (days < 30) return `${days} 天前`;
+  const months = Math.floor(days / 30);
+  return `${months} 个月前`;
 }
 
 function closeDrawer() {
@@ -260,7 +304,7 @@ function daysBetween(date, b) {
   if (!date) return Infinity;
   const a = new Date(date);
   const end = b instanceof Date ? b : new Date(b);
-  return Math.floor((end - a) / 86400000);
+  return Math.max(0, Math.floor((end - a) / 86400000));
 }
 
 function formatDate(value) {
@@ -269,19 +313,36 @@ function formatDate(value) {
   return new Intl.DateTimeFormat("zh-CN", { year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
 }
 
+function formatDateShort(value) {
+  if (!value) return "—";
+  return new Intl.DateTimeFormat("zh-CN", { month: "2-digit", day: "2-digit" }).format(new Date(value));
+}
+
 function formatDateTime(value) {
   if (!value) return "—";
-  const d = new Date(value);
-  return new Intl.DateTimeFormat("zh-CN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }).format(d);
+  return new Intl.DateTimeFormat("zh-CN", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }).format(new Date(value));
 }
 
 function formatMoney(value, currency = "USD") {
-  try { return new Intl.NumberFormat("en-US", { style: "currency", currency, maximumFractionDigits: 2 }).format(value); }
-  catch { return `${value}`; }
+  if (currency === "GBp") return `${Number(value).toFixed(2)}p`;
+  try {
+    return new Intl.NumberFormat("en-US", { style: "currency", currency: currency || "USD", maximumFractionDigits: 2 }).format(value);
+  } catch {
+    return `${Number(value).toFixed(2)} ${currency || ""}`.trim();
+  }
+}
+
+function marketNameFallback(ticker) {
+  return ticker === "SPCX" ? "SpaceX exposure" : ticker;
+}
+
+function shorten(text, max) {
+  const s = String(text || "").trim();
+  return s.length > max ? `${s.slice(0, max - 1)}…` : s;
 }
 
 function escapeHTML(v) {
-  return String(v ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[c]));
+  return String(v ?? "").replace(/[&<>'"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[c]));
 }
 function escapeAttr(v) { return escapeHTML(v); }
 
@@ -290,9 +351,9 @@ els.tabs.addEventListener("click", e => {
   if (!btn) return;
   state.filter = btn.dataset.filter;
   els.tabs.querySelectorAll(".tab").forEach(x => x.classList.toggle("active", x === btn));
-  render();
+  renderLedger();
 });
-els.search.addEventListener("input", e => { state.search = e.target.value; render(); });
+els.search.addEventListener("input", e => { state.search = e.target.value; renderLedger(); });
 els.refreshBtn.addEventListener("click", () => loadData(true));
 els.drawerClose.addEventListener("click", closeDrawer);
 els.drawerBackdrop.addEventListener("click", closeDrawer);
