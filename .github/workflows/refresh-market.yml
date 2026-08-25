@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "data/symbols.json"
+      - ".github/workflows/refresh-market.yml"
   workflow_dispatch:
   schedule:
     - cron: "17,47 12-22 * * 1-5"
