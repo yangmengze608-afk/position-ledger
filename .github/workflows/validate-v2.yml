@@ -7,12 +7,22 @@ on:
       - "scripts/**"
       - "tests/**"
       - ".github/workflows/**"
+      - "app.js"
+      - "config.js"
+      - "index.html"
+      - "styles.css"
+      - "vercel.json"
   pull_request:
     paths:
       - "data/**"
       - "scripts/**"
       - "tests/**"
       - ".github/workflows/**"
+      - "app.js"
+      - "config.js"
+      - "index.html"
+      - "styles.css"
+      - "vercel.json"
 
 jobs:
   validate:
@@ -29,6 +39,11 @@ jobs:
       - run: python scripts/validate_data.py
       - run: python scripts/validate_automation.py
       - run: node --test tests/classifier.test.js tests/collector.test.js tests/reconciliation.test.js tests/queue-upgrade.test.js
+      - name: Validate frontend syntax and config
+        run: |
+          node --check app.js
+          node --check config.js
+          python -m json.tool vercel.json >/dev/null
       - name: Ensure generated holdings are committed
         run: |
           python scripts/rebuild_holdings.py
