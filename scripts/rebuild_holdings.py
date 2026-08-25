@@ -55,13 +55,13 @@ def main():
             "thesis": latest_active.get("summary", "") if latest_active else latest_confirm.get("summary", ""),
             "eventCount": len(events)
         }
-        # Preserve the existing Serenity JSON shape so the migration is non-breaking.
-        # Additional creators are always explicit and therefore cannot collide by ticker.
+        # Legacy Serenity rows stay byte-compatible with the existing frontend/data.
+        # Any additional creator is explicit, preventing same-ticker cross-creator collisions.
         if creator != DEFAULT_CREATOR_ID:
             holding = {"creatorId": creator, **holding}
         holdings.append(holding)
 
-    output = {"schemaVersion": 2, "defaultCreatorId": DEFAULT_CREATOR_ID, "holdings": holdings}
+    output = {"schemaVersion": 1, "holdings": holdings}
     OUT_PATH.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {len(holdings)} holdings -> {OUT_PATH}")
 
