@@ -1,15 +1,65 @@
 "use strict";
 
+const SECURITY_CATALOG = require("../../data/security_aliases.json").securities || [];
 const TICKER_RE = /\$([A-Z][A-Z0-9.-]{0,9})\b/g;
 const ANY_CASHTAG_RE = /\$([A-Z0-9][A-Z0-9.-]{0,14})\b/gi;
 const POSITION_WORDS = /\b(position|positions|stake|stakes|shares?|longs?|bags?|holding|holdings|exposure)\b/i;
 
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function contextualSecurityMentions(text) {
+  const source = String(text || "");
+  const results = [];
+
+  for (const security of SECURITY_CATALOG) {
+    const aliases = [...(security.aliases || [])].sort((a, b) => b.length - a.length);
+    let resolved = null;
+    for (const alias of aliases) {
+      const aliasRe = new RegExp(`\\b${escapeRegExp(alias)}\\b`, "ig");
+      for (const match of source.matchAll(aliasRe)) {
+        const start = match.index + match[0].length;
+        const nearby = source.slice(start, start + 48);
+        const codeMatch = nearby.match(/^\s*\(\s*(\d{4,6})\b/);
+        if (!codeMatch) continue;
+        const rawCode = codeMatch[1];
+        resolved = {
+          ticker: String(security.ticker).toUpperCase(),
+          company: security.company || security.ticker,
+          exchange: security.exchange || "",
+          marketSymbol: security.marketSymbol || null,
+          alias: match[0],
+          rawCode,
+          entityMention: `${match[0]} (${rawCode})`,
+          entityWarning: rawCode === String(security.ticker)
+            ? null
+            : `source-code-mismatch:${rawCode}!=${security.ticker}`,
+        };
+        break;
+      }
+      if (resolved) break;
+    }
+    if (resolved) results.push(resolved);
+  }
+  return results;
+}
+
 function extractTickers(text, entityTickers = []) {
   const found = [];
   const seen = new Set();
+  const contextual = contextualSecurityMentions(text);
+  const conflictingRawCodes = new Set(
+    contextual.filter((x) => x.entityWarning).map((x) => x.rawCode)
+  );
+
   for (const raw of entityTickers || []) {
     const ticker = String(raw || "").replace(/^\$/, "").toUpperCase();
+    if (/^\d{4,6}$/.test(ticker) && conflictingRawCodes.has(ticker)) continue;
     if (ticker && !seen.has(ticker)) { seen.add(ticker); found.push(ticker); }
+  }
+  for (const item of contextual) {
+    if (!seen.has(item.ticker)) { seen.add(item.ticker); found.push(item.ticker); }
   }
   for (const match of String(text || "").matchAll(TICKER_RE)) {
     const ticker = match[1].toUpperCase();
@@ -25,8 +75,14 @@ function cashtagsInClause(text) {
   return [...String(text || "").matchAll(ANY_CASHTAG_RE)].map((m) => m[1].toUpperCase());
 }
 
+function tickersInClause(text) {
+  const out = new Set(cashtagsInClause(text));
+  for (const item of contextualSecurityMentions(text)) out.add(item.ticker);
+  return [...out];
+}
+
 function clauseHasTicker(clause, ticker) {
-  return cashtagsInClause(clause).includes(String(ticker).toUpperCase());
+  return tickersInClause(clause).includes(String(ticker).toUpperCase());
 }
 
 function localScopeForTicker(text, ticker) {
@@ -45,7 +101,7 @@ function localScopeForTicker(text, ticker) {
     selected.add(index);
     for (const neighbor of [index - 1, index + 1]) {
       if (neighbor < 0 || neighbor >= clauses.length) continue;
-      if (cashtagsInClause(clauses[neighbor]).length === 0) selected.add(neighbor);
+      if (tickersInClause(clauses[neighbor]).length === 0) selected.add(neighbor);
     }
   }
   return [...selected].sort((a, b) => a - b).map((index) => clauses[index]).join(". ");
@@ -187,6 +243,8 @@ function firstMatch(text, rules) {
 
 function classifyPost(post) {
   const text = String(post?.text || "").trim();
+  const contextual = contextualSecurityMentions(text);
+  const contextualByTicker = new Map(contextual.map((item) => [item.ticker, item]));
   const tickers = extractTickers(text, post?.cashtags || []);
   if (!text || tickers.length === 0) return [];
 
@@ -205,19 +263,42 @@ function classifyPost(post) {
     const selected = strong || soft;
     if (!selected) continue;
 
+    const resolution = contextualByTicker.get(ticker) || null;
     const multiTickerPenalty = tickers.length > 1 && !POSITION_WORDS.test(scope);
-    const confidence = multiTickerPenalty && selected.confidence === "A" ? "B" : selected.confidence;
-    const score = multiTickerPenalty ? Math.min(selected.score, 0.82) : selected.score;
+    let confidence = multiTickerPenalty && selected.confidence === "A" ? "B" : selected.confidence;
+    let score = multiTickerPenalty ? Math.min(selected.score, 0.82) : selected.score;
+    let classifier = resolution ? "rules-v2.3-contextual-numeric" : "rules-v2.1-local";
+
+    if (resolution?.entityWarning) {
+      if (confidence === "A") confidence = "B";
+      score = Math.min(score, 0.80);
+      classifier = "rules-v2.3-entity-mismatch";
+    }
+
     results.push({
       ticker,
       suggestedType: selected.type,
       confidence,
       score,
       evidence: selected.evidence,
-      classifier: "rules-v2.1-local",
+      classifier,
+      ...(resolution ? {
+        company: resolution.company,
+        exchange: resolution.exchange,
+        marketSymbol: resolution.marketSymbol,
+        entityMention: resolution.entityMention,
+        sourceCode: resolution.rawCode,
+        entityWarning: resolution.entityWarning,
+      } : {}),
     });
   }
   return results;
 }
 
-module.exports = { extractTickers, classifyPost, localScopeForTicker, explicitListActions };
+module.exports = {
+  extractTickers,
+  classifyPost,
+  localScopeForTicker,
+  explicitListActions,
+  contextualSecurityMentions,
+};
