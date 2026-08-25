@@ -1,52 +1,56 @@
 {
-  "recordedAt": "2026-08-25T03:18:18.923453+00:00",
-  "workflowCommit": "eadb8d6ffdf40260a0a707e4a576c11c2c370720",
-  "batchId": "32804638584-1",
+  "recordedAt": "2026-08-25T10:25:34.232184+00:00",
+  "workflowCommit": "78111e09064fb5b0c85d2f110385d1a6155295fa",
+  "batchId": "32837134897-1",
   "collector": {
-    "startedAt": "2026-08-25T03:18:02.832Z",
+    "startedAt": "2026-08-25T10:25:30.134Z",
     "provider": "multi-source",
     "accounts": [
       {
         "handle": "aleabitoreddit",
         "ok": true,
         "selectedProvider": "fxembed-rss",
-        "recent": 100,
+        "recent": 84,
         "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
-            "ok": false,
-            "error": "HTTP 429",
-            "durationMs": 12263
+            "ok": true,
+            "recent": 0,
+            "durationMs": 266
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
-            "recent": 100,
-            "durationMs": 2342
+            "recent": 84,
+            "durationMs": 2273
           }
         ]
       }
     ],
-    "completedAt": "2026-08-25T03:18:18.242Z",
+    "completedAt": "2026-08-25T10:25:33.477Z",
     "added": 0,
-    "totalStored": 114
+    "totalStored": 115
   },
-  "rawPostCount": 114,
+  "rawPostCount": 115,
+  "rawPostsByCreator": {
+    "serenity": 115
+  },
   "reviewQueueCount": 12,
   "changes": {
-    "raw": "false",
-    "review": "true"
+    "raw": "true",
+    "review": "false"
   },
   "stepsReached": {
     "guard": "success",
     "fetch": "success",
+    "creator": "success",
     "classify": "success",
     "llm": "success",
     "propose": "success"
   },
   "delivery": {
-    "kind": "issue",
-    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/17"
+    "kind": "none",
+    "url": null
   }
 }
