@@ -4,7 +4,10 @@ on:
   push:
     branches: ["main"]
     paths:
+      - "data/events.json"
+      - "data/holdings.json"
       - "data/symbols.json"
+      - "scripts/refresh_market.py"
       - ".github/workflows/refresh-market.yml"
   workflow_dispatch:
   schedule:

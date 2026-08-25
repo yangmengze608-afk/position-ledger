@@ -7,6 +7,7 @@
   <title>Position Ledger · 公开持仓证据账本</title>
   <link rel="preconnect" href="https://raw.githubusercontent.com" />
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./performance.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -39,7 +40,7 @@
         <div class="method-card">
           <span class="method-label">METHODOLOGY</span>
           <strong>记录“她公开说过什么”，而不是猜她现在持有什么。</strong>
-          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变账本状态；历史提及与推测单独处理。</p>
+          <p>只有明确的 OPEN / ADD / HOLD / REDUCE / EXIT / DENY 证据会改变账本状态；“披露后表现”使用披露日对应交易日的市场收盘锚点，只描述公开披露后的价格路径，不代表真实持仓成本或账户收益。</p>
         </div>
       </section>
 
@@ -86,6 +87,7 @@
                   <th>首次披露</th>
                   <th class="num">现价</th>
                   <th class="num">日涨跌</th>
+                  <th class="num" title="首次公开披露对应交易日收盘到当前价的市场表现，不是投资者真实成本收益率">披露后</th>
                   <th class="num">事件</th>
                   <th>证据</th>
                 </tr>
@@ -108,7 +110,7 @@
           <section class="panel legend-panel">
             <div class="panel-head"><div><div class="eyebrow">EVIDENCE SCALE</div><h2>证据等级</h2></div></div>
             <div class="legend-row"><b>A</b><div><strong>明确一手声明</strong><span>直接说买入、仍持有、卖出或没有持仓。</span></div></div>
-            <div class="legend-row"><b>B</b><div><strong>强语义支持</strong><span>证据很强，但不是直接账户状态句。</span></div></div>
+            <div class="legend-row"><b>B</b><div><strong>强语义支持</strong><span>证据很强，但不是直接账户状态句，或需要人工实体解析。</span></div></div>
             <div class="legend-row"><b>C</b><div><strong>推断</strong><span>不自动进入 Live，仅作研究候选。</span></div></div>
           </section>
         </aside>
@@ -116,7 +118,7 @@
     </main>
 
     <footer>
-      <span>GitHub-backed evidence ledger</span><span>·</span><span>公开信息研究用途</span><span>·</span><span>Not financial advice</span>
+      <span>Hosted on GitHub Pages</span><span>·</span><span>GitHub-backed evidence ledger</span><span>·</span><span>公开信息研究用途</span><span>·</span><span>Not financial advice</span>
     </footer>
   </div>
 
@@ -128,5 +130,6 @@
 
   <script src="./config.js"></script>
   <script type="module" src="./app.js"></script>
+  <script type="module" src="./performance-ui.js"></script>
 </body>
 </html>
