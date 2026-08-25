@@ -1,7 +1,39 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T17:48:05.021Z",
+  "generatedAt": "2026-08-25T19:00:25.747Z",
   "posts": [
+    {
+      "id": "2092321562279956706",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T18:41:48.000Z",
+      "text": "I can't lie.\nThis is pretty good. $MSTR\nSend more ₿ears.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092321562279956706",
+      "cashtags": [
+        "MSTR"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T19:00:21.330Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092318663307387386",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-25T18:30:17.000Z",
+      "text": "No hate to those who own 2x leveraged stocks, I have, and I'm sure most of us have, but this is why I don't recommend using them. \nThis chart says it better than I can.\nSanDisk is up 134% over six months. The 2x version is up 155%.\nYou took double the risk and got 1.15x the return.\nBut look at the peak. The leveraged fund was up over 800% while the stock was around 270%. It gave nearly all of it back. The stock held most of its gains. The leveraged version didn't.\nThat's volatility decay. A 2x fund gives you two times the daily return, not two times the return over time. Those are completely different things.\nThe math is simple. Stock up 10% then down 10% leaves you at 99%. The 2x version, up 20% then down 20%, leaves you at 96%. The stock lost 1%, you lost 4%. Nothing went wrong, the fund tracked perfectly, the rebalancing just ate you.\nThat compounds every single day the underlying chops, which is most days.\nAnd it's worst on the most volatile names, which is exactly where these products exist.\nThey're built to be held for one day. The prospectus says so.\nIf you want leverage, use margin where you control the exposure, or just size up in the underlying.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092318663307387386",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T19:00:21.330Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092302114512916530",
       "person": "CK Capital",
