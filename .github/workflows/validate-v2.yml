@@ -10,11 +10,13 @@ on:
       - "app.js"
       - "performance-ui.js"
       - "terminal-ui.js"
+      - "evidence-drawer-ui.js"
       - "config.js"
       - "index.html"
       - "styles.css"
       - "performance.css"
       - "terminal.css"
+      - "evidence-drawer.css"
       - "vercel.json"
   pull_request:
     paths:
@@ -25,11 +27,13 @@ on:
       - "app.js"
       - "performance-ui.js"
       - "terminal-ui.js"
+      - "evidence-drawer-ui.js"
       - "config.js"
       - "index.html"
       - "styles.css"
       - "performance.css"
       - "terminal.css"
+      - "evidence-drawer.css"
       - "vercel.json"
 
 jobs:
@@ -53,6 +57,7 @@ jobs:
           node --check app.js
           node --check performance-ui.js
           node --check terminal-ui.js
+          node --check evidence-drawer-ui.js
           node --check config.js
           python -m json.tool vercel.json >/dev/null
       - name: Ensure generated holdings are committed
