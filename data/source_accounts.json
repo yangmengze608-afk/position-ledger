@@ -10,6 +10,16 @@
       "includeReplies": true,
       "source": "x-syndication",
       "maxAgeDays": 14
+    },
+    {
+      "creatorId": "ck-capital",
+      "person": "CK Capital",
+      "handle": "CKCapitalxx",
+      "platform": "x",
+      "enabled": true,
+      "includeReplies": true,
+      "source": "x-syndication",
+      "maxAgeDays": 14
     }
   ]
 }
