@@ -19,6 +19,7 @@ on:
       - "terminal.css"
       - "evidence-drawer.css"
       - "mentions.css"
+      - "manjianghong.css"
       - "vercel.json"
   pull_request:
     paths:
@@ -38,6 +39,7 @@ on:
       - "terminal.css"
       - "evidence-drawer.css"
       - "mentions.css"
+      - "manjianghong.css"
       - "vercel.json"
 
 jobs:
@@ -65,6 +67,10 @@ jobs:
           node --check mentions-ui.js
           node --check config.js
           python -m json.tool vercel.json >/dev/null
+      - name: Validate registry JSON
+        run: |
+          python -m json.tool data/coverage_sources.json >/dev/null
+          python -m json.tool data/creators.json >/dev/null
       - name: Ensure generated holdings are committed
         run: |
           python scripts/rebuild_holdings.py

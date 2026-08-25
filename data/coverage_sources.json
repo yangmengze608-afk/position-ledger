@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25T09:15:00Z",
+  "policy": {
+    "canonicalRule": "Public mirrors are discovery and corroboration sources. They do not become A-grade canonical position evidence unless the original first-person source can be verified. Human-reviewed secondary evidence may enter at B grade with provenance retained.",
+    "subscriberCoverage": "not-guaranteed",
+    "subscriberNote": "X may contain subscriber-only posts that are not fully visible to non-subscribers. This ledger therefore describes observed public and independently corroborated disclosures, not a complete brokerage account or complete subscriber feed."
+  },
+  "sources": [
+    {
+      "id": "x-public",
+      "name": "X public timeline",
+      "type": "primary",
+      "url": "https://x.com/aleabitoreddit",
+      "trust": "A-eligible",
+      "use": "Primary source for directly observable public first-person disclosures."
+    },
+    {
+      "id": "topicdigg",
+      "name": "TopicDigg",
+      "type": "public-mirror",
+      "url": "https://topicdigg.com/x/aleabitoreddit",
+      "trust": "discovery",
+      "use": "Gap detection and historical public-post recovery; verify against original X when possible."
+    },
+    {
+      "id": "serenity-wiki",
+      "name": "SerenityAlpha",
+      "type": "independent-tracker",
+      "url": "https://serenity.wiki/en",
+      "trust": "discovery",
+      "use": "Coverage comparison, ticker discovery and missing-post detection."
+    },
+    {
+      "id": "serenitysaid",
+      "name": "serenitysaid",
+      "type": "public-mirror",
+      "url": "https://www.serenitysaid.com/",
+      "trust": "discovery",
+      "use": "Bilingual public-post mirror and narrative mapping."
+    },
+    {
+      "id": "instalker",
+      "name": "Instalker",
+      "type": "public-mirror",
+      "url": "https://instalker.org/aleabitoreddit",
+      "trust": "discovery",
+      "use": "Recent public-post recovery when X syndication is incomplete."
+    },
+    {
+      "id": "fortunetrace",
+      "name": "FortuneTrace",
+      "type": "public-mirror",
+      "url": "https://www.fortunetrace.com/",
+      "trust": "corroboration",
+      "use": "Corroborates selected public posts with timestamped archival copies."
+    },
+    {
+      "id": "xiaohongshu-community",
+      "name": "Xiaohongshu community reposts",
+      "type": "community-repost",
+      "url": null,
+      "trust": "discovery-only",
+      "use": "Potential gap detector for Chinese reposts/screenshots. No reliable indexed source was found in current web search; require explicit public post URL or screenshot provenance before review."
+    }
+  ]
+}

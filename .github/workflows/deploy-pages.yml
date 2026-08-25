@@ -10,6 +10,7 @@ on:
       - "terminal.css"
       - "evidence-drawer.css"
       - "mentions.css"
+      - "manjianghong.css"
       - "app.js"
       - "performance-ui.js"
       - "terminal-ui.js"
