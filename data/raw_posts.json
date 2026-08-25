@@ -1,7 +1,24 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-25T20:49:51.199Z",
+  "generatedAt": "2026-08-25T21:46:33.190Z",
   "posts": [
+    {
+      "id": "2092354322432684098",
+      "person": "Serenity",
+      "platform": "x",
+      "handle": "aleabitoreddit",
+      "sourceAuthor": "aleabitoreddit",
+      "createdAt": "2026-08-25T20:51:59.000Z",
+      "text": "Lost interest in $SMTC and every other earnings report today after finding a memory name way too interesting not to research...",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2092354322432684098",
+      "cashtags": [
+        "SMTC"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-25T21:46:23.109Z",
+      "creatorId": "serenity"
+    },
     {
       "id": "2092344903585976390",
       "person": "CK Capital",
