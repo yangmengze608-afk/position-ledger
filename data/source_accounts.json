@@ -20,6 +20,16 @@
       "includeReplies": true,
       "source": "x-syndication",
       "maxAgeDays": 14
+    },
+    {
+      "creatorId": "luminara",
+      "person": "Luminara Stocks",
+      "handle": "_stockResearch",
+      "platform": "x",
+      "enabled": true,
+      "includeReplies": true,
+      "source": "x-syndication",
+      "maxAgeDays": 14
     }
   ]
 }
