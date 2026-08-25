@@ -92,7 +92,13 @@ function hydrateProfile() {
   document.querySelector("#profile-name").textContent = `${p.name} · 持仓追踪台`;
   document.querySelector("#profile-desc").textContent = p.description;
   document.querySelector("#profile-handle").textContent = p.handle;
-  document.querySelector("#last-updated").textContent = `账本更新 ${formatDateTime(p.updatedAt)}`;
+  const latestEventMs = state.events.reduce((latest, event) => {
+    const value = Date.parse(event.date || "");
+    return Number.isFinite(value) ? Math.max(latest, value) : latest;
+  }, 0);
+  const profileMs = Date.parse(p.updatedAt || "");
+  const latestMs = Math.max(Number.isFinite(profileMs) ? profileMs : 0, latestEventMs);
+  document.querySelector("#last-updated").textContent = `账本更新 ${formatDateTime(latestMs ? new Date(latestMs).toISOString() : p.updatedAt)}`;
 }
 
 function updateBackendBadge() {
