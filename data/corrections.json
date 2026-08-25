@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "corrections": [
+    {
+      "id": "correction-20260825-foreign-author-2088906198418681869",
+      "createdAt": "2026-08-25T12:35:00Z",
+      "creatorId": "serenity",
+      "kind": "foreign-source-author",
+      "sourcePostId": "2088906198418681869",
+      "invalidForCreator": true,
+      "actualAuthor": "_stockResearch",
+      "actualAuthorDisplayName": "Luminara Stocks",
+      "reason": "The pre-author-validation FxEmbed ingest rewrote a foreign reply/list item to the tracked Serenity handle. Public mirror evidence shows the five-stock ADD list belongs to Luminara Stocks (@_stockResearch), while Serenity's subsequent post is a separate CCXI reply/open disclosure.",
+      "revokedEventIds": [
+        "evt-spcx-2088906198418681869-add",
+        "evt-cbrs-2088906198418681869-add",
+        "evt-orcl-2088906198418681869-add",
+        "evt-nvts-2088906198418681869-add",
+        "evt-ccxi-2088906198418681869-add"
+      ],
+      "affectedTickers": ["SPCX", "CBRS", "ORCL", "NVTS", "CCXI"],
+      "preserveIndependentEvents": [
+        "evt-ccxi-20260816-open",
+        "evt-ccxi-2089747675415494843-hold"
+      ],
+      "auditSources": [
+        "https://aichainmap.com/serenity/"
+      ],
+      "note": "Canonical events are removed, but this correction record preserves the audit trail and prevents the stale raw post from being classified again."
+    }
+  ]
+}
