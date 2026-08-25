@@ -1,7 +1,7 @@
 "use strict";
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { mergeCandidate } = require("../scripts/classify_positions");
+const { mergeCandidate, correctionSourceKey, invalidSourceKeysFrom } = require("../scripts/classify_positions");
 
 function baseCandidate(overrides = {}) {
   return {
@@ -54,4 +54,16 @@ test("already proposed candidate is immutable even if a stronger rule appears", 
   const stronger = baseCandidate({ confidence: "A", score: 0.99, classifier: "rules-v2.2-list" });
   assert.equal(mergeCandidate(queued, stronger), "unchanged");
   assert.equal(queued.get(stronger.id).confidence, "B");
+});
+
+test("creator-scoped correction invalidates only the misattributed source", () => {
+  const keys = invalidSourceKeysFrom({
+    corrections: [{
+      creatorId: "serenity",
+      sourcePostId: "2088906198418681869",
+      invalidForCreator: true,
+    }],
+  });
+  assert.equal(keys.has(correctionSourceKey("serenity", "2088906198418681869")), true);
+  assert.equal(keys.has(correctionSourceKey("luminara", "2088906198418681869")), false);
 });
