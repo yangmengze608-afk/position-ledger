@@ -3,7 +3,7 @@ from datetime import timezone
 from unittest.mock import patch
 
 import scripts.refresh_market as market_module
-from scripts.refresh_market import anchor_for_event, build_creator_anchors, performance_pct, previous_session_close
+from scripts.refresh_market import anchor_for_event, build_creator_anchors, performance_pct, previous_session_close, unmapped_live_holdings
 
 
 class MarketAnchorTests(unittest.TestCase):
@@ -77,6 +77,17 @@ class MarketAnchorTests(unittest.TestCase):
         with patch.object(market_module, "HOLDINGS", []):
             anchors = build_creator_anchors("NVDA", sessions, timezone.utc, 150.0)
         self.assertEqual(anchors, {})
+
+    def test_unmapped_live_holdings_are_explicit_not_silent(self):
+        holdings = [
+            {"ticker": "ASTS", "state": "live"},
+            {"ticker": "GRG", "state": "live"},
+            {"ticker": "OLD", "state": "archive"},
+        ]
+        with patch.object(market_module, "HOLDINGS", holdings), patch.object(
+            market_module, "SYMBOLS", {"ASTS": "ASTS", "GRG": None}
+        ):
+            self.assertEqual(unmapped_live_holdings(), ["GRG"])
 
 
 if __name__ == "__main__":
