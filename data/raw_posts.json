@@ -1,7 +1,22 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T09:05:58.904Z",
+  "generatedAt": "2026-08-26T10:00:51.048Z",
   "posts": [
+    {
+      "id": "2092543905271345187",
+      "person": "Serenity",
+      "platform": "x",
+      "handle": "aleabitoreddit",
+      "sourceAuthor": "aleabitoreddit",
+      "createdAt": "2026-08-26T09:25:19.000Z",
+      "text": "@Mengmengeth I don't use external platforms, only X!",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2092543905271345187",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T10:00:18.015Z",
+      "creatorId": "serenity"
+    },
     {
       "id": "2092517102339162263",
       "person": "Serenity",
@@ -4437,7 +4452,7 @@
       ],
       "isReply": false,
       "sourceProvider": "first-party-web:telescope-monthly",
-      "discoveredAt": "2026-08-26T09:05:58.894Z",
+      "discoveredAt": "2026-08-26T10:00:51.039Z",
       "portfolioSnapshot": {
         "complete": true,
         "period": "2026-08",
