@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "accounts": [
     {
       "creatorId": "serenity",
@@ -30,6 +30,18 @@
       "includeReplies": true,
       "source": "x-syndication",
       "maxAgeDays": 14
+    },
+    {
+      "creatorId": "luke-hallard",
+      "person": "Luke Hallard",
+      "handle": "7LukeHallard",
+      "platform": "web-portfolio",
+      "enabled": true,
+      "source": "telescope-monthly",
+      "urlTemplate": "https://telescopeinvesting.com/updates/{YYYY}-{MM}",
+      "lookbackMonths": 2,
+      "minimumHoldings": 8,
+      "maxAgeDays": 75
     }
   ]
 }
