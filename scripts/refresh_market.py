@@ -132,6 +132,15 @@ def holdings_for_ticker(ticker):
     return [h for h in HOLDINGS if h.get("ticker") == ticker]
 
 
+def unmapped_live_holdings():
+    tickers = {
+        str(h.get("ticker") or "").strip()
+        for h in HOLDINGS
+        if h.get("state") == "live" and str(h.get("ticker") or "").strip()
+    }
+    return sorted(ticker for ticker in tickers if not SYMBOLS.get(ticker))
+
+
 def build_creator_anchors(ticker, sessions, market_tz, current_price):
     anchors = {}
     for holding in holdings_for_ticker(ticker):
@@ -194,6 +203,9 @@ def main():
             pass
     quotes = dict(previous_payload.get("quotes", {}))
     failures = []
+    unmapped = unmapped_live_holdings()
+    for ticker in unmapped:
+        print(f"WARN {ticker}: no market symbol mapping")
 
     for ticker, symbol in SYMBOLS.items():
         if not symbol:
@@ -220,6 +232,7 @@ def main():
         },
         "quotes": quotes,
         "failures": failures,
+        "unmappedHoldings": unmapped,
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
