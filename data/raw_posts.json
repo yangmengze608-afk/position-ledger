@@ -1,7 +1,24 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T07:11:56.801Z",
+  "generatedAt": "2026-08-26T08:03:18.965Z",
   "posts": [
+    {
+      "id": "2092517102339162263",
+      "person": "Serenity",
+      "platform": "x",
+      "handle": "aleabitoreddit",
+      "sourceAuthor": "aleabitoreddit",
+      "createdAt": "2026-08-26T07:38:48.000Z",
+      "text": "I love how so many people requested  $SIVE that Saxo Japan went out of their way to list it!\nJust goes to show how much demand there is for this laser company.\nSpecial shoutout to Saxo. And of course, excited for Sivers earnings + planned Nasdaq listing coming up.\n📢 お客様のご要望にお応えして、新たな海外銘柄の取扱いを開始しました！ ✅ Sivers Semiconductors AB（SIVE） ✅ Lynas Rare Earths Ltd.（LYC） ✅ Ivanhoe Mines Ltd.（IVN） サクソバンク証券は、今後もお客様の声に寄り添いながらより良いサービスの提供に努めてまいります。",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2092517102339162263",
+      "cashtags": [
+        "SIVE"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T08:02:44.811Z",
+      "creatorId": "serenity"
+    },
     {
       "id": "2092462992205938938",
       "person": "CK Capital",
@@ -4420,7 +4437,7 @@
       ],
       "isReply": false,
       "sourceProvider": "first-party-web:telescope-monthly",
-      "discoveredAt": "2026-08-26T07:11:56.786Z",
+      "discoveredAt": "2026-08-26T08:03:18.950Z",
       "portfolioSnapshot": {
         "complete": true,
         "period": "2026-08",
