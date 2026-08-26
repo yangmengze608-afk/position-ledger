@@ -4,6 +4,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 const { classifyPost } = require("./lib/position_rules");
+const { classifyPortfolioSnapshot } = require("./lib/portfolio_snapshot_rules");
 const { DEFAULT_CREATOR_ID, creatorIdOf, legacyCompatibleId } = require("./lib/creator_identity");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -69,6 +70,11 @@ function mergeCandidate(queued, candidate) {
     entityMention: candidate.entityMention || existing.entityMention || null,
     sourceCode: candidate.sourceCode || existing.sourceCode || null,
     entityWarning: candidate.entityWarning || null,
+    disclosedWeightPct: candidate.disclosedWeightPct ?? existing.disclosedWeightPct ?? null,
+    sourceMarkers: candidate.sourceMarkers || existing.sourceMarkers || [],
+    snapshotPeriod: candidate.snapshotPeriod || existing.snapshotPeriod || null,
+    sourceType: candidate.sourceType || existing.sourceType || null,
+    sourceProvider: candidate.sourceProvider || existing.sourceProvider || null,
     sourceUrl: candidate.sourceUrl,
     sourceDate: candidate.sourceDate,
     sourceText: candidate.sourceText,
@@ -97,7 +103,9 @@ async function main() {
       skippedCorrected += 1;
       continue;
     }
-    for (const result of classifyPost(post)) {
+    const snapshotResults = classifyPortfolioSnapshot(post);
+    const classification = snapshotResults ?? classifyPost(post);
+    for (const result of classification) {
       const key = eventKey({ creatorId }, post.id, result.ticker, result.suggestedType);
       if (eventKeys.has(key)) continue;
       const id = candidateId(post.id, result.ticker, result.suggestedType, creatorId);
@@ -118,7 +126,12 @@ async function main() {
         entityMention: result.entityMention || null,
         sourceCode: result.sourceCode || null,
         entityWarning: result.entityWarning || null,
+        disclosedWeightPct: result.disclosedWeightPct ?? null,
+        sourceMarkers: result.sourceMarkers || [],
+        snapshotPeriod: result.snapshotPeriod || null,
         sourcePostId: post.id,
+        sourceType: post.sourceType || (String(post.sourceProvider || "").startsWith("first-party-web:") ? "first-party-portfolio" : null),
+        sourceProvider: post.sourceProvider || null,
         sourceUrl: post.sourceUrl,
         sourceDate: post.createdAt,
         sourceText: post.text,
