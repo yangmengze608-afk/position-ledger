@@ -652,13 +652,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-googl-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-googl-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-rklb-hold",
@@ -683,13 +684,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-rklb-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-rklb-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-isrg-hold",
@@ -714,13 +716,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-isrg-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-isrg-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-amzn-hold",
@@ -747,13 +750,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-amzn-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-amzn-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-meli-hold",
@@ -780,13 +784,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-meli-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-meli-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-tsla-hold",
@@ -813,13 +818,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-tsla-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-tsla-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-crwd-hold",
@@ -844,13 +850,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-crwd-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-crwd-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-panw-hold",
@@ -875,13 +882,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-panw-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-panw-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-spcx-add",
@@ -908,13 +916,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-spcx-web-luke-hallard-2026-08-add"
+      "proposedEventId": "luke-hallard-evt-spcx-web-luke-hallard-2026-08-add",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-asts-add",
@@ -941,13 +950,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-asts-web-luke-hallard-2026-08-add"
+      "proposedEventId": "luke-hallard-evt-asts-web-luke-hallard-2026-08-add",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-axon-hold",
@@ -974,13 +984,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-axon-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-axon-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-nvda-hold",
@@ -1007,13 +1018,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-nvda-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-nvda-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-se-hold",
@@ -1038,13 +1050,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-se-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-se-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-uber-hold",
@@ -1069,13 +1082,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-uber-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-uber-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-tmdx-hold",
@@ -1100,13 +1114,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-tmdx-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-tmdx-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-iind-hold",
@@ -1131,13 +1146,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-iind-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-iind-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-nvo-hold",
@@ -1162,13 +1178,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-nvo-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-nvo-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-iren-hold",
@@ -1193,13 +1210,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-iren-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-iren-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-adyen-hold",
@@ -1224,13 +1242,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-adyen-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-adyen-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-pltr-hold",
@@ -1255,13 +1274,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-pltr-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-pltr-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-nu-hold",
@@ -1286,13 +1306,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-nu-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-nu-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-lmt-hold",
@@ -1317,13 +1338,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-lmt-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-lmt-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-grg-hold",
@@ -1348,13 +1370,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-grg-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-grg-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-bepc-hold",
@@ -1379,13 +1402,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-bepc-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-bepc-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-cwen-hold",
@@ -1410,13 +1434,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-cwen-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-cwen-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-ibe-hold",
@@ -1441,13 +1466,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-ibe-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-ibe-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-cand-x-web-luke-hallard-2026-08-nktr-hold",
@@ -1472,13 +1498,14 @@
       "sourceType": "first-party-portfolio",
       "sourceProvider": "first-party-web:telescope-monthly",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
-      "sourceDate": "2026-08-15T00:00:00.000Z",
+      "sourceDate": "2026-08-15T12:00:00.000Z",
       "sourceText": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "status": "proposed",
       "llm": null,
       "batchId": "32932190161-1",
       "createdAt": "2026-08-26T04:58:33.547Z",
-      "proposedEventId": "luke-hallard-evt-nktr-web-luke-hallard-2026-08-hold"
+      "proposedEventId": "luke-hallard-evt-nktr-web-luke-hallard-2026-08-hold",
+      "sourceDatePrecision": "day"
     }
   ]
 }

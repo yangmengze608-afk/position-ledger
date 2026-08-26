@@ -51,7 +51,7 @@
       "company": "Adyen",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $ADYEN - Adyen - 1.0",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -62,7 +62,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-amzn-web-luke-hallard-2026-08-hold",
@@ -72,7 +73,7 @@
       "company": "Amazon",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $AMZN - Amazon - 7.8",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -86,7 +87,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "high-conviction"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-asts-web-luke-hallard-2026-08-add",
@@ -96,7 +98,7 @@
       "company": "AST SpaceMobile",
       "exchange": "",
       "type": "ADD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $ASTS - AST SpaceMob",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -110,7 +112,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "bought-added"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-axon-web-luke-hallard-2026-08-hold",
@@ -120,7 +123,7 @@
       "company": "Axon",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $AXON - Axon - 2.7% ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -134,7 +137,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "high-conviction"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-bepc-web-luke-hallard-2026-08-hold",
@@ -144,7 +148,7 @@
       "company": "Brookfield Renewable",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $BEPC - Brookfield R",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -155,7 +159,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.5,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-crwd-web-luke-hallard-2026-08-hold",
@@ -165,7 +170,7 @@
       "company": "CrowdStrike",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $CRWD - CrowdStrike ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -176,7 +181,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 4.1,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-cwen-web-luke-hallard-2026-08-hold",
@@ -186,7 +192,7 @@
       "company": "Clearway Energy",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $CWEN - Clearway Ene",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -197,7 +203,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.5,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-googl-web-luke-hallard-2026-08-hold",
@@ -207,7 +214,7 @@
       "company": "Alphabet",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $GOOGL - Alphabet - ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -218,7 +225,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 11.8,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-grg-web-luke-hallard-2026-08-hold",
@@ -228,7 +236,7 @@
       "company": "Greggs",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $GRG - Greggs - 0.6%",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -239,7 +247,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.6,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-ibe-web-luke-hallard-2026-08-hold",
@@ -249,7 +258,7 @@
       "company": "Iberdrola SA",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $IBE - Iberdrola SA ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -260,7 +269,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.5,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-iind-web-luke-hallard-2026-08-hold",
@@ -270,7 +280,7 @@
       "company": "India ETF",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $IIND - India ETF - ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -281,7 +291,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1.1,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-iren-web-luke-hallard-2026-08-hold",
@@ -291,7 +302,7 @@
       "company": "Iris Energy",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $IREN - Iris Energy ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -302,7 +313,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-isrg-web-luke-hallard-2026-08-hold",
@@ -312,7 +324,7 @@
       "company": "Intuitive Surgical",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $ISRG - Intuitive Su",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -323,7 +335,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 8.8,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-lmt-web-luke-hallard-2026-08-hold",
@@ -333,7 +346,7 @@
       "company": "Lockheed Martin",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $LMT - Lockheed Mart",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -344,7 +357,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.6,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-meli-web-luke-hallard-2026-08-hold",
@@ -354,7 +368,7 @@
       "company": "MercadoLibre",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $MELI - MercadoLibre",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -368,7 +382,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "high-conviction"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-nktr-web-luke-hallard-2026-08-hold",
@@ -378,7 +393,7 @@
       "company": "Nektar Therapeutics",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $NKTR - Nektar Thera",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -389,7 +404,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.4,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-nu-web-luke-hallard-2026-08-hold",
@@ -399,7 +415,7 @@
       "company": "Nubank",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $NU - Nubank - 0.9%",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -410,7 +426,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 0.9,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-nvda-web-luke-hallard-2026-08-hold",
@@ -420,7 +437,7 @@
       "company": "NVIDIA",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $NVDA - NVIDIA - 2.6",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -434,7 +451,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "high-conviction"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-nvo-web-luke-hallard-2026-08-hold",
@@ -444,7 +462,7 @@
       "company": "Novo Nordisk",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $NVO - Novo Nordisk ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -455,7 +473,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1.1,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-panw-web-luke-hallard-2026-08-hold",
@@ -465,7 +484,7 @@
       "company": "Palo Alto Networks",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $PANW - Palo Alto Ne",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -476,7 +495,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 3,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-pltr-web-luke-hallard-2026-08-hold",
@@ -486,7 +506,7 @@
       "company": "Palantir",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $PLTR - Palantir - 1",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -497,7 +517,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-rklb-web-luke-hallard-2026-08-hold",
@@ -507,7 +528,7 @@
       "company": "Rocket Lab",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $RKLB - Rocket Lab -",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -518,7 +539,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 9.8,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-se-web-luke-hallard-2026-08-hold",
@@ -528,7 +550,7 @@
       "company": "Sea Ltd",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $SE - Sea Ltd - 2.2%",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -539,7 +561,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 2.2,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-spcx-web-luke-hallard-2026-08-add",
@@ -549,7 +572,7 @@
       "company": "SpaceX",
       "exchange": "",
       "type": "ADD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $SPCX - SpaceX - 3.0",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -563,7 +586,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "bought-added"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-tmdx-web-luke-hallard-2026-08-hold",
@@ -573,7 +597,7 @@
       "company": "TransMedics",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $TMDX - TransMedics ",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -584,7 +608,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1.2,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-tsla-web-luke-hallard-2026-08-hold",
@@ -594,7 +619,7 @@
       "company": "Tesla",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $TSLA - Tesla - 4.2%",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -608,7 +633,8 @@
       "snapshotPeriod": "2026-08",
       "sourceMarkers": [
         "high-conviction"
-      ]
+      ],
+      "sourceDatePrecision": "day"
     },
     {
       "id": "luke-hallard-evt-uber-web-luke-hallard-2026-08-hold",
@@ -618,7 +644,7 @@
       "company": "Uber",
       "exchange": "",
       "type": "HOLD",
-      "date": "2026-08-15T00:00:00.000Z",
+      "date": "2026-08-15T12:00:00.000Z",
       "confidence": "A",
       "summary": "原始公开披露：I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026] · $UBER - Uber - 1.2%",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
@@ -629,7 +655,8 @@
       "note": "一手公开完整组合快照；以 PR 合并作为人工验收",
       "classifier": "rules-v2.5-complete-portfolio",
       "disclosedWeightPct": 1.2,
-      "snapshotPeriod": "2026-08"
+      "snapshotPeriod": "2026-08",
+      "sourceDatePrecision": "day"
     },
     {
       "id": "evt-aehr-20260815-historical",
