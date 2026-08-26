@@ -9,6 +9,10 @@ const {
 } = require("../scripts/fetch_public_portfolios.js");
 const { classifyPortfolioSnapshot } = require("../scripts/lib/portfolio_snapshot_rules.js");
 const { canonicalSourceType } = require("../scripts/propose_events.js");
+const {
+  normalizeFirstPartyDateOnlyPosts,
+  reconcileSourceDates,
+} = require("../scripts/reconcile_source_dates.js");
 
 const account = {
   creatorId: "luke-hallard",
@@ -84,6 +88,56 @@ test("complete portfolio snapshot maps hold, add and reduce conservatively", () 
   assert.equal(byTicker.get("GOOGL").confidence, "A");
   assert.equal(byTicker.get("GOOGL").disclosedWeightPct, 11.8);
   assert.equal(byTicker.get("ASTS").snapshotPeriod, "2026-08");
+});
+
+test("date-only first-party portfolio disclosure normalizes to noon UTC and reconciles canonical timestamps", () => {
+  const raw = {
+    posts: [{
+      id: "web-luke-hallard-2026-08",
+      createdAt: "2026-08-15T00:00:00.000Z",
+      sourceProvider: "first-party-web:telescope-monthly",
+      portfolioSnapshot: { complete: true },
+    }],
+  };
+  const events = {
+    events: [{
+      id: "luke-hallard-evt-spcx-web-luke-hallard-2026-08-add",
+      sourcePostId: "web-luke-hallard-2026-08",
+      date: "2026-08-15T00:00:00.000Z",
+    }],
+  };
+  const queue = {
+    items: [{
+      id: "luke-hallard-cand-web-luke-hallard-2026-08-spcx-add",
+      sourcePostId: "web-luke-hallard-2026-08",
+      sourceDate: "2026-08-15T00:00:00.000Z",
+    }],
+  };
+
+  const result = reconcileSourceDates(raw, events, queue);
+  assert.equal(raw.posts[0].createdAt, "2026-08-15T12:00:00.000Z");
+  assert.equal(raw.posts[0].sourceDatePrecision, "day");
+  assert.equal(events.events[0].date, "2026-08-15T12:00:00.000Z");
+  assert.equal(events.events[0].sourceDatePrecision, "day");
+  assert.equal(queue.items[0].sourceDate, "2026-08-15T12:00:00.000Z");
+  assert.equal(queue.items[0].sourceDatePrecision, "day");
+  assert.ok(result.rawChanged > 0);
+  assert.ok(result.eventsChanged > 0);
+  assert.ok(result.queueChanged > 0);
+});
+
+test("precise non-midnight first-party disclosure timestamp is preserved", () => {
+  const raw = {
+    posts: [{
+      id: "web-example-precise",
+      createdAt: "2026-08-15T18:42:11.000Z",
+      sourceProvider: "first-party-web:example",
+      portfolioSnapshot: { complete: true },
+    }],
+  };
+  assert.equal(normalizeFirstPartyDateOnlyPosts(raw), 0);
+  assert.equal(raw.posts[0].createdAt, "2026-08-15T18:42:11.000Z");
+  assert.equal(raw.posts[0].sourceDatePrecision, undefined);
 });
 
 test("web portfolio source is canonical first-party portfolio provenance", () => {

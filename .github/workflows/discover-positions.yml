@@ -9,6 +9,7 @@ on:
       - "data/creators.json"
       - "scripts/fetch_x_timeline.js"
       - "scripts/fetch_public_portfolios.js"
+      - "scripts/reconcile_source_dates.js"
       - "scripts/tag_creator_ids.js"
       - "scripts/classify_positions.js"
       - "scripts/lib/creator_identity.js"
@@ -50,7 +51,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -77,6 +78,11 @@ jobs:
         id: portfolio
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/fetch_public_portfolios.js
+
+      - name: Reconcile date-only first-party source timestamps
+        id: source_dates
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/reconcile_source_dates.js
 
       - name: Resolve creator identity on raw evidence
         id: creator
@@ -161,6 +167,7 @@ jobs:
                   "guard": "${{ steps.guard.outcome }}",
                   "fetch": "${{ steps.fetch.outcome }}",
                   "portfolio": "${{ steps.portfolio.outcome }}",
+                  "sourceDates": "${{ steps.source_dates.outcome }}",
                   "creator": "${{ steps.creator.outcome }}",
                   "classify": "${{ steps.classify.outcome }}",
                   "llm": "${{ steps.llm.outcome }}",

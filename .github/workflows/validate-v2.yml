@@ -79,6 +79,7 @@ jobs:
           node --check cross-creator-ui.js
           node --check scripts/fetch_x_timeline.js
           node --check scripts/fetch_public_portfolios.js
+          node --check scripts/reconcile_source_dates.js
           node --check scripts/tag_creator_ids.js
           node --check scripts/classify_positions.js
           node --check scripts/propose_events.js
