@@ -80,6 +80,30 @@ function scheduleDecorate() {
   });
 }
 
+function bootstrapCrossCreatorIntel() {
+  const cssHref = new URL("./cross-creator.css", import.meta.url).href;
+  if (!document.querySelector(`link[href="${cssHref}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssHref;
+    link.dataset.crossCreatorStyles = "true";
+    document.head.appendChild(link);
+  }
+
+  if (!document.querySelector("#cross-creator-intel")) {
+    const host = document.createElement("section");
+    host.id = "cross-creator-intel";
+    host.className = "cross-intel-shell";
+    host.setAttribute("aria-label", "跨 Creator 持仓情报");
+    host.innerHTML = `<div class="cross-intel-head"><div class="cross-intel-head-copy"><span class="cross-intel-kicker">CROSS-CREATOR INTELLIGENCE</span><h2>跨大 V 持仓情报</h2><p>正在读取 canonical ledger…</p></div></div>`;
+    const dashboard = document.querySelector(".dashboard-grid");
+    if (dashboard?.parentNode) dashboard.parentNode.insertBefore(host, dashboard);
+  }
+
+  const moduleHref = new URL("./cross-creator-ui.js", import.meta.url).href;
+  import(moduleHref).catch(error => console.warn("Cross-creator module unavailable", error));
+}
+
 const observer = new MutationObserver(scheduleDecorate);
 observer.observe(document.body, {
   childList: true,
@@ -91,3 +115,4 @@ observer.observe(document.body, {
 window.addEventListener("position-ledger:creatorchange", scheduleDecorate);
 window.addEventListener("popstate", scheduleDecorate);
 scheduleDecorate();
+bootstrapCrossCreatorIntel();
