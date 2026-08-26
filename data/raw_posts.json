@@ -1,7 +1,84 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T15:55:28.329Z",
+  "generatedAt": "2026-08-26T17:52:06.445Z",
   "posts": [
+    {
+      "id": "2092667576954532213",
+      "person": "Serenity",
+      "platform": "x",
+      "handle": "aleabitoreddit",
+      "sourceAuthor": "aleabitoreddit",
+      "createdAt": "2026-08-26T17:36:44.000Z",
+      "text": "@embgaspbaud The enormous Q2/Q3 DDR2 hike pricing points to it",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2092667576954532213",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T17:51:29.084Z",
+      "creatorId": "serenity"
+    },
+    {
+      "id": "2092665229880836597",
+      "person": "Serenity",
+      "platform": "x",
+      "handle": "aleabitoreddit",
+      "sourceAuthor": "aleabitoreddit",
+      "createdAt": "2026-08-26T17:27:25.000Z",
+      "text": "The concept of “cascading bottlenecks” is just super cool.\nBecause of DDR4 supply shocks and costs:\nLot of ODMs are redesigning downward from DDR4 -> DDR3 -> DDR2.\nBut even the legacy players themselves like Winbond are withdrawing from DDR2.\nMaking the bottleneck even worse",
+      "sourceUrl": "https://x.com/aleabitoreddit/status/2092665229880836597",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T17:51:29.084Z",
+      "creatorId": "serenity"
+    },
+    {
+      "id": "2092663844615413949",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-26T17:21:55.000Z",
+      "text": "@todayyearsold I came from Germany to Nepal for my summer holidays /trek and am here seeing the devastation! https://x.com/_stockresearch/status/2092619704020144377?s=46\nI’m currently traveling in Nepal and the flooding that is happening in parts of Nepal is absolutely devastating!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2092663844615413949",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T17:52:05.345Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2092651278082191700",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-26T16:31:58.000Z",
+      "text": "@DeepValueBagger does anything excite you currently?",
+      "sourceUrl": "https://x.com/_stockResearch/status/2092651278082191700",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T17:52:05.345Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2092647074831417665",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-26T16:15:16.000Z",
+      "text": "4 hours... $NVDA\nThe entire market comes down to one man this week. Jensen Huang steps on stage Wednesday after the close. Whatever he says will decide how the next few months go. $NVDA",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092647074831417665",
+      "cashtags": [
+        "NVDA"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T17:51:48.940Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092637699152785537",
       "person": "CK Capital",
@@ -2724,6 +2801,23 @@
       "creatorId": "luminara"
     },
     {
+      "id": "2091095603304652880",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-22T09:30:17.000Z",
+      "text": "@FindleysFinance $NBIS - a lot higher than it should be % wise!",
+      "sourceUrl": "https://x.com/_stockResearch/status/2091095603304652880",
+      "cashtags": [
+        "NBIS"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T17:52:05.347Z",
+      "creatorId": "luminara"
+    },
+    {
       "id": "2091088824961216577",
       "person": "Luminara Stocks",
       "platform": "x",
@@ -4614,7 +4708,7 @@
       ],
       "isReply": false,
       "sourceProvider": "first-party-web:telescope-monthly",
-      "discoveredAt": "2026-08-26T15:55:28.319Z",
+      "discoveredAt": "2026-08-26T17:52:06.437Z",
       "portfolioSnapshot": {
         "complete": true,
         "period": "2026-08",
