@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25T12:45:00Z",
+  "updatedAt": "2026-08-26T03:36:00Z",
   "policy": {
-    "canonicalRule": "Public mirrors are discovery and corroboration sources. They do not become A-grade canonical position evidence unless the original first-person source can be verified. Human-reviewed secondary evidence may enter at B grade with provenance retained.",
+    "canonicalRule": "Public mirrors are discovery and corroboration sources. They do not become A-grade canonical position evidence unless the original first-person source can be verified. Human-reviewed secondary evidence may enter at B grade with provenance retained. First-party complete portfolio pages may be A-eligible when authorship, completeness language and holdings are directly observable.",
     "subscriberCoverage": "not-guaranteed",
-    "subscriberNote": "X may contain subscriber-only posts that are not fully visible to non-subscribers. This ledger therefore describes observed public and independently corroborated disclosures, not a complete brokerage account or complete subscriber feed."
+    "subscriberNote": "Some platforms may contain subscriber-only posts that are not fully visible to non-subscribers. This ledger therefore describes observed public and independently corroborated disclosures, not a complete brokerage account or complete subscriber feed."
   },
   "sources": [
     {
@@ -30,6 +30,22 @@
       "url": "https://x.com/_stockResearch",
       "trust": "A-eligible",
       "use": "Primary source for directly observable public first-person disclosures from Luminara Stocks."
+    },
+    {
+      "id": "telescope-luke-portfolio",
+      "name": "Telescope Investing · Luke Hallard monthly portfolio",
+      "type": "primary",
+      "url": "https://telescopeinvesting.com/updates/",
+      "trust": "A-eligible",
+      "use": "First-party monthly complete portfolio snapshots from Luke Hallard. A snapshot is eligible only when the page explicitly states it is the complete portfolio and exposes ticker-level holdings; buy/add and trim/sell markers are preserved with provenance."
+    },
+    {
+      "id": "x-public-luke-hallard",
+      "name": "X public profile · Luke Hallard",
+      "type": "primary-corroboration",
+      "url": "https://x.com/7LukeHallard",
+      "trust": "corroboration",
+      "use": "Public profile linked from Telescope Investing; the first-party Telescope portfolio page is the canonical source for monthly complete portfolio snapshots."
     },
     {
       "id": "topicdigg",
