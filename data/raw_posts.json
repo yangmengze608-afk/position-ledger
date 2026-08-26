@@ -1,7 +1,56 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T03:28:09.535Z",
+  "generatedAt": "2026-08-26T04:58:33.339Z",
   "posts": [
+    {
+      "id": "2092462992205938938",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-26T04:03:48.000Z",
+      "text": "@BullpenInvestin Not mentioned too much on these platforms because its traded on the ASX",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092462992205938938",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T04:58:16.836Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092462662261039358",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-26T04:02:29.000Z",
+      "text": "$SMTC call notes.\n>Data center revenue was a record $100 million, up 39% sequentially and 91% year over year. They guided Q3 data center up another 45% sequentially, roughly 160% year over year.\n>Hou on their position: \"We are now designed into every module provider in our target markets. Several on a sole-source basis.\"\n>FiberEdge went from 18% share on 800G two years ago to over 50% today. He expects the same on 1.6T by year end.\n>On CopperEdge: \"We believe our linear equalizer solutions are the de facto industry standard.\"\n>The 800G number surprised me most. \"We enter into the year for 800 gig, the industry is forecasting 50 million transceiver units. Now we are hearing the number of 80 million, 90 million.\"\nThat's the whole market getting revised up mid-cycle.\n>On pricing: \"Availability is more important to the customers and then the pricing is almost, there are no erosion to be expected in the near term.\"\n>Backlog is fully booked for the rest of this fiscal year and over 70% booked for next year. Capacity is the constraint, and Hou said there's room to add another 50% to 100%.\n>Then the part that changes the valuation. They're divesting the cellular module business, closing in Q4.\n \n>Lin said gross margin excluding it was 59.7% this quarter versus 54.5% reported, guided to 63.9% next quarter versus 58.3% reported. His words: \"A good starting point post divestiture is that 64% gross margin.\"\nThat's a 500 basis point structural step up separate from mix, and mix is improving on its own.\n>Photonics is the underrated build. HieFo capacity tripling by year end, high power CW lasers under evaluation at five or six module makers, and content per transceiver going from high single digit dollars to high double digit as the industry moves toward 3.2T.\n>Every name in optics right now is capacity constrained rather than demand constrained. What separates Semtech is the layer. $LITE and $COHR make lasers and modules. Semtech makes the silicon inside them plus the copper on the other side, so they get paid whichever architecture wins.\nUp next.\nInvestor day October 15.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092462662261039358",
+      "cashtags": [
+        "SMTC",
+        "LITE",
+        "COHR"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T04:58:16.836Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092459304758497522",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-26T03:49:08.000Z",
+      "text": "@theragingbullX I agree, bright times ahead.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092459304758497522",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T04:58:16.836Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092446942252994630",
       "person": "CK Capital",
@@ -4329,6 +4378,259 @@
       "sourceProvider": "fxembed-rss",
       "discoveredAt": "2026-08-24T14:37:41.626Z",
       "creatorId": "serenity"
+    },
+    {
+      "id": "web-luke-hallard-2026-08",
+      "creatorId": "luke-hallard",
+      "person": "Luke Hallard",
+      "platform": "web",
+      "handle": "7LukeHallard",
+      "sourceAuthor": "Luke Hallard",
+      "createdAt": "2026-08-15T00:00:00.000Z",
+      "text": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
+      "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
+      "cashtags": [
+        "GOOGL",
+        "RKLB",
+        "ISRG",
+        "AMZN",
+        "MELI",
+        "TSLA",
+        "CRWD",
+        "PANW",
+        "SPCX",
+        "ASTS",
+        "AXON",
+        "NVDA",
+        "SE",
+        "UBER",
+        "TMDX",
+        "IIND",
+        "NVO",
+        "IREN",
+        "ADYEN",
+        "PLTR",
+        "NU",
+        "LMT",
+        "GRG",
+        "BEPC",
+        "CWEN",
+        "IBE",
+        "NKTR"
+      ],
+      "isReply": false,
+      "sourceProvider": "first-party-web:telescope-monthly",
+      "discoveredAt": "2026-08-26T04:58:33.329Z",
+      "portfolioSnapshot": {
+        "complete": true,
+        "period": "2026-08",
+        "statement": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]",
+        "items": [
+          {
+            "ticker": "GOOGL",
+            "name": "Alphabet",
+            "weightPct": 11.8,
+            "markers": [],
+            "raw": "$GOOGL - Alphabet - 11.8%"
+          },
+          {
+            "ticker": "RKLB",
+            "name": "Rocket Lab",
+            "weightPct": 9.8,
+            "markers": [],
+            "raw": "$RKLB - Rocket Lab - 9.8%"
+          },
+          {
+            "ticker": "ISRG",
+            "name": "Intuitive Surgical",
+            "weightPct": 8.8,
+            "markers": [],
+            "raw": "$ISRG - Intuitive Surgical - 8.8%"
+          },
+          {
+            "ticker": "AMZN",
+            "name": "Amazon",
+            "weightPct": 7.8,
+            "markers": [
+              "high-conviction"
+            ],
+            "raw": "$AMZN - Amazon - 7.8% ⭐"
+          },
+          {
+            "ticker": "MELI",
+            "name": "MercadoLibre",
+            "weightPct": 5.3,
+            "markers": [
+              "high-conviction"
+            ],
+            "raw": "$MELI - MercadoLibre - 5.3% ⭐"
+          },
+          {
+            "ticker": "TSLA",
+            "name": "Tesla",
+            "weightPct": 4.2,
+            "markers": [
+              "high-conviction"
+            ],
+            "raw": "$TSLA - Tesla - 4.2% ⭐"
+          },
+          {
+            "ticker": "CRWD",
+            "name": "CrowdStrike",
+            "weightPct": 4.1,
+            "markers": [],
+            "raw": "$CRWD - CrowdStrike - 4.1%"
+          },
+          {
+            "ticker": "PANW",
+            "name": "Palo Alto Networks",
+            "weightPct": 3,
+            "markers": [],
+            "raw": "$PANW - Palo Alto Networks - 3.0%"
+          },
+          {
+            "ticker": "SPCX",
+            "name": "SpaceX",
+            "weightPct": 3,
+            "markers": [
+              "bought-added"
+            ],
+            "raw": "$SPCX - SpaceX - 3.0% ⬆️"
+          },
+          {
+            "ticker": "ASTS",
+            "name": "AST SpaceMobile",
+            "weightPct": 2.8,
+            "markers": [
+              "bought-added"
+            ],
+            "raw": "$ASTS - AST SpaceMobile - 2.8% ⬆️"
+          },
+          {
+            "ticker": "AXON",
+            "name": "Axon",
+            "weightPct": 2.7,
+            "markers": [
+              "high-conviction"
+            ],
+            "raw": "$AXON - Axon - 2.7% ⭐"
+          },
+          {
+            "ticker": "NVDA",
+            "name": "NVIDIA",
+            "weightPct": 2.6,
+            "markers": [
+              "high-conviction"
+            ],
+            "raw": "$NVDA - NVIDIA - 2.6% ⭐"
+          },
+          {
+            "ticker": "SE",
+            "name": "Sea Ltd",
+            "weightPct": 2.2,
+            "markers": [],
+            "raw": "$SE - Sea Ltd - 2.2%"
+          },
+          {
+            "ticker": "UBER",
+            "name": "Uber",
+            "weightPct": 1.2,
+            "markers": [],
+            "raw": "$UBER - Uber - 1.2%"
+          },
+          {
+            "ticker": "TMDX",
+            "name": "TransMedics",
+            "weightPct": 1.2,
+            "markers": [],
+            "raw": "$TMDX - TransMedics - 1.2%"
+          },
+          {
+            "ticker": "IIND",
+            "name": "India ETF",
+            "weightPct": 1.1,
+            "markers": [],
+            "raw": "$IIND - India ETF - 1.1%"
+          },
+          {
+            "ticker": "NVO",
+            "name": "Novo Nordisk",
+            "weightPct": 1.1,
+            "markers": [],
+            "raw": "$NVO - Novo Nordisk - 1.1%"
+          },
+          {
+            "ticker": "IREN",
+            "name": "Iris Energy",
+            "weightPct": 1,
+            "markers": [],
+            "raw": "$IREN - Iris Energy - 1.0%"
+          },
+          {
+            "ticker": "ADYEN",
+            "name": "Adyen",
+            "weightPct": 1,
+            "markers": [],
+            "raw": "$ADYEN - Adyen - 1.0%"
+          },
+          {
+            "ticker": "PLTR",
+            "name": "Palantir",
+            "weightPct": 1,
+            "markers": [],
+            "raw": "$PLTR - Palantir - 1.0%"
+          },
+          {
+            "ticker": "NU",
+            "name": "Nubank",
+            "weightPct": 0.9,
+            "markers": [],
+            "raw": "$NU - Nubank - 0.9%"
+          },
+          {
+            "ticker": "LMT",
+            "name": "Lockheed Martin",
+            "weightPct": 0.6,
+            "markers": [],
+            "raw": "$LMT - Lockheed Martin - 0.6%"
+          },
+          {
+            "ticker": "GRG",
+            "name": "Greggs",
+            "weightPct": 0.6,
+            "markers": [],
+            "raw": "$GRG - Greggs - 0.6%"
+          },
+          {
+            "ticker": "BEPC",
+            "name": "Brookfield Renewable",
+            "weightPct": 0.5,
+            "markers": [],
+            "raw": "$BEPC - Brookfield Renewable - 0.5%"
+          },
+          {
+            "ticker": "CWEN",
+            "name": "Clearway Energy",
+            "weightPct": 0.5,
+            "markers": [],
+            "raw": "$CWEN - Clearway Energy - 0.5%"
+          },
+          {
+            "ticker": "IBE",
+            "name": "Iberdrola SA",
+            "weightPct": 0.5,
+            "markers": [],
+            "raw": "$IBE - Iberdrola SA - 0.5%"
+          },
+          {
+            "ticker": "NKTR",
+            "name": "Nektar Therapeutics",
+            "weightPct": 0.4,
+            "markers": [],
+            "raw": "$NKTR - Nektar Therapeutics - 0.4%"
+          }
+        ]
+      }
     }
   ]
 }
