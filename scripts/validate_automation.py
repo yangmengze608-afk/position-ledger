@@ -57,6 +57,7 @@ if yaml is not None:
     assert "Persist raw-only ingest cache without human review" in workflow_text, "raw-only cache persistence missing"
     assert "steps.diff.outputs.review_changed == 'true'" in workflow_text, "human review must be gated on review-worthy changes"
     assert "fetch_public_portfolios.js" in workflow_text, "first-party portfolio collector must remain wired into discovery"
+    assert "reconcile_source_dates.js" in workflow_text, "date-only first-party source reconciliation missing"
     assert "POSITION_LEDGER_PORTFOLIO_REPORT_PATH" in workflow_text, "portfolio collector diagnostics missing"
 
 print(f"automation OK: posts={len(post_ids)} queue={len(item_ids)} sources={len(accounts)}")
