@@ -4386,7 +4386,7 @@
       "platform": "web",
       "handle": "7LukeHallard",
       "sourceAuthor": "Luke Hallard",
-      "createdAt": "2026-08-15T00:00:00.000Z",
+      "createdAt": "2026-08-15T12:00:00.000Z",
       "text": "I've generated a 22% CAGR over 23 years by investing in world-class companies committed to shaping a better future. Here's everything I own today: [Aug 2026]\n$GOOGL - Alphabet - 11.8%\n$RKLB - Rocket Lab - 9.8%\n$ISRG - Intuitive Surgical - 8.8%\n$AMZN - Amazon - 7.8% ⭐\n$MELI - MercadoLibre - 5.3% ⭐\n$TSLA - Tesla - 4.2% ⭐\n$CRWD - CrowdStrike - 4.1%\n$PANW - Palo Alto Networks - 3.0%\n$SPCX - SpaceX - 3.0% ⬆️\n$ASTS - AST SpaceMobile - 2.8% ⬆️\n$AXON - Axon - 2.7% ⭐\n$NVDA - NVIDIA - 2.6% ⭐\n$SE - Sea Ltd - 2.2%\n$UBER - Uber - 1.2%\n$TMDX - TransMedics - 1.2%\n$IIND - India ETF - 1.1%\n$NVO - Novo Nordisk - 1.1%\n$IREN - Iris Energy - 1.0%\n$ADYEN - Adyen - 1.0%\n$PLTR - Palantir - 1.0%\n$NU - Nubank - 0.9%\n$LMT - Lockheed Martin - 0.6%\n$GRG - Greggs - 0.6%\n$BEPC - Brookfield Renewable - 0.5%\n$CWEN - Clearway Energy - 0.5%\n$IBE - Iberdrola SA - 0.5%\n$NKTR - Nektar Therapeutics - 0.4%",
       "sourceUrl": "https://telescopeinvesting.com/updates/2026-08",
       "cashtags": [
@@ -4630,7 +4630,8 @@
             "raw": "$NKTR - Nektar Therapeutics - 0.4%"
           }
         ]
-      }
+      },
+      "sourceDatePrecision": "day"
     }
   ]
 }
