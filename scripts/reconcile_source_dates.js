@@ -29,10 +29,10 @@ function normalizeFirstPartyDateOnlyPosts(rawPayload) {
     if (!isFirstPartyCompletePortfolio(post)) continue;
     const value = String(post.createdAt);
     const midnight = value.match(/^(\d{4}-\d{2}-\d{2})T00:00:00(?:\.000)?Z$/);
-    if (midnight) {
-      post.createdAt = `${midnight[1]}T12:00:00.000Z`;
-      changed += 1;
-    }
+    if (!midnight) continue;
+
+    post.createdAt = `${midnight[1]}T12:00:00.000Z`;
+    changed += 1;
     if (post.sourceDatePrecision !== "day") {
       post.sourceDatePrecision = "day";
       changed += 1;
