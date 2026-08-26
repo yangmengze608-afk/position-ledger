@@ -42,6 +42,12 @@ function classifierName(item) {
   return item.llm ? `llm+${item.classifier || "rules-v2.1-local"}` : (item.classifier || "rules-v2.1-local");
 }
 
+function canonicalSourceType(item) {
+  if (item.sourceType) return item.sourceType;
+  if (String(item.sourceProvider || "").startsWith("first-party-web:")) return "first-party-portfolio";
+  return "x-original";
+}
+
 async function main() {
   const eventPayload = await readJson(EVENTS_PATH, { schemaVersion: 1, events: [] });
   const queuePayload = await readJson(QUEUE_PATH, { schemaVersion: 1, items: [] });
@@ -76,7 +82,7 @@ async function main() {
 
     const previous = previousByTicker.get(creatorTickerKey(item)) || {};
     const creatorId = creatorIdOf(item);
-    events.push({
+    const event = {
       id,
       creatorId,
       person: item.person,
@@ -88,14 +94,22 @@ async function main() {
       confidence: "A",
       summary: `原始公开披露：${(item.llm?.reason || item.evidence || type).slice(0, 180)}`,
       sourceUrl: item.sourceUrl,
-      sourceType: "x-original",
+      sourceType: canonicalSourceType(item),
+      sourceProvider: item.sourceProvider || null,
       sourcePostId: item.sourcePostId,
       sourceText: item.sourceText,
-      note: "V2 自动提议；以 PR 合并作为人工验收",
+      note: item.sourceType === "first-party-portfolio"
+        ? "一手公开完整组合快照；以 PR 合并作为人工验收"
+        : "V2 自动提议；以 PR 合并作为人工验收",
       classifier: classifierName(item)
-    });
+    };
+    if (item.disclosedWeightPct != null) event.disclosedWeightPct = Number(item.disclosedWeightPct);
+    if (item.snapshotPeriod) event.snapshotPeriod = item.snapshotPeriod;
+    if (Array.isArray(item.sourceMarkers) && item.sourceMarkers.length) event.sourceMarkers = item.sourceMarkers;
+
+    events.push(event);
     existingIds.add(id);
-    previousByTicker.set(creatorTickerKey(item), events[events.length - 1]);
+    previousByTicker.set(creatorTickerKey(item), event);
     item.creatorId = creatorId;
     item.status = "proposed";
     item.proposedEventId = id;
@@ -122,4 +136,4 @@ if (require.main === module) {
   main().catch((error) => { console.error(error); process.exit(1); });
 }
 
-module.exports = { canPromote, eventType, eventId, creatorTickerKey, classifierName };
+module.exports = { canPromote, eventType, eventId, creatorTickerKey, classifierName, canonicalSourceType };

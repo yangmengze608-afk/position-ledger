@@ -41,6 +41,7 @@ def main():
         confirms = [e for e in events if e["type"] in ACTIVE_TYPES | {"DENY", "EXIT", "HISTORICAL"}]
         latest_confirm = confirms[-1] if confirms else last
         latest_active = next((e for e in reversed(events) if e["type"] in ACTIVE_TYPES), None)
+        latest_weight = next((e for e in reversed(events) if e.get("disclosedWeightPct") is not None), None)
 
         holding = {
             "ticker": ticker,
@@ -55,6 +56,12 @@ def main():
             "thesis": latest_active.get("summary", "") if latest_active else latest_confirm.get("summary", ""),
             "eventCount": len(events)
         }
+        if latest_weight:
+            holding["disclosedWeightPct"] = latest_weight.get("disclosedWeightPct")
+            holding["weightAsOf"] = latest_weight.get("date")
+            if latest_weight.get("snapshotPeriod"):
+                holding["snapshotPeriod"] = latest_weight.get("snapshotPeriod")
+
         # Legacy Serenity rows stay byte-compatible with the existing frontend/data.
         # Any additional creator is explicit, preventing same-ticker cross-creator collisions.
         if creator != DEFAULT_CREATOR_ID:

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25T12:45:00Z",
+  "updatedAt": "2026-08-26T03:36:00Z",
   "creators": [
     {
       "id": "serenity",
@@ -39,6 +39,19 @@
       "coverageMode": "public-plus-reviewed-secondary",
       "subscriberCoverage": "public-observed-only",
       "dataNamespace": "luminara",
+      "positionPolicy": "event-sourced-evidence-first"
+    },
+    {
+      "id": "luke-hallard",
+      "displayName": "Luke Hallard",
+      "aliases": ["Telescope Investing", "The Badger", "Badger"],
+      "status": "active",
+      "primaryPlatform": "web",
+      "handle": "7LukeHallard",
+      "profileUrl": "https://telescopeinvesting.com/",
+      "coverageMode": "first-party-public-portfolio-plus-x",
+      "subscriberCoverage": "public-observed-only",
+      "dataNamespace": "luke-hallard",
       "positionPolicy": "event-sourced-evidence-first"
     }
   ]
