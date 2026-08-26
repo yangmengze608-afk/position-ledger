@@ -516,6 +516,24 @@
       "sourceText": "Lot of misinterpretations flying left and right around the $600m ATM. I'm still bullish on $AAOI and I have large positions (which is why I care more). \nWhat I've been consistent with is not being a fan of overusing ATMs/dilution for financing. I've said this before with $IREN + $POET.\nAnd I'll be consistent with my own positions like AOI. \nHowever, the reason I'm still overweight on AOI vs. the rest (looking at you Poet): \nIs that AOI is actually capacity constrained with high demand visibility. \nIn terms of timing:\n- AOI should have waited until completion of 1.6T qualifications (expected in the next few weeks)\n- Could have used other structures like convertible notes above market prices. \nBut they did it on the drop from $220 -> $130, and it's likely there will be short term structural overhang whenever they want to tap into it. \nI don't have to support every single business decision to  remain long.\n@aleabitoreddit Not bullish anymore??! Ugly price action at the moment for $Aaoi",
       "note": "V2 自动提议；以 PR 合并作为人工验收",
       "classifier": "rules-v2.1-local"
+    },
+    {
+      "id": "ck-capital-evt-eos.ax-2092434734869528787-hold",
+      "creatorId": "ck-capital",
+      "person": "CK Capital",
+      "ticker": "EOS.AX",
+      "company": "EOS.AX",
+      "exchange": "",
+      "type": "HOLD",
+      "date": "2026-08-26T02:11:31.000Z",
+      "confidence": "A",
+      "summary": "原始公开披露：one of my top positions",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092434734869528787",
+      "sourceType": "x-original",
+      "sourcePostId": "2092434734869528787",
+      "sourceText": "$EOS.AX is on an absolute tear.\nGlad to say it’s one of my top positions.",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "classifier": "rules-v2.1-local"
     }
   ]
 }

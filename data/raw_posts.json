@@ -1,7 +1,54 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-26T02:01:54.740Z",
+  "generatedAt": "2026-08-26T03:28:09.535Z",
   "posts": [
+    {
+      "id": "2092446942252994630",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-26T03:00:01.000Z",
+      "text": "@SteveUrkelDude On a heater!!!",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092446942252994630",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T03:28:05.574Z",
+      "creatorId": "ck-capital"
+    },
+    {
+      "id": "2092444761777184934",
+      "person": "Luminara Stocks",
+      "platform": "x",
+      "handle": "_stockResearch",
+      "sourceAuthor": "_stockResearch",
+      "createdAt": "2026-08-26T02:51:21.000Z",
+      "text": "\"A 2x fund gives you two times the daily return, not two times the return over time. \nThose are completely different things.  The math is simple. Stock up 10% then down 10% leaves you at 99%. The 2x version, up 20% then down 20%, leaves you at 96%. The stock lost 1%, you lost 4%. Nothing went wrong, the fund tracked perfectly, the rebalancing just ate you.  That compounds every single day the underlying chops, which is most days.\"\n-Quoted!\nNo hate to those who own 2x leveraged stocks, I have, and I'm sure most of us have, but this is why I don't recommend using them. This chart says it better than I can. SanDisk is up 134% over six months. The 2x version is up 155%. You took double the risk and got 1.15x the return…",
+      "sourceUrl": "https://x.com/_stockResearch/status/2092444761777184934",
+      "cashtags": [],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T03:28:08.732Z",
+      "creatorId": "luminara"
+    },
+    {
+      "id": "2092434734869528787",
+      "person": "CK Capital",
+      "platform": "x",
+      "handle": "CKCapitalxx",
+      "sourceAuthor": "CKCapitalxx",
+      "createdAt": "2026-08-26T02:11:31.000Z",
+      "text": "$EOS.AX is on an absolute tear.\nGlad to say it’s one of my top positions.",
+      "sourceUrl": "https://x.com/CKCapitalxx/status/2092434734869528787",
+      "cashtags": [
+        "EOS.AX"
+      ],
+      "isReply": false,
+      "sourceProvider": "fxembed-rss",
+      "discoveredAt": "2026-08-26T03:28:05.574Z",
+      "creatorId": "ck-capital"
+    },
     {
       "id": "2092426263398945247",
       "person": "CK Capital",
