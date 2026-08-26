@@ -1,9 +1,9 @@
 {
-  "recordedAt": "2026-08-25T13:03:48.295038+00:00",
-  "workflowCommit": "dbc546b67d98ba8851e1e8865ffecac12111def0",
-  "batchId": "32851007241-1",
+  "recordedAt": "2026-08-26T06:26:23.442538+00:00",
+  "workflowCommit": "375e7fce591d8852c215f85081e581fc2d1f00c5",
+  "batchId": "32938089632-1",
   "collector": {
-    "startedAt": "2026-08-25T13:02:58.114Z",
+    "startedAt": "2026-08-26T06:25:34.322Z",
     "provider": "multi-source",
     "accounts": [
       {
@@ -17,13 +17,13 @@
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12247
+            "durationMs": 12474
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 65,
-            "durationMs": 2646
+            "durationMs": 2435
           }
         ]
       },
@@ -31,20 +31,20 @@
         "handle": "CKCapitalxx",
         "ok": true,
         "selectedProvider": "fxembed-rss",
-        "recent": 72,
+        "recent": 71,
         "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12195
+            "durationMs": 12178
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
-            "recent": 72,
-            "durationMs": 4876
+            "recent": 71,
+            "durationMs": 3847
           }
         ]
       },
@@ -53,34 +53,61 @@
         "ok": true,
         "selectedProvider": "fxembed-rss",
         "recent": 55,
-        "added": 55,
+        "added": 0,
         "attempts": [
           {
             "provider": "x-syndication",
             "ok": false,
             "error": "HTTP 429",
-            "durationMs": 12161
+            "durationMs": 12171
           },
           {
             "provider": "fxembed-rss",
             "ok": true,
             "recent": 55,
-            "durationMs": 2869
+            "durationMs": 2429
           }
         ]
       }
     ],
-    "completedAt": "2026-08-25T13:03:47.513Z",
-    "added": 55,
-    "totalStored": 244
+    "completedAt": "2026-08-26T06:26:22.262Z",
+    "added": 0,
+    "totalStored": 273
   },
-  "rawPostCount": 244,
+  "portfolioCollector": {
+    "startedAt": "2026-08-26T06:26:22.314Z",
+    "provider": "first-party-web",
+    "accounts": [
+      {
+        "creatorId": "luke-hallard",
+        "ok": true,
+        "snapshotId": "web-luke-hallard-2026-08",
+        "holdings": 27,
+        "added": false,
+        "updated": false,
+        "attempts": [
+          {
+            "url": "https://telescopeinvesting.com/updates/2026-08",
+            "ok": true,
+            "holdings": 27,
+            "durationMs": 213
+          }
+        ]
+      }
+    ],
+    "completedAt": "2026-08-26T06:26:22.538Z",
+    "added": 0,
+    "updated": 0,
+    "totalStored": 273
+  },
+  "rawPostCount": 273,
   "rawPostsByCreator": {
-    "serenity": 116,
-    "ck-capital": 73,
-    "luminara": 55
+    "ck-capital": 95,
+    "luminara": 56,
+    "serenity": 121,
+    "luke-hallard": 1
   },
-  "reviewQueueCount": 26,
+  "reviewQueueCount": 54,
   "changes": {
     "raw": "true",
     "review": "true"
@@ -88,6 +115,8 @@
   "stepsReached": {
     "guard": "success",
     "fetch": "success",
+    "portfolio": "success",
+    "sourceDates": "success",
     "creator": "success",
     "classify": "success",
     "llm": "success",
@@ -95,6 +124,6 @@
   },
   "delivery": {
     "kind": "issue",
-    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/39"
+    "url": "https://github.com/yangmengze608-afk/position-ledger/issues/49"
   }
 }
