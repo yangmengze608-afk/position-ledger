@@ -14,12 +14,37 @@ async function readJson(file, fallback) {
   catch { return fallback; }
 }
 
+function isFirstPartyCompletePortfolio(post) {
+  return Boolean(
+    post?.id
+    && post?.createdAt
+    && String(post.sourceProvider || "").startsWith("first-party-web:")
+    && post.portfolioSnapshot?.complete === true
+  );
+}
+
+function normalizeFirstPartyDateOnlyPosts(rawPayload) {
+  let changed = 0;
+  for (const post of rawPayload?.posts || []) {
+    if (!isFirstPartyCompletePortfolio(post)) continue;
+    const value = String(post.createdAt);
+    const midnight = value.match(/^(\d{4}-\d{2}-\d{2})T00:00:00(?:\.000)?Z$/);
+    if (midnight) {
+      post.createdAt = `${midnight[1]}T12:00:00.000Z`;
+      changed += 1;
+    }
+    if (post.sourceDatePrecision !== "day") {
+      post.sourceDatePrecision = "day";
+      changed += 1;
+    }
+  }
+  return changed;
+}
+
 function canonicalFirstPartySourceDates(rawPayload) {
   const dates = new Map();
   for (const post of rawPayload?.posts || []) {
-    if (!post?.id || !post?.createdAt) continue;
-    if (!String(post.sourceProvider || "").startsWith("first-party-web:")) continue;
-    if (post.portfolioSnapshot?.complete !== true) continue;
+    if (!isFirstPartyCompletePortfolio(post)) continue;
     dates.set(String(post.id), {
       createdAt: String(post.createdAt),
       precision: post.sourceDatePrecision || null,
@@ -29,6 +54,7 @@ function canonicalFirstPartySourceDates(rawPayload) {
 }
 
 function reconcileSourceDates(rawPayload, eventPayload, queuePayload) {
+  const rawChanged = normalizeFirstPartyDateOnlyPosts(rawPayload);
   const dates = canonicalFirstPartySourceDates(rawPayload);
   let eventsChanged = 0;
   let queueChanged = 0;
@@ -59,7 +85,7 @@ function reconcileSourceDates(rawPayload, eventPayload, queuePayload) {
     }
   }
 
-  return { eventsChanged, queueChanged, sourceCount: dates.size };
+  return { rawChanged, eventsChanged, queueChanged, sourceCount: dates.size };
 }
 
 async function main() {
@@ -69,15 +95,16 @@ async function main() {
     readJson(QUEUE_PATH, { items: [] }),
   ]);
   const result = reconcileSourceDates(raw, events, queue);
-  if (result.eventsChanged === 0 && result.queueChanged === 0) {
+  if (result.rawChanged === 0 && result.eventsChanged === 0 && result.queueChanged === 0) {
     console.log(`[source-date] unchanged; first-party-sources=${result.sourceCount}`);
     return;
   }
-  await Promise.all([
-    fs.writeFile(EVENTS_PATH, JSON.stringify(events, null, 2) + "\n", "utf8"),
-    fs.writeFile(QUEUE_PATH, JSON.stringify(queue, null, 2) + "\n", "utf8"),
-  ]);
-  console.log(`[source-date] events=${result.eventsChanged} queue=${result.queueChanged} first-party-sources=${result.sourceCount}`);
+  const writes = [];
+  if (result.rawChanged) writes.push(fs.writeFile(RAW_PATH, JSON.stringify(raw, null, 2) + "\n", "utf8"));
+  if (result.eventsChanged) writes.push(fs.writeFile(EVENTS_PATH, JSON.stringify(events, null, 2) + "\n", "utf8"));
+  if (result.queueChanged) writes.push(fs.writeFile(QUEUE_PATH, JSON.stringify(queue, null, 2) + "\n", "utf8"));
+  await Promise.all(writes);
+  console.log(`[source-date] raw=${result.rawChanged} events=${result.eventsChanged} queue=${result.queueChanged} first-party-sources=${result.sourceCount}`);
 }
 
 if (require.main === module) {
@@ -87,4 +114,9 @@ if (require.main === module) {
   });
 }
 
-module.exports = { canonicalFirstPartySourceDates, reconcileSourceDates };
+module.exports = {
+  isFirstPartyCompletePortfolio,
+  normalizeFirstPartyDateOnlyPosts,
+  canonicalFirstPartySourceDates,
+  reconcileSourceDates,
+};
