@@ -9,11 +9,11 @@
       "state": "live",
       "confidence": "A",
       "firstRecordedAt": "2026-08-20T23:38:19.000Z",
-      "lastConfirmedAt": "2026-08-26T02:11:31.000Z",
-      "lastActiveAt": "2026-08-26T02:11:31.000Z",
+      "lastConfirmedAt": "2026-08-27T00:32:46.000Z",
+      "lastActiveAt": "2026-08-27T00:32:46.000Z",
       "note": "V2 自动提议；以 PR 合并作为人工验收",
       "thesis": "原始公开披露：one of my top positions",
-      "eventCount": 2
+      "eventCount": 3
     },
     {
       "creatorId": "luke-hallard",
@@ -708,14 +708,14 @@
       "ticker": "EWY",
       "company": "iShares MSCI South Korea ETF",
       "exchange": "NYSE Arca",
-      "state": "unconfirmed",
-      "confidence": "B",
+      "state": "live",
+      "confidence": "A",
       "firstRecordedAt": "2026-08-15T14:34:00+10:00",
-      "lastConfirmedAt": "2026-08-15T14:34:00+10:00",
-      "lastActiveAt": null,
-      "note": "历史披露，当前状态待确认",
-      "thesis": "在回顾年度表现时，把 EWY 列入今年早些时候或去年曾建立过仓位的一组标的。",
-      "eventCount": 1
+      "lastConfirmedAt": "2026-08-27T05:46:04.000Z",
+      "lastActiveAt": "2026-08-27T05:46:04.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I trimmed",
+      "eventCount": 2
     },
     {
       "ticker": "INTC",
@@ -773,14 +773,14 @@
       "ticker": "MU",
       "company": "Micron Technology",
       "exchange": "NASDAQ",
-      "state": "unconfirmed",
-      "confidence": "B",
+      "state": "live",
+      "confidence": "A",
       "firstRecordedAt": "2026-08-15T14:34:00+10:00",
-      "lastConfirmedAt": "2026-08-15T14:34:00+10:00",
-      "lastActiveAt": null,
-      "note": "历史披露，当前状态待确认",
-      "thesis": "在回顾年度表现时，把 MU 列入今年早些时候或去年曾建立过仓位的一组标的。",
-      "eventCount": 1
+      "lastConfirmedAt": "2026-08-27T05:46:04.000Z",
+      "lastActiveAt": "2026-08-27T05:46:04.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I trimmed",
+      "eventCount": 2
     },
     {
       "ticker": "POET",
@@ -796,6 +796,19 @@
       "eventCount": 1
     },
     {
+      "ticker": "SIMO",
+      "company": "SIMO",
+      "exchange": "",
+      "state": "live",
+      "confidence": "A",
+      "firstRecordedAt": "2026-08-27T05:46:04.000Z",
+      "lastConfirmedAt": "2026-08-27T05:46:04.000Z",
+      "lastActiveAt": "2026-08-27T05:46:04.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I trimmed",
+      "eventCount": 1
+    },
+    {
       "ticker": "SIVE",
       "company": "Sivers Semiconductors",
       "exchange": "NASDAQ",
@@ -807,6 +820,19 @@
       "note": "高确信光学敞口",
       "thesis": "在讨论 SK hynix 光互联路线时，再次把 SIVE 称为自己认为最干净的间接标的。",
       "eventCount": 2
+    },
+    {
+      "ticker": "SNDK",
+      "company": "SNDK",
+      "exchange": "",
+      "state": "live",
+      "confidence": "A",
+      "firstRecordedAt": "2026-08-27T05:46:04.000Z",
+      "lastConfirmedAt": "2026-08-27T05:46:04.000Z",
+      "lastActiveAt": "2026-08-27T05:46:04.000Z",
+      "note": "V2 自动提议；以 PR 合并作为人工验收",
+      "thesis": "原始公开披露：I trimmed",
+      "eventCount": 1
     },
     {
       "ticker": "TSEM",
