@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T22:02:43.931200+00:00",
+  "updatedAt": "2026-09-22T00:53:22.247139+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "methodology": {
     "dailyMove": "regular market price versus previous valid adjusted daily session close",
@@ -9,7 +9,7 @@
     "AAOI": {
       "symbol": "AAOI",
       "price": 108.67,
-      "previousClose": 105.169998,
+      "previousClose": 98.059998,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -62,7 +62,7 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:18.674760+00:00"
+      "updatedAt": "2026-09-22T00:53:00.018020+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
@@ -104,12 +104,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:19.233970+00:00"
+      "updatedAt": "2026-09-22T00:53:00.491304+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
       "price": 44.0,
-      "previousClose": 42.700001,
+      "previousClose": 41.200001,
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
@@ -146,12 +146,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:20.246307+00:00"
+      "updatedAt": "2026-09-22T00:53:01.354269+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
       "price": 79.93,
-      "previousClose": 70.029999,
+      "previousClose": 67.75,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -188,12 +188,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:20.778544+00:00"
+      "updatedAt": "2026-09-22T00:53:01.793102+00:00"
     },
     "POET": {
       "symbol": "POET",
       "price": 8.41,
-      "previousClose": 7.8,
+      "previousClose": 7.51,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
@@ -230,12 +230,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:21.287289+00:00"
+      "updatedAt": "2026-09-22T00:53:02.248844+00:00"
     },
     "ARM": {
       "symbol": "ARM",
       "price": 322.9,
-      "previousClose": 275.609985,
+      "previousClose": 264.899994,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -260,12 +260,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:21.845481+00:00"
+      "updatedAt": "2026-09-22T00:53:02.638059+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
       "price": 257.38,
-      "previousClose": 244.25,
+      "previousClose": 240.759995,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -306,12 +306,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:22.434700+00:00"
+      "updatedAt": "2026-09-22T00:53:03.089007+00:00"
     },
     "INTC": {
       "symbol": "INTC",
       "price": 121.78,
-      "previousClose": 108.599998,
+      "previousClose": 108.800003,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -336,12 +336,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:22.980731+00:00"
+      "updatedAt": "2026-09-22T00:53:03.802601+00:00"
     },
     "LITE": {
       "symbol": "LITE",
       "price": 954.49,
-      "previousClose": 930.909973,
+      "previousClose": 893.609985,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -366,12 +366,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:23.506259+00:00"
+      "updatedAt": "2026-09-22T00:53:04.217459+00:00"
     },
     "EWY": {
       "symbol": "EWY",
       "price": 189.16,
-      "previousClose": 181.309998,
+      "previousClose": 182.389999,
       "currency": "USD",
       "exchange": "PCX",
       "marketState": null,
@@ -396,12 +396,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:24.014481+00:00"
+      "updatedAt": "2026-09-22T00:53:04.727211+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
       "price": 233.82,
-      "previousClose": 223.600006,
+      "previousClose": 219.240005,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -426,12 +426,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:24.548592+00:00"
+      "updatedAt": "2026-09-22T00:53:05.162339+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
       "price": 96.93,
-      "previousClose": 93.489998,
+      "previousClose": 90.550003,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
@@ -472,12 +472,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:25.011425+00:00"
+      "updatedAt": "2026-09-22T00:53:05.598003+00:00"
     },
     "MU": {
       "symbol": "MU",
       "price": 1043.96,
-      "previousClose": 1015.799988,
+      "previousClose": 977.5,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -502,7 +502,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:25.570537+00:00"
+      "updatedAt": "2026-09-22T00:53:06.057668+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
@@ -532,12 +532,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-09-21T22:02:26.088054+00:00"
+      "updatedAt": "2026-09-22T00:53:06.558509+00:00"
     },
     "SPCX": {
       "symbol": "SPCX",
       "price": 151.85,
-      "previousClose": 152.710007,
+      "previousClose": 154.809998,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -578,12 +578,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:26.635409+00:00"
+      "updatedAt": "2026-09-22T00:53:07.008169+00:00"
     },
     "CBRS": {
       "symbol": "CBRS",
       "price": 208.49,
-      "previousClose": 198.369995,
+      "previousClose": 194.139999,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -608,12 +608,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:27.158271+00:00"
+      "updatedAt": "2026-09-22T00:53:07.504524+00:00"
     },
     "ORCL": {
       "symbol": "ORCL",
       "price": 148.56,
-      "previousClose": 147.610001,
+      "previousClose": 150.589996,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -638,12 +638,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:27.726811+00:00"
+      "updatedAt": "2026-09-22T00:53:07.953719+00:00"
     },
     "NVTS": {
       "symbol": "NVTS",
       "price": 12.16,
-      "previousClose": 11.43,
+      "previousClose": 11.14,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -668,7 +668,7 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:28.324298+00:00"
+      "updatedAt": "2026-09-22T00:53:08.546869+00:00"
     },
     "6976": {
       "symbol": "6976.T",
@@ -710,7 +710,7 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:28.880324+00:00"
+      "updatedAt": "2026-09-22T00:53:09.052684+00:00"
     },
     "2492": {
       "symbol": "2492.TW",
@@ -752,12 +752,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:29.450817+00:00"
+      "updatedAt": "2026-09-22T00:53:09.547773+00:00"
     },
     "EOS.AX": {
       "symbol": "EOS.AX",
-      "price": 10.46,
-      "previousClose": 10.34,
+      "price": 10.68,
+      "previousClose": 10.46,
       "currency": "AUD",
       "exchange": "ASX",
       "marketState": null,
@@ -771,18 +771,18 @@
             "sessionDate": "2026-08-21",
             "price": 8.9,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 17.5281
+            "performancePct": 20.0
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-26T02:11:31.000Z",
             "sessionDate": "2026-08-26",
             "price": 11.24,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -6.9395
+            "performancePct": -4.9822
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:29.976165+00:00"
+      "updatedAt": "2026-09-22T00:53:09.997486+00:00"
     },
     "ADYEN": {
       "symbol": "ADYEN.AS",
@@ -812,12 +812,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:30.486716+00:00"
+      "updatedAt": "2026-09-22T00:53:10.472650+00:00"
     },
     "AMZN": {
       "symbol": "AMZN",
       "price": 258.45,
-      "previousClose": 253.710007,
+      "previousClose": 251.190002,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -842,12 +842,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:30.981391+00:00"
+      "updatedAt": "2026-09-22T00:53:10.912325+00:00"
     },
     "ASTS": {
       "symbol": "ASTS",
       "price": 61.89,
-      "previousClose": 58.52,
+      "previousClose": 62.709999,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -872,12 +872,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:31.547745+00:00"
+      "updatedAt": "2026-09-22T00:53:11.366263+00:00"
     },
     "AXON": {
       "symbol": "AXON",
       "price": 452.06,
-      "previousClose": 447.76001,
+      "previousClose": 453.5,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -902,12 +902,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:32.229409+00:00"
+      "updatedAt": "2026-09-22T00:53:11.830906+00:00"
     },
     "BEPC": {
       "symbol": "BEPC",
       "price": 29.95,
-      "previousClose": 29.93,
+      "previousClose": 29.860001,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -932,12 +932,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:32.745652+00:00"
+      "updatedAt": "2026-09-22T00:53:12.310080+00:00"
     },
     "CRWD": {
       "symbol": "CRWD",
       "price": 249.35,
-      "previousClose": 237.649994,
+      "previousClose": 245.699997,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -962,12 +962,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:33.258224+00:00"
+      "updatedAt": "2026-09-22T00:53:12.738745+00:00"
     },
     "CWEN": {
       "symbol": "CWEN",
       "price": 30.89,
-      "previousClose": 30.82,
+      "previousClose": 30.959999,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -992,12 +992,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:33.776824+00:00"
+      "updatedAt": "2026-09-22T00:53:13.169474+00:00"
     },
     "GOOGL": {
       "symbol": "GOOGL",
       "price": 354.97,
-      "previousClose": 349.540009,
+      "previousClose": 347.329987,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1022,12 +1022,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:34.315306+00:00"
+      "updatedAt": "2026-09-22T00:53:13.629844+00:00"
     },
     "GRG": {
       "symbol": "GRG.L",
       "price": 1818.0,
-      "previousClose": 1800.0,
+      "previousClose": 1796.0,
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
@@ -1052,7 +1052,7 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:34.894126+00:00"
+      "updatedAt": "2026-09-22T00:53:14.117576+00:00"
     },
     "IBE": {
       "symbol": "IBE.MC",
@@ -1082,12 +1082,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:35.490849+00:00"
+      "updatedAt": "2026-09-22T00:53:14.597233+00:00"
     },
     "IIND": {
       "symbol": "IIND.L",
       "price": 6.447,
-      "previousClose": 6.378,
+      "previousClose": 6.414,
       "currency": "GBP",
       "exchange": "LSE",
       "marketState": null,
@@ -1112,12 +1112,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:35.992497+00:00"
+      "updatedAt": "2026-09-22T00:53:15.273388+00:00"
     },
     "IREN": {
       "symbol": "IREN",
       "price": 47.23,
-      "previousClose": 46.68,
+      "previousClose": 43.48,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1142,12 +1142,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:36.497065+00:00"
+      "updatedAt": "2026-09-22T00:53:15.690975+00:00"
     },
     "ISRG": {
       "symbol": "ISRG",
       "price": 401.65,
-      "previousClose": 393.329987,
+      "previousClose": 383.540009,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1172,12 +1172,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:37.009736+00:00"
+      "updatedAt": "2026-09-22T00:53:16.152301+00:00"
     },
     "LMT": {
       "symbol": "LMT",
       "price": 535.4,
-      "previousClose": 533.380005,
+      "previousClose": 538.090027,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1202,12 +1202,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:37.627838+00:00"
+      "updatedAt": "2026-09-22T00:53:16.650537+00:00"
     },
     "MELI": {
       "symbol": "MELI",
       "price": 1820.47,
-      "previousClose": 1787.390015,
+      "previousClose": 1825.209961,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1232,12 +1232,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:38.128715+00:00"
+      "updatedAt": "2026-09-22T00:53:17.111360+00:00"
     },
     "NKTR": {
       "symbol": "NKTR",
       "price": 66.84,
-      "previousClose": 67.099998,
+      "previousClose": 68.360001,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
@@ -1262,12 +1262,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:38.629235+00:00"
+      "updatedAt": "2026-09-22T00:53:17.545950+00:00"
     },
     "NU": {
       "symbol": "NU",
       "price": 14.06,
-      "previousClose": 13.65,
+      "previousClose": 13.84,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1292,12 +1292,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:39.135636+00:00"
+      "updatedAt": "2026-09-22T00:53:17.945794+00:00"
     },
     "NVDA": {
       "symbol": "NVDA",
       "price": 227.38,
-      "previousClose": 222.270004,
+      "previousClose": 219.339996,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1322,12 +1322,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:39.660796+00:00"
+      "updatedAt": "2026-09-22T00:53:18.383260+00:00"
     },
     "NVO": {
       "symbol": "NVO",
       "price": 39.8,
-      "previousClose": 43.240002,
+      "previousClose": 43.189999,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1352,12 +1352,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:40.210754+00:00"
+      "updatedAt": "2026-09-22T00:53:18.886303+00:00"
     },
     "PANW": {
       "symbol": "PANW",
       "price": 371.76,
-      "previousClose": 363.579987,
+      "previousClose": 375.059998,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1382,12 +1382,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:40.711182+00:00"
+      "updatedAt": "2026-09-22T00:53:19.296978+00:00"
     },
     "PLTR": {
       "symbol": "PLTR",
       "price": 183.09,
-      "previousClose": 177.639999,
+      "previousClose": 176.240005,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1412,12 +1412,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:41.183259+00:00"
+      "updatedAt": "2026-09-22T00:53:19.746117+00:00"
     },
     "RKLB": {
       "symbol": "RKLB",
       "price": 69.89,
-      "previousClose": 64.57,
+      "previousClose": 67.82,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1442,12 +1442,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:41.702579+00:00"
+      "updatedAt": "2026-09-22T00:53:20.148108+00:00"
     },
     "SE": {
       "symbol": "SE",
       "price": 102.65,
-      "previousClose": 101.790001,
+      "previousClose": 101.269997,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1472,12 +1472,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:42.184113+00:00"
+      "updatedAt": "2026-09-22T00:53:20.589170+00:00"
     },
     "TMDX": {
       "symbol": "TMDX",
       "price": 87.29,
-      "previousClose": 86.419998,
+      "previousClose": 86.660004,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -1502,12 +1502,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:42.702817+00:00"
+      "updatedAt": "2026-09-22T00:53:21.118842+00:00"
     },
     "TSLA": {
       "symbol": "TSLA",
       "price": 375.3,
-      "previousClose": 364.269989,
+      "previousClose": 366.200012,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1532,12 +1532,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:43.195453+00:00"
+      "updatedAt": "2026-09-22T00:53:21.568878+00:00"
     },
     "UBER": {
       "symbol": "UBER",
       "price": 70.84,
-      "previousClose": 70.5,
+      "previousClose": 70.870003,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1562,12 +1562,12 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:43.681037+00:00"
+      "updatedAt": "2026-09-22T00:53:21.996994+00:00"
     },
     "CCXI": {
       "symbol": "CCXI",
       "price": 13.58,
-      "previousClose": 12.9,
+      "previousClose": 12.08,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -1620,7 +1620,7 @@
           }
         }
       },
-      "updatedAt": "2026-09-21T22:02:19.708275+00:00"
+      "updatedAt": "2026-09-22T00:53:00.934526+00:00"
     }
   },
   "failures": [],
