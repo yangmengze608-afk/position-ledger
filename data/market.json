@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T20:41:55.063169+00:00",
+  "updatedAt": "2026-10-20T23:27:11.129424+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "methodology": {
     "dailyMove": "regular market price versus previous valid adjusted daily session close",
@@ -62,12 +62,12 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:34.501224+00:00"
+      "updatedAt": "2026-10-20T23:26:55.543595+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
       "price": 23.4,
-      "previousClose": 23.440001,
+      "previousClose": 23.9,
       "currency": "SEK",
       "exchange": "STO",
       "marketState": null,
@@ -104,7 +104,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:34.902059+00:00"
+      "updatedAt": "2026-10-20T23:26:55.930518+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
@@ -146,7 +146,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:35.752832+00:00"
+      "updatedAt": "2026-10-20T23:26:56.581939+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
@@ -188,7 +188,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:36.244790+00:00"
+      "updatedAt": "2026-10-20T23:26:56.941235+00:00"
     },
     "POET": {
       "symbol": "POET",
@@ -230,7 +230,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:36.677250+00:00"
+      "updatedAt": "2026-10-20T23:26:57.256514+00:00"
     },
     "ARM": {
       "symbol": "ARM",
@@ -260,7 +260,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:37.107589+00:00"
+      "updatedAt": "2026-10-20T23:26:57.564660+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
@@ -306,7 +306,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:37.601965+00:00"
+      "updatedAt": "2026-10-20T23:26:57.881346+00:00"
     },
     "INTC": {
       "symbol": "INTC",
@@ -336,7 +336,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:38.033568+00:00"
+      "updatedAt": "2026-10-20T23:26:58.211031+00:00"
     },
     "LITE": {
       "symbol": "LITE",
@@ -366,7 +366,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:38.458085+00:00"
+      "updatedAt": "2026-10-20T23:26:58.518087+00:00"
     },
     "EWY": {
       "symbol": "EWY",
@@ -396,7 +396,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:38.867560+00:00"
+      "updatedAt": "2026-10-20T23:26:58.841558+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
@@ -426,7 +426,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:39.287722+00:00"
+      "updatedAt": "2026-10-20T23:26:59.154392+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
@@ -472,7 +472,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:39.700672+00:00"
+      "updatedAt": "2026-10-20T23:26:59.464389+00:00"
     },
     "MU": {
       "symbol": "MU",
@@ -502,12 +502,12 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:40.157268+00:00"
+      "updatedAt": "2026-10-20T23:26:59.814715+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
       "price": 18.27,
-      "previousClose": 18.799999,
+      "previousClose": 17.83,
       "currency": "CHF",
       "exchange": "EBS",
       "marketState": null,
@@ -532,7 +532,7 @@
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-10-20T20:41:40.591344+00:00"
+      "updatedAt": "2026-10-20T23:27:00.137370+00:00"
     },
     "SPCX": {
       "symbol": "SPCX",
@@ -578,7 +578,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:40.985519+00:00"
+      "updatedAt": "2026-10-20T23:27:00.444332+00:00"
     },
     "CBRS": {
       "symbol": "CBRS",
@@ -608,7 +608,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:41.400839+00:00"
+      "updatedAt": "2026-10-20T23:27:00.751903+00:00"
     },
     "ORCL": {
       "symbol": "ORCL",
@@ -638,7 +638,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:41.849779+00:00"
+      "updatedAt": "2026-10-20T23:27:01.075135+00:00"
     },
     "NVTS": {
       "symbol": "NVTS",
@@ -668,7 +668,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:42.279166+00:00"
+      "updatedAt": "2026-10-20T23:27:01.382957+00:00"
     },
     "6976": {
       "symbol": "6976.T",
@@ -710,7 +710,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:42.725202+00:00"
+      "updatedAt": "2026-10-20T23:27:01.789960+00:00"
     },
     "2492": {
       "symbol": "2492.TW",
@@ -752,11 +752,11 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:43.189910+00:00"
+      "updatedAt": "2026-10-20T23:27:02.115813+00:00"
     },
     "EOS.AX": {
       "symbol": "EOS.AX",
-      "price": 9.01,
+      "price": 9.02,
       "previousClose": 9.01,
       "currency": "AUD",
       "exchange": "ASX",
@@ -771,23 +771,23 @@
             "sessionDate": "2026-08-21",
             "price": 8.9,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 1.236
+            "performancePct": 1.3483
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-26T02:11:31.000Z",
             "sessionDate": "2026-08-26",
             "price": 11.24,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -19.8399
+            "performancePct": -19.7509
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:43.639332+00:00"
+      "updatedAt": "2026-10-20T23:27:02.423975+00:00"
     },
     "ADYEN": {
       "symbol": "ADYEN.AS",
       "price": 924.5,
-      "previousClose": 930.400024,
+      "previousClose": 947.299988,
       "currency": "EUR",
       "exchange": "AMS",
       "marketState": null,
@@ -812,7 +812,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:44.064377+00:00"
+      "updatedAt": "2026-10-20T23:27:02.733278+00:00"
     },
     "AMZN": {
       "symbol": "AMZN",
@@ -842,7 +842,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:44.538830+00:00"
+      "updatedAt": "2026-10-20T23:27:03.047258+00:00"
     },
     "ASTS": {
       "symbol": "ASTS",
@@ -872,7 +872,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:44.971437+00:00"
+      "updatedAt": "2026-10-20T23:27:03.357591+00:00"
     },
     "AXON": {
       "symbol": "AXON",
@@ -902,7 +902,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:45.375768+00:00"
+      "updatedAt": "2026-10-20T23:27:03.671311+00:00"
     },
     "BEPC": {
       "symbol": "BEPC",
@@ -932,7 +932,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:45.817264+00:00"
+      "updatedAt": "2026-10-20T23:27:03.987586+00:00"
     },
     "CRWD": {
       "symbol": "CRWD",
@@ -962,7 +962,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:46.208421+00:00"
+      "updatedAt": "2026-10-20T23:27:04.304071+00:00"
     },
     "CWEN": {
       "symbol": "CWEN",
@@ -992,7 +992,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:46.645076+00:00"
+      "updatedAt": "2026-10-20T23:27:04.747724+00:00"
     },
     "GOOGL": {
       "symbol": "GOOGL",
@@ -1022,12 +1022,12 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:47.146897+00:00"
+      "updatedAt": "2026-10-20T23:27:05.085248+00:00"
     },
     "GRG": {
       "symbol": "GRG.L",
       "price": 2300.0,
-      "previousClose": 2346.0,
+      "previousClose": 2290.0,
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
@@ -1052,12 +1052,12 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:47.562508+00:00"
+      "updatedAt": "2026-10-20T23:27:05.420493+00:00"
     },
     "IBE": {
       "symbol": "IBE.MC",
       "price": 21.23,
-      "previousClose": 21.23,
+      "previousClose": 21.690001,
       "currency": "EUR",
       "exchange": "MCE",
       "marketState": null,
@@ -1082,12 +1082,12 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:48.031124+00:00"
+      "updatedAt": "2026-10-20T23:27:05.761505+00:00"
     },
     "IIND": {
       "symbol": "IIND.L",
       "price": 6.327,
-      "previousClose": 6.302,
+      "previousClose": 6.354,
       "currency": "GBP",
       "exchange": "LSE",
       "marketState": null,
@@ -1112,7 +1112,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:48.443474+00:00"
+      "updatedAt": "2026-10-20T23:27:06.070394+00:00"
     },
     "IREN": {
       "symbol": "IREN",
@@ -1142,7 +1142,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:48.869742+00:00"
+      "updatedAt": "2026-10-20T23:27:06.382646+00:00"
     },
     "ISRG": {
       "symbol": "ISRG",
@@ -1172,7 +1172,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:49.284147+00:00"
+      "updatedAt": "2026-10-20T23:27:06.690246+00:00"
     },
     "LMT": {
       "symbol": "LMT",
@@ -1202,7 +1202,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:49.791987+00:00"
+      "updatedAt": "2026-10-20T23:27:07.039214+00:00"
     },
     "MELI": {
       "symbol": "MELI",
@@ -1232,7 +1232,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:50.214575+00:00"
+      "updatedAt": "2026-10-20T23:27:07.356060+00:00"
     },
     "NKTR": {
       "symbol": "NKTR",
@@ -1262,7 +1262,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:50.638373+00:00"
+      "updatedAt": "2026-10-20T23:27:07.665594+00:00"
     },
     "NU": {
       "symbol": "NU",
@@ -1292,7 +1292,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:51.040739+00:00"
+      "updatedAt": "2026-10-20T23:27:07.974597+00:00"
     },
     "NVDA": {
       "symbol": "NVDA",
@@ -1322,7 +1322,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:51.463886+00:00"
+      "updatedAt": "2026-10-20T23:27:08.290782+00:00"
     },
     "NVO": {
       "symbol": "NVO",
@@ -1352,7 +1352,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:51.916283+00:00"
+      "updatedAt": "2026-10-20T23:27:08.641950+00:00"
     },
     "PANW": {
       "symbol": "PANW",
@@ -1382,7 +1382,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:52.330284+00:00"
+      "updatedAt": "2026-10-20T23:27:08.953052+00:00"
     },
     "PLTR": {
       "symbol": "PLTR",
@@ -1412,7 +1412,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:52.764814+00:00"
+      "updatedAt": "2026-10-20T23:27:09.262270+00:00"
     },
     "RKLB": {
       "symbol": "RKLB",
@@ -1442,7 +1442,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:53.167844+00:00"
+      "updatedAt": "2026-10-20T23:27:09.569125+00:00"
     },
     "SE": {
       "symbol": "SE",
@@ -1472,7 +1472,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:53.553139+00:00"
+      "updatedAt": "2026-10-20T23:27:09.874330+00:00"
     },
     "TMDX": {
       "symbol": "TMDX",
@@ -1502,7 +1502,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:53.967297+00:00"
+      "updatedAt": "2026-10-20T23:27:10.183832+00:00"
     },
     "TSLA": {
       "symbol": "TSLA",
@@ -1532,7 +1532,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:54.399851+00:00"
+      "updatedAt": "2026-10-20T23:27:10.494320+00:00"
     },
     "UBER": {
       "symbol": "UBER",
@@ -1562,7 +1562,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:54.813005+00:00"
+      "updatedAt": "2026-10-20T23:27:10.879274+00:00"
     },
     "CCXI": {
       "symbol": "CCXI",
@@ -1620,7 +1620,7 @@
           }
         }
       },
-      "updatedAt": "2026-10-20T20:41:35.326640+00:00"
+      "updatedAt": "2026-10-20T23:26:56.238028+00:00"
     }
   },
   "failures": [],
