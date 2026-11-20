@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T01:54:44.096588+00:00",
+  "updatedAt": "2026-11-20T20:28:17.811440+00:00",
   "provider": "Yahoo Finance chart endpoint via GitHub Actions",
   "methodology": {
     "dailyMove": "regular market price versus previous valid adjusted daily session close",
@@ -8,8 +8,8 @@
   "quotes": {
     "AAOI": {
       "symbol": "AAOI",
-      "price": 39.46,
-      "previousClose": 45.220001,
+      "price": 32.96,
+      "previousClose": 39.459999,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -19,14 +19,14 @@
         "sessionDate": "2026-08-18",
         "price": 131.410004,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -69.9718
+        "performancePct": -74.9182
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-24T11:00:56.000Z",
         "sessionDate": "2026-08-24",
         "price": 107.629997,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -63.3374
+        "performancePct": -69.3766
       },
       "creatorAnchors": {
         "luminara": {
@@ -35,14 +35,14 @@
             "sessionDate": "2026-08-24",
             "price": 107.629997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -63.3374
+            "performancePct": -69.3766
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-22T15:36:24.000Z",
             "sessionDate": "2026-08-24",
             "price": 107.629997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -63.3374
+            "performancePct": -69.3766
           }
         },
         "serenity": {
@@ -51,23 +51,23 @@
             "sessionDate": "2026-08-18",
             "price": 131.410004,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -69.9718
+            "performancePct": -74.9182
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-24T11:00:56.000Z",
             "sessionDate": "2026-08-24",
             "price": 107.629997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -63.3374
+            "performancePct": -69.3766
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:28.428151+00:00"
+      "updatedAt": "2026-11-20T20:27:59.496141+00:00"
     },
     "SIVE": {
       "symbol": "SIVE.ST",
-      "price": 13.69,
-      "previousClose": 13.51,
+      "price": 11.41,
+      "previousClose": 13.69,
       "currency": "SEK",
       "exchange": "STO",
       "marketState": null,
@@ -77,14 +77,14 @@
         "sessionDate": "2026-08-17",
         "price": 40.900002,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -66.5281
+        "performancePct": -72.1027
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-21T17:40:00+10:00",
         "sessionDate": "2026-08-21",
         "price": 36.5,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -62.4932
+        "performancePct": -68.7397
       },
       "creatorAnchors": {
         "serenity": {
@@ -93,23 +93,23 @@
             "sessionDate": "2026-08-17",
             "price": 40.900002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -66.5281
+            "performancePct": -72.1027
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-21T17:40:00+10:00",
             "sessionDate": "2026-08-21",
             "price": 36.5,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -62.4932
+            "performancePct": -68.7397
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:28.770372+00:00"
+      "updatedAt": "2026-11-20T20:27:59.870705+00:00"
     },
     "IQE": {
       "symbol": "IQE.L",
-      "price": 29.75,
-      "previousClose": 29.85,
+      "price": 25.8,
+      "previousClose": 29.75,
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
@@ -119,14 +119,14 @@
         "sessionDate": "2026-08-13",
         "price": 50.299999,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -40.8549
+        "performancePct": -48.7078
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-13T17:46:00+10:00",
         "sessionDate": "2026-08-13",
         "price": 50.299999,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -40.8549
+        "performancePct": -48.7078
       },
       "creatorAnchors": {
         "serenity": {
@@ -135,23 +135,23 @@
             "sessionDate": "2026-08-13",
             "price": 50.299999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -40.8549
+            "performancePct": -48.7078
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-13T17:46:00+10:00",
             "sessionDate": "2026-08-13",
             "price": 50.299999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -40.8549
+            "performancePct": -48.7078
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:29.410343+00:00"
+      "updatedAt": "2026-11-20T20:28:00.637015+00:00"
     },
     "AXTI": {
       "symbol": "AXTI",
-      "price": 34.84,
-      "previousClose": 36.419998,
+      "price": 30.66,
+      "previousClose": 34.84,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -161,14 +161,14 @@
         "sessionDate": "2026-08-13",
         "price": 77.449997,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -55.0161
+        "performancePct": -60.4132
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-13T17:46:00+10:00",
         "sessionDate": "2026-08-13",
         "price": 77.449997,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -55.0161
+        "performancePct": -60.4132
       },
       "creatorAnchors": {
         "serenity": {
@@ -177,23 +177,23 @@
             "sessionDate": "2026-08-13",
             "price": 77.449997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -55.0161
+            "performancePct": -60.4132
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-13T17:46:00+10:00",
             "sessionDate": "2026-08-13",
             "price": 77.449997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -55.0161
+            "performancePct": -60.4132
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:29.758813+00:00"
+      "updatedAt": "2026-11-20T20:28:00.977571+00:00"
     },
     "POET": {
       "symbol": "POET",
-      "price": 4.07,
-      "previousClose": 4.4,
+      "price": 3.4,
+      "previousClose": 4.07,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
@@ -203,14 +203,14 @@
         "sessionDate": "2026-08-13",
         "price": 8.91,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -54.321
+        "performancePct": -61.8406
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-13T18:17:00+10:00",
         "sessionDate": "2026-08-13",
         "price": 8.91,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -54.321
+        "performancePct": -61.8406
       },
       "creatorAnchors": {
         "serenity": {
@@ -219,23 +219,23 @@
             "sessionDate": "2026-08-13",
             "price": 8.91,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -54.321
+            "performancePct": -61.8406
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-13T18:17:00+10:00",
             "sessionDate": "2026-08-13",
             "price": 8.91,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -54.321
+            "performancePct": -61.8406
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:30.120535+00:00"
+      "updatedAt": "2026-11-20T20:28:01.338991+00:00"
     },
     "ARM": {
       "symbol": "ARM",
-      "price": 177.17,
-      "previousClose": 183.389999,
+      "price": 153.93,
+      "previousClose": 177.169998,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -245,7 +245,7 @@
         "sessionDate": "2026-08-17",
         "price": 271.429993,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -34.7272
+        "performancePct": -43.2892
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -255,17 +255,17 @@
             "sessionDate": "2026-08-17",
             "price": 271.429993,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -34.7272
+            "performancePct": -43.2892
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:30.445970+00:00"
+      "updatedAt": "2026-11-20T20:28:01.878057+00:00"
     },
     "MRVL": {
       "symbol": "MRVL",
-      "price": 138.47,
-      "previousClose": 148.740005,
+      "price": 122.945,
+      "previousClose": 138.470001,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -275,7 +275,7 @@
         "sessionDate": "2026-08-17",
         "price": 234.278809,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -40.8952
+        "performancePct": -47.5219
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -285,14 +285,14 @@
             "sessionDate": "2026-08-24",
             "price": 229.239899,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -39.596
+            "performancePct": -46.3684
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-22T10:21:26.000Z",
             "sessionDate": "2026-08-24",
             "price": 229.239899,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -39.596
+            "performancePct": -46.3684
           }
         },
         "serenity": {
@@ -301,17 +301,17 @@
             "sessionDate": "2026-08-17",
             "price": 234.278809,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -40.8952
+            "performancePct": -47.5219
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:30.765943+00:00"
+      "updatedAt": "2026-11-20T20:28:02.294805+00:00"
     },
     "INTC": {
       "symbol": "INTC",
-      "price": 55.72,
-      "previousClose": 55.169998,
+      "price": 52.475,
+      "previousClose": 55.720001,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -321,7 +321,7 @@
         "sessionDate": "2026-08-17",
         "price": 103.489998,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -46.159
+        "performancePct": -49.2946
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -331,17 +331,17 @@
             "sessionDate": "2026-08-17",
             "price": 103.489998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -46.159
+            "performancePct": -49.2946
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:31.142358+00:00"
+      "updatedAt": "2026-11-20T20:28:02.676313+00:00"
     },
     "LITE": {
       "symbol": "LITE",
-      "price": 535.15,
-      "previousClose": 559.969971,
+      "price": 467.055,
+      "previousClose": 535.150024,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -351,7 +351,7 @@
         "sessionDate": "2026-08-17",
         "price": 968.900024,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -44.7673
+        "performancePct": -51.7953
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -361,17 +361,17 @@
             "sessionDate": "2026-08-17",
             "price": 968.900024,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -44.7673
+            "performancePct": -51.7953
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:31.450260+00:00"
+      "updatedAt": "2026-11-20T20:28:03.049611+00:00"
     },
     "EWY": {
       "symbol": "EWY",
-      "price": 134.59,
-      "previousClose": 135.320007,
+      "price": 123.93,
+      "previousClose": 134.589996,
       "currency": "USD",
       "exchange": "PCX",
       "marketState": null,
@@ -381,7 +381,7 @@
         "sessionDate": "2026-08-17",
         "price": 185.100006,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -27.288
+        "performancePct": -33.047
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -391,17 +391,17 @@
             "sessionDate": "2026-08-17",
             "price": 185.100006,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -27.288
+            "performancePct": -33.047
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:31.776713+00:00"
+      "updatedAt": "2026-11-20T20:28:03.453354+00:00"
     },
     "TSEM": {
       "symbol": "TSEM",
-      "price": 127.77,
-      "previousClose": 136.059998,
+      "price": 114.285,
+      "previousClose": 127.769997,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -411,7 +411,7 @@
         "sessionDate": "2026-08-17",
         "price": 263.730011,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -51.5527
+        "performancePct": -56.6659
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -421,17 +421,17 @@
             "sessionDate": "2026-08-17",
             "price": 263.730011,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -51.5527
+            "performancePct": -56.6659
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:32.090724+00:00"
+      "updatedAt": "2026-11-20T20:28:03.863179+00:00"
     },
     "AEHR": {
       "symbol": "AEHR",
-      "price": 47.94,
-      "previousClose": 49.740002,
+      "price": 39.595,
+      "previousClose": 47.939999,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
@@ -441,7 +441,7 @@
         "sessionDate": "2026-08-17",
         "price": 145.610001,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -67.0764
+        "performancePct": -72.8075
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -451,14 +451,14 @@
             "sessionDate": "2026-08-19",
             "price": 107.959999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -55.5947
+            "performancePct": -63.3244
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-19T15:38:30.000Z",
             "sessionDate": "2026-08-19",
             "price": 107.959999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -55.5947
+            "performancePct": -63.3244
           }
         },
         "serenity": {
@@ -467,17 +467,17 @@
             "sessionDate": "2026-08-17",
             "price": 145.610001,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -67.0764
+            "performancePct": -72.8075
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:32.401716+00:00"
+      "updatedAt": "2026-11-20T20:28:04.201219+00:00"
     },
     "MU": {
       "symbol": "MU",
-      "price": 690.44,
-      "previousClose": 712.419983,
+      "price": 595.185,
+      "previousClose": 690.440002,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -487,7 +487,7 @@
         "sessionDate": "2026-08-17",
         "price": 1011.59082,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -31.7471
+        "performancePct": -41.1635
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -497,17 +497,17 @@
             "sessionDate": "2026-08-17",
             "price": 1011.59082,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -31.7471
+            "performancePct": -41.1635
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:32.726514+00:00"
+      "updatedAt": "2026-11-20T20:28:04.591463+00:00"
     },
     "AMS-OSRAM": {
       "symbol": "AMS.SW",
-      "price": 13.77,
-      "previousClose": 14.16,
+      "price": 12.55,
+      "previousClose": 13.77,
       "currency": "CHF",
       "exchange": "EBS",
       "marketState": null,
@@ -517,7 +517,7 @@
         "sessionDate": "2026-08-21",
         "price": 17.450001,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -21.0888
+        "performancePct": -28.0802
       },
       "lastActionAnchor": null,
       "creatorAnchors": {
@@ -527,17 +527,17 @@
             "sessionDate": "2026-08-21",
             "price": 17.450001,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -21.0888
+            "performancePct": -28.0802
           },
           "lastActionAnchor": null
         }
       },
-      "updatedAt": "2026-11-20T01:54:33.051584+00:00"
+      "updatedAt": "2026-11-20T20:28:05.128570+00:00"
     },
     "SPCX": {
       "symbol": "SPCX",
-      "price": 138.43,
-      "previousClose": 141.699997,
+      "price": 129.0,
+      "previousClose": 138.429993,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -551,14 +551,14 @@
             "sessionDate": "2026-08-17",
             "price": 146.229996,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -5.3341
+            "performancePct": -11.7828
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 146.229996,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -5.3341
+            "performancePct": -11.7828
           }
         },
         "luminara": {
@@ -567,23 +567,23 @@
             "sessionDate": "2026-08-19",
             "price": 139.649994,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -0.8736
+            "performancePct": -7.6262
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-19T05:46:24.000Z",
             "sessionDate": "2026-08-19",
             "price": 139.649994,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -0.8736
+            "performancePct": -7.6262
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:33.395793+00:00"
+      "updatedAt": "2026-11-20T20:28:05.498083+00:00"
     },
     "CBRS": {
       "symbol": "CBRS",
-      "price": 86.96,
-      "previousClose": 104.18,
+      "price": 84.01,
+      "previousClose": 86.959999,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -597,23 +597,23 @@
             "sessionDate": "2026-08-19",
             "price": 215.690002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -59.6829
+            "performancePct": -61.0506
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-19T05:46:24.000Z",
             "sessionDate": "2026-08-19",
             "price": 215.690002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -59.6829
+            "performancePct": -61.0506
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:33.707907+00:00"
+      "updatedAt": "2026-11-20T20:28:05.867812+00:00"
     },
     "ORCL": {
       "symbol": "ORCL",
-      "price": 110.57,
-      "previousClose": 115.0,
+      "price": 101.679,
+      "previousClose": 110.57,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -627,23 +627,23 @@
             "sessionDate": "2026-08-19",
             "price": 143.280075,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -22.8295
+            "performancePct": -29.0348
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-19T05:46:24.000Z",
             "sessionDate": "2026-08-19",
             "price": 143.280075,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -22.8295
+            "performancePct": -29.0348
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:34.039257+00:00"
+      "updatedAt": "2026-11-20T20:28:06.235525+00:00"
     },
     "NVTS": {
       "symbol": "NVTS",
-      "price": 7.17,
-      "previousClose": 7.6,
+      "price": 6.098,
+      "previousClose": 7.17,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -657,23 +657,23 @@
             "sessionDate": "2026-08-19",
             "price": 12.83,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -44.1154
+            "performancePct": -52.4708
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-19T05:46:24.000Z",
             "sessionDate": "2026-08-19",
             "price": 12.83,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -44.1154
+            "performancePct": -52.4708
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:34.343592+00:00"
+      "updatedAt": "2026-11-20T20:28:06.603416+00:00"
     },
     "6976": {
       "symbol": "6976.T",
-      "price": 6085.0,
-      "previousClose": 6755.0,
+      "price": 6187.0,
+      "previousClose": 6458.0,
       "currency": "JPY",
       "exchange": "JPX",
       "marketState": null,
@@ -683,14 +683,14 @@
         "sessionDate": "2026-08-17",
         "price": 11239.102539,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -45.8587
+        "performancePct": -44.9511
       },
       "lastActionAnchor": {
         "eventAt": "2026-08-17T02:52:12.000Z",
         "sessionDate": "2026-08-17",
         "price": 11239.102539,
         "method": "first-market-close-on-or-after-disclosure-date",
-        "performancePct": -45.8587
+        "performancePct": -44.9511
       },
       "creatorAnchors": {
         "serenity": {
@@ -699,23 +699,23 @@
             "sessionDate": "2026-08-17",
             "price": 11239.102539,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -45.8587
+            "performancePct": -44.9511
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-17T02:52:12.000Z",
             "sessionDate": "2026-08-17",
             "price": 11239.102539,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -45.8587
+            "performancePct": -44.9511
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:34.705906+00:00"
+      "updatedAt": "2026-11-20T20:28:07.011458+00:00"
     },
     "2492": {
       "symbol": "2492.TW",
       "price": 187.5,
-      "previousClose": 208.0,
+      "previousClose": 231.0,
       "currency": "TWD",
       "exchange": "TAI",
       "marketState": null,
@@ -752,12 +752,12 @@
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:35.050168+00:00"
+      "updatedAt": "2026-11-20T20:28:07.381199+00:00"
     },
     "EOS.AX": {
       "symbol": "EOS.AX",
-      "price": 6.68,
-      "previousClose": 6.96,
+      "price": 6.64,
+      "previousClose": 6.64,
       "currency": "AUD",
       "exchange": "ASX",
       "marketState": null,
@@ -771,23 +771,23 @@
             "sessionDate": "2026-08-21",
             "price": 8.9,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -24.9438
+            "performancePct": -25.3933
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-26T02:11:31.000Z",
             "sessionDate": "2026-08-26",
             "price": 11.24,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -40.5694
+            "performancePct": -40.9253
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:35.375535+00:00"
+      "updatedAt": "2026-11-20T20:28:07.728616+00:00"
     },
     "ADYEN": {
       "symbol": "ADYEN.AS",
-      "price": 806.4,
-      "previousClose": 837.700012,
+      "price": 793.5,
+      "previousClose": 806.400024,
       "currency": "EUR",
       "exchange": "AMS",
       "marketState": null,
@@ -801,23 +801,23 @@
             "sessionDate": "2026-08-17",
             "price": 1031.400024,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -21.815
+            "performancePct": -23.0657
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 1031.400024,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -21.815
+            "performancePct": -23.0657
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:35.693869+00:00"
+      "updatedAt": "2026-11-20T20:28:08.120062+00:00"
     },
     "AMZN": {
       "symbol": "AMZN",
-      "price": 257.37,
-      "previousClose": 257.890015,
+      "price": 247.48,
+      "previousClose": 257.369995,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -831,23 +831,23 @@
             "sessionDate": "2026-08-17",
             "price": 261.309998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -1.5078
+            "performancePct": -5.2926
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 261.309998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -1.5078
+            "performancePct": -5.2926
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:36.002547+00:00"
+      "updatedAt": "2026-11-20T20:28:08.504534+00:00"
     },
     "ASTS": {
       "symbol": "ASTS",
-      "price": 25.55,
-      "previousClose": 27.59,
+      "price": 22.865,
+      "previousClose": 25.549999,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -861,23 +861,23 @@
             "sessionDate": "2026-08-17",
             "price": 71.139999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -64.0849
+            "performancePct": -67.8592
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 71.139999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -64.0849
+            "performancePct": -67.8592
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:36.331682+00:00"
+      "updatedAt": "2026-11-20T20:28:08.915046+00:00"
     },
     "AXON": {
       "symbol": "AXON",
-      "price": 306.98,
-      "previousClose": 298.589996,
+      "price": 292.99,
+      "previousClose": 306.980011,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -891,23 +891,23 @@
             "sessionDate": "2026-08-17",
             "price": 604.320007,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -49.2024
+            "performancePct": -51.5174
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 604.320007,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -49.2024
+            "performancePct": -51.5174
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:36.649859+00:00"
+      "updatedAt": "2026-11-20T20:28:09.293678+00:00"
     },
     "BEPC": {
       "symbol": "BEPC",
-      "price": 30.46,
-      "previousClose": 30.59,
+      "price": 29.84,
+      "previousClose": 30.459999,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -921,23 +921,23 @@
             "sessionDate": "2026-08-17",
             "price": 34.673885,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -12.1529
+            "performancePct": -13.941
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 34.673885,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -12.1529
+            "performancePct": -13.941
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:36.972145+00:00"
+      "updatedAt": "2026-11-20T20:28:09.685585+00:00"
     },
     "CRWD": {
       "symbol": "CRWD",
-      "price": 243.46,
-      "previousClose": 219.580002,
+      "price": 228.45,
+      "previousClose": 243.460007,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -951,23 +951,23 @@
             "sessionDate": "2026-08-17",
             "price": 213.899994,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 13.8195
+            "performancePct": 6.8022
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 213.899994,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 13.8195
+            "performancePct": 6.8022
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:37.324080+00:00"
+      "updatedAt": "2026-11-20T20:28:10.099237+00:00"
     },
     "CWEN": {
       "symbol": "CWEN",
-      "price": 30.77,
-      "previousClose": 31.309999,
+      "price": 28.65,
+      "previousClose": 30.77,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -981,23 +981,23 @@
             "sessionDate": "2026-08-17",
             "price": 33.639095,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -8.529
+            "performancePct": -14.8312
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 33.639095,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -8.529
+            "performancePct": -14.8312
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:37.647546+00:00"
+      "updatedAt": "2026-11-20T20:28:10.471687+00:00"
     },
     "GOOGL": {
       "symbol": "GOOGL",
-      "price": 272.66,
-      "previousClose": 280.200012,
+      "price": 267.91,
+      "previousClose": 272.660004,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1011,23 +1011,23 @@
             "sessionDate": "2026-08-17",
             "price": 343.779022,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -20.6874
+            "performancePct": -22.0691
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 343.779022,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -20.6874
+            "performancePct": -22.0691
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:37.959106+00:00"
+      "updatedAt": "2026-11-20T20:28:10.860935+00:00"
     },
     "GRG": {
       "symbol": "GRG.L",
-      "price": 2398.0,
-      "previousClose": 2370.0,
+      "price": 2376.0,
+      "previousClose": 2398.0,
       "currency": "GBp",
       "exchange": "LSE",
       "marketState": null,
@@ -1041,23 +1041,23 @@
             "sessionDate": "2026-08-17",
             "price": 1797.809082,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 33.3846
+            "performancePct": 32.1609
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 1797.809082,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 33.3846
+            "performancePct": 32.1609
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:38.329656+00:00"
+      "updatedAt": "2026-11-20T20:28:11.278775+00:00"
     },
     "IBE": {
       "symbol": "IBE.MC",
-      "price": 22.59,
-      "previousClose": 22.879999,
+      "price": 22.67,
+      "previousClose": 22.59,
       "currency": "EUR",
       "exchange": "MCE",
       "marketState": null,
@@ -1071,23 +1071,23 @@
             "sessionDate": "2026-08-17",
             "price": 20.139999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 12.1649
+            "performancePct": 12.5621
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 20.139999,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 12.1649
+            "performancePct": 12.5621
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:38.675160+00:00"
+      "updatedAt": "2026-11-20T20:28:11.670439+00:00"
     },
     "IIND": {
       "symbol": "IIND.L",
-      "price": 7.062,
-      "previousClose": 6.96,
+      "price": 7.259,
+      "previousClose": 7.062,
       "currency": "GBP",
       "exchange": "LSE",
       "marketState": null,
@@ -1101,23 +1101,23 @@
             "sessionDate": "2026-08-17",
             "price": 6.563,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 7.6032
+            "performancePct": 10.6049
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 6.563,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 7.6032
+            "performancePct": 10.6049
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:38.986882+00:00"
+      "updatedAt": "2026-11-20T20:28:12.045786+00:00"
     },
     "IREN": {
       "symbol": "IREN",
-      "price": 14.41,
-      "previousClose": 15.805,
+      "price": 12.072,
+      "previousClose": 14.41,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1131,23 +1131,23 @@
             "sessionDate": "2026-08-17",
             "price": 44.900002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -67.9065
+            "performancePct": -73.1136
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 44.900002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -67.9065
+            "performancePct": -73.1136
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:39.292270+00:00"
+      "updatedAt": "2026-11-20T20:28:12.418753+00:00"
     },
     "ISRG": {
       "symbol": "ISRG",
-      "price": 407.24,
-      "previousClose": 430.529999,
+      "price": 402.24,
+      "previousClose": 407.23999,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1161,23 +1161,23 @@
             "sessionDate": "2026-08-17",
             "price": 390.329987,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 4.3322
+            "performancePct": 3.0513
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 390.329987,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 4.3322
+            "performancePct": 3.0513
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:39.596825+00:00"
+      "updatedAt": "2026-11-20T20:28:12.793164+00:00"
     },
     "LMT": {
       "symbol": "LMT",
-      "price": 571.85,
-      "previousClose": 590.340027,
+      "price": 566.172,
+      "previousClose": 571.849976,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1191,23 +1191,23 @@
             "sessionDate": "2026-08-17",
             "price": 590.090149,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -3.0911
+            "performancePct": -4.0533
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 590.090149,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -3.0911
+            "performancePct": -4.0533
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:39.968963+00:00"
+      "updatedAt": "2026-11-20T20:28:13.173177+00:00"
     },
     "MELI": {
       "symbol": "MELI",
-      "price": 1355.49,
-      "previousClose": 1436.829956,
+      "price": 1352.02,
+      "previousClose": 1355.48999,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1221,23 +1221,23 @@
             "sessionDate": "2026-08-17",
             "price": 1787.569946,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -24.1714
+            "performancePct": -24.3655
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 1787.569946,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -24.1714
+            "performancePct": -24.3655
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:40.277860+00:00"
+      "updatedAt": "2026-11-20T20:28:13.554772+00:00"
     },
     "NKTR": {
       "symbol": "NKTR",
-      "price": 32.54,
-      "previousClose": 35.91,
+      "price": 30.52,
+      "previousClose": 32.540001,
       "currency": "USD",
       "exchange": "NCM",
       "marketState": null,
@@ -1251,23 +1251,23 @@
             "sessionDate": "2026-08-17",
             "price": 72.669998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -55.2222
+            "performancePct": -58.0019
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 72.669998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -55.2222
+            "performancePct": -58.0019
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:40.683124+00:00"
+      "updatedAt": "2026-11-20T20:28:13.935327+00:00"
     },
     "NU": {
       "symbol": "NU",
-      "price": 11.82,
-      "previousClose": 12.33,
+      "price": 11.43,
+      "previousClose": 11.82,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1281,23 +1281,23 @@
             "sessionDate": "2026-08-17",
             "price": 14.74,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -19.81
+            "performancePct": -22.4559
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 14.74,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -19.81
+            "performancePct": -22.4559
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:40.989174+00:00"
+      "updatedAt": "2026-11-20T20:28:14.272448+00:00"
     },
     "NVDA": {
       "symbol": "NVDA",
-      "price": 145.98,
-      "previousClose": 155.460007,
+      "price": 128.036,
+      "previousClose": 145.979996,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1311,23 +1311,23 @@
             "sessionDate": "2026-08-17",
             "price": 224.758499,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -35.0503
+            "performancePct": -43.034
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 224.758499,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -35.0503
+            "performancePct": -43.034
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:41.300976+00:00"
+      "updatedAt": "2026-11-20T20:28:14.641405+00:00"
     },
     "NVO": {
       "symbol": "NVO",
-      "price": 38.87,
-      "previousClose": 40.700001,
+      "price": 38.029,
+      "previousClose": 38.869999,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1341,23 +1341,23 @@
             "sessionDate": "2026-08-17",
             "price": 44.880001,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -13.3913
+            "performancePct": -15.2652
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 44.880001,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -13.3913
+            "performancePct": -15.2652
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:41.653687+00:00"
+      "updatedAt": "2026-11-20T20:28:15.016083+00:00"
     },
     "PANW": {
       "symbol": "PANW",
-      "price": 361.73,
-      "previousClose": 309.290009,
+      "price": 344.59,
+      "previousClose": 361.730011,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1371,23 +1371,23 @@
             "sessionDate": "2026-08-17",
             "price": 375.76001,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -3.7338
+            "performancePct": -8.2952
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 375.76001,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -3.7338
+            "performancePct": -8.2952
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:41.961087+00:00"
+      "updatedAt": "2026-11-20T20:28:15.431287+00:00"
     },
     "PLTR": {
       "symbol": "PLTR",
-      "price": 153.68,
-      "previousClose": 156.559998,
+      "price": 143.98,
+      "previousClose": 153.679993,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1401,23 +1401,23 @@
             "sessionDate": "2026-08-17",
             "price": 172.550003,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -10.936
+            "performancePct": -16.5575
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 172.550003,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -10.936
+            "performancePct": -16.5575
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:42.274742+00:00"
+      "updatedAt": "2026-11-20T20:28:15.806439+00:00"
     },
     "RKLB": {
       "symbol": "RKLB",
-      "price": 50.99,
-      "previousClose": 55.049999,
+      "price": 45.53,
+      "previousClose": 50.990002,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1431,23 +1431,23 @@
             "sessionDate": "2026-08-17",
             "price": 82.080002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -37.8777
+            "performancePct": -44.5297
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 82.080002,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -37.8777
+            "performancePct": -44.5297
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:42.619298+00:00"
+      "updatedAt": "2026-11-20T20:28:16.134864+00:00"
     },
     "SE": {
       "symbol": "SE",
-      "price": 65.94,
-      "previousClose": 69.440002,
+      "price": 62.9,
+      "previousClose": 65.940002,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1461,23 +1461,23 @@
             "sessionDate": "2026-08-17",
             "price": 119.449997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -44.797
+            "performancePct": -47.342
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 119.449997,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -44.797
+            "performancePct": -47.342
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:42.925152+00:00"
+      "updatedAt": "2026-11-20T20:28:16.513468+00:00"
     },
     "TMDX": {
       "symbol": "TMDX",
-      "price": 94.02,
-      "previousClose": 93.910004,
+      "price": 85.285,
+      "previousClose": 94.019997,
       "currency": "USD",
       "exchange": "NGM",
       "marketState": null,
@@ -1491,23 +1491,23 @@
             "sessionDate": "2026-08-17",
             "price": 88.349998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 6.4177
+            "performancePct": -3.4692
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 88.349998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 6.4177
+            "performancePct": -3.4692
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:43.233104+00:00"
+      "updatedAt": "2026-11-20T20:28:16.852944+00:00"
     },
     "TSLA": {
       "symbol": "TSLA",
-      "price": 374.41,
-      "previousClose": 380.109985,
+      "price": 346.09,
+      "previousClose": 374.410004,
       "currency": "USD",
       "exchange": "NMS",
       "marketState": null,
@@ -1521,23 +1521,23 @@
             "sessionDate": "2026-08-17",
             "price": 339.299988,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 10.3478
+            "performancePct": 2.0012
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 339.299988,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": 10.3478
+            "performancePct": 2.0012
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:43.536752+00:00"
+      "updatedAt": "2026-11-20T20:28:17.197780+00:00"
     },
     "UBER": {
       "symbol": "UBER",
-      "price": 65.6,
-      "previousClose": 68.809998,
+      "price": 64.235,
+      "previousClose": 65.599998,
       "currency": "USD",
       "exchange": "NYQ",
       "marketState": null,
@@ -1551,18 +1551,18 @@
             "sessionDate": "2026-08-17",
             "price": 74.989998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -12.5217
+            "performancePct": -14.3419
           },
           "lastActionAnchor": {
             "eventAt": "2026-08-15T12:00:00.000Z",
             "sessionDate": "2026-08-17",
             "price": 74.989998,
             "method": "first-market-close-on-or-after-disclosure-date",
-            "performancePct": -12.5217
+            "performancePct": -14.3419
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:43.846436+00:00"
+      "updatedAt": "2026-11-20T20:28:17.561272+00:00"
     },
     "CCXI": {
       "symbol": "CCXI",
@@ -1620,7 +1620,7 @@
           }
         }
       },
-      "updatedAt": "2026-11-20T01:54:29.091082+00:00"
+      "updatedAt": "2026-11-20T20:28:00.257953+00:00"
     }
   },
   "failures": [],
